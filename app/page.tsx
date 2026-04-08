@@ -91,6 +91,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ULTRA K9 PRO FUNNEL BANNER */}
+      <section className="bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200 py-12 px-4">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0 flex justify-center">
+            <div className="relative">
+              <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10 animate-pulse">
+                #1 PICK
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://ultrak9pro.com/statics/img/tsl-pin.png"
+                alt="Ultra K9 Pro primal nutrient drops for dogs"
+                className="h-52 w-auto object-contain drop-shadow-lg"
+              />
+            </div>
+          </div>
+          <div className="flex-1 text-center md:text-left">
+            <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-2">Editor's Top Pick — Dog Health & Longevity</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-tight">
+              Turn Your Dog Back Into the Fierce, Healthy Animal They Were Born to Be
+            </h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-lg">
+              <strong>UltraK9 Pro</strong> contains a spectrum of primal nutrients that clear your dog's body of toxins, strengthen their liver, kidneys, and thyroid, and fight the GMOs, preservatives, and allergens hidden in commercial food. Better digestion, less inflammation, healthier joints — and years added back to their life.
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-5">
+              {[
+                "✓ Joint & tendon relief",
+                "✓ Digestive health",
+                "✓ Fur & skin care",
+                "✓ Oral health",
+                "✓ Detox support",
+                "✓ 60-day guarantee",
+              ].map((b) => (
+                <span key={b} className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">{b}</span>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+              <a
+                href="https://ultrak9pro.com/video.php?hop=pawadvisor&hopId=de50071c-c884-44a7-997b-daa7213ded87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-500 hover:bg-amber-400 text-white font-bold px-6 py-3 rounded-full transition-colors text-sm text-center"
+              >
+                Check Official Price →
+              </a>
+              <Link
+                href="/reviews/ultra-k9-pro-review"
+                className="border border-gray-300 hover:border-amber-400 text-gray-700 hover:text-amber-700 font-semibold px-6 py-3 rounded-full transition-colors text-sm text-center"
+              >
+                Read Our Full Review
+              </Link>
+            </div>
+            <p className="text-xs text-gray-400 mt-3">Affiliate link — we earn a commission at no extra cost to you</p>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED REVIEWS */}
       <section className="max-w-5xl mx-auto px-4 py-14">
         <div className="flex items-end justify-between mb-8">
@@ -199,63 +256,6 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ULTRA K9 PRO FUNNEL BANNER */}
-      <section className="bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200 py-12 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 flex justify-center">
-            <div className="relative">
-              <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10 animate-pulse">
-                #1 PICK
-              </div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://ultrak9pro.com/statics/img/tsl-pin.png"
-                alt="Ultra K9 Pro primal nutrient drops for dogs"
-                className="h-52 w-auto object-contain drop-shadow-lg"
-              />
-            </div>
-          </div>
-          <div className="flex-1 text-center md:text-left">
-            <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-2">Editor's Top Pick — Dog Health & Longevity</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-tight">
-              Turn Your Dog Back Into the Fierce, Healthy Animal They Were Born to Be
-            </h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-lg">
-              <strong>UltraK9 Pro</strong> contains a spectrum of primal nutrients that clear your dog's body of toxins, strengthen their liver, kidneys, and thyroid, and fight the GMOs, preservatives, and allergens hidden in commercial food. Better digestion, less inflammation, healthier joints — and years added back to their life.
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-5">
-              {[
-                "✓ Joint & tendon relief",
-                "✓ Digestive health",
-                "✓ Fur & skin care",
-                "✓ Oral health",
-                "✓ Detox support",
-                "✓ 60-day guarantee",
-              ].map((b) => (
-                <span key={b} className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">{b}</span>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <a
-                href="https://ultrak9pro.com/video.php?hop=pawadvisor&hopId=de50071c-c884-44a7-997b-daa7213ded87"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-amber-500 hover:bg-amber-400 text-white font-bold px-6 py-3 rounded-full transition-colors text-sm text-center"
-              >
-                Check Official Price →
-              </a>
-              <Link
-                href="/reviews/ultra-k9-pro-review"
-                className="border border-gray-300 hover:border-amber-400 text-gray-700 hover:text-amber-700 font-semibold px-6 py-3 rounded-full transition-colors text-sm text-center"
-              >
-                Read Our Full Review
-              </Link>
-            </div>
-            <p className="text-xs text-gray-400 mt-3">Affiliate link — we earn a commission at no extra cost to you</p>
-          </div>
         </div>
       </section>
 
