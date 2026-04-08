@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Cat Food & Products 2024 – Top Picks for Every Cat",
+  title: "Best Cat Food & Products 2026 – Top Picks for Every Cat",
   description:
     "Find the best cat food, litter, supplements, and gear. Expert reviews and vet-approved picks for kittens, adults, and senior cats.",
 };
@@ -12,7 +12,7 @@ export default function CatsPage() {
     <>
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Best Cat Products 2024</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Best Cat Products 2026</h1>
           <p className="text-purple-100 text-lg">Top-rated food, litter, and health products for every cat.</p>
         </div>
       </section>

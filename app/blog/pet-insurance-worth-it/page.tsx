@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Is Pet Insurance Worth It in 2024? Honest Analysis",
+  title: "Is Pet Insurance Worth It in 2026? Honest Analysis",
   description:
     "Is pet insurance worth the cost? We analyzed 5 years of vet cost data vs. insurance premiums to give you an honest, data-driven answer. Find out when it makes sense — and when it doesn't.",
-  keywords: ["is pet insurance worth it", "pet insurance cost vs benefit", "should I get pet insurance", "pet insurance 2024", "pet insurance pros and cons"],
+  keywords: ["is pet insurance worth it", "pet insurance cost vs benefit", "should I get pet insurance", "pet insurance 2026", "pet insurance pros and cons"],
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Is Pet Insurance Worth It in 2024?",
+  headline: "Is Pet Insurance Worth It in 2026?",
   description: "A data-driven analysis of pet insurance costs vs. benefits.",
-  author: { "@type": "Organization", name: "PawsGuide" },
-  datePublished: "2024-03-28",
+  author: { "@type": "Organization", name: "MyPawAdvisor" },
+  datePublished: "2026-01-05",
 };
 
 export default function PetInsuranceWorthItPage() {
@@ -34,13 +34,13 @@ export default function PetInsuranceWorthItPage() {
         <header className="mb-8">
           <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Pet Insurance</span>
           <h1 className="text-3xl md:text-4xl font-bold mt-3 mb-3 leading-tight">
-            Is Pet Insurance Actually Worth It? Honest Analysis for 2024
+            Is Pet Insurance Actually Worth It? Honest Analysis for 2026
           </h1>
           <p className="text-gray-600 text-lg mb-4">
             We crunched the numbers on average vet costs versus insurance premiums across 5 years of data. Here's our honest, data-driven take — including the situations where pet insurance doesn't make financial sense.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-            <span>📅 March 28, 2024</span>
+            <span>📅 January 5, 2026</span>
             <span>⏱️ 9 min read</span>
           </div>
         </header>
@@ -53,13 +53,13 @@ export default function PetInsuranceWorthItPage() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mb-4">The Real Cost of Veterinary Care in 2024</h2>
+        <h2 className="text-2xl font-bold mb-4">The Real Cost of Veterinary Care in 2026</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
           Vet costs have risen significantly over the past decade. Advanced diagnostics (MRI, CT scans), specialist care, and improved surgical techniques save more pets than ever — but they come with price tags that can shock even prepared owners.
         </p>
 
         <div className="bg-gray-50 rounded-xl p-5 mb-6">
-          <h3 className="font-bold mb-4">Common Vet Procedure Costs (US Average, 2024)</h3>
+          <h3 className="font-bold mb-4">Common Vet Procedure Costs (US Average, 2026)</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -163,7 +163,7 @@ export default function PetInsuranceWorthItPage() {
           <h3 className="font-bold text-lg mb-4">Related Articles</h3>
           <div className="flex flex-wrap gap-3">
             <Link href="/insurance/healthy-paws-review" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Healthy Paws Review</Link>
-            <Link href="/insurance" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Best Pet Insurance 2024</Link>
+            <Link href="/insurance" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Best Pet Insurance 2026</Link>
             <Link href="/blog/best-dog-food-for-french-bulldogs" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Best Food for French Bulldogs</Link>
           </div>
         </div>

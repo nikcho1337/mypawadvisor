@@ -26,6 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.className} bg-white text-gray-800`}>
+        {/* TRUST BAR */}
+        <div className="bg-emerald-700 text-emerald-100 text-xs py-1.5 px-4 text-center">
+          ✅ Expert-reviewed content &nbsp;|&nbsp; 🐾 Written by pet owners, for pet owners &nbsp;|&nbsp; 🔒 Affiliate disclosure on every page
+        </div>
+
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-emerald-600">
@@ -61,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>
               <p className="text-white font-semibold mb-3">Insurance</p>
               <ul className="space-y-1 text-sm">
-                <li><Link href="/insurance" className="hover:text-white transition-colors">Best Pet Insurance 2024</Link></li>
+                <li><Link href="/insurance" className="hover:text-white transition-colors">Best Pet Insurance 2026</Link></li>
                 <li><Link href="/insurance/healthy-paws-review" className="hover:text-white transition-colors">Healthy Paws Review</Link></li>
               </ul>
             </div>
@@ -74,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
           <div className="border-t border-gray-800 text-center text-xs py-4 px-4">
-            <p>© 2024 MyPawAdvisor. This site contains affiliate links. We may earn a commission at no extra cost to you.</p>
+            <p>© 2026 MyPawAdvisor. This site contains affiliate links. We may earn a commission at no extra cost to you.</p>
           </div>
         </footer>
       </body>

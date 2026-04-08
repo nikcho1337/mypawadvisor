@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Pet Insurance 2024 – Compare Top Plans",
+  title: "Best Pet Insurance 2026 – Compare Top Plans",
   description:
-    "Compare the best pet insurance plans of 2024. We reviewed 12 providers so you don't have to. Find affordable coverage for dogs and cats with the highest reimbursement rates.",
-  keywords: ["best pet insurance", "pet insurance comparison", "dog insurance", "cat insurance", "cheap pet insurance 2024"],
+    "Compare the best pet insurance plans of 2026. We reviewed 12 providers so you don't have to. Find affordable coverage for dogs and cats with the highest reimbursement rates.",
+  keywords: ["best pet insurance", "pet insurance comparison", "dog insurance", "cat insurance", "cheap pet insurance 2026"],
 };
 
 const plans = [
@@ -38,7 +38,7 @@ const plans = [
     bestFor: "Wellness add-on, diminishing deductible",
     pros: ["Optional wellness rewards", "Diminishing deductible", "Dental illness covered", "Flexible plans"],
     cons: ["Higher base premium", "Annual limit caps"],
-    href: "/insurance",
+    href: "/insurance/embrace-review",
     affiliateHref: "#",
   },
   {
@@ -71,8 +71,8 @@ function StarRating({ rating }: { rating: number }) {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Best Pet Insurance 2024 – Compare Top Plans",
-  description: "Compare the best pet insurance plans of 2024 for dogs and cats.",
+  headline: "Best Pet Insurance 2026 – Compare Top Plans",
+  description: "Compare the best pet insurance plans of 2026 for dogs and cats.",
   author: { "@type": "Organization", name: "PawsGuide" },
 };
 
@@ -84,8 +84,8 @@ export default function InsurancePage() {
       {/* HERO */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Updated April 2024</p>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Best Pet Insurance 2024:<br />Compare Top Plans</h1>
+          <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Updated April 2026</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Best Pet Insurance 2026:<br />Compare Top Plans</h1>
           <p className="text-blue-100 text-lg mb-6">
             We analyzed 12 pet insurance providers across 47 criteria. Here are the ones actually worth your money.
           </p>
@@ -100,7 +100,7 @@ export default function InsurancePage() {
       {/* QUICK ANSWER */}
       <section className="max-w-4xl mx-auto px-4 py-10">
         <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
-          <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Pet Insurance 2024</h2>
+          <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Pet Insurance 2026</h2>
           <ul className="text-sm space-y-1 text-gray-700">
             <li><strong>Best Overall:</strong> Healthy Paws — unlimited benefits, 90% reimbursement</li>
             <li><strong>Best for Wellness Coverage:</strong> Embrace — optional wellness rewards add-on</li>

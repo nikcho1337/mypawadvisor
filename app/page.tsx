@@ -119,7 +119,7 @@ export default function HomePage() {
       {/* TOP PICKS */}
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Our Top Picks for 2024</h2>
+          <h2 className="text-2xl font-bold text-center mb-2">Our Top Picks for 2026</h2>
           <p className="text-gray-500 text-center mb-8">Tested, reviewed, and highly rated by real pet owners.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {topPicks.map((pick) => (
@@ -145,7 +145,7 @@ export default function HomePage() {
 
       {/* WHY TRUST US */}
       <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-2xl font-bold text-center mb-10">Why Pet Owners Trust PawsGuide</h2>
+        <h2 className="text-2xl font-bold text-center mb-10">Why Pet Owners Trust MyPawAdvisor</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {[
             { icon: "🔬", title: "Research-Backed Reviews", desc: "Every product is analyzed using ingredient lists, vet input, and thousands of owner reviews." },

@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for French Bulldogs 2024 – Vet-Approved Picks",
+  title: "Best Dog Food for French Bulldogs 2026 – Vet-Approved Picks",
   description:
-    "Find the best dog food for French Bulldogs in 2024. We cover the top picks for sensitive stomachs, weight management, and puppies. Vet-approved, breed-specific recommendations.",
+    "Find the best dog food for French Bulldogs in 2026. We cover the top picks for sensitive stomachs, weight management, and puppies. Vet-approved, breed-specific recommendations.",
   keywords: ["best dog food for French Bulldogs", "French Bulldog food", "French Bulldog sensitive stomach food", "best food for Frenchie", "French Bulldog diet"],
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Best Dog Food for French Bulldogs 2024",
+  headline: "Best Dog Food for French Bulldogs 2026",
   description: "Vet-approved dog food picks for French Bulldogs covering sensitive stomachs, weight management, and puppies.",
-  author: { "@type": "Organization", name: "PawsGuide" },
-  datePublished: "2024-04-03",
+  author: { "@type": "Organization", name: "MyPawAdvisor" },
+  datePublished: "2026-01-10",
 };
 
 const picks = [
@@ -40,13 +40,13 @@ export default function FrenchBulldogFoodPage() {
         <header className="mb-8">
           <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Dog Food</span>
           <h1 className="text-3xl md:text-4xl font-bold mt-3 mb-3 leading-tight">
-            Best Dog Food for French Bulldogs in 2024 (Vet-Approved Picks)
+            Best Dog Food for French Bulldogs in 2026 (Vet-Approved Picks)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
             French Bulldogs have unique dietary requirements: brachycephalic skulls that make eating certain kibble shapes difficult, notoriously sensitive stomachs, and a tendency to become overweight. We reviewed 15 formulas specifically with Frenchies in mind.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-            <span>📅 April 3, 2024</span>
+            <span>📅 April 3, 2026</span>
             <span>⏱️ 7 min read</span>
           </div>
         </header>
@@ -132,7 +132,7 @@ export default function FrenchBulldogFoodPage() {
           <div className="flex flex-wrap gap-3">
             <Link href="/dogs" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">All Dog Food Reviews</Link>
             <Link href="/blog/pet-insurance-worth-it" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Is Pet Insurance Worth It?</Link>
-            <Link href="/insurance" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Best Pet Insurance 2024</Link>
+            <Link href="/insurance" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Best Pet Insurance 2026</Link>
           </div>
         </div>
       </article>

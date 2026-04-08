@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Healthy Paws Pet Insurance Review 2024 – Is It Worth It?",
+  title: "Healthy Paws Pet Insurance Review 2026 – Is It Worth It?",
   description:
-    "Detailed Healthy Paws pet insurance review for 2024. We cover pricing, coverage, real claims experience, pros and cons. Is Healthy Paws the best pet insurance for your dog or cat?",
+    "Detailed Healthy Paws pet insurance review for 2026. We cover pricing, coverage, real claims experience, pros and cons. Is Healthy Paws the best pet insurance for your dog or cat?",
   keywords: ["Healthy Paws review", "Healthy Paws pet insurance", "best pet insurance", "healthy paws cost", "healthy paws claims"],
 };
 
@@ -17,7 +17,7 @@ const jsonLd = {
     description: "Pet insurance provider offering unlimited annual benefits and fast claims processing.",
   },
   reviewRating: { "@type": "Rating", ratingValue: "4.9", bestRating: "5" },
-  author: { "@type": "Organization", name: "PawsGuide" },
+  author: { "@type": "Organization", name: "MyPawAdvisor" },
   reviewBody: "Healthy Paws offers the best overall pet insurance with unlimited annual benefits and 90% reimbursement rate.",
 };
 
@@ -38,15 +38,15 @@ export default function HealthyPawsReviewPage() {
       <article className="max-w-4xl mx-auto px-4 py-8">
         {/* HEADER */}
         <header className="mb-8">
-          <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Editor's Choice 2024</span>
+          <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Editor's Choice 2026</span>
           <h1 className="text-3xl md:text-4xl font-bold mt-3 mb-3 leading-tight">
-            Healthy Paws Pet Insurance Review 2024: Best Overall?
+            Healthy Paws Pet Insurance Review 2026: Best Overall?
           </h1>
           <p className="text-gray-600 text-lg mb-4">
             After reviewing 12 pet insurance providers, Healthy Paws consistently tops our list for comprehensive coverage, fast claims, and unlimited annual benefits. Here's everything you need to know.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-            <span>📅 Updated April 2024</span>
+            <span>📅 Updated January 2026</span>
             <span>⏱️ 8 min read</span>
             <span className="text-amber-400">★★★★★ <span className="text-gray-500">4.9/5</span></span>
           </div>
