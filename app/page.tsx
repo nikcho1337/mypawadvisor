@@ -124,29 +124,36 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORY QUICK NAV */}
-      <section className="bg-white border-b border-gray-100 py-5 px-4">
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-2">
-          {[
-            { href: "/reviews", emoji: "🏆", label: "All Reviews" },
-            { href: "/reviews/kong-classic-dog-toy", emoji: "🐶", label: "Dog Toys" },
-            { href: "/reviews/furminator-deshedding-tool", emoji: "✂️", label: "Grooming" },
-            { href: "/reviews/petfusion-ultimate-dog-bed", emoji: "🛏️", label: "Dog Beds" },
-            { href: "/reviews/outward-hound-slow-feeder", emoji: "🥣", label: "Feeding" },
-            { href: "/reviews/cat-dancer-interactive-toy", emoji: "🐱", label: "Cat Toys" },
-            { href: "/reviews/rocco-roxie-stain-eliminator", emoji: "🧹", label: "Cleaning" },
-            { href: "/reviews/rabbitgoo-no-pull-dog-harness", emoji: "🦮", label: "Harnesses" },
-            { href: "/reviews/midwest-icrate-dog-crate", emoji: "🏠", label: "Crates" },
-            { href: "/insurance", emoji: "🛡️", label: "Insurance" },
-          ].map((cat) => (
-            <Link
-              key={cat.href}
-              href={cat.href}
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-full text-xs font-medium text-gray-700 hover:border-emerald-400 hover:text-emerald-700 hover:bg-emerald-50 transition-all whitespace-nowrap"
-            >
-              <span>{cat.emoji}</span>
-              <span>{cat.label}</span>
-            </Link>
-          ))}
+      <section className="bg-white border-b border-gray-100 py-4 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
+            {[
+              { href: "/reviews", emoji: "🏆", label: "All Reviews" },
+              { href: "/reviews/kong-classic-dog-toy", emoji: "🐶", label: "Dog Toys" },
+              { href: "/reviews/furminator-deshedding-tool", emoji: "✂️", label: "Grooming" },
+              { href: "/reviews/petfusion-ultimate-dog-bed", emoji: "🛏️", label: "Dog Beds" },
+              { href: "/reviews/outward-hound-slow-feeder", emoji: "🥣", label: "Feeding" },
+            ].map((cat) => (
+              <Link key={cat.href} href={cat.href}
+                className="flex items-center gap-1.5 px-4 py-2 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-emerald-400 hover:text-emerald-700 hover:bg-emerald-50 transition-all">
+                <span>{cat.emoji}</span><span>{cat.label}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { href: "/reviews/cat-dancer-interactive-toy", emoji: "🐱", label: "Cat Toys" },
+              { href: "/reviews/rocco-roxie-stain-eliminator", emoji: "🧹", label: "Cleaning" },
+              { href: "/reviews/rabbitgoo-no-pull-dog-harness", emoji: "🦮", label: "Harnesses" },
+              { href: "/reviews/midwest-icrate-dog-crate", emoji: "🏠", label: "Crates" },
+              { href: "/insurance", emoji: "🛡️", label: "Insurance" },
+            ].map((cat) => (
+              <Link key={cat.href} href={cat.href}
+                className="flex items-center gap-1.5 px-4 py-2 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-emerald-400 hover:text-emerald-700 hover:bg-emerald-50 transition-all">
+                <span>{cat.emoji}</span><span>{cat.label}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
