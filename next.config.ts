@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.midwesthomes4pets.com" },
       { protocol: "https", hostname: "images.litter-robot.com" },
       { protocol: "https", hostname: "ultra-k9-pro.com" },
+      { protocol: "https", hostname: "ultrak9pro.com" },
     ],
   },
 };

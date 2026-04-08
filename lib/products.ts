@@ -886,7 +886,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: "8,000+",
     price: "$49–$69",
-    heroImage: "https://ultra-k9-pro.com/assets/images/ultra-k9-pro-843x933.png",
+    heroImage: "https://ultrak9pro.com/statics/img/tsl-pin.png",
     heroImageAlt: "Ultra K9 Pro primal nutrient drops supplement bottle for dogs",
     metaTitle: "Ultra K9 Pro Review 2026 – Does This Dog Supplement Work?",
     metaDescription: "Honest Ultra K9 Pro review after 90 days of testing with 3 dogs. We break down every ingredient, the science behind primal nutrients, and whether it's worth the price.",
