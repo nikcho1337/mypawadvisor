@@ -124,32 +124,33 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORY QUICK NAV */}
-      <section className="bg-white border-b border-gray-100 py-4 px-4">
+      <section className="bg-gradient-to-b from-white to-gray-50 border-b border-gray-100 py-6 px-4">
         <div className="max-w-5xl mx-auto">
+          <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Browse by Category</p>
           <div className="flex flex-wrap justify-center gap-2 mb-2">
             {[
-              { href: "/reviews", label: "All Reviews", color: "bg-emerald-500 text-white" },
-              { href: "/reviews/kong-classic-dog-toy", label: "Dog Toys", color: "bg-amber-100 text-amber-800" },
-              { href: "/reviews/furminator-deshedding-tool", label: "Grooming", color: "bg-purple-100 text-purple-800" },
-              { href: "/reviews/petfusion-ultimate-dog-bed", label: "Dog Beds", color: "bg-blue-100 text-blue-800" },
-              { href: "/reviews/outward-hound-slow-feeder", label: "Feeding", color: "bg-orange-100 text-orange-800" },
+              { href: "/reviews", label: "🏆 All Reviews", color: "bg-emerald-500 hover:bg-emerald-400 text-white shadow-md shadow-emerald-200" },
+              { href: "/reviews/kong-classic-dog-toy", label: "🐶 Dog Toys", color: "bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 hover:border-amber-400 hover:shadow-sm" },
+              { href: "/reviews/furminator-deshedding-tool", label: "✂️ Grooming", color: "bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-200 hover:border-purple-400 hover:shadow-sm" },
+              { href: "/reviews/petfusion-ultimate-dog-bed", label: "🛏️ Dog Beds", color: "bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 hover:border-blue-400 hover:shadow-sm" },
+              { href: "/reviews/outward-hound-slow-feeder", label: "🥣 Feeding", color: "bg-orange-50 hover:bg-orange-100 text-orange-800 border border-orange-200 hover:border-orange-400 hover:shadow-sm" },
             ].map((cat) => (
               <Link key={cat.href} href={cat.href}
-                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all hover:opacity-80 ${cat.color}`}>
+                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 ${cat.color}`}>
                 {cat.label}
               </Link>
             ))}
           </div>
           <div className="flex flex-wrap justify-center gap-2">
             {[
-              { href: "/reviews/cat-dancer-interactive-toy", label: "Cat Toys", color: "bg-pink-100 text-pink-800" },
-              { href: "/reviews/rocco-roxie-stain-eliminator", label: "Cleaning", color: "bg-cyan-100 text-cyan-800" },
-              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "Harnesses", color: "bg-lime-100 text-lime-800" },
-              { href: "/reviews/midwest-icrate-dog-crate", label: "Crates", color: "bg-stone-200 text-stone-800" },
-              { href: "/insurance", label: "Insurance", color: "bg-indigo-100 text-indigo-800" },
+              { href: "/reviews/cat-dancer-interactive-toy", label: "🐱 Cat Toys", color: "bg-pink-50 hover:bg-pink-100 text-pink-800 border border-pink-200 hover:border-pink-400 hover:shadow-sm" },
+              { href: "/reviews/rocco-roxie-stain-eliminator", label: "🧹 Cleaning", color: "bg-cyan-50 hover:bg-cyan-100 text-cyan-800 border border-cyan-200 hover:border-cyan-400 hover:shadow-sm" },
+              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "🦮 Harnesses", color: "bg-lime-50 hover:bg-lime-100 text-lime-800 border border-lime-200 hover:border-lime-400 hover:shadow-sm" },
+              { href: "/reviews/midwest-icrate-dog-crate", label: "🏠 Crates", color: "bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200 hover:border-stone-400 hover:shadow-sm" },
+              { href: "/insurance", label: "🛡️ Insurance", color: "bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 hover:border-indigo-400 hover:shadow-sm" },
             ].map((cat) => (
               <Link key={cat.href} href={cat.href}
-                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all hover:opacity-80 ${cat.color}`}>
+                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 ${cat.color}`}>
                 {cat.label}
               </Link>
             ))}
