@@ -139,7 +139,7 @@ export default async function ReviewPage({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-4 rounded-xl text-base transition-colors w-full"
           >
-            <span>Check Current Price on Amazon</span>
+            <span>{product.affiliateCta ?? "Check Current Price on Amazon"}</span>
             <span>→</span>
           </a>
           <p className="text-xs text-gray-400 text-center mt-2">Affiliate link — we earn a small commission at no extra cost to you</p>
@@ -259,7 +259,7 @@ export default async function ReviewPage({
             rel="noopener noreferrer"
             className="inline-block bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-xl text-base transition-colors"
           >
-            Buy on Amazon →
+            {product.affiliateCta ?? "Buy on Amazon"} →
           </a>
           <p className="text-gray-500 text-xs mt-3">Affiliate link — no extra cost to you</p>
         </div>
