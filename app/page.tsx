@@ -157,12 +157,12 @@ export default function HomePage() {
                 href={`/reviews/${product.slug}`}
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all flex"
               >
-                <div className="w-28 shrink-0 bg-gray-100 overflow-hidden">
+                <div className="w-28 h-28 shrink-0 bg-gray-100 overflow-hidden flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={product.heroImage}
                     alt={product.heroImageAlt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-1"
                   />
                 </div>
                 <div className="p-4 flex-1 min-w-0">
