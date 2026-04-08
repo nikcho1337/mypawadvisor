@@ -453,7 +453,7 @@ export const products: Product[] = [
       { name: "Furhaven Orthopedic Dog Bed", reason: "More affordable, decent foam quality for the price", href: amazonSearchLink("Furhaven Orthopedic Dog Bed") },
     ],
     affiliateHref: amazonSearchLink("PetFusion Ultimate Dog Bed Memory Foam"),
-    featured: true,
+    featured: false,
   },
   {
     slug: "arm-hammer-dog-dental-kit",
