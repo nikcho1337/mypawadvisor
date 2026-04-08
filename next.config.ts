@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "d2edvletk84qg.cloudfront.net" },
       { protocol: "https", hostname: "catdancer.com" },
       { protocol: "https", hostname: "chuckanddons.com" },
+      { protocol: "https", hostname: "www.rabbitgoo.com" },
+      { protocol: "https", hostname: "www.midwesthomes4pets.com" },
+      { protocol: "https", hostname: "images.litter-robot.com" },
     ],
   },
 };
