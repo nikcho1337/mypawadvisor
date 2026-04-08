@@ -124,32 +124,32 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORY QUICK NAV */}
-      <section className="bg-gray-950 py-4 px-4">
+      <section className="bg-white border-b border-gray-100 py-4 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-1.5 mb-1.5">
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
             {[
-              { href: "/reviews", label: "All Reviews" },
-              { href: "/reviews/kong-classic-dog-toy", label: "Dog Toys" },
-              { href: "/reviews/furminator-deshedding-tool", label: "Grooming" },
-              { href: "/reviews/petfusion-ultimate-dog-bed", label: "Dog Beds" },
-              { href: "/reviews/outward-hound-slow-feeder", label: "Feeding" },
+              { href: "/reviews", label: "All Reviews", color: "bg-emerald-500 text-white" },
+              { href: "/reviews/kong-classic-dog-toy", label: "Dog Toys", color: "bg-amber-100 text-amber-800" },
+              { href: "/reviews/furminator-deshedding-tool", label: "Grooming", color: "bg-purple-100 text-purple-800" },
+              { href: "/reviews/petfusion-ultimate-dog-bed", label: "Dog Beds", color: "bg-blue-100 text-blue-800" },
+              { href: "/reviews/outward-hound-slow-feeder", label: "Feeding", color: "bg-orange-100 text-orange-800" },
             ].map((cat) => (
               <Link key={cat.href} href={cat.href}
-                className="px-4 py-1.5 bg-gray-800 hover:bg-emerald-500 text-gray-300 hover:text-white rounded text-xs font-semibold uppercase tracking-wide transition-all">
+                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all hover:opacity-80 ${cat.color}`}>
                 {cat.label}
               </Link>
             ))}
           </div>
-          <div className="flex flex-wrap justify-center gap-1.5">
+          <div className="flex flex-wrap justify-center gap-2">
             {[
-              { href: "/reviews/cat-dancer-interactive-toy", label: "Cat Toys" },
-              { href: "/reviews/rocco-roxie-stain-eliminator", label: "Cleaning" },
-              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "Harnesses" },
-              { href: "/reviews/midwest-icrate-dog-crate", label: "Crates" },
-              { href: "/insurance", label: "Insurance" },
+              { href: "/reviews/cat-dancer-interactive-toy", label: "Cat Toys", color: "bg-pink-100 text-pink-800" },
+              { href: "/reviews/rocco-roxie-stain-eliminator", label: "Cleaning", color: "bg-cyan-100 text-cyan-800" },
+              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "Harnesses", color: "bg-lime-100 text-lime-800" },
+              { href: "/reviews/midwest-icrate-dog-crate", label: "Crates", color: "bg-stone-200 text-stone-800" },
+              { href: "/insurance", label: "Insurance", color: "bg-indigo-100 text-indigo-800" },
             ].map((cat) => (
               <Link key={cat.href} href={cat.href}
-                className="px-4 py-1.5 bg-gray-800 hover:bg-emerald-500 text-gray-300 hover:text-white rounded text-xs font-semibold uppercase tracking-wide transition-all">
+                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all hover:opacity-80 ${cat.color}`}>
                 {cat.label}
               </Link>
             ))}
