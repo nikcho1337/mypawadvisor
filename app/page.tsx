@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { products, getFeaturedProducts } from "@/lib/products";
 
@@ -111,13 +110,12 @@ export default function HomePage() {
               href={`/reviews/${product.slug}`}
               className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
             >
-              <div className="relative h-48 bg-gray-100">
-                <Image
+              <div className="relative h-48 bg-gray-100 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={product.heroImage}
                   alt={product.heroImageAlt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute top-3 left-3">
@@ -159,13 +157,12 @@ export default function HomePage() {
                 href={`/reviews/${product.slug}`}
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all flex"
               >
-                <div className="relative w-28 shrink-0 bg-gray-100">
-                  <Image
+                <div className="w-28 shrink-0 bg-gray-100 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={product.heroImage}
                     alt={product.heroImageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="112px"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-4 flex-1 min-w-0">

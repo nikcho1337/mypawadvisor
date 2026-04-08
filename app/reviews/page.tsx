@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/products";
 
@@ -59,13 +58,12 @@ export default function ReviewsPage() {
                   href={`/reviews/${product.slug}`}
                   className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5"
                 >
-                  <div className="relative h-44 bg-gray-100">
-                    <Image
+                  <div className="relative h-44 bg-gray-100 overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={product.heroImage}
                       alt={product.heroImageAlt}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-3 left-3">
                       <span className={`text-xs font-bold px-2 py-1 rounded-full ${product.badgeColor}`}>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { products, getProductBySlug } from "@/lib/products";
 import { notFound } from "next/navigation";
@@ -103,14 +102,13 @@ export default async function ReviewPage({
         </header>
 
         {/* HERO IMAGE */}
-        <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden mb-8 bg-gray-100">
-          <Image
+        <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden mb-8 bg-gray-100">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={product.heroImage}
             alt={product.heroImageAlt}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 896px"
+            className="w-full h-full object-cover"
+            loading="eager"
           />
         </div>
 
