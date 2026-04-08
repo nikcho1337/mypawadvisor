@@ -102,12 +102,12 @@ export default async function ReviewPage({
         </header>
 
         {/* HERO IMAGE */}
-        <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden mb-8 bg-gray-100">
+        <div className="w-full rounded-2xl overflow-hidden mb-8 bg-gray-50 flex items-center justify-center" style={{maxHeight: "420px"}}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.heroImage}
             alt={product.heroImageAlt}
-            className="w-full h-full object-cover"
+            className="max-h-[420px] w-auto max-w-full object-contain p-4"
             loading="eager"
           />
         </div>
