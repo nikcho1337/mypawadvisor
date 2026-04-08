@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/insurance/embrace-review`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/cats`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/blog/best-pet-products-amazon`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/blog/best-dog-food-for-golden-retrievers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/blog/best-dog-food-for-german-shepherds`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/blog/best-cat-food`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

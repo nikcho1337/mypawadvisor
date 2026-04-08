@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-pet-products-amazon",
+    title: "Best Pet Products on Amazon in 2026 – Top 8 Picks",
+    excerpt: "We filtered through millions of Amazon reviews to find the 8 best pet products for dogs and cats — toys, grooming tools, beds, slow feeders, odor eliminators, and more.",
+    category: "Amazon Picks",
+    readTime: "6 min read",
+    date: "April 8, 2026",
+  },
+  {
     slug: "best-dog-food-for-golden-retrievers",
     title: "Best Dog Food for Golden Retrievers in 2026 (Vet-Approved)",
     excerpt: "Golden Retrievers are prone to heart disease, hip dysplasia, and obesity. We reviewed 18 formulas to find the best foods that actively address these health concerns.",
@@ -51,6 +59,7 @@ const posts = [
 ];
 
 const categoryColors: Record<string, string> = {
+  "Amazon Picks": "bg-orange-100 text-orange-700",
   "Dog Food": "bg-amber-100 text-amber-700",
   "Cat Food": "bg-purple-100 text-purple-700",
   "Pet Insurance": "bg-emerald-100 text-emerald-700",
