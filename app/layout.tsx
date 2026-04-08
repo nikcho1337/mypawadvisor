@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mypawadvisor.com"),
   openGraph: { siteName: "MyPawAdvisor", type: "website", locale: "en_US" },
   robots: { index: true, follow: true },
+  alternates: {
+    types: {
+      "application/rss+xml": "https://mypawadvisor.com/feed.xml",
+    },
+  },
 };
 
 const navLinks = [
