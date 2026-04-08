@@ -66,31 +66,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CATEGORY QUICK NAV */}
-      <section className="bg-white border-b border-gray-100 py-5 px-4">
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-3">
-          {[
-            { href: "/reviews", emoji: "🏆", label: "All Reviews" },
-            { href: "/reviews/kong-classic-dog-toy", emoji: "🐶", label: "Dog Toys" },
-            { href: "/reviews/furminator-deshedding-tool", emoji: "✂️", label: "Grooming" },
-            { href: "/reviews/petfusion-ultimate-dog-bed", emoji: "🛏️", label: "Dog Beds" },
-            { href: "/reviews/outward-hound-slow-feeder", emoji: "🥣", label: "Feeding" },
-            { href: "/reviews/cat-dancer-interactive-toy", emoji: "🐱", label: "Cat Toys" },
-            { href: "/reviews/rocco-roxie-stain-eliminator", emoji: "🧹", label: "Cleaning" },
-            { href: "/insurance", emoji: "🛡️", label: "Insurance" },
-          ].map((cat) => (
-            <Link
-              key={cat.href}
-              href={cat.href}
-              className="flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-emerald-400 hover:text-emerald-700 hover:bg-emerald-50 transition-all"
-            >
-              <span>{cat.emoji}</span>
-              <span>{cat.label}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* ULTRA K9 PRO FUNNEL BANNER */}
       <section className="bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200 py-12 px-4">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
@@ -145,6 +120,33 @@ export default function HomePage() {
             </div>
             <p className="text-xs text-gray-400 mt-3">Affiliate link — we earn a commission at no extra cost to you</p>
           </div>
+        </div>
+      </section>
+
+      {/* CATEGORY QUICK NAV */}
+      <section className="bg-white border-b border-gray-100 py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-2">
+          {[
+            { href: "/reviews", emoji: "🏆", label: "All Reviews" },
+            { href: "/reviews/kong-classic-dog-toy", emoji: "🐶", label: "Dog Toys" },
+            { href: "/reviews/furminator-deshedding-tool", emoji: "✂️", label: "Grooming" },
+            { href: "/reviews/petfusion-ultimate-dog-bed", emoji: "🛏️", label: "Dog Beds" },
+            { href: "/reviews/outward-hound-slow-feeder", emoji: "🥣", label: "Feeding" },
+            { href: "/reviews/cat-dancer-interactive-toy", emoji: "🐱", label: "Cat Toys" },
+            { href: "/reviews/rocco-roxie-stain-eliminator", emoji: "🧹", label: "Cleaning" },
+            { href: "/reviews/rabbitgoo-no-pull-dog-harness", emoji: "🦮", label: "Harnesses" },
+            { href: "/reviews/midwest-icrate-dog-crate", emoji: "🏠", label: "Crates" },
+            { href: "/insurance", emoji: "🛡️", label: "Insurance" },
+          ].map((cat) => (
+            <Link
+              key={cat.href}
+              href={cat.href}
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-full text-xs font-medium text-gray-700 hover:border-emerald-400 hover:text-emerald-700 hover:bg-emerald-50 transition-all whitespace-nowrap"
+            >
+              <span>{cat.emoji}</span>
+              <span>{cat.label}</span>
+            </Link>
+          ))}
         </div>
       </section>
 
