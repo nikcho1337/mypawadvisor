@@ -34,6 +34,15 @@ const navLinks = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CKF73GJ6Z" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-4CKF73GJ6Z');
+        `}} />
+      </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
 
         {/* TOP BAR */}
