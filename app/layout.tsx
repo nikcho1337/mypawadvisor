@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
 
         {/* FOOTER */}
-        <footer className="bg-gray-950 text-gray-400 mt-20">
+        <footer className="bg-gray-950 text-gray-400">
           <div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <p className="text-white font-extrabold text-lg mb-3">🐾 MyPawAdvisor</p>
