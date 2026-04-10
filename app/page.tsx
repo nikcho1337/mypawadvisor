@@ -376,7 +376,7 @@ export default function HomePage() {
             {[
               {
                 href: "/blog/best-dog-food-for-golden-retrievers",
-                img: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&fit=crop&crop=bottom",
+                img: "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=600&q=80&fit=crop",
                 imgAlt: "Golden Retriever dog",
                 tag: "Dog Food",
                 tagBg: "bg-amber-500",
@@ -418,7 +418,7 @@ export default function HomePage() {
                   <img
                     src={post.img}
                     alt={post.imgAlt}
-                    className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${post.imgAlt === "Golden Retriever dog" ? "object-bottom" : "object-center"}`}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
                   <span className={`absolute top-3 left-3 text-xs font-bold text-white px-2.5 py-1 rounded-full shadow ${post.tagBg}`}>{post.tag}</span>
