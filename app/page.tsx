@@ -278,7 +278,7 @@ export default function HomePage() {
             <div>
               <div className="w-10 h-1 bg-emerald-500 rounded-full mb-3" />
               <h2 className="text-3xl font-extrabold text-gray-900">From the Blog</h2>
-              <p className="text-gray-500 text-sm mt-1">Expert guides written for real pet owners</p>
+              <p className="text-gray-500 text-sm mt-1">Expert guides written for pet owners</p>
             </div>
             <Link href="/blog" className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors hidden md:inline-flex items-center gap-1">
               View all articles →
