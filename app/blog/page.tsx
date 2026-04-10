@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-dog-food-for-labrador-retrievers",
+    title: "Best Dog Food for Labrador Retrievers in 2026 (Vet-Approved)",
+    excerpt:
+      "Labs carry a genetic mutation that makes them feel perpetually hungry — making obesity, joint damage, and bloat real risks. We reviewed 22 formulas to find the best foods that keep Labradors lean, active, and healthy.",
+    category: "Dog Food",
+    readTime: "8 min read",
+    date: "April 10, 2026",
+  },
+  {
     slug: "best-pet-products-amazon",
     title: "Best Pet Products on Amazon in 2026 – Top 8 Picks",
     excerpt: "We filtered through millions of Amazon reviews to find the 8 best pet products for dogs and cats — toys, grooming tools, beds, slow feeders, odor eliminators, and more.",
