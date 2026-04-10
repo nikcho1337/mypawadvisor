@@ -270,108 +270,140 @@ export default function HomePage() {
       </section>
 
       {/* FROM THE BLOG */}
-      <section className="bg-gray-950 py-16 px-4">
+      <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-5xl mx-auto">
 
           {/* Section header */}
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-emerald-400 font-semibold text-xs uppercase tracking-widest mb-2">Expert Guides & Reviews</p>
-              <h2 className="text-3xl font-extrabold text-white">From the Blog</h2>
+              <div className="w-10 h-1 bg-emerald-500 rounded-full mb-3" />
+              <h2 className="text-3xl font-extrabold text-gray-900">From the Blog</h2>
+              <p className="text-gray-500 text-sm mt-1">Expert guides written for real pet owners</p>
             </div>
-            <Link href="/blog" className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors hidden md:block">
+            <Link href="/blog" className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors hidden md:inline-flex items-center gap-1">
               View all articles →
             </Link>
           </div>
 
           {/* Featured post (large) + 2 side posts */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 mb-5">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
 
             {/* Featured large card */}
             <Link
               href="/blog/best-dog-food-for-senior-dogs"
-              className="group lg:col-span-3 bg-gray-800 border border-gray-700 rounded-2xl p-7 hover:border-emerald-500 hover:bg-gray-750 transition-all flex flex-col justify-between min-h-[260px]"
+              className="group lg:col-span-3 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100"
             >
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2.5 py-1 rounded-full">Dog Food</span>
-                  <span className="text-xs text-gray-500">Apr 10, 2026</span>
-                  <span className="text-xs text-gray-500">· 9 min read</span>
+              <div className="relative h-52 overflow-hidden bg-gray-100">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&fit=crop"
+                  alt="Senior dog resting peacefully"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <span className="absolute top-4 left-4 text-xs font-bold text-white bg-amber-500 px-3 py-1 rounded-full shadow">Dog Food</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-3 text-xs text-gray-400 mb-3">
+                  <span>Apr 10, 2026</span>
+                  <span>·</span>
+                  <span>9 min read</span>
                 </div>
-                <h3 className="text-xl font-extrabold text-white leading-snug mb-3 group-hover:text-emerald-400 transition-colors">
+                <h3 className="text-xl font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-emerald-600 transition-colors">
                   Best Dog Food for Senior Dogs in 2026 — Vet-Approved
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  After age 7, dogs face muscle loss, joint deterioration, and cognitive decline. We reviewed 25 senior formulas to find the ones that actively fight these changes — not just slap a "senior" label on the bag.
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  After age 7, dogs face muscle loss, joint deterioration, and cognitive decline. We reviewed 25 senior formulas to find the ones that genuinely deliver.
                 </p>
-              </div>
-              <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
-                Read article <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+                <span className="text-sm font-semibold text-emerald-600 group-hover:underline">
+                  Read article →
+                </span>
               </div>
             </Link>
 
             {/* Two stacked side cards */}
-            <div className="lg:col-span-2 flex flex-col gap-5">
+            <div className="lg:col-span-2 flex flex-col gap-6">
               <Link
                 href="/blog/best-dog-food-for-labrador-retrievers"
-                className="group bg-gray-800 border border-gray-700 rounded-2xl p-6 hover:border-emerald-500 transition-all flex flex-col justify-between flex-1"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100 flex-1"
               >
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2.5 py-1 rounded-full">Dog Food</span>
-                    <span className="text-xs text-gray-500">Apr 10, 2026</span>
-                  </div>
-                  <h3 className="text-base font-bold text-white leading-snug mb-2 group-hover:text-emerald-400 transition-colors">
+                <div className="relative h-36 overflow-hidden bg-gray-100">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&q=80&fit=crop"
+                    alt="Yellow Labrador Retriever"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                  <span className="absolute top-3 left-3 text-xs font-bold text-white bg-amber-500 px-2.5 py-1 rounded-full shadow">Dog Food</span>
+                </div>
+                <div className="p-4">
+                  <p className="text-xs text-gray-400 mb-2">Apr 10, 2026 · 8 min read</p>
+                  <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 group-hover:text-emerald-600 transition-colors">
                     Best Dog Food for Labrador Retrievers 2026
                   </h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">Labs carry a gene that makes them feel permanently hungry. The right food manages obesity, joints, and bloat risk.</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">Labs carry a gene that makes them feel permanently hungry. The right food manages obesity, joints, and bloat.</p>
                 </div>
-                <span className="mt-4 text-emerald-400 text-xs font-semibold">Read article →</span>
               </Link>
 
               <Link
                 href="/blog/pet-insurance-worth-it"
-                className="group bg-gray-800 border border-gray-700 rounded-2xl p-6 hover:border-emerald-500 transition-all flex flex-col justify-between flex-1"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100 flex-1"
               >
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2.5 py-1 rounded-full">Pet Insurance</span>
-                    <span className="text-xs text-gray-500">Jan 5, 2026</span>
-                  </div>
-                  <h3 className="text-base font-bold text-white leading-snug mb-2 group-hover:text-emerald-400 transition-colors">
+                <div className="relative h-36 overflow-hidden bg-gray-100">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=600&q=80&fit=crop"
+                    alt="Dog at veterinary clinic"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                  <span className="absolute top-3 left-3 text-xs font-bold text-white bg-emerald-600 px-2.5 py-1 rounded-full shadow">Pet Insurance</span>
+                </div>
+                <div className="p-4">
+                  <p className="text-xs text-gray-400 mb-2">Jan 5, 2026 · 9 min read</p>
+                  <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 group-hover:text-emerald-600 transition-colors">
                     Is Pet Insurance Actually Worth It?
                   </h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">We crunched 5 years of vet cost data vs. premiums. The honest answer — including when it doesn't make sense.</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">We crunched 5 years of vet cost data vs. premiums. The honest answer — including when it doesn't make sense.</p>
                 </div>
-                <span className="mt-4 text-emerald-400 text-xs font-semibold">Read article →</span>
               </Link>
             </div>
           </div>
 
           {/* Bottom row — 3 smaller cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 href: "/blog/best-dog-food-for-golden-retrievers",
+                img: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&fit=crop",
+                imgAlt: "Golden Retriever dog",
                 tag: "Dog Food",
-                tagColor: "text-amber-400 bg-amber-400/10 border-amber-400/20",
+                tagBg: "bg-amber-500",
                 date: "Jan 20, 2026",
+                read: "8 min",
                 title: "Best Dog Food for Golden Retrievers 2026",
-                excerpt: "Vet-approved picks covering heart health, hip dysplasia, and Golden's tendency to overeat.",
+                excerpt: "Vet-approved picks covering heart health, hip dysplasia, and weight management.",
               },
               {
                 href: "/blog/best-dog-food-for-german-shepherds",
+                img: "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600&q=80&fit=crop",
+                imgAlt: "German Shepherd dog",
                 tag: "Dog Food",
-                tagColor: "text-amber-400 bg-amber-400/10 border-amber-400/20",
+                tagBg: "bg-amber-500",
                 date: "Jan 18, 2026",
+                read: "7 min",
                 title: "Best Dog Food for German Shepherds 2026",
-                excerpt: "German Shepherds have sensitive digestion and are prone to hip dysplasia. The right diet targets both.",
+                excerpt: "Sensitive digestion and hip dysplasia are common in GSDs. The right diet targets both directly.",
               },
               {
                 href: "/blog/best-cat-food",
+                img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80&fit=crop",
+                imgAlt: "Cat eating food",
                 tag: "Cat Food",
-                tagColor: "text-purple-400 bg-purple-400/10 border-purple-400/20",
+                tagBg: "bg-purple-500",
                 date: "Jan 15, 2026",
+                read: "8 min",
                 title: "Best Cat Food in 2026: Top Picks for Every Cat",
                 excerpt: "We reviewed 25+ wet and dry brands to find foods that actually meet a cat's nutritional needs.",
               },
@@ -379,24 +411,32 @@ export default function HomePage() {
               <Link
                 key={post.href}
                 href={post.href}
-                className="group bg-gray-800 border border-gray-700 rounded-2xl p-5 hover:border-emerald-500 transition-all"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100"
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className={`text-xs font-bold border px-2.5 py-1 rounded-full ${post.tagColor}`}>{post.tag}</span>
-                  <span className="text-xs text-gray-500">{post.date}</span>
+                <div className="relative h-40 overflow-hidden bg-gray-100">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.img}
+                    alt={post.imgAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                  <span className={`absolute top-3 left-3 text-xs font-bold text-white px-2.5 py-1 rounded-full shadow ${post.tagBg}`}>{post.tag}</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-snug mb-2 group-hover:text-emerald-400 transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{post.excerpt}</p>
-                <span className="mt-4 inline-block text-emerald-400 text-xs font-semibold">Read article →</span>
+                <div className="p-4">
+                  <p className="text-xs text-gray-400 mb-2">{post.date} · {post.read} read</p>
+                  <h3 className="text-sm font-bold text-gray-900 leading-snug mb-2 group-hover:text-emerald-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">{post.excerpt}</p>
+                </div>
               </Link>
             ))}
           </div>
 
-          {/* Mobile "all articles" link */}
-          <div className="mt-8 text-center md:hidden">
-            <Link href="/blog" className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+          {/* Mobile / bottom CTA */}
+          <div className="mt-8 text-center">
+            <Link href="/blog" className="inline-block text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors md:hidden">
               View all articles →
             </Link>
           </div>
