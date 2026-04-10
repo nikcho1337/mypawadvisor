@@ -269,22 +269,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* INSURANCE CTA */}
-      <section className="bg-emerald-600 text-white py-14 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-3">Don't Forget to Protect Your Pet</h2>
-          <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">
-            The right product keeps your pet happy. Pet insurance keeps them healthy when the unexpected happens. Compare top plans — free, in 60 seconds.
-          </p>
-          <Link
-            href="/insurance"
-            className="inline-block bg-white text-emerald-700 font-bold px-8 py-4 rounded-full hover:bg-emerald-50 transition-colors text-base"
-          >
-            Compare Pet Insurance Plans →
-          </Link>
-        </div>
-      </section>
-
       {/* FROM THE BLOG */}
       <section className="bg-gray-950 py-16 px-4">
         <div className="max-w-5xl mx-auto">
@@ -417,6 +401,22 @@ export default function HomePage() {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* INSURANCE CTA */}
+      <section className="bg-emerald-600 text-white py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold mb-3">Don't Forget to Protect Your Pet</h2>
+          <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">
+            The right product keeps your pet happy. Pet insurance keeps them healthy when the unexpected happens. Compare top plans — free, in 60 seconds.
+          </p>
+          <Link
+            href="/insurance"
+            className="inline-block bg-white text-emerald-700 font-bold px-8 py-4 rounded-full hover:bg-emerald-50 transition-colors text-base"
+          >
+            Compare Pet Insurance Plans →
+          </Link>
         </div>
       </section>
     </>
