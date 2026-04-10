@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-dog-food-for-senior-dogs",
+    title: "Best Dog Food for Senior Dogs in 2026 (Vet-Approved)",
+    excerpt:
+      "After age 7, dogs face muscle loss, joint deterioration, cognitive decline, and digestive slowdown. The right food actively fights all of these. We reviewed 25 senior formulas to find the ones that genuinely deliver.",
+    category: "Dog Food",
+    readTime: "9 min read",
+    date: "April 10, 2026",
+  },
+  {
     slug: "best-dog-food-for-labrador-retrievers",
     title: "Best Dog Food for Labrador Retrievers in 2026 (Vet-Approved)",
     excerpt:
