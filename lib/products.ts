@@ -949,8 +949,8 @@ export const products: Product[] = [
   },
   {
     slug: "best-automatic-cat-litter-box",
-    name: "Best Automatic Self-Cleaning Litter Boxes of 2026",
-    shortName: "Auto Litter Boxes",
+    name: "Automatic Self-Cleaning Cat Litter Box",
+    shortName: "Self-Cleaning Litter Box",
     badge: "Best Cat Litter Box",
     badgeColor: "bg-purple-100 text-purple-800",
     category: "cats",
@@ -1026,8 +1026,8 @@ export const products: Product[] = [
   },
   {
     slug: "best-dog-joint-supplements",
-    name: "Best Dog Joint Supplements of 2026",
-    shortName: "Dog Joint Supplements",
+    name: "Dog Hip & Joint Supplement Chews",
+    shortName: "Dog Joint Chews",
     badge: "Best Joint Supplement",
     badgeColor: "bg-emerald-100 text-emerald-800",
     category: "dogs",
