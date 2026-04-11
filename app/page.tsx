@@ -41,7 +41,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/insurance"
-                className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold px-6 py-3 rounded-full transition-colors"
+                className="bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-semibold px-6 py-3 rounded-full transition-colors backdrop-blur-sm"
               >
                 Pet Insurance Guide
               </Link>
