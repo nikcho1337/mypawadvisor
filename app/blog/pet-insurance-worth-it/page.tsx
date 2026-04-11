@@ -45,6 +45,16 @@ export default function PetInsuranceWorthItPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=1200&q=80&auto=format&fit=crop"
+            alt="Dog at veterinary clinic being examined by vet"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* VERDICT */}
         <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">📋 Short Answer</h2>

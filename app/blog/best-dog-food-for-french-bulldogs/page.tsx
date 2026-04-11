@@ -51,6 +51,16 @@ export default function FrenchBulldogFoodPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop"
+            alt="French Bulldog with adorable face and bat ears"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* QUICK ANSWER */}
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">🐶 Quick Answer</h2>

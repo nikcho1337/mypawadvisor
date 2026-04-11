@@ -194,6 +194,16 @@ export default function BestPetProductsAmazonPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&q=80&auto=format&fit=crop"
+            alt="Dog playing with pet products and toys"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* QUICK ANSWER BOX */}
         <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-3">🏆 Quick Answer: Best Pet Products on Amazon</h2>

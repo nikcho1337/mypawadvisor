@@ -113,6 +113,16 @@ export default function GoldenRetrieverFoodPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop"
+            alt="Golden Retriever with beautiful golden coat outdoors"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* QUICK ANSWER */}
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Food for Golden Retrievers 2026</h2>

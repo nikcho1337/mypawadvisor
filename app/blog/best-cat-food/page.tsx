@@ -65,6 +65,16 @@ export default function BestCatFoodPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&q=80&auto=format&fit=crop"
+            alt="Beautiful cat with bright eyes looking at camera"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Cat Foods 2026</h2>
           <ul className="text-sm space-y-1 text-gray-700">

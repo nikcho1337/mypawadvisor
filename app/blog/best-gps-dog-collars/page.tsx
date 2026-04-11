@@ -169,6 +169,16 @@ export default function BestGPSDogCollarsPage() {
           </div>
         </header>
 
+        {/* HERO IMAGE */}
+        <div className="rounded-2xl overflow-hidden mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80&auto=format&fit=crop"
+            alt="Dog running outdoors with collar in nature"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* QUICK ANSWER */}
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best GPS Dog Collars 2026</h2>
