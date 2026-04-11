@@ -1,4 +1,4 @@
-export const AMAZON_TAG = "chloe0208-20";
+export const AMAZON_TAG = "pawadvisor-20";
 
 export function amazonSearchLink(query: string) {
   return `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${AMAZON_TAG}`;

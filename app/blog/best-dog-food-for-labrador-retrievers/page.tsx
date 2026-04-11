@@ -47,7 +47,7 @@ const picks = [
       "Excellent stool quality",
     ],
     cons: ["Premium price point", "Contains some by-products"],
-    affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Labrador+Retriever+Adult&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Labrador+Retriever+Adult&tag=pawadvisor-20",
   },
   {
     rank: 2,
@@ -66,7 +66,7 @@ const picks = [
       "No artificial colors, flavors, or preservatives",
     ],
     cons: ["Not grain-free", "Some picky Labs may resist the taste"],
-    affiliateHref: "https://www.amazon.com/s?k=Hills+Science+Diet+Large+Breed+Adult&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Hills+Science+Diet+Large+Breed+Adult&tag=pawadvisor-20",
   },
   {
     rank: 3,
@@ -85,7 +85,7 @@ const picks = [
       "Research-backed formula",
     ],
     cons: ["Contains corn and wheat", "Higher in calories — portion control needed"],
-    affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Large+Breed+Adult+Chicken+Rice&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Large+Breed+Adult+Chicken+Rice&tag=pawadvisor-20",
   },
   {
     rank: 4,
@@ -104,7 +104,7 @@ const picks = [
       "No artificial additives",
     ],
     cons: ["Expensive for large-breed portions", "Transition slowly to avoid GI upset"],
-    affiliateHref: "https://www.amazon.com/s?k=Wellness+Core+Large+Breed+Adult&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Wellness+Core+Large+Breed+Adult&tag=pawadvisor-20",
   },
 ];
 

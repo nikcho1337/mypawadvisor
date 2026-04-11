@@ -48,7 +48,7 @@ const picks = [
       "No artificial colors or preservatives",
     ],
     cons: ["Not grain-free", "Some dogs find kibble size too small"],
-    affiliateHref: "https://www.amazon.com/s?k=Hills+Science+Diet+Adult+7+Small+Bites&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Hills+Science+Diet+Adult+7+Small+Bites&tag=pawadvisor-20",
   },
   {
     rank: 2,
@@ -67,7 +67,7 @@ const picks = [
       "EPA for joint mobility",
     ],
     cons: ["Higher price for a mainstream brand", "Only available in chicken flavor"],
-    affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Bright+Mind+Adult+7&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Bright+Mind+Adult+7&tag=pawadvisor-20",
   },
   {
     rank: 3,
@@ -86,7 +86,7 @@ const picks = [
       "Highly digestible formula",
     ],
     cons: ["Only for small breeds", "Premium price"],
-    affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Aging+12+Small+Dog&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Aging+12+Small+Dog&tag=pawadvisor-20",
   },
   {
     rank: 4,
@@ -105,7 +105,7 @@ const picks = [
       "Good for picky senior eaters",
     ],
     cons: ["LifeSource Bits can be inconsistent batch to batch", "Not WSAVA-approved"],
-    affiliateHref: "https://www.amazon.com/s?k=Blue+Buffalo+Life+Protection+Healthy+Aging&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Blue+Buffalo+Life+Protection+Healthy+Aging&tag=pawadvisor-20",
   },
   {
     rank: 5,
@@ -124,7 +124,7 @@ const picks = [
       "Omega-rich for coat health",
     ],
     cons: ["Expensive", "Transition slowly to avoid GI upset"],
-    affiliateHref: "https://www.amazon.com/s?k=Wellness+Complete+Health+Senior&tag=chloe0208-20",
+    affiliateHref: "https://www.amazon.com/s?k=Wellness+Complete+Health+Senior&tag=pawadvisor-20",
   },
 ];
 

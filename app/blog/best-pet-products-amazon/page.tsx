@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ["best pet products amazon", "amazon dog products", "amazon cat products", "best dog toys amazon", "best pet accessories 2026"],
 };
 
-const TAG = "chloe0208-20";
+const TAG = "pawadvisor-20";
 const amz = (query: string) =>
   `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${TAG}`;
 
