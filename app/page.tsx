@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="flex-shrink-0">
             <div className="grid grid-cols-2 gap-3 w-64">
               {[
-                { emoji: "🐕", stat: "12", label: "Products Tested" },
+                { emoji: "🐕", stat: "18", label: "Products Tested" },
                 { emoji: "⭐", stat: "4.6", label: "Avg Rating" },
                 { emoji: "📝", stat: "10K+", label: "Reviews Read" },
                 { emoji: "✅", stat: "100%", label: "Honest Picks" },
