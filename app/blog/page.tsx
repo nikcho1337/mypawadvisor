@@ -9,6 +9,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-gps-dog-collars",
+    title: "Best GPS Dog Collars in 2026 (Tested & Reviewed)",
+    excerpt:
+      "One in three dogs will go missing in their lifetime. Modern GPS dog collars offer real-time tracking, virtual fences, health monitoring, and battery lives measured in months. We ranked the top picks for every dog and lifestyle.",
+    category: "Dog Tech",
+    readTime: "8 min read",
+    date: "April 11, 2026",
+  },
+  {
+    slug: "best-dog-probiotics",
+    title: "Best Dog Probiotics in 2026 (Vet-Recommended for Gut Health)",
+    excerpt:
+      "Gut health is the fastest-growing category in pet wellness. A dog's gut microbiome influences digestion, immunity, skin, mood, and longevity. We ranked the best dog probiotics by strain diversity, clinical evidence, and value.",
+    category: "Dog Health",
+    readTime: "7 min read",
+    date: "April 11, 2026",
+  },
+  {
     slug: "best-dog-dental-chews",
     title: "Best Dog Dental Chews in 2026 (Vet-Approved for Clean Teeth)",
     excerpt:
