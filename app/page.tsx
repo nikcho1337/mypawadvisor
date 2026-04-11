@@ -170,12 +170,18 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {featured.map((product) => (
+        <div className="grid grid-cols-6 gap-5">
+          {featured.map((product, index) => {
+            const orphans = featured.length % 3;
+            const firstOrphanIndex = featured.length - orphans;
+            let colStartClass = "";
+            if (orphans === 1 && index === firstOrphanIndex) colStartClass = "lg:col-start-3";
+            else if (orphans === 2 && index === firstOrphanIndex) colStartClass = "lg:col-start-2";
+            return (
             <Link
               key={product.slug}
               href={`/reviews/${product.slug}`}
-              className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
+              className={`col-span-6 md:col-span-3 lg:col-span-2 ${colStartClass} group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1`}
             >
               <div className="relative h-48 bg-gray-100 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -203,7 +209,8 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 
