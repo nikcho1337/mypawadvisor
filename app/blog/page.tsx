@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-dog-dental-chews",
+    title: "Best Dog Dental Chews in 2026 (Vet-Approved for Clean Teeth)",
+    excerpt:
+      "80% of dogs show signs of dental disease by age 3 — yet most owners skip brushing entirely. The right dental chew given daily can reduce plaque by up to 60%. We ranked the best VOHC-accepted options on the market.",
+    category: "Dog Health",
+    readTime: "7 min read",
+    date: "April 11, 2026",
+  },
+  {
     slug: "best-dog-food-for-senior-dogs",
     title: "Best Dog Food for Senior Dogs in 2026 (Vet-Approved)",
     excerpt:
