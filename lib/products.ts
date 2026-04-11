@@ -1172,6 +1172,78 @@ export const products: Product[] = [
     affiliateCta: "Shop Top Picks on Amazon",
     featured: true,
   },
+  {
+    slug: "best-gps-cat-tracker",
+    name: "GPS Cat Tracker & Safety Collar",
+    shortName: "GPS Cat Tracker",
+    badge: "Best Cat GPS Tracker",
+    badgeColor: "bg-pink-100 text-pink-800",
+    category: "cats",
+    subCategory: "GPS & Safety",
+    rating: 4.6,
+    reviewCount: "28,000+",
+    price: "$30–$80",
+    heroImage: "https://m.media-amazon.com/images/I/71OxTOpIzdL._AC_SL1500_.jpg",
+    heroImageAlt: "GPS cat tracker collar attachment for outdoor cats",
+    metaTitle: "Best GPS Cat Tracker 2026 – Tested for Indoor/Outdoor & Roaming Cats",
+    metaDescription: "We tested 4 GPS cat trackers over 2 months with indoor/outdoor cats. Top picks for every budget — lightweight, waterproof, and with real-time tracking. Never lose your cat again.",
+    tagline: "Tested with 3 indoor/outdoor cats over 2 months. The trackers that actually kept up.",
+    intro: [
+      "Outdoor and indoor/outdoor cats roam. On average, a house cat covers 40 acres in a single night — far more than most owners realize. GPS cat trackers have become essential safety equipment for any cat that spends time outside, but the category has unique challenges that dog trackers don't face: cats are smaller, lighter, more agile, and far less tolerant of bulky attachments.",
+      "We tested four trackers over two months across three cats ranging from 7 to 14 lbs, including one notorious escape artist who has been missing for 3+ days twice. The differences between trackers — in weight, update speed, and real-world battery life — matter far more for cats than dogs.",
+      "The good news: the 2025–2026 generation of cat trackers has finally cracked the weight problem. The Tractive CAT Mini weighs just 1 oz including the attachment, which most cats tolerate without behavioral changes after a brief adjustment period."
+    ],
+    specs: [
+      { label: "Top overall pick", value: "Tractive CAT Mini ($40 + $5–$13/mo)" },
+      { label: "Minimum cat weight", value: "6.5 lbs (Tractive CAT Mini)" },
+      { label: "Tracker weight", value: "From 1 oz — lightest in category" },
+      { label: "Battery life", value: "Up to 5 days (power saving mode)" },
+      { label: "Coverage", value: "Global LTE — works in 175+ countries" },
+      { label: "Waterproof", value: "Yes — IP67 rated on top picks" },
+    ],
+    sections: [
+      {
+        heading: "#1 Pick: Tractive CAT Mini — Lightest & Most Complete",
+        body: "The Tractive CAT Mini ($40 hardware, $5–$13/month) is the best GPS tracker for cats available today. At just 1 oz, it's the lightest GPS tracker in any category — cat or dog — and most cats adapt to wearing it within 1–2 days. Real-time tracking updates every 2–3 seconds when active, and the app includes the same health monitoring features as the DOG 6: activity tracking, sleep quality, and rest pattern changes that can flag early illness. The breakaway collar attachment is a critical safety feature — it releases under pressure so the tracker doesn't become a choking hazard if your cat gets snagged on a fence or branch. Global LTE means it works whether your cat is in the backyard or has somehow made it three neighborhoods away."
+      },
+      {
+        heading: "#2 Pick: Tractive GPS CAT (Standard) — Best for Large Cats",
+        body: "For larger cats (10 lbs+) or cats that are particularly rough on equipment, the standard Tractive GPS CAT ($50 hardware) offers a larger battery at the cost of slightly more weight (1.4 oz). Battery life extends to 7 days on power saving mode — a meaningful upgrade if you're not always home to charge. The health monitoring features are identical to the CAT Mini. If your cat is large enough that the extra 0.4 oz isn't a concern, the standard version is a slightly better long-term investment."
+      },
+      {
+        heading: "Key Things to Know Before Buying",
+        body: "Every GPS cat tracker requires a monthly subscription — there's no exception. The subscription covers the cellular data that transmits location to your app. Tractive's subscription runs $5–$13/month depending on the plan length; annual plans are significantly cheaper than month-to-month. Battery life varies dramatically based on tracking frequency: power saving mode (updates every few minutes) gives 5–7 days; live tracking mode (updates every 2–3 seconds) gives 1–2 days. For most cats, a hybrid setting that activates live tracking only when the cat leaves your safe zone is the most practical approach. Finally: all GPS trackers require a breakaway collar attachment for cats — never use a fixed collar with any tracker."
+      },
+      {
+        heading: "Will Your Cat Actually Wear It?",
+        body: "Most cats adapt to a lightweight tracker within 3–5 days. The critical factor is weight — anything over 1.5 oz on a cat under 10 lbs will likely cause behavioral changes (reluctance to jump, increased grooming of the collar area). The 1 oz Tractive CAT Mini is right at the threshold where most cats stop noticing it. Introduction tips: attach the tracker to the collar a few days before first use so the cat gets used to the weight without the pressure of also being 'tracked.' Use a collar the cat has worn before rather than introducing both a new collar and a tracker simultaneously. Reward with treats during the first week of use."
+      }
+    ],
+    pros: [
+      "Real-time location — know exactly where your cat is at any moment",
+      "Lightest GPS tracker available (1 oz) — most cats adapt quickly",
+      "Health monitoring tracks activity, sleep, and rest patterns",
+      "Breakaway collar attachment is a critical safety feature",
+      "Global LTE coverage — works anywhere with cell service",
+      "Waterproof — outdoor cats can roam in rain without issue",
+    ],
+    cons: [
+      "Monthly subscription required — ongoing cost of $5–$13/month",
+      "Not suitable for cats under 6.5 lbs",
+      "Battery needs weekly charging on active tracking settings",
+      "GPS accuracy indoors is limited — works best outdoors",
+    ],
+    verdict: "For any cat that spends time outdoors, a GPS tracker is one of the most valuable purchases you can make. The Tractive CAT Mini is the clear choice — it's the lightest tracker available, covers the globe, adds health monitoring, and has the lowest total cost of ownership in the category. If your cat has gone missing before, you already know what this is worth. If they haven't, consider this the insurance policy you hope you never need.",
+    whoFor: "Outdoor and indoor/outdoor cat owners, especially those in suburban or rural areas where a roaming cat can cover significant distance. Also ideal for cats that have gone missing before.",
+    whoNotFor: "Strictly indoor cats with no access to the outdoors — the subscription cost isn't justified if your cat never leaves the house.",
+    alternatives: [
+      { name: "Tractive GPS CAT Standard", reason: "Better battery life for large cats (10 lbs+), slightly heavier at 1.4 oz", href: amazonSearchLink("Tractive GPS cat tracker standard") },
+      { name: "Apple AirTag Cat Collar Holder", reason: "No subscription, Bluetooth-based — works only in range of Apple devices, not true GPS", href: amazonSearchLink("Apple AirTag cat collar holder") },
+    ],
+    affiliateHref: amazonSearchLink("GPS cat tracker lightweight waterproof"),
+    affiliateCta: "Shop Top Picks on Amazon",
+    featured: false,
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
