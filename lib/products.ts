@@ -871,7 +871,7 @@ export const products: Product[] = [
       { name: "Catit Jumbo Hooded Cat Litter Pan", reason: "Best manual litter box — hooded design controls odor at $30", href: amazonSearchLink("Catit Jumbo Hooded Cat Litter Pan") },
     ],
     affiliateHref: amazonSearchLink("Litter-Robot 4 Self Cleaning Litter Box"),
-    featured: true,
+    featured: false,
   },
 
   // ─── ULTRA K9 PRO ─────────────────────────────────────────────────────────
