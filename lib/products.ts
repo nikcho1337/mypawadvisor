@@ -1111,7 +1111,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: "95,000+",
     price: "$50–$130",
-    heroImage: "https://m.media-amazon.com/images/I/71OxTOpIzdL._AC_SL1500_.jpg",
+    heroImage: "https://m.media-amazon.com/images/I/81-GYvLKAJL._AC_SL1500_.jpg",
     heroImageAlt: "Tractive GPS dog tracker device attached to dog collar",
     metaTitle: "Best GPS Dog Tracker 2026 – Tested: Tractive, Fi & Garmin Compared",
     metaDescription: "We tested 5 GPS dog trackers over 3 months across urban and rural environments. Real escape scenarios, battery life tests, and subscription cost breakdowns. Best picks for every budget.",
