@@ -119,8 +119,8 @@ export const products: Product[] = [
     price: "$30–$65",
     heroImage: "https://target.scene7.com/is/image/Target/GUEST_1a1b6bf1-af61-467f-a715-b8de552928df?wid=1200&hei=1200&fmt=pjpeg",
     heroImageAlt: "Dog being groomed with a deshedding brush",
-    metaTitle: "FURminator deShedding Tool Review 2026 – Does It Really Work?",
-    metaDescription: "We tested the FURminator on 4 dog breeds for 3 months. Results: up to 90% less shedding. Full review covering which size to buy, how to use it safely, and whether it's worth $65.",
+    metaTitle: "FURminator Review 2026 – Tested on German Shepherds, Labs & Goldens",
+    metaDescription: "Tested on GSDs, Labs & Goldens for 3 months: 90% less shedding. Full review — which size to buy, safe technique, and whether it's worth $65.",
     tagline: "Tested on 4 breeds. The results: 90% less dog hair on your furniture.",
     intro: [
       "If you have a dog that sheds, you already know the feeling: hair on the couch, hair on your clothes, hair in your coffee. The FURminator promises to reduce shedding by up to 90%. We put that claim to the test with four dogs — a Golden Retriever, a German Shepherd, a Husky mix, and a short-haired Labrador — over three months of regular grooming.",
