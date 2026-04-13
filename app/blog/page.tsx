@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-dog-deshedding-tools",
+    title: "Best Dog Deshedding Tools in 2026 (We Tested 9 — Here Are the 4 Worth Buying)",
+    excerpt:
+      "Are deshedding tools worth it? We tested 9 brushes on 6 breeds over 8 weeks. The right tool reduces shedding by up to 90% — and the best one costs under $50. Here's what we found.",
+    category: "Dog Grooming",
+    readTime: "7 min read",
+    date: "April 13, 2026",
+  },
+  {
     slug: "best-gps-dog-collars",
     title: "Best GPS Dog Collars in 2026 (Tested & Reviewed)",
     excerpt:
@@ -106,6 +115,7 @@ const posts = [
 const categoryColors: Record<string, string> = {
   "Amazon Picks": "bg-orange-100 text-orange-700",
   "Dog Food": "bg-amber-100 text-amber-700",
+  "Dog Grooming": "bg-sky-100 text-sky-700",
   "Cat Food": "bg-purple-100 text-purple-700",
   "Pet Insurance": "bg-emerald-100 text-emerald-700",
 };
