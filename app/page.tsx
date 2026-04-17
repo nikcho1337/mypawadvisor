@@ -12,6 +12,50 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+function PawIcon({ className = "", style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} style={style} aria-hidden="true">
+      <path
+        d="M32 38c-8 0-14 6-14 14 0 6 6 10 14 10s14-4 14-10c0-8-6-14-14-14zM14 28c-4 0-7 4-7 8s3 7 7 7 7-3 7-7-3-8-7-8zm36 0c-4 0-7 4-7 8s3 7 7 7 7-3 7-7-3-8-7-8zM22 12c-3 0-6 3-6 8s3 8 6 8 6-3 6-8-3-8-6-8zm20 0c-3 0-6 3-6 8s3 8 6 8 6-3 6-8-3-8-6-8z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+const PAW_DECORATIONS: Array<{ top: string; left: string; size: number; rotate: number; opacity: number; color: string }> = [
+  { top: "8%",  left: "4%",   size: 52, rotate: -22, opacity: 0.10, color: "#059669" },
+  { top: "22%", left: "88%",  size: 42, rotate:  15, opacity: 0.09, color: "#0d9488" },
+  { top: "58%", left: "2%",   size: 38, rotate:  30, opacity: 0.08, color: "#059669" },
+  { top: "72%", left: "92%",  size: 56, rotate: -18, opacity: 0.11, color: "#0d9488" },
+  { top: "38%", left: "48%",  size: 34, rotate:  45, opacity: 0.06, color: "#10b981" },
+  { top: "82%", left: "22%",  size: 46, rotate: -35, opacity: 0.09, color: "#059669" },
+  { top: "14%", left: "64%",  size: 30, rotate:  60, opacity: 0.07, color: "#0d9488" },
+  { top: "50%", left: "78%",  size: 36, rotate:   8, opacity: 0.08, color: "#059669" },
+];
+
+function PawBackground() {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      {PAW_DECORATIONS.map((p, i) => (
+        <PawIcon
+          key={i}
+          style={{
+            position: "absolute",
+            top: p.top,
+            left: p.left,
+            width: p.size,
+            height: p.size,
+            color: p.color,
+            opacity: p.opacity,
+            transform: `rotate(${p.rotate}deg)`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function HomePage() {
   const featured = getFeaturedProducts();
   const allProducts = products;
@@ -19,29 +63,30 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-gray-950 text-white py-20 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-amber-50 py-20 px-4">
+        <PawBackground />
+        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">
+            <p className="text-emerald-700 text-sm font-semibold uppercase tracking-widest mb-4">
               Honest Pet Product Reviews
             </p>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-gray-900">
               We test it.<br />
-              <span className="text-emerald-400">You buy the best.</span>
+              <span className="text-emerald-600">You buy the best.</span>
             </h1>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-lg">
+            <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
               Every review on MyPawAdvisor is based on real hands-on testing with real pets. No sponsored rankings. No guessing. Just honest picks from the best-selling products on Amazon.
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <Link
                 href="/reviews"
-                className="bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-6 py-3 rounded-full transition-colors"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-md shadow-emerald-600/20"
               >
                 Browse All Reviews
               </Link>
               <Link
                 href="/insurance"
-                className="bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-semibold px-6 py-3 rounded-full transition-colors backdrop-blur-sm"
+                className="bg-white hover:bg-gray-50 border border-gray-300 hover:border-emerald-600 text-gray-800 hover:text-emerald-700 font-semibold px-6 py-3 rounded-full transition-colors"
               >
                 Pet Insurance Guide
               </Link>
@@ -55,10 +100,10 @@ export default function HomePage() {
                 { emoji: "📝", stat: "10K+", label: "Reviews Read" },
                 { emoji: "✅", stat: "100%", label: "Honest Picks" },
               ].map((item) => (
-                <div key={item.label} className="bg-gray-800 rounded-2xl p-4 text-center">
+                <div key={item.label} className="bg-white border border-gray-200 rounded-2xl p-4 text-center shadow-sm">
                   <div className="text-2xl mb-1">{item.emoji}</div>
-                  <div className="text-xl font-extrabold text-white">{item.stat}</div>
-                  <div className="text-xs text-gray-400">{item.label}</div>
+                  <div className="text-xl font-extrabold text-gray-900">{item.stat}</div>
+                  <div className="text-xs text-gray-500">{item.label}</div>
                 </div>
               ))}
             </div>
