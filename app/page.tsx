@@ -58,15 +58,14 @@ function PawBackground() {
 
 function RunningDog() {
   return (
-    <div className="absolute bottom-3 left-0 right-0 h-24 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-      <div className="dog-runner absolute bottom-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/dog_gif.gif"
-          alt=""
-          className="h-20 w-auto"
-        />
-      </div>
+    <div className="absolute bottom-4 right-6 pointer-events-none z-0 hidden md:block" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/dog_gif.gif"
+        alt=""
+        className="h-28 w-auto"
+        style={{ mixBlendMode: "multiply" }}
+      />
     </div>
   );
 }
