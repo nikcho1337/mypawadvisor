@@ -64,7 +64,6 @@ function RunningDog() {
         src="/dog_gif.gif"
         alt=""
         className="h-28 w-auto"
-        style={{ mixBlendMode: "multiply" }}
       />
     </div>
   );
