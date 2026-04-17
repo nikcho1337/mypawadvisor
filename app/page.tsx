@@ -66,11 +66,6 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-amber-50 py-20 px-4">
         <PawBackground />
-        {/* Decorative dog */}
-        <div className="hidden md:block absolute pointer-events-none z-[1]" style={{ top: "70px", left: "54%" }} aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/dog_gif_v2.gif" alt="" className="h-24 w-auto" />
-        </div>
         <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <p className="text-emerald-700 text-sm font-semibold uppercase tracking-widest mb-4">
@@ -78,7 +73,17 @@ export default function HomePage() {
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-gray-900">
               We test it.<br />
-              <span className="text-emerald-600">You buy the best.</span>
+              <span className="text-emerald-600 relative inline-block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/dog_gif_v2.gif"
+                  alt=""
+                  className="absolute h-12 md:h-14 w-auto pointer-events-none"
+                  style={{ right: "15%", bottom: "95%" }}
+                  aria-hidden="true"
+                />
+                You buy the best.
+              </span>
             </h1>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
               Every review on MyPawAdvisor is based on real hands-on testing with real pets. No sponsored rankings. No guessing. Just honest picks from the best-selling products on Amazon.
