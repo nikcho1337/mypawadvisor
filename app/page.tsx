@@ -56,6 +56,50 @@ function PawBackground() {
   );
 }
 
+function RunningDog() {
+  return (
+    <div className="absolute bottom-3 left-0 right-0 h-16 overflow-hidden pointer-events-none z-0" aria-hidden="true">
+      <div className="dog-runner absolute bottom-0">
+        <div className="dog-gallop">
+          <svg viewBox="0 0 90 56" width="78" height="48" className="text-emerald-700">
+            {/* Tail */}
+            <path d="M 10 24 Q 2 14 8 4" stroke="currentColor" strokeWidth="5" strokeLinecap="round" fill="none" />
+            {/* Back legs (swing A) */}
+            <g className="leg-a">
+              <rect x="20" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            </g>
+            <g className="leg-b">
+              <rect x="27" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            </g>
+            {/* Body */}
+            <ellipse cx="38" cy="26" rx="24" ry="11" fill="currentColor" />
+            {/* Front legs (swing alternate) */}
+            <g className="leg-b">
+              <rect x="52" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            </g>
+            <g className="leg-a">
+              <rect x="59" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            </g>
+            {/* Head */}
+            <circle cx="68" cy="20" r="10" fill="currentColor" />
+            {/* Ear */}
+            <path d="M 66 8 L 74 6 L 72 16 Z" fill="currentColor" />
+            {/* Snout */}
+            <ellipse cx="78" cy="23" rx="7" ry="4.5" fill="currentColor" />
+            {/* Nose */}
+            <circle cx="83" cy="22" r="1.6" fill="#0f172a" />
+            {/* Eye */}
+            <circle cx="70" cy="18" r="1.4" fill="#fff" />
+            <circle cx="70.2" cy="18" r="0.7" fill="#0f172a" />
+            {/* Collar */}
+            <rect x="58" y="26" width="4" height="6" rx="1" fill="#f59e0b" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const featured = getFeaturedProducts();
   const allProducts = products;
@@ -65,6 +109,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-amber-50 py-20 px-4">
         <PawBackground />
+        <RunningDog />
         <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <p className="text-emerald-700 text-sm font-semibold uppercase tracking-widest mb-4">
