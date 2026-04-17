@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "furminator-for-german-shepherds",
+    title: "Is the FURminator Good for German Shepherds? (8-Week Honest Test)",
+    excerpt:
+      "Short answer: yes — it's one of the best tools on the market for GSDs. We tested it on a 4-year-old German Shepherd for 8 weeks and saw an 85% reduction in household shedding. Here's which size to buy and how to use it correctly.",
+    category: "Dog Grooming",
+    readTime: "8 min read",
+    date: "April 17, 2026",
+  },
+  {
     slug: "best-dog-deshedding-tools",
     title: "Best Dog Deshedding Tools in 2026 (We Tested 9 — Here Are the 4 Worth Buying)",
     excerpt:
