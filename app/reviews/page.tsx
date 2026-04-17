@@ -37,11 +37,11 @@ export default function ReviewsPage() {
 
   return (
     <>
-      <section className="bg-gray-900 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-emerald-50 via-white to-amber-50 border-b border-gray-200 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-emerald-400 font-semibold text-sm uppercase tracking-widest mb-3">Tested & Verified</p>
-          <h1 className="text-4xl font-extrabold mb-4">Pet Product Reviews</h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-emerald-700 font-semibold text-sm uppercase tracking-widest mb-3">Tested & Verified</p>
+          <h1 className="text-4xl font-extrabold mb-4 text-gray-900">Pet Product Reviews</h1>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             We buy, test, and honestly review the best-selling pet products on Amazon. No sponsored posts. No guessing. Real results.
           </p>
         </div>
