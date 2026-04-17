@@ -78,7 +78,7 @@ export default function HomePage() {
               <img
                 src="/dog_gif_v2.gif"
                 alt=""
-                className="absolute h-12 md:h-14 w-auto pointer-events-none right-0 -top-2"
+                className="absolute h-12 md:h-16 w-auto pointer-events-none right-0 -top-2 md:right-auto md:-top-6 md:left-[55%]"
                 aria-hidden="true"
               />
             </h1>
