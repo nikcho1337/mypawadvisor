@@ -56,18 +56,6 @@ function PawBackground() {
   );
 }
 
-function RunningDog() {
-  return (
-    <div className="absolute bottom-4 right-6 pointer-events-none z-0 hidden md:block" aria-hidden="true">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/dog_gif.gif"
-        alt=""
-        className="h-28 w-auto"
-      />
-    </div>
-  );
-}
 
 export default function HomePage() {
   const featured = getFeaturedProducts();
@@ -78,7 +66,6 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-amber-50 py-20 px-4">
         <PawBackground />
-        <RunningDog />
         <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <p className="text-emerald-700 text-sm font-semibold uppercase tracking-widest mb-4">
