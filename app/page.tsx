@@ -74,13 +74,26 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-gray-900 relative">
               We test it.<br />
               <span className="text-emerald-600">You buy the best.</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/dog_gif_v2.gif"
-                alt=""
-                className="absolute h-12 md:h-16 w-auto pointer-events-none right-0 -top-2 md:right-auto md:-top-6 md:left-[55%]"
+              <span
+                className="absolute pointer-events-none right-0 -top-2 md:right-auto md:-top-6 md:left-[55%] flex flex-col items-center"
                 aria-hidden="true"
-              />
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/dog_gif_v2.gif"
+                  alt=""
+                  className="block h-12 md:h-16 w-auto"
+                />
+                {/* Ground shadow — soft elliptical shadow below the dog's paws */}
+                <span
+                  className="block mt-0.5 h-1.5 md:h-2 rounded-full"
+                  style={{
+                    width: "80%",
+                    background:
+                      "radial-gradient(ellipse at center, rgba(15,23,42,0.22) 0%, rgba(15,23,42,0.08) 50%, transparent 78%)",
+                  }}
+                />
+              </span>
             </h1>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
               Every review on MyPawAdvisor is based on real hands-on testing with real pets. No sponsored rankings. No guessing. Just honest picks from the best-selling products on Amazon.
