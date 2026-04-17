@@ -58,41 +58,133 @@ function PawBackground() {
 
 function RunningDog() {
   return (
-    <div className="absolute bottom-3 left-0 right-0 h-16 overflow-hidden pointer-events-none z-0" aria-hidden="true">
+    <div className="absolute bottom-3 left-0 right-0 h-20 overflow-hidden pointer-events-none z-0" aria-hidden="true">
       <div className="dog-runner absolute bottom-0">
         <div className="dog-gallop">
-          <svg viewBox="0 0 90 56" width="78" height="48" className="text-emerald-700">
-            {/* Tail */}
-            <path d="M 10 24 Q 2 14 8 4" stroke="currentColor" strokeWidth="5" strokeLinecap="round" fill="none" />
-            {/* Back legs (swing A) */}
-            <g className="leg-a">
-              <rect x="20" y="33" width="4" height="14" rx="2" fill="currentColor" />
+          <svg viewBox="0 0 128 72" width="104" height="58" className="text-emerald-700">
+            {/* TAIL — curled up Shiba-style */}
+            <path
+              d="M 14 28 Q 4 24, 4 14 Q 6 4, 18 4 Q 30 6, 28 18 Q 26 22, 24 26"
+              stroke="currentColor"
+              strokeWidth="7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="currentColor"
+            />
+            {/* Inner tail shadow for depth */}
+            <path
+              d="M 16 12 Q 22 10, 22 16"
+              stroke="#065f46"
+              strokeWidth="2"
+              strokeLinecap="round"
+              fill="none"
+              opacity="0.5"
+            />
+
+            {/* BACK LEGS — animated swing */}
+            <g className="leg-a" style={{ transformOrigin: "34px 42px" }}>
+              <path d="M 32 42 Q 30 52, 32 62 Q 34 64, 38 62 L 38 42 Z" fill="currentColor" />
+              <ellipse cx="35" cy="62" rx="4" ry="2" fill="#065f46" />
             </g>
-            <g className="leg-b">
-              <rect x="27" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            <g className="leg-b" style={{ transformOrigin: "46px 42px" }}>
+              <path d="M 44 42 Q 46 52, 44 62 Q 46 64, 50 62 L 50 42 Z" fill="currentColor" />
+              <ellipse cx="47" cy="62" rx="4" ry="2" fill="#065f46" />
             </g>
-            {/* Body */}
-            <ellipse cx="38" cy="26" rx="24" ry="11" fill="currentColor" />
-            {/* Front legs (swing alternate) */}
-            <g className="leg-b">
-              <rect x="52" y="33" width="4" height="14" rx="2" fill="currentColor" />
+
+            {/* BODY — organic curve */}
+            <path
+              d="M 22 34
+                 Q 22 22, 36 20
+                 L 80 22
+                 Q 94 23, 98 32
+                 Q 100 40, 94 44
+                 L 26 44
+                 Q 18 42, 22 34 Z"
+              fill="currentColor"
+            />
+
+            {/* CHEST FLUFF */}
+            <path
+              d="M 94 42 Q 102 42, 104 38 Q 106 44, 102 46 Q 96 46, 94 44 Z"
+              fill="currentColor"
+            />
+
+            {/* FRONT LEGS — alternating swing */}
+            <g className="leg-b" style={{ transformOrigin: "80px 44px" }}>
+              <path d="M 78 44 Q 76 54, 78 64 Q 80 66, 84 64 L 84 44 Z" fill="currentColor" />
+              <ellipse cx="81" cy="64" rx="4" ry="2" fill="#065f46" />
             </g>
-            <g className="leg-a">
-              <rect x="59" y="33" width="4" height="14" rx="2" fill="currentColor" />
+            <g className="leg-a" style={{ transformOrigin: "92px 44px" }}>
+              <path d="M 90 44 Q 92 54, 90 64 Q 92 66, 96 64 L 96 44 Z" fill="currentColor" />
+              <ellipse cx="93" cy="64" rx="4" ry="2" fill="#065f46" />
             </g>
-            {/* Head */}
-            <circle cx="68" cy="20" r="10" fill="currentColor" />
-            {/* Ear */}
-            <path d="M 66 8 L 74 6 L 72 16 Z" fill="currentColor" />
-            {/* Snout */}
-            <ellipse cx="78" cy="23" rx="7" ry="4.5" fill="currentColor" />
-            {/* Nose */}
-            <circle cx="83" cy="22" r="1.6" fill="#0f172a" />
-            {/* Eye */}
-            <circle cx="70" cy="18" r="1.4" fill="#fff" />
-            <circle cx="70.2" cy="18" r="0.7" fill="#0f172a" />
-            {/* Collar */}
-            <rect x="58" y="26" width="4" height="6" rx="1" fill="#f59e0b" />
+
+            {/* NECK */}
+            <path
+              d="M 94 28 Q 100 24, 106 28 L 104 38 Q 98 38, 94 36 Z"
+              fill="currentColor"
+            />
+
+            {/* HEAD */}
+            <path
+              d="M 100 24
+                 Q 104 12, 114 14
+                 Q 122 18, 122 28
+                 Q 120 36, 112 36
+                 Q 102 36, 100 30 Z"
+              fill="currentColor"
+            />
+
+            {/* EAR (back) */}
+            <path d="M 106 10 L 109 2 L 114 14 Z" fill="currentColor" />
+            {/* EAR (front, slightly darker for depth) */}
+            <path d="M 112 10 L 117 2 L 118 14 Z" fill="#065f46" />
+
+            {/* SNOUT */}
+            <path
+              d="M 118 26 Q 126 26, 126 32 Q 124 36, 118 34 Z"
+              fill="currentColor"
+            />
+
+            {/* NOSE */}
+            <ellipse cx="125" cy="30" rx="2" ry="1.8" fill="#0f172a" />
+            {/* Nose highlight */}
+            <circle cx="124.5" cy="29" r="0.5" fill="#fff" opacity="0.6" />
+
+            {/* TONGUE — frisky */}
+            <path
+              d="M 119 34 Q 121 38, 119 40 Q 117 38, 117 34 Z"
+              fill="#fb7185"
+            />
+            <path
+              d="M 118 36 L 118 39"
+              stroke="#e11d48"
+              strokeWidth="0.6"
+              strokeLinecap="round"
+            />
+
+            {/* MOUTH line */}
+            <path
+              d="M 114 32 Q 116 34, 118 32"
+              stroke="#065f46"
+              strokeWidth="0.8"
+              fill="none"
+              strokeLinecap="round"
+            />
+
+            {/* EYE */}
+            <circle cx="111" cy="22" r="2.2" fill="#fff" />
+            <circle cx="112" cy="22.5" r="1.4" fill="#0f172a" />
+            <circle cx="112.3" cy="21.8" r="0.5" fill="#fff" />
+
+            {/* COLLAR */}
+            <path
+              d="M 96 32 Q 100 30, 104 32 L 103 38 Q 100 40, 97 38 Z"
+              fill="#f59e0b"
+            />
+            {/* Collar tag */}
+            <circle cx="100" cy="40" r="2" fill="#fbbf24" stroke="#d97706" strokeWidth="0.5" />
+            <path d="M 99.5 40 L 100.5 40 M 100 39.5 L 100 40.5" stroke="#d97706" strokeWidth="0.4" strokeLinecap="round" />
           </svg>
         </div>
       </div>
