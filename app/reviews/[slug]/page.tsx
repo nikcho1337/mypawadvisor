@@ -227,22 +227,24 @@ export default async function ReviewPage({
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-5 text-gray-900">Alternatives to Consider</h2>
           <div className="space-y-3">
-            {product.alternatives.map((alt) => (
-              <div key={alt.name} className="flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4">
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm">{alt.name}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{alt.reason}</p>
+            {product.alternatives.map((alt) => {
+              const isInternal = alt.href.startsWith("/");
+              const label = isInternal ? "Read review →" : "View on Amazon →";
+              const className = "text-xs font-semibold text-amber-600 hover:text-amber-700 whitespace-nowrap border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-50 transition-colors";
+              return (
+                <div key={alt.name} className="flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4">
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm">{alt.name}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{alt.reason}</p>
+                  </div>
+                  {isInternal ? (
+                    <Link href={alt.href} className={className}>{label}</Link>
+                  ) : (
+                    <a href={alt.href} target="_blank" rel="noopener noreferrer" className={className}>{label}</a>
+                  )}
                 </div>
-                <a
-                  href={alt.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-amber-600 hover:text-amber-700 whitespace-nowrap border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-50 transition-colors"
-                >
-                  View on Amazon →
-                </a>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
