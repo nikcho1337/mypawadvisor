@@ -1181,7 +1181,7 @@ export const products: Product[] = [
     rating: 4.4,
     reviewCount: "2,000+",
     price: "$9–$14",
-    heroImage: "https://m.media-amazon.com/images/I/71PplsQnCpL._AC_SL1500_.jpg",
+    heroImage: "https://m.media-amazon.com/images/I/71+89FzfreL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator Sensitive Areas Tool — small brush head with soft bristles for face, ears and paws",
     metaTitle: "FURminator Sensitive Areas Tool Review 2026 – Is It Actually Gentle?",
     metaDescription: "Honest FURminator Sensitive Areas Tool review. Tested on a nervous cat and a small dog around face, ears, paws and belly. What it does well, what it doesn't, and who should skip it.",
@@ -1247,7 +1247,7 @@ export const products: Product[] = [
       { name: "Safari Cat Grooming Glove", reason: "Alternative for cats who won't tolerate any brush — bristle glove gets face/body in one pass", href: amazonSearchLink("Safari cat grooming glove") },
       { name: "ConairPRO Dog Face & Paw Trimmer", reason: "If the problem is actually long face hair (not debris), consider a trimmer instead", href: amazonSearchLink("ConairPRO dog face paw trimmer") },
     ],
-    affiliateHref: amazonSearchLink("FURminator Sensitive Areas Tool"),
+    affiliateHref: "https://amzn.to/4cSx0px",
     featured: false,
   },
 ];
