@@ -20,7 +20,7 @@ const products = [
     description: "Precisely formulated for over 30 specific breeds. Kibble size, texture, and nutrient profile are tailored to your dog's exact genetic needs.",
     pros: ["Breed-specific formulas", "Vet recommended", "Excellent digestibility", "Precise nutrient ratios"],
     cons: ["Expensive", "Some formulas use by-products"],
-    href: "/dogs/royal-canin-review",
+    href: "/blog/best-dog-food-for-german-shepherds",
     affiliateHref: "#",
   },
   {
@@ -34,7 +34,7 @@ const products = [
     description: "Grain-free formula with high-quality protein as the #1 ingredient. No artificial preservatives, flavors, or fillers.",
     pros: ["Whole food ingredients", "Grain-free", "No artificial additives", "High protein"],
     cons: ["Premium price", "Not widely available in stores"],
-    href: "/dogs",
+    href: "/blog/best-dog-food-for-golden-retrievers",
     affiliateHref: "#",
   },
   {
@@ -48,7 +48,7 @@ const products = [
     description: "Real meat first, no chicken by-product meals, no corn, wheat, or soy. LifeSource Bits provide antioxidants and nutrients.",
     pros: ["Real meat as first ingredient", "Affordable", "Widely available", "Life stage formulas"],
     cons: ["Some dogs don't tolerate it", "Ingredient quality varies by line"],
-    href: "/dogs",
+    href: "/blog/best-dog-food-for-labrador-retrievers",
     affiliateHref: "#",
   },
 ];
@@ -136,8 +136,8 @@ export default function DogsPage() {
             <p><strong>4. Avoid unnecessary fillers.</strong> Corn, wheat, and soy as primary ingredients add calories with minimal nutrition. Look for whole grains or grain-free options instead.</p>
           </div>
           <div className="mt-6">
-            <Link href="/dogs/best-dog-food-by-breed" className="inline-block bg-amber-500 text-white font-bold px-6 py-3 rounded-full hover:bg-amber-600 transition-colors text-sm">
-              Find Best Food for Your Breed →
+            <Link href="/blog" className="inline-block bg-amber-500 text-white font-bold px-6 py-3 rounded-full hover:bg-amber-600 transition-colors text-sm">
+              Browse Breed-Specific Food Guides →
             </Link>
           </div>
         </div>

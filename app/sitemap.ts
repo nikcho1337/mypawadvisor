@@ -1,35 +1,46 @@
 import { MetadataRoute } from "next";
 import { products } from "@/lib/products";
+import { readdirSync, statSync } from "node:fs";
+import { join } from "node:path";
+
+const BASE_URL = "https://www.mypawadvisor.com";
+
+function getBlogSlugs(): string[] {
+  const blogDir = join(process.cwd(), "app", "blog");
+  return readdirSync(blogDir).filter((name) => {
+    const full = join(blogDir, name);
+    return statSync(full).isDirectory();
+  });
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mypawadvisor.com";
   const now = new Date();
 
   const reviewRoutes: MetadataRoute.Sitemap = products.map((p) => ({
-    url: `${baseUrl}/reviews/${p.slug}`,
+    url: `${BASE_URL}/reviews/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.9,
   }));
 
+  const blogRoutes: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   return [
-    { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${baseUrl}/reviews`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE_URL}/reviews`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     ...reviewRoutes,
-    { url: `${baseUrl}/insurance`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/insurance/healthy-paws-review`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/insurance/embrace-review`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-dog-food-for-senior-dogs`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-dog-food-for-labrador-retrievers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-dog-food-for-golden-retrievers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-dog-food-for-german-shepherds`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-cat-food`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-dog-food-for-french-bulldogs`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/best-pet-products-amazon`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog/pet-insurance-worth-it`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/dogs`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/cats`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${BASE_URL}/insurance`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/insurance/healthy-paws-review`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/insurance/embrace-review`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    ...blogRoutes,
+    { url: `${BASE_URL}/dogs`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE_URL}/cats`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
   ];
 }

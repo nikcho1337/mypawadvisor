@@ -22,6 +22,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "ultrak9pro.com" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/blog/best-dog-food-for-labrador-retriever",
+        destination: "/blog/best-dog-food-for-labrador-retrievers",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
