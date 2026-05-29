@@ -9,7 +9,7 @@
  * dashboard (Product Linking → Bounties / Audible).
  * See: https://affiliate-program.amazon.com/help/node/topic/GRXPHT8U84RAYDXZ
  */
-export const AUDIBLE_FREE_TRIAL = "https://amzn.to/4vbcNBz";
+export const AUDIBLE_FREE_TRIAL = "https://amzn.to/4uyH4dK";
 
 export interface Book {
   slug: string;
