@@ -262,9 +262,6 @@ export default function HomePage() {
               Start My Free Trial →
             </a>
           </div>
-          <p className="text-center text-xs text-gray-400 mt-3">
-            Affiliate links — we may earn a commission at no extra cost to you.
-          </p>
         </div>
       </section>
 
