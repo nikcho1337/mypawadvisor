@@ -28,6 +28,7 @@ const navLinks = [
   { href: "/reviews?cat=dogs", label: "Dogs" },
   { href: "/reviews?cat=cats", label: "Cats" },
   { href: "/blog", label: "Blog" },
+  { href: "/books", label: "Books" },
   { href: "/insurance", label: "Insurance" },
 ];
 

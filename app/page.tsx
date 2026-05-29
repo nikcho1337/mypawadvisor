@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products, getFeaturedProducts } from "@/lib/products";
+import { books, AUDIBLE_FREE_TRIAL } from "@/lib/books";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -514,6 +515,90 @@ export default function HomePage() {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* BOOKS + AUDIBLE */}
+      <section className="relative overflow-hidden bg-gray-950 text-white py-16 px-4">
+        {/* soft glow accents */}
+        <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-emerald-600/20 blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[#ff9900]/20 blur-3xl pointer-events-none" aria-hidden="true" />
+
+        <div className="relative max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#ff9900] font-bold text-xs uppercase tracking-widest mb-2">📚 Recommended Reading</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Books Every Pet Owner Should Read</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              The fastest way to understand your pet. And you can listen to every one of them{" "}
+              <strong className="text-white">free</strong> with an Audible trial.
+            </p>
+          </div>
+
+          {/* Book cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {books.map((book) => (
+              <div
+                key={book.slug}
+                className="group bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col hover:bg-white/[0.08] transition-colors"
+              >
+                <Link href={`/books#${book.slug}`} className="flex justify-center mb-5">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={book.cover}
+                    alt={book.coverAlt}
+                    className="h-44 w-auto rounded-md shadow-xl shadow-black/40 group-hover:-translate-y-1 transition-transform"
+                  />
+                </Link>
+                <span className="inline-flex items-center gap-1 text-amber-400 text-sm mb-2">
+                  {"★".repeat(Math.floor(book.rating))}
+                  <span className="text-gray-400 ml-1 text-xs">{book.rating.toFixed(1)}</span>
+                </span>
+                <h3 className="font-bold text-lg leading-snug mb-1">{book.title}</h3>
+                <p className="text-[#ff9900] text-sm font-medium mb-2">{book.hook}</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{book.blurb}</p>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href={book.amazonHref}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="text-center bg-amber-500 hover:bg-amber-400 text-white font-bold px-4 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    Buy on Amazon →
+                  </a>
+                  <Link
+                    href={`/books#${book.slug}`}
+                    className="text-center border border-white/20 hover:border-white/40 text-gray-200 font-semibold px-4 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    Read Our Review
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Audible free trial band */}
+          <div className="bg-gradient-to-r from-[#ff9900]/15 to-transparent border border-[#ff9900]/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-extrabold mb-2">
+                🎧 Don't want to read? Listen for free.
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
+                Start a <strong className="text-white">30-day Audible free trial</strong> and your first
+                audiobook is yours to keep — even if you cancel. Perfect for walks, commutes, or winding down.
+              </p>
+            </div>
+            <a
+              href={AUDIBLE_FREE_TRIAL}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="shrink-0 bg-[#ff9900] hover:bg-[#f08c00] text-gray-900 font-bold px-7 py-3.5 rounded-full transition-colors shadow-lg text-sm whitespace-nowrap"
+            >
+              Start My Free Trial →
+            </a>
+          </div>
+          <p className="text-center text-xs text-gray-600 mt-4">
+            Affiliate links — we may earn a commission at no extra cost to you.
+          </p>
         </div>
       </section>
 
