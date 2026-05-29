@@ -190,6 +190,104 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* BOOKS + AUDIBLE */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-emerald-50/40 to-white py-16 px-4">
+        <PawBackground />
+        <div className="relative max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              📚 Recommended Reading
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Books Every Pet Owner Should Read</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-lg">
+              The fastest way to truly understand your pet — and you can listen to every one of them{" "}
+              <strong className="text-emerald-700">free</strong> with an Audible trial.
+            </p>
+          </div>
+
+          {/* Book cards */}
+          <div className="grid md:grid-cols-3 gap-7 mb-14">
+            {books.map((book) => (
+              <div
+                key={book.slug}
+                className="group relative bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-300 hover:-translate-y-1.5 p-6 flex flex-col"
+              >
+                {/* Cover on a soft pedestal */}
+                <Link href={`/books#${book.slug}`} className="relative flex justify-center mb-6 pt-3">
+                  <div
+                    className="absolute inset-x-6 top-3 bottom-4 rounded-2xl bg-gradient-to-b from-amber-50 to-emerald-50/60"
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-3 rounded-full bg-black/15 blur-md"
+                    aria-hidden="true"
+                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={book.cover}
+                    alt={book.coverAlt}
+                    className="relative h-52 w-auto rounded-md shadow-lg ring-1 ring-black/5 group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-300"
+                  />
+                </Link>
+                <div className="flex items-center justify-between mb-2">
+                  <StarRating rating={book.rating} />
+                  <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                    🎧 Free on Audible
+                  </span>
+                </div>
+                <h3 className="font-extrabold text-lg text-gray-900 leading-snug mb-1">{book.title}</h3>
+                <p className="text-amber-600 text-sm font-semibold mb-2">{book.hook}</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{book.blurb}</p>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href={book.amazonHref}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="text-center bg-amber-500 hover:bg-amber-400 text-white font-bold px-4 py-2.5 rounded-full transition-colors text-sm shadow-sm shadow-amber-500/20"
+                  >
+                    Buy on Amazon →
+                  </a>
+                  <Link
+                    href={`/books#${book.slug}`}
+                    className="text-center border border-gray-200 hover:border-emerald-400 text-gray-700 hover:text-emerald-700 font-semibold px-4 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    Read Our Review
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Audible free trial band */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+            <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center text-4xl">
+              🎧
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-2">Listen Free with Audible</p>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 leading-tight">
+                Prefer to listen? Get your first audiobook free.
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
+                Start a <strong className="text-gray-900">30-day Audible free trial</strong> and the audiobook
+                is yours to keep — even if you cancel. Perfect for walks, commutes, or winding down with your pup.
+              </p>
+            </div>
+            <a
+              href={AUDIBLE_FREE_TRIAL}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="shrink-0 bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-full transition-colors shadow-lg shadow-amber-500/30 text-base whitespace-nowrap"
+            >
+              Start My Free Trial →
+            </a>
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-4">
+            Affiliate links — we may earn a commission at no extra cost to you.
+          </p>
+        </div>
+      </section>
+
       {/* CATEGORY QUICK NAV */}
       <section className="bg-gradient-to-b from-white to-gray-50 border-b border-gray-100 py-6 px-4">
         <div className="max-w-5xl mx-auto">
@@ -515,90 +613,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-        </div>
-      </section>
-
-      {/* BOOKS + AUDIBLE */}
-      <section className="relative overflow-hidden bg-gray-950 text-white py-16 px-4">
-        {/* soft glow accents */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-emerald-600/20 blur-3xl pointer-events-none" aria-hidden="true" />
-        <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[#ff9900]/20 blur-3xl pointer-events-none" aria-hidden="true" />
-
-        <div className="relative max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-[#ff9900] font-bold text-xs uppercase tracking-widest mb-2">📚 Recommended Reading</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Books Every Pet Owner Should Read</h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              The fastest way to understand your pet. And you can listen to every one of them{" "}
-              <strong className="text-white">free</strong> with an Audible trial.
-            </p>
-          </div>
-
-          {/* Book cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {books.map((book) => (
-              <div
-                key={book.slug}
-                className="group bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col hover:bg-white/[0.08] transition-colors"
-              >
-                <Link href={`/books#${book.slug}`} className="flex justify-center mb-5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={book.cover}
-                    alt={book.coverAlt}
-                    className="h-44 w-auto rounded-md shadow-xl shadow-black/40 group-hover:-translate-y-1 transition-transform"
-                  />
-                </Link>
-                <span className="inline-flex items-center gap-1 text-amber-400 text-sm mb-2">
-                  {"★".repeat(Math.floor(book.rating))}
-                  <span className="text-gray-400 ml-1 text-xs">{book.rating.toFixed(1)}</span>
-                </span>
-                <h3 className="font-bold text-lg leading-snug mb-1">{book.title}</h3>
-                <p className="text-[#ff9900] text-sm font-medium mb-2">{book.hook}</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{book.blurb}</p>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href={book.amazonHref}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="text-center bg-amber-500 hover:bg-amber-400 text-white font-bold px-4 py-2.5 rounded-full transition-colors text-sm"
-                  >
-                    Buy on Amazon →
-                  </a>
-                  <Link
-                    href={`/books#${book.slug}`}
-                    className="text-center border border-white/20 hover:border-white/40 text-gray-200 font-semibold px-4 py-2.5 rounded-full transition-colors text-sm"
-                  >
-                    Read Our Review
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Audible free trial band */}
-          <div className="bg-gradient-to-r from-[#ff9900]/15 to-transparent border border-[#ff9900]/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-xl md:text-2xl font-extrabold mb-2">
-                🎧 Don't want to read? Listen for free.
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
-                Start a <strong className="text-white">30-day Audible free trial</strong> and your first
-                audiobook is yours to keep — even if you cancel. Perfect for walks, commutes, or winding down.
-              </p>
-            </div>
-            <a
-              href={AUDIBLE_FREE_TRIAL}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="shrink-0 bg-[#ff9900] hover:bg-[#f08c00] text-gray-900 font-bold px-7 py-3.5 rounded-full transition-colors shadow-lg text-sm whitespace-nowrap"
-            >
-              Start My Free Trial →
-            </a>
-          </div>
-          <p className="text-center text-xs text-gray-600 mt-4">
-            Affiliate links — we may earn a commission at no extra cost to you.
-          </p>
         </div>
       </section>
 
