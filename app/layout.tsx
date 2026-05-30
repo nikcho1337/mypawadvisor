@@ -116,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
           <div className="border-t border-gray-800 text-center text-xs py-5 px-4 text-gray-600">
-            <p>© 2026 MyPawAdvisor. This site contains affiliate links. We may earn a commission at no extra cost to you. <Link href="/about" className="underline hover:text-gray-400">Full disclosure</Link>.</p>
+            <p>© 2026 MyPawAdvisor. This site contains affiliate links. We may earn a commission at no extra cost to you. <Link href="/about" className="underline hover:text-gray-400">Full disclosure</Link> · <Link href="/privacy" className="underline hover:text-gray-400">Privacy Policy</Link>.</p>
           </div>
         </footer>
       </body>
