@@ -36,6 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/* Cinzel — cosmic display face used for the Natal Chart nav item + product */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CKF73GJ6Z" />
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
@@ -63,6 +66,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {link.label}
                 </Link>
               ))}
+              {/* New: Pet Natal Chart — distinguished with cosmic color, display font + a soft sparkle */}
+              <Link
+                href="/natal-chart"
+                className="group relative inline-flex items-center gap-1.5 font-semibold tracking-wide transition-transform duration-200 hover:-translate-y-0.5"
+                style={{ fontFamily: "'Cinzel', Georgia, serif" }}
+              >
+                <span className="text-amber-400 animate-pulse [animation-duration:2.4s] group-hover:text-amber-300">✦</span>
+                <span className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-amber-500 bg-clip-text text-transparent transition-[filter] group-hover:[filter:brightness(1.15)]">
+                  Natal Chart
+                </span>
+              </Link>
             </nav>
             <Link
               href="/insurance"
@@ -74,6 +88,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex md:hidden items-center gap-4 text-sm font-medium text-gray-600">
               <Link href="/reviews" className="hover:text-emerald-600">Reviews</Link>
               <Link href="/blog" className="hover:text-emerald-600">Blog</Link>
+              <Link href="/natal-chart" className="inline-flex items-center gap-1 font-semibold" style={{ fontFamily: "'Cinzel', Georgia, serif" }}>
+                <span className="text-amber-400 animate-pulse">✦</span>
+                <span className="bg-gradient-to-r from-violet-600 to-amber-500 bg-clip-text text-transparent">Natal</span>
+              </Link>
             </div>
           </div>
         </header>
@@ -108,6 +126,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>
               <p className="text-white font-semibold mb-3">Resources</p>
               <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/natal-chart" className="inline-flex items-center gap-1.5 group" style={{ fontFamily: "'Cinzel', Georgia, serif" }}>
+                    <span className="text-amber-400 group-hover:text-amber-300 transition-colors">✦</span>
+                    <span className="bg-gradient-to-r from-violet-400 to-amber-300 bg-clip-text text-transparent group-hover:[filter:brightness(1.15)] transition-[filter]">Pet Natal Chart</span>
+                  </Link>
+                </li>
+                <li><Link href="/natal-chart/guide" className="text-violet-300/80 hover:text-violet-200 transition-colors">Natal Chart Guide</Link></li>
                 <li><Link href="/insurance" className="hover:text-white transition-colors">Pet Insurance 2026</Link></li>
                 <li><Link href="/blog" className="hover:text-white transition-colors">Pet Care Blog</Link></li>
                 <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>

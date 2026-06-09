@@ -1,6 +1,55 @@
 import Link from "next/link";
 import { products, getFeaturedProducts } from "@/lib/products";
-import { books, AUDIBLE_FREE_TRIAL } from "@/lib/books";
+import { books } from "@/lib/books";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { computeNatalChart, type BirthInput } from "@/scripts/natal/natal-chart";
+import { buildReading } from "@/scripts/natal/reading-template";
+import { renderCertificateSVG } from "@/scripts/natal/render-svg";
+
+// A real example chart, computed at build time for the homepage feature banner — with a
+// real pet photo in the center so it feels warm and relatable, not abstract.
+const CHART_SAMPLE: BirthInput = {
+  name: "Goldie", species: "dog", breed: "Golden Retriever",
+  year: 2021, month: 7, day: 15, hour: 9, minute: 30,
+  latitude: 30.2672, longitude: -97.7431, cityLabel: "Austin, USA",
+};
+const PET_PHOTO = "data:image/jpeg;base64," + readFileSync(join(process.cwd(), "public", "sample-pet.jpg")).toString("base64");
+const _chartSampleChart = computeNatalChart(CHART_SAMPLE);
+const _chartSampleReading = buildReading(CHART_SAMPLE, _chartSampleChart);
+// The three signature templates, shown side-by-side so visitors see the range of styles.
+// The reading is theme-independent, so it's computed once and re-skinned per theme.
+// The three real product themes (same order/names as the /natal-chart theme picker).
+const CHART_CARDS = ([
+  { theme: "nebula", label: "Nebula" },
+  { theme: "aurora", label: "Aurora" },
+  { theme: "ember",  label: "Ember" },
+] as const).map((t) => ({
+  ...t,
+  svg: renderCertificateSVG(CHART_SAMPLE, _chartSampleChart, _chartSampleReading, { theme: t.theme, photoDataUri: PET_PHOTO }),
+}));
+// Deterministic background fields for the cosmic section (server-rendered once → no flicker).
+function genField(count: number, seed: number, minTop = 42) {
+  let s = seed;
+  const rnd = () => { s = (s * 1103515245 + 12345) & 0x7fffffff; return s / 0x7fffffff; };
+  return Array.from({ length: count }, () => ({
+    x: +(rnd() * 100).toFixed(2),
+    y: +(minTop + rnd() * (100 - minTop)).toFixed(2),
+    r: +(rnd() * 1.5 + 0.7).toFixed(2),
+    dur: +(rnd() * 3 + 2.4).toFixed(2),
+    delay: +(rnd() * 4).toFixed(2),
+  }));
+}
+const NIGHT_STARS = genField(34, 1234);
+const DUST = genField(8, 5077).map((d) => ({ ...d, r: d.r + 1.6 }));
+// gold paw prints drifting through the night half
+const COSMIC_PAWS = [
+  { top: "56%", left: "7%", size: 46, rot: -18, o: 0.11 },
+  { top: "74%", left: "87%", size: 56, rot: 14, o: 0.12 },
+  { top: "88%", left: "17%", size: 40, rot: 28, o: 0.09 },
+  { top: "64%", left: "72%", size: 34, rot: -8, o: 0.08 },
+  { top: "92%", left: "60%", size: 30, rot: 40, o: 0.07 },
+];
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -133,9 +182,172 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* PET NATAL CHART — DAY → NIGHT TRANSITION INTO THE COSMIC PRODUCT */}
+      <section
+        className="relative overflow-hidden px-4 pt-12 pb-16"
+        style={{
+          background:
+            "linear-gradient(to bottom, #fffbeb 0%, #f7faef 5%, #ecf8ef 10%, #d7f3e4 17%, #ace6cf 26%, #76d0b6 37%, #45b29a 48%, #2a8a7c 59%, #176259 70%, #0d3e38 81%, #07251f 91%, #04140f 100%)",
+        }}
+      >
+        <style>{`
+          @keyframes mpaTwinkle { 0%, 100% { opacity: .18 } 50% { opacity: .95 } }
+          @keyframes mpaFloat { from { transform: translateY(7px) } to { transform: translateY(-9px) } }
+        `}</style>
+
+        {/* brand paw prints — emerald in the warm top, fading into the night */}
+        <PawBackground />
+        {/* gold paws drifting through the cosmic half */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          {COSMIC_PAWS.map((p, i) => (
+            <PawIcon
+              key={i}
+              style={{ position: "absolute", top: p.top, left: p.left, width: p.size, height: p.size, color: "#f1d484", opacity: p.o, transform: `rotate(${p.rot}deg)` }}
+            />
+          ))}
+        </div>
+
+        {/* twinkling stars + slow cosmic dust over the lower, night half */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[38%]" aria-hidden>
+          {NIGHT_STARS.map((st, i) => (
+            <span
+              key={i}
+              style={{
+                position: "absolute", left: `${st.x}%`, top: `${st.y}%`,
+                width: st.r * 2, height: st.r * 2, borderRadius: "9999px", background: "#fff",
+                animation: `mpaTwinkle ${st.dur}s ease-in-out ${st.delay}s infinite`,
+              }}
+            />
+          ))}
+          {DUST.map((d, i) => (
+            <span
+              key={`d${i}`}
+              style={{
+                position: "absolute", left: `${d.x}%`, top: `${d.y}%`,
+                width: d.r * 2, height: d.r * 2, borderRadius: "9999px",
+                background: "rgba(241,212,132,0.7)", filter: "blur(0.5px)",
+                animation: `mpaFloat ${d.dur + 3}s ease-in-out ${d.delay}s infinite alternate`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          {/* ── warm top: still the daytime site vibe ── */}
+          <p className="text-amber-700 font-bold text-xs uppercase tracking-[0.28em] mb-3">
+            ✦ A MyPawAdvisor Original ✦
+          </p>
+          <h2
+            className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
+            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+          >
+            Your Pet&apos;s Real Natal Chart
+          </h2>
+          <p className="text-gray-700 text-base md:text-lg max-w-xl mx-auto mb-2 italic">
+            It begins on an ordinary afternoon… and ends out among the stars.
+          </p>
+          <p className="text-gray-700/90 text-sm md:text-base max-w-xl mx-auto mb-9 leading-relaxed">
+            We read the actual sky from the moment your pet was born — real astronomy, made for pure
+            joy — and turn it into a one-of-a-kind reading and a chart worth framing.
+          </p>
+
+          {/* ── three signature templates, fanned like a deck (overlap by half) ── */}
+          <div className="relative mx-auto mb-8 h-[270px] sm:h-[370px] w-[300px] sm:w-[400px]">
+            {CHART_CARDS.map((c, i) => {
+              const step = i - 1; // -1 (left) · 0 (center) · 1 (right)
+              return (
+                <Link
+                  key={c.theme}
+                  href="/natal-chart"
+                  aria-label={`Create the chart — ${c.label} style`}
+                  className="group absolute left-1/2 top-2 w-[150px] sm:w-[200px] transition-[transform,z-index] duration-300 ease-out hover:!z-50"
+                  style={{
+                    // overlap by half: % is relative to the card's own width, so this stays
+                    // responsive across breakpoints. center card sits on top of the fan.
+                    zIndex: 12 - Math.abs(step),
+                    transform: `translateX(${step * 56 - 50}%) translateY(${Math.abs(step) * 14}px) rotate(${step * 8}deg)`,
+                  }}
+                >
+                  <div
+                    className="rounded-[10px] overflow-hidden ring-1 ring-amber-300/25 shadow-2xl shadow-black/50 transition-transform duration-300 group-hover:-translate-y-3 group-hover:scale-[1.05] group-hover:ring-amber-200/70 [&_svg]:w-full [&_svg]:h-auto [&_svg]:block"
+                    dangerouslySetInnerHTML={{ __html: c.svg }}
+                  />
+                  <span className="pointer-events-none absolute inset-x-0 -bottom-6 text-center text-[10px] uppercase tracking-[0.2em] text-amber-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {c.label}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+          <p className="text-amber-100/55 text-xs mb-7">Three signature styles — hover to peek; pick yours when you create the chart.</p>
+
+          {/* ── cosmic bottom: fully in the chart vibe ── */}
+          <div className="flex flex-wrap gap-2 justify-center mb-7">
+            {["✦ Real astronomy", "✦ One-of-a-kind reading", "✦ Printable keepsake", "✦ Perfect gift", "✦ Free to view"].map((b) => (
+              <span key={b} className="text-xs font-semibold text-amber-100/90 bg-amber-300/10 border border-amber-300/25 px-3 py-1 rounded-full">{b}</span>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/natal-chart"
+              className="bg-gradient-to-r from-amber-300 to-amber-200 hover:from-amber-200 hover:to-amber-100 text-[#1a1040] font-bold px-7 py-3 rounded-full transition-colors text-sm text-center"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              ✦ Create the Chart ✦
+            </Link>
+            <Link
+              href="/natal-chart/guide"
+              className="border border-amber-300/40 hover:border-amber-300/80 text-amber-100 font-semibold px-7 py-3 rounded-full transition-colors text-sm text-center"
+            >
+              Read the Guide
+            </Link>
+          </div>
+          <p className="text-xs text-indigo-300/50 mt-4">Free to view the full chart &amp; reading · printable keepsake from $6.99</p>
+        </div>
+      </section>
+
+      {/* DAWN — transition from the cosmic chart back into the warm site */}
+      <div
+        aria-hidden
+        className="h-20 md:h-28"
+        style={{
+          background:
+            "linear-gradient(to bottom, #04140f 0%, #07251f 20%, #0d3e38 38%, #176259 54%, #45b29a 70%, #b9efdc 87%, #fffbeb 100%)",
+        }}
+      />
+
+      {/* CATEGORY QUICK NAV — the doorway back into the everyday site after the cosmic deck.
+          A clean neutral band + defined top edge sets it apart from the dark natal sector,
+          signalling "the real site starts here." */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 py-10 border-t border-gray-200/80 shadow-[inset_0_11px_28px_-20px_rgba(20,20,45,0.22)]">
+        <PawBackground />
+        <div className="relative max-w-4xl mx-auto">
+          <p className="text-center text-[11px] font-semibold text-gray-400 uppercase tracking-[0.22em] mb-5">Browse by Category</p>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            {[
+              { href: "/reviews", label: "🏆 All Reviews", color: "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-md shadow-emerald-500/30 ring-1 ring-emerald-600/30 hover:from-emerald-400 hover:to-emerald-500" },
+              { href: "/reviews/kong-classic-dog-toy", label: "🐶 Dog Toys", color: "bg-amber-50 text-amber-800 ring-1 ring-amber-200/80 hover:bg-amber-100 hover:ring-amber-300" },
+              { href: "/reviews/furminator-deshedding-tool", label: "✂️ Grooming", color: "bg-purple-50 text-purple-800 ring-1 ring-purple-200/80 hover:bg-purple-100 hover:ring-purple-300" },
+              { href: "/reviews/petfusion-ultimate-dog-bed", label: "🛏️ Dog Beds", color: "bg-blue-50 text-blue-800 ring-1 ring-blue-200/80 hover:bg-blue-100 hover:ring-blue-300" },
+              { href: "/reviews/outward-hound-slow-feeder", label: "🥣 Feeding", color: "bg-orange-50 text-orange-800 ring-1 ring-orange-200/80 hover:bg-orange-100 hover:ring-orange-300" },
+              { href: "/reviews/cat-dancer-interactive-toy", label: "🐱 Cat Toys", color: "bg-pink-50 text-pink-800 ring-1 ring-pink-200/80 hover:bg-pink-100 hover:ring-pink-300" },
+              { href: "/reviews/rocco-roxie-stain-eliminator", label: "🧹 Cleaning", color: "bg-cyan-50 text-cyan-800 ring-1 ring-cyan-200/80 hover:bg-cyan-100 hover:ring-cyan-300" },
+              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "🦮 Harnesses", color: "bg-lime-50 text-lime-800 ring-1 ring-lime-200/80 hover:bg-lime-100 hover:ring-lime-300" },
+              { href: "/reviews/midwest-icrate-dog-crate", label: "🏠 Crates", color: "bg-stone-100 text-stone-700 ring-1 ring-stone-200 hover:bg-stone-200 hover:ring-stone-300" },
+              { href: "/insurance", label: "🛡️ Insurance", color: "bg-indigo-50 text-indigo-800 ring-1 ring-indigo-200/80 hover:bg-indigo-100 hover:ring-indigo-300" },
+            ].map((cat) => (
+              <Link key={cat.href} href={cat.href}
+                className={`px-5 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wide shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${cat.color}`}>
+                {cat.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ULTRA K9 PRO FUNNEL BANNER */}
-      <section className="bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200 py-12 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <section className="px-4 py-10">
+        <div className="max-w-5xl mx-auto rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 ring-1 ring-amber-200/80 shadow-[0_14px_44px_-20px_rgba(180,120,20,0.4)] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-shrink-0 flex justify-center">
             <div className="relative">
               <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10 animate-pulse">
@@ -240,63 +452,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Audible free trial band */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200 p-5 md:p-6 flex flex-col md:flex-row items-center gap-5 shadow-sm">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center text-2xl">
-              🎧
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-lg md:text-xl font-extrabold text-gray-900 mb-1 leading-tight">
-                Prefer to listen? Get your first audiobook free.
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
-                Start a <strong className="text-gray-900">30-day Audible free trial</strong> — the audiobook is yours to keep, even if you cancel.
-              </p>
-            </div>
-            <a
-              href={AUDIBLE_FREE_TRIAL}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="shrink-0 bg-amber-500 hover:bg-amber-400 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-lg shadow-amber-500/30 text-sm whitespace-nowrap"
-            >
-              Start My Free Trial →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CATEGORY QUICK NAV */}
-      <section className="bg-gradient-to-b from-white to-gray-50 border-b border-gray-100 py-6 px-4">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Browse by Category</p>
-          <div className="flex flex-wrap justify-center gap-2 mb-2">
-            {[
-              { href: "/reviews", label: "🏆 All Reviews", color: "bg-emerald-500 hover:bg-emerald-400 text-white shadow-md shadow-emerald-200" },
-              { href: "/reviews/kong-classic-dog-toy", label: "🐶 Dog Toys", color: "bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 hover:border-amber-400 hover:shadow-sm" },
-              { href: "/reviews/furminator-deshedding-tool", label: "✂️ Grooming", color: "bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-200 hover:border-purple-400 hover:shadow-sm" },
-              { href: "/reviews/petfusion-ultimate-dog-bed", label: "🛏️ Dog Beds", color: "bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 hover:border-blue-400 hover:shadow-sm" },
-              { href: "/reviews/outward-hound-slow-feeder", label: "🥣 Feeding", color: "bg-orange-50 hover:bg-orange-100 text-orange-800 border border-orange-200 hover:border-orange-400 hover:shadow-sm" },
-            ].map((cat) => (
-              <Link key={cat.href} href={cat.href}
-                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 ${cat.color}`}>
-                {cat.label}
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {[
-              { href: "/reviews/cat-dancer-interactive-toy", label: "🐱 Cat Toys", color: "bg-pink-50 hover:bg-pink-100 text-pink-800 border border-pink-200 hover:border-pink-400 hover:shadow-sm" },
-              { href: "/reviews/rocco-roxie-stain-eliminator", label: "🧹 Cleaning", color: "bg-cyan-50 hover:bg-cyan-100 text-cyan-800 border border-cyan-200 hover:border-cyan-400 hover:shadow-sm" },
-              { href: "/reviews/rabbitgoo-no-pull-dog-harness", label: "🦮 Harnesses", color: "bg-lime-50 hover:bg-lime-100 text-lime-800 border border-lime-200 hover:border-lime-400 hover:shadow-sm" },
-              { href: "/reviews/midwest-icrate-dog-crate", label: "🏠 Crates", color: "bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200 hover:border-stone-400 hover:shadow-sm" },
-              { href: "/insurance", label: "🛡️ Insurance", color: "bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 hover:border-indigo-400 hover:shadow-sm" },
-            ].map((cat) => (
-              <Link key={cat.href} href={cat.href}
-                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 ${cat.color}`}>
-                {cat.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

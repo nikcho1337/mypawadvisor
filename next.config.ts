@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // jsPDF lazily imports html2canvas/canvg/dompurify for its unused .html() feature.
+  // Alias them to an empty stub so Turbopack doesn't fail resolving optional deps.
+  turbopack: {
+    resolveAlias: {
+      html2canvas: "./lib/empty-module.ts",
+      canvg: "./lib/empty-module.ts",
+      dompurify: "./lib/empty-module.ts",
+    },
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
