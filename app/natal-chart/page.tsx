@@ -397,13 +397,13 @@ export default function HoroscopePage() {
                     <p className="text-amber-100 font-semibold" style={{ fontFamily: "Cinzel, serif" }}>Personalize the wording</p>
                     <p className="text-indigo-200/70 text-sm">Rewrite the captions &amp; closing line, or add a dedication.</p>
                   </div>
-                  <span className="shrink-0 rounded-full bg-amber-300 text-[#120a2e] text-[11px] font-bold px-2.5 py-1 tracking-wide">PREMIUM&nbsp;+$3</span>
+                  <span className="shrink-0 rounded-full bg-amber-300 text-[#120a2e] text-[11px] font-bold px-2.5 py-1 tracking-wide">CUSTOM&nbsp;+$3</span>
                 </div>
 
                 {!showEditor ? (
                   <button onClick={() => setShowEditor(true)}
                     className="mt-3 rounded-full border border-amber-300/50 px-4 py-1.5 text-amber-100 text-sm hover:bg-amber-300/10 transition">
-                    ✎ Edit text (premium)
+                    ✎ Edit text (custom)
                   </button>
                 ) : (
                   <div className="mt-4 space-y-3">
