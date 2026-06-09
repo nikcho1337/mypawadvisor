@@ -235,7 +235,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           {/* ── warm top: still the daytime site vibe ── */}
           <p className="text-amber-700 font-bold text-xs uppercase tracking-[0.28em] mb-3">
-            ✦ A MyPawAdvisor Original ✦
+            ✦ MyPawAdvisor Original ✦
           </p>
           <h2
             className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
