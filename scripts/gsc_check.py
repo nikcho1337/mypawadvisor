@@ -10,6 +10,11 @@ import datetime as dt
 import sys
 from pathlib import Path
 
+# Force UTF-8 on stdout — Windows defaults to cp1251/cp1252 which can't
+# encode accented letters in GSC query results.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError

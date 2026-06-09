@@ -5,9 +5,10 @@ import { buildReading } from "@/scripts/natal/reading-template";
 import { renderCertificateSVG } from "@/scripts/natal/render-svg";
 
 export const metadata: Metadata = {
-  title: "The Story Behind Your Pet's Natal Chart | MyPawAdvisor",
+  title: "The Story Behind Your Pet's Natal Chart",
   description:
     "A personal guide to the Pet Natal Chart — how it works, why the astronomy is real, and why it makes such a meaningful gift for any pet lover.",
+  alternates: { canonical: "https://www.mypawadvisor.com/natal-chart/guide" },
 };
 
 // A real example chart, computed at build time so visitors see exactly what they'll get.
