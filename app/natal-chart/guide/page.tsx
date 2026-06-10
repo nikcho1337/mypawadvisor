@@ -20,6 +20,14 @@ const SAMPLE_PET: BirthInput = {
 const SAMPLE_CHART = computeNatalChart(SAMPLE_PET);
 const SAMPLE_READING = buildReading(SAMPLE_PET, SAMPLE_CHART);
 const SAMPLE_SVG = renderCertificateSVG(SAMPLE_PET, SAMPLE_CHART, SAMPLE_READING, { theme: "nebula" });
+// Second render (fresh unique SVG ids) for the framed-on-the-wall mockup further down.
+// The screen version has rounded corners; a real print is square-cut, so flatten the
+// frame clip's radius for the mockup copy only.
+const SAMPLE_SVG_FRAMED = renderCertificateSVG(SAMPLE_PET, SAMPLE_CHART, SAMPLE_READING, { theme: "nebula" })
+  .replace('rx="40"', 'rx="0"');
+// One more copy (unique ids again) for the second frame in the side-by-side comparison.
+const SAMPLE_SVG_FRAMED_B = renderCertificateSVG(SAMPLE_PET, SAMPLE_CHART, SAMPLE_READING, { theme: "nebula" })
+  .replace('rx="40"', 'rx="0"');
 
 // A few fixed stars for the hero backdrop (server-rendered, deterministic — no flicker).
 const STARS = [
@@ -166,6 +174,82 @@ export default function GuidePage() {
 
         <Divider />
 
+        {/* ---------- what you get, exactly ---------- */}
+        <Section title="What exactly do you get?">
+          <p>No mystery box — here&rsquo;s precisely what comes out the other side:</p>
+          <ul className="space-y-3 mt-3">
+            <Bullet>
+              <strong className="text-amber-100">The certificate</strong> — your pet&rsquo;s name in gold
+              lettering over the complete chart wheel: all ten planets, the zodiac band, houses and
+              aspect lines, with their photo glowing in the center medallion. Beneath it, their Sun,
+              Moon &amp; Rising cards, a star rating, their elemental nature, and the Cosmic Signature
+              closing line.
+            </Bullet>
+            <Bullet>
+              <strong className="text-amber-100">The written reading</strong> — about ten warm, funny
+              sections (Sun, Moon, Rising, how they operate, love &amp; play, their standout aspect and
+              more). Free to read in full, on screen, forever.
+            </Bullet>
+            <Bullet>
+              <strong className="text-amber-100">The PDF keepsake</strong> — a high-resolution portrait
+              file, roughly 2050 × 3250 pixels (≈250 DPI print quality), with the watermark removed.
+              One-time unlock from $6.99.
+            </Bullet>
+            <Bullet>
+              <strong className="text-amber-100">Print-ready sizing</strong> — prints crisp on A4 or US
+              Letter at home or at any print shop, and the tall portrait layout leaves a slim natural
+              border. It slides straight into a standard A4 frame, or mat it into a larger one for
+              full gallery-wall drama.
+            </Bullet>
+            <Bullet>
+              <strong className="text-amber-100">Make it yours</strong> — the CUSTOM add-on (+$3) lets
+              you rewrite the captions and the closing line, or add a dedication like
+              <em> &ldquo;Our best girl, forever ✦&rdquo;</em> before you download.
+            </Bullet>
+          </ul>
+
+          {/* framed-on-the-wall mockup so visitors can picture it at home */}
+          <div
+            className="mt-10 rounded-2xl px-6 pt-10 pb-8"
+            style={{
+              background: "radial-gradient(130% 100% at 50% 0%, #f3ecdf 0%, #e7dcc8 55%, #d6c7ac 100%)",
+              boxShadow: "inset 0 0 70px rgba(110,85,50,0.22)",
+            }}
+          >
+            <div className="flex flex-wrap items-start justify-center gap-8">
+              <div className="w-[170px] sm:w-[215px]">
+                <FramedPrint
+                  svg={SAMPLE_SVG_FRAMED}
+                  frame={{
+                    background: "linear-gradient(135deg, #41301c 0%, #6b5026 24%, #33271a 55%, #57422a 82%, #2c2113 100%)",
+                    boxShadow:
+                      "0 30px 55px -18px rgba(35,22,6,0.65), 0 12px 24px -10px rgba(35,22,6,0.5), 0 3px 7px rgba(35,22,6,0.35), inset 0 1px 1px rgba(255,235,190,0.35), inset 0 -1px 2px rgba(0,0,0,0.5)",
+                  }}
+                  lip={{ background: "linear-gradient(135deg, #d9b96a, #8a6d35 60%, #d9b96a)" }}
+                />
+                <p className="text-center text-[#5d4a2e] text-xs mt-3 uppercase tracking-[0.18em]">Walnut &amp; gold</p>
+              </div>
+              <div className="w-[170px] sm:w-[215px]">
+                <FramedPrint
+                  svg={SAMPLE_SVG_FRAMED_B}
+                  frame={{
+                    background: "linear-gradient(135deg, #1c1c1e 0%, #303034 26%, #151517 58%, #28282b 100%)",
+                    boxShadow:
+                      "0 30px 55px -18px rgba(0,0,0,0.6), 0 12px 24px -10px rgba(0,0,0,0.45), 0 3px 7px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.14), inset 0 -1px 2px rgba(0,0,0,0.65)",
+                  }}
+                  lip={{ background: "linear-gradient(135deg, #dadadd, #8f8f94 60%, #cfcfd3)" }}
+                />
+                <p className="text-center text-[#5d4a2e] text-xs mt-3 uppercase tracking-[0.18em]">Matte black</p>
+              </div>
+              <p className="basis-full text-center text-[#5d4a2e] text-sm mt-1 italic">
+                Luna&rsquo;s chart printed on A4 — same print, two frames. Wall, sadly, not included.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        <Divider />
+
         {/* ---------- the gift ---------- */}
         <Section title="Honestly? It&rsquo;s a perfect gift.">
           <p>
@@ -252,6 +336,40 @@ function Step({ n, h, children }: { n: number; h: string; children: React.ReactN
         <p className="text-indigo-100/80">{children}</p>
       </div>
     </li>
+  );
+}
+
+// A framed print on the wall: moulding + thin lip around a full-bleed, square-cut print,
+// with rabbet shadow and glass glare so it reads as a real framed piece.
+function FramedPrint({ svg, frame, lip }: { svg: string; frame: React.CSSProperties; lip: React.CSSProperties }) {
+  return (
+    <div className="rounded-[3px] p-[9px] sm:p-[11px]" style={frame}>
+      <div className="p-[2px]" style={lip}>
+        <div className="relative">
+          {/* the print itself — toned down from screen-bright to ink-on-paper */}
+          <div
+            className="[&_svg]:w-full [&_svg]:h-auto [&_svg]:block"
+            style={{ filter: "brightness(0.96) contrast(0.96) saturate(0.92)" }}
+            dangerouslySetInnerHTML={{ __html: svg }}
+          />
+          {/* depth: the frame's rabbet casts a shadow onto the glass/print */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{ boxShadow: "inset 0 3px 9px rgba(0,0,0,0.55), inset 0 -2px 6px rgba(0,0,0,0.4), inset 3px 0 7px rgba(0,0,0,0.35), inset -3px 0 7px rgba(0,0,0,0.35)" }}
+          />
+          {/* glass: diagonal glare streaks + soft top light */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(115deg, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.08) 14%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 58%, rgba(255,255,255,0.12) 72%, rgba(255,255,255,0) 86%), linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 16%)",
+            }}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
