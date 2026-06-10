@@ -13,7 +13,8 @@ export async function GET(request: Request) {
   try {
     const session = await stripe.checkout.sessions.retrieve(id);
     return Response.json({
-      paid: session.payment_status === "paid",
+      // "no_payment_required" = session completed with a 100% promo code (no PaymentIntent).
+      paid: session.payment_status === "paid" || session.payment_status === "no_payment_required",
       personalized: session.metadata?.personalized === "1",
     });
   } catch (err: any) {

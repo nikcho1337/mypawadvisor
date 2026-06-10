@@ -42,6 +42,7 @@ export async function POST(request: Request) {
           },
         },
       ],
+      allow_promotion_codes: true,
       success_url: `${origin}/natal-chart?paid={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/natal-chart?canceled=1`,
       metadata: { personalized: personalized ? "1" : "0", petName },
