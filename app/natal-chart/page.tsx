@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { computeNatalChart, type BirthInput, type NatalChart } from "@/scripts/natal/natal-chart";
 import { buildReading, type Reading } from "@/scripts/natal/reading-template";
 import { renderCertificateSVG, type ThemeName, type CertEdits } from "@/scripts/natal/render-svg";
@@ -428,8 +429,18 @@ export default function HoroscopePage() {
         </section>
       )}
 
-      {/* Contact support — email lives only in the mailto href, never shown on screen */}
-      <section className="relative z-10 max-w-xs mx-auto px-4 pb-12">
+      {/* Guide + contact support — email lives only in the mailto href, never shown on screen */}
+      <section className="relative z-10 max-w-sm mx-auto px-4 pb-12 space-y-3">
+        <div className="rounded-lg border border-amber-200/20 bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
+          <span className="text-indigo-200/70 text-xs" style={{ fontFamily: "'Cormorant Garamond', serif" }}>New to natal charts?</span>
+          <Link
+            href="/natal-chart/guide"
+            className="shrink-0 rounded-full border border-amber-300/50 px-3 py-1.5 text-amber-100 text-xs hover:bg-amber-300/10 transition"
+            style={{ fontFamily: "Cinzel, serif" }}
+          >
+            ✦ Read the Guide
+          </Link>
+        </div>
         <div className="rounded-lg border border-amber-200/20 bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
           <span className="text-indigo-200/70 text-xs" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Need a hand?</span>
           <button
