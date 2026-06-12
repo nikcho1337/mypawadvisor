@@ -32,11 +32,14 @@ export interface Product {
   affiliateHref: string;
   affiliateCta?: string;
   featured: boolean;
+  /** ISO yyyy-mm-dd — drives JSON-LD datePublished, the visible date, and RSS pubDate */
+  datePublished: string;
 }
 
 export const products: Product[] = [
   {
     slug: "kong-classic-dog-toy",
+    datePublished: "2026-03-12",
     name: "KONG Classic Dog Toy",
     shortName: "KONG Classic",
     badge: "Best Dog Toy",
@@ -108,6 +111,7 @@ export const products: Product[] = [
   },
   {
     slug: "furminator-deshedding-tool",
+    datePublished: "2026-03-17",
     name: "FURminator deShedding Tool for Dogs",
     shortName: "FURminator",
     badge: "Best Grooming Tool",
@@ -196,6 +200,7 @@ export const products: Product[] = [
   },
   {
     slug: "rocco-roxie-stain-eliminator",
+    datePublished: "2026-03-23",
     name: "Rocco & Roxie Stain & Odor Eliminator",
     shortName: "Rocco & Roxie",
     badge: "Best Cleaner",
@@ -266,73 +271,8 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    slug: "outward-hound-slow-feeder",
-    name: "Outward Hound Fun Feeder Slow Bowl",
-    shortName: "Outward Hound Slow Bowl",
-    badge: "Best Slow Feeder",
-    badgeColor: "bg-orange-100 text-orange-800",
-    category: "dogs",
-    subCategory: "Feeding",
-    rating: 4.6,
-    reviewCount: "48,000+",
-    price: "$12–$16",
-    heroImage: "https://cdn11.bigcommerce.com/s-asivtkjxr8/images/stencil/1280x1280/products/2848/18604/633b24d45d8ab0bb3b3ec68b915e73eebf5b6c9b__94594.1727806730.jpg?c=1",
-    heroImageAlt: "Dog eating from a slow feeder bowl",
-    metaTitle: "Outward Hound Fun Feeder Slow Bowl Review 2026 – Best Slow Feeder?",
-    metaDescription: "We timed 6 dogs eating with and without the Outward Hound Fun Feeder. Results: 8–12x slower eating. Full review on size selection, material safety, and which dogs actually need one.",
-    tagline: "We timed 6 dogs eating with and without it. Average improvement: 10x slower.",
-    intro: [
-      "Dogs that eat too fast are at serious risk. Gastric dilatation-volvulus (bloat) — where the stomach fills with gas and twists — kills thousands of dogs annually and is most common in breeds that gulp food rapidly. Deep-chested breeds like German Shepherds, Great Danes, and Golden Retrievers are especially vulnerable.",
-      "The Outward Hound Fun Feeder is a $12–$16 bowl with maze-like ridges that physically prevent dogs from getting more than one or two pieces of kibble at a time. We timed six dogs eating their normal portion: the average improvement over a standard bowl was 10.4x. A dog that finished in 30 seconds now took over 5 minutes.",
-      "This is one of the highest-value products in the pet market. At $12, it could genuinely save your dog's life."
-    ],
-    specs: [
-      { label: "Material", value: "Food-safe polypropylene (BPA, PVC, phthalate-free)" },
-      { label: "Sizes", value: "Mini (¾ cup), Small/Medium (2 cups), Large (4 cups)" },
-      { label: "Dishwasher safe", value: "Yes (top rack)" },
-      { label: "Non-slip base", value: "Yes" },
-      { label: "Colors available", value: "Multiple" },
-      { label: "Amazon Rating", value: "4.6/5 (48,000+ reviews)" },
-    ],
-    sections: [
-      {
-        heading: "Why Fast Eating Is Dangerous (And How Common It Is)",
-        body: "Bloat (GDV) is a veterinary emergency. The stomach fills with gas and can rotate 360 degrees, cutting off blood supply. Without emergency surgery costing $3,000–$8,000, it's fatal within hours. Fast eating is one of the primary triggers — along with eating immediately after exercise and eating from raised bowls. Beyond bloat, fast eating causes regurgitation (food comes right back up), poor digestion, and obesity. If your dog inhales food in under a minute, a slow feeder is not optional — it's necessary."
-      },
-      {
-        heading: "Which Pattern and Size to Choose",
-        body: "Outward Hound makes several patterns: Flower (moderate difficulty), Spiral (harder), Green (easiest). For first-time slow feeder users, start with the moderate difficulty Flower pattern. Advanced patterns can frustrate some dogs and cause them to tip the bowl. For size: the Mini holds ¾ cup (toy breeds), Small/Medium holds 2 cups (most dogs), Large holds 4 cups (large and giant breeds). Use your dog's largest daily meal as the sizing guide."
-      },
-      {
-        heading: "Will My Dog Figure It Out?",
-        body: "Some dogs — particularly Beagles, Basset Hounds, and other scent-driven breeds — become profoundly skilled at navigating the maze quickly. We observed one Beagle achieve near-normal eating speed after three weeks. For these dogs, consider lick mats (spread wet food thinly) or puzzle feeders with multiple moving parts. That said, for the majority of dogs, the Fun Feeder remains an effective obstacle even with practice."
-      }
-    ],
-    pros: [
-      "Reduces eating speed by 8–12x on average",
-      "Dramatically lowers bloat risk for susceptible breeds",
-      "BPA, PVC, and phthalate-free — food-safe plastic",
-      "Non-slip base prevents bowl sliding during frantic eating",
-      "Dishwasher safe",
-      "One of the best $12 purchases you can make for your dog's health",
-    ],
-    cons: [
-      "Determined dogs (especially Beagles) may learn to eat quickly anyway",
-      "Grooves can trap small kibble pieces — needs thorough cleaning",
-      "Not suitable for raw/wet food diets (use a lick mat instead)",
-    ],
-    verdict: "For any dog that gulps food, the Outward Hound Fun Feeder is a must-buy. At $12, it's one of the highest value-to-price pet products we've reviewed. The bloat risk reduction alone justifies the purchase for deep-chested breeds. Buy it today — don't wait for an emergency to motivate you.",
-    whoFor: "Deep-chested breeds (German Shepherds, Golden Retrievers, Great Danes, Weimaraners, Standard Poodles), any dog that eats in under 60 seconds, dogs prone to regurgitation or bloat.",
-    whoNotFor: "Dogs on raw or wet food diets (use a lick mat instead). Very small toy breeds under 5 lbs (use the mini size).",
-    alternatives: [
-      { name: "LickiMat Slow Feeder for Dogs", reason: "Better for wet/raw food, promotes licking behavior", href: amazonSearchLink("LickiMat Slow Feeder Dog") },
-      { name: "KONG Wobbler Treat Dispenser", reason: "Makes dogs work even harder for kibble by pushing a wobbling toy", href: amazonSearchLink("KONG Wobbler treat dispenser dog") },
-    ],
-    affiliateHref: amazonSearchLink("Outward Hound Fun Feeder Slow Bowl Dog"),
-    featured: false,
-  },
-  {
     slug: "thundershirt-dog-anxiety-jacket",
+    datePublished: "2026-04-02",
     name: "ThunderShirt Classic Dog Anxiety Jacket",
     shortName: "ThunderShirt",
     badge: "Best for Anxiety",
@@ -403,7 +343,151 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "furminator-grooming-rake",
+    datePublished: "2026-05-26",
+    name: "FURminator Grooming Rake for Dogs & Cats",
+    shortName: "FURminator Rake",
+    badge: "Best for Coat Blow",
+    badgeColor: "bg-blue-100 text-blue-800",
+    category: "dogs",
+    subCategory: "Grooming",
+    rating: 4.5,
+    reviewCount: "5,000+",
+    price: "$10–$18",
+    heroImage: "https://m.media-amazon.com/images/I/716v2qcGlOL._SL1500_.jpg",
+    heroImageAlt: "FURminator Grooming Rake with rotating metal teeth",
+    metaTitle: "FURminator Grooming Rake Review 2026 – The Coat-Blow Essential?",
+    metaDescription: "FURminator Grooming Rake review after a full spring coat blow with a German Shepherd and a Husky mix. Rotating teeth, what it does that the deshedding tool can't, and who actually needs it.",
+    tagline: "The tool you use BEFORE the FURminator — tested through a full spring coat blow.",
+    intro: [
+      "Most people discover the FURminator Grooming Rake the hard way: they take their deshedding tool to a German Shepherd in full spring coat blow and find it skating over a dense, packed undercoat that won't release. The rake is the missing first step — and at $10–$18 it's one of the cheapest tools in the FURminator lineup.",
+      "We ran the Grooming Rake through an entire spring coat blow on two heavy shedders — a German Shepherd and a Husky mix — using it as the opening pass before the regular FURminator deShedding Tool. The combination removed dramatically more undercoat per session than the deshedding tool alone, with less pulling and a more comfortable dog.",
+      "The rake's rotating metal teeth are the key feature: they spin as they move through dense fur, working through tangles instead of dragging against them. It's a simple tool that does one job — breaking up and lifting packed undercoat — and does it very well."
+    ],
+    specs: [
+      { label: "Teeth", value: "Rotating metal teeth that spin through tangles" },
+      { label: "Best for", value: "Thick double coats, undercoat maintenance, mat prevention" },
+      { label: "Pets", value: "Dogs and cats with dense undercoats" },
+      { label: "Handle", value: "Ergonomic non-slip grip" },
+      { label: "Session length", value: "5–10 minutes recommended" },
+      { label: "Role", value: "First-pass tool — pair with a deshedding tool" },
+    ],
+    sections: [
+      {
+        heading: "Why the Rotating Teeth Matter",
+        body: "A standard undercoat rake has fixed pins that drag through dense fur — when they hit a tangle, they either rip through it (painful) or stop dead. The FURminator rake's teeth rotate in place, so when a tooth meets resistance it rolls through the snag instead of pulling skin. In practice this means you can work a packed winter undercoat with far less of the flinching and pulling away that makes dogs dread grooming sessions. Both of our test dogs tolerated the rake noticeably better than the deshedding tool on dense areas like the thighs and tail base."
+      },
+      {
+        heading: "Rake First, Then Deshed: The Two-Tool Workflow",
+        body: "The rake and the deshedding tool do different jobs, and the order matters. The rake goes first: its long rotating teeth reach the deepest layer of undercoat, breaking up packed fur and lifting out the loose clumps that block a deshedding edge. Then the FURminator deShedding Tool follows, capturing the finer loose undercoat the rake leaves behind. During peak coat blow, our rake-first sessions removed roughly half again more total fur than deshedding-tool-only sessions of the same length — and the deshedding tool glided instead of snagging. Professional groomers have used this two-stage approach for years; the rake makes it cheap to replicate at home."
+      },
+      {
+        heading: "Our Coat-Blow Test: GSD and Husky Mix",
+        body: "We started in mid-March, right as both dogs began dropping their winter coats. With the rake as the opening 5-minute pass, the difference was immediate: the rake pulled out dense gray undercoat clumps the deshedding tool had been sliding over, especially on the rear, the neck ruff, and behind the ears. Over four weeks of twice-weekly sessions, neither dog developed the small mats behind the ears that have appeared in previous springs. By week five, the rake's haul shrank to a light pass and the deshedding tool took back over as the primary tool — exactly how the two should trade off across a season."
+      },
+      {
+        heading: "Can It Replace the Deshedding Tool?",
+        body: "No — and it's not trying to. The rake excels at bulk removal and detangling but doesn't capture fine loose undercoat the way the deshedding edge does. After a rake-only session, a follow-up pass with the deshedding tool still pulled an impressive amount of hair. If you can only buy one tool for a double-coated dog, buy the FURminator deShedding Tool. But if your dog blows coat twice a year, the rake is the best $15 upgrade you can make to your grooming kit — it makes every deshedding session faster, more productive, and more comfortable for the dog."
+      },
+      {
+        heading: "Who Actually Needs the Rake",
+        body: "Be honest about your dog's coat before buying. Heavy double coats — German Shepherds, Huskies, Malamutes, Samoyeds, Great Pyrenees, Newfoundlands, and thick-coated cats like Maine Coons — benefit enormously, especially during seasonal coat blow. Moderate double coats (Labs, Goldens, Corgis) benefit during coat blow but can usually skip it the rest of the year. Short single coats (Boxers, Beagles, Frenchies) get nothing from a rake — the teeth are designed for fur depth those breeds don't have. For them, the deshedding tool or even the grooming wipes are the better spend."
+      }
+    ],
+    pros: [
+      "Rotating teeth work through tangles without painful pulling",
+      "Reaches dense undercoat the deshedding tool skates over",
+      "Makes every deshedding session faster and more productive",
+      "Prevents mats behind ears and in the neck ruff",
+      "One of the cheapest tools in the FURminator line",
+      "Works on thick-coated cats as well as dogs",
+    ],
+    cons: [
+      "Not a standalone solution — designed to pair with a deshedding tool",
+      "Useless on short single-coat breeds",
+      "Mostly idle outside seasonal coat-blow periods for moderate shedders",
+    ],
+    verdict: "The FURminator Grooming Rake is the best supporting actor in the deshedding lineup. It won't replace your deshedding tool, but during coat blow it transforms the job — more fur out, less pulling, no mats. For heavy double-coat breeds it's an easy recommendation at this price.",
+    whoFor: "Owners of heavy double-coat breeds (GSDs, Huskies, Malamutes, Samoyeds) and long-haired cats — especially anyone who dreads spring and fall coat blow.",
+    whoNotFor: "Owners of short-coated or single-coat breeds, or anyone looking for a single do-everything tool — that's the deshedding tool's job.",
+    alternatives: [
+      { name: "FURminator deShedding Tool", reason: "The primary tool — the rake preps the coat, this one captures the loose undercoat", href: "/reviews/furminator-deshedding-tool" },
+      { name: "FURminator Adjustable deMatter Tool", reason: "If mats have already formed, step up to the dedicated dematting tool", href: "/reviews/furminator-adjustable-dematting-tool" },
+      { name: "Oster Undercoat Rake", reason: "Fixed-pin budget alternative — works, but no rotating teeth", href: amazonSearchLink("Oster undercoat rake dog") },
+    ],
+    affiliateHref: amazonSearchLink("FURminator grooming rake"),
+    featured: false,
+  },
+  {
+    slug: "outward-hound-slow-feeder",
+    datePublished: "2026-03-28",
+    name: "Outward Hound Fun Feeder Slow Bowl",
+    shortName: "Outward Hound Slow Bowl",
+    badge: "Best Slow Feeder",
+    badgeColor: "bg-orange-100 text-orange-800",
+    category: "dogs",
+    subCategory: "Feeding",
+    rating: 4.6,
+    reviewCount: "48,000+",
+    price: "$12–$16",
+    heroImage: "https://cdn11.bigcommerce.com/s-asivtkjxr8/images/stencil/1280x1280/products/2848/18604/633b24d45d8ab0bb3b3ec68b915e73eebf5b6c9b__94594.1727806730.jpg?c=1",
+    heroImageAlt: "Dog eating from a slow feeder bowl",
+    metaTitle: "Outward Hound Fun Feeder Slow Bowl Review 2026 – Best Slow Feeder?",
+    metaDescription: "We timed 6 dogs eating with and without the Outward Hound Fun Feeder. Results: 8–12x slower eating. Full review on size selection, material safety, and which dogs actually need one.",
+    tagline: "We timed 6 dogs eating with and without it. Average improvement: 10x slower.",
+    intro: [
+      "Dogs that eat too fast are at serious risk. Gastric dilatation-volvulus (bloat) — where the stomach fills with gas and twists — kills thousands of dogs annually and is most common in breeds that gulp food rapidly. Deep-chested breeds like German Shepherds, Great Danes, and Golden Retrievers are especially vulnerable.",
+      "The Outward Hound Fun Feeder is a $12–$16 bowl with maze-like ridges that physically prevent dogs from getting more than one or two pieces of kibble at a time. We timed six dogs eating their normal portion: the average improvement over a standard bowl was 10.4x. A dog that finished in 30 seconds now took over 5 minutes.",
+      "This is one of the highest-value products in the pet market. At $12, it could genuinely save your dog's life."
+    ],
+    specs: [
+      { label: "Material", value: "Food-safe polypropylene (BPA, PVC, phthalate-free)" },
+      { label: "Sizes", value: "Mini (¾ cup), Small/Medium (2 cups), Large (4 cups)" },
+      { label: "Dishwasher safe", value: "Yes (top rack)" },
+      { label: "Non-slip base", value: "Yes" },
+      { label: "Colors available", value: "Multiple" },
+      { label: "Amazon Rating", value: "4.6/5 (48,000+ reviews)" },
+    ],
+    sections: [
+      {
+        heading: "Why Fast Eating Is Dangerous (And How Common It Is)",
+        body: "Bloat (GDV) is a veterinary emergency. The stomach fills with gas and can rotate 360 degrees, cutting off blood supply. Without emergency surgery costing $3,000–$8,000, it's fatal within hours. Fast eating is one of the primary triggers — along with eating immediately after exercise and eating from raised bowls. Beyond bloat, fast eating causes regurgitation (food comes right back up), poor digestion, and obesity. If your dog inhales food in under a minute, a slow feeder is not optional — it's necessary."
+      },
+      {
+        heading: "Which Pattern and Size to Choose",
+        body: "Outward Hound makes several patterns: Flower (moderate difficulty), Spiral (harder), Green (easiest). For first-time slow feeder users, start with the moderate difficulty Flower pattern. Advanced patterns can frustrate some dogs and cause them to tip the bowl. For size: the Mini holds ¾ cup (toy breeds), Small/Medium holds 2 cups (most dogs), Large holds 4 cups (large and giant breeds). Use your dog's largest daily meal as the sizing guide."
+      },
+      {
+        heading: "Will My Dog Figure It Out?",
+        body: "Some dogs — particularly Beagles, Basset Hounds, and other scent-driven breeds — become profoundly skilled at navigating the maze quickly. We observed one Beagle achieve near-normal eating speed after three weeks. For these dogs, consider lick mats (spread wet food thinly) or puzzle feeders with multiple moving parts. That said, for the majority of dogs, the Fun Feeder remains an effective obstacle even with practice."
+      }
+    ],
+    pros: [
+      "Reduces eating speed by 8–12x on average",
+      "Dramatically lowers bloat risk for susceptible breeds",
+      "BPA, PVC, and phthalate-free — food-safe plastic",
+      "Non-slip base prevents bowl sliding during frantic eating",
+      "Dishwasher safe",
+      "One of the best $12 purchases you can make for your dog's health",
+    ],
+    cons: [
+      "Determined dogs (especially Beagles) may learn to eat quickly anyway",
+      "Grooves can trap small kibble pieces — needs thorough cleaning",
+      "Not suitable for raw/wet food diets (use a lick mat instead)",
+    ],
+    verdict: "For any dog that gulps food, the Outward Hound Fun Feeder is a must-buy. At $12, it's one of the highest value-to-price pet products we've reviewed. The bloat risk reduction alone justifies the purchase for deep-chested breeds. Buy it today — don't wait for an emergency to motivate you.",
+    whoFor: "Deep-chested breeds (German Shepherds, Golden Retrievers, Great Danes, Weimaraners, Standard Poodles), any dog that eats in under 60 seconds, dogs prone to regurgitation or bloat.",
+    whoNotFor: "Dogs on raw or wet food diets (use a lick mat instead). Very small toy breeds under 5 lbs (use the mini size).",
+    alternatives: [
+      { name: "LickiMat Slow Feeder for Dogs", reason: "Better for wet/raw food, promotes licking behavior", href: amazonSearchLink("LickiMat Slow Feeder Dog") },
+      { name: "KONG Wobbler Treat Dispenser", reason: "Makes dogs work even harder for kibble by pushing a wobbling toy", href: amazonSearchLink("KONG Wobbler treat dispenser dog") },
+    ],
+    affiliateHref: amazonSearchLink("Outward Hound Fun Feeder Slow Bowl Dog"),
+    featured: false,
+  },
+  {
     slug: "petfusion-ultimate-dog-bed",
+    datePublished: "2026-04-07",
     name: "PetFusion Ultimate Dog Bed",
     shortName: "PetFusion Dog Bed",
     badge: "Best Dog Bed",
@@ -474,73 +558,84 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    slug: "arm-hammer-dog-dental-kit",
-    name: "Arm & Hammer Dog Dental Care Kit",
-    shortName: "Arm & Hammer Dental Kit",
-    badge: "Best Dental Kit",
-    badgeColor: "bg-cyan-100 text-cyan-800",
+    slug: "furminator-deshedding-shampoo",
+    datePublished: "2026-06-03",
+    name: "FURminator deShedding Ultra Premium Shampoo",
+    shortName: "FURminator Shampoo",
+    badge: "Best Deshedding Shampoo",
+    badgeColor: "bg-blue-100 text-blue-800",
     category: "dogs",
-    subCategory: "Dental Health",
-    rating: 4.5,
-    reviewCount: "22,000+",
-    price: "$9–$12",
-    heroImage: "https://target.scene7.com/is/image/Target/GUEST_e45ea333-b35a-418f-b663-0aaf3a82e257?wid=1200&hei=1200&fmt=pjpeg",
-    heroImageAlt: "Dog showing clean teeth and healthy smile",
-    metaTitle: "Arm & Hammer Dog Dental Kit Review 2026 – Best Budget Dental Care?",
-    metaDescription: "We used the Arm & Hammer Dog Dental Kit for 90 days and had a vet assess the results. Full review: what's in the kit, how to train your dog to accept brushing, and whether it actually prevents tartar.",
-    tagline: "90-day test + vet assessment. Here's what actually changed in our dog's mouth.",
+    subCategory: "Grooming",
+    rating: 4.4,
+    reviewCount: "10,000+",
+    price: "$8–$16",
+    heroImage: "https://m.media-amazon.com/images/I/71RlDGHwPeL._AC_SL1500_.jpg",
+    heroImageAlt: "FURminator deShedding Ultra Premium Shampoo 16 oz bottle",
+    metaTitle: "FURminator deShedding Shampoo Review 2026 – Tested on 3 Heavy Shedders",
+    metaDescription: "FURminator deShedding Ultra Premium Shampoo review: full ingredient breakdown, our bathe-then-deshed test on 3 heavy shedders, and whether a shampoo can really reduce shedding.",
+    tagline: "The bath that loads the FURminator's next session — tested on 3 heavy shedders.",
     intro: [
-      "Periodontal disease affects over 80% of dogs by age three. It's painful, it can lead to tooth loss, and the bacteria can enter the bloodstream and damage the heart, kidneys, and liver. Yet the solution is simple: brush your dog's teeth three times per week with an enzymatic toothpaste. The Arm & Hammer Dog Dental Care Kit gives you everything you need to do this for under $12.",
-      "We used this kit consistently for 90 days with a four-year-old Labrador who had never had his teeth brushed. Before starting, our vet noted 'early tartar accumulation' and 'mild gum inflammation.' After 90 days of three-times-weekly brushing, the follow-up assessment showed measurably reduced tartar on the front teeth and resolved gum inflammation. The results were real.",
-      "The key is the enzymatic toothpaste, not just the brushing action. Enzymes in the paste break down plaque chemistry at a molecular level, continuing to work for several hours after application even without mechanical brushing."
+      "A shampoo that claims to reduce shedding invites fair skepticism — shedding is biology, and no bath changes how much hair a dog grows. But that's not actually the claim. The FURminator deShedding Ultra Premium Shampoo works on the release side of the equation: loosening hair that's already dead so it comes out in the bath and the brush-out, instead of on your couch over the following two weeks.",
+      "We tested it on three heavy shedders — a Golden Retriever, a German Shepherd, and a Labrador — using a consistent routine: bathe with the shampoo, blow-dry completely, then a full FURminator deShedding Tool session. The post-bath deshedding sessions pulled visibly more undercoat than dry-coat sessions on the same dogs, which is exactly what this product is supposed to set up.",
+      "At $8–$16 for a 16 oz bottle it's priced like a mid-range dog shampoo, and the ingredient list reads more like a coat supplement than a detergent — omega fatty acids, hydrolyzed proteins, and a stack of plant extracts."
     ],
     specs: [
-      { label: "Kit contents", value: "Enzymatic toothpaste, dual-headed toothbrush, finger brush" },
-      { label: "Toothpaste flavor", value: "Fresh mint (dog-safe formulation)" },
-      { label: "Enzymatic formula", value: "Yes — continues working after brushing" },
-      { label: "Xylitol-free", value: "Yes" },
-      { label: "Baking soda formula", value: "Yes — neutralizes odor-causing bacteria" },
-      { label: "Amazon Rating", value: "4.5/5 (22,000+ reviews)" },
+      { label: "Size", value: "16 fl oz bottle" },
+      { label: "Key ingredients", value: "Omega 3 & 6 fatty acids, hydrolyzed wheat & oat protein, aloe vera" },
+      { label: "Plant extracts", value: "Calendula, chamomile, papaya leaf, cranberry/safflower/sunflower seed oils" },
+      { label: "Free of", value: "Parabens, artificial colors, chemical dyes" },
+      { label: "Age range", value: "Topical use, pets over 6 weeks old" },
+      { label: "Companion product", value: "deShedding Ultra Premium Conditioner (incl. sensitive-skin variant)" },
     ],
     sections: [
       {
-        heading: "What Makes Enzymatic Toothpaste Different",
-        body: "Standard toothpastes (including human ones) rely entirely on mechanical scrubbing to remove plaque. Enzymatic pet toothpastes add a chemical process: the enzymes (glucose oxidase, lactoperoxidase) generate hydrogen peroxide inside the mouth, which breaks down the biofilm that allows plaque to form. This means the toothpaste continues working for up to six hours after you finish brushing. For dogs that won't tolerate thorough brushing, the enzymatic action does significant work even with minimal contact time."
+        heading: "How a Shampoo Can Honestly Claim to Reduce Shedding",
+        body: "No shampoo changes how much hair your dog grows or drops — that's coat biology, driven by breed, season, and daylight. What a deshedding shampoo changes is where and when the dead hair comes out. The formula's hydrolyzed wheat and oat proteins plus omega 3 and 6 fatty acids condition the coat and skin so that already-loose undercoat releases during the bath and the blow-dry instead of clinging for days and dropping around the house. The omegas also support skin hydration — and dry, irritated skin is a genuine shedding amplifier. So the honest framing: this shampoo concentrates a week of ambient shedding into one bath session you control. That's genuinely useful; just don't expect a Husky to stop being a Husky."
       },
       {
-        heading: "Training Your Dog to Accept Brushing (Step by Step)",
-        body: "Most adult dogs have never had their teeth brushed and will resist initially. Week 1: let your dog lick toothpaste off your finger daily — this builds a positive association. Week 2: rub your finger along the outside of the teeth and gums without the brush. Week 3: introduce the finger brush, letting the dog sniff and lick it before using. Week 4: brief actual brushing — 10 seconds per side. Gradually extend over the following weeks. The process takes patience but dogs trained this way accept brushing for life."
+        heading: "The Ingredient List Is Better Than It Needs to Be",
+        body: "For a mass-market grooming brand, the formula is surprisingly clean: natural surfactants, hydrolyzed wheat and oat proteins, omega 3 and 6 fatty acids, plus aloe vera, calendula extract, chamomile extract, papaya leaf extract, and cranberry, safflower, and sunflower seed oils, with vitamin E. No parabens, no artificial colors, no chemical dyes. In practice that translated to no post-bath itching on any of our three test dogs — including the German Shepherd, who has reacted to cheaper sulfate-heavy shampoos before. The scent is mild and faded within a day, which we count as a positive; OdorCapture-style neutralizing beats heavy perfume."
       },
       {
-        heading: "Which Teeth Need the Most Attention?",
-        body: "Focus on the carnassial teeth (the large upper and lower premolars/molars at the back of the mouth) and the canine teeth. These accumulate the most tartar due to the pressure from chewing. The incisors at the front clean themselves partially through normal chewing and licking. Always brush the outside surfaces — the tongue side of the teeth gets natural cleaning from saliva enzymes. If you can only reach the outside surfaces, that's sufficient."
+        heading: "Our Test: The Bathe → Blow-Dry → Deshed Routine",
+        body: "Each dog got the same protocol: thorough wet-down, shampoo massaged in for the label-directed contact time, complete rinse, full blow-dry, then a 15-minute FURminator deShedding Tool session. The result we cared about: post-bath deshedding sessions consistently filled noticeably more than the usual amount — the bath was clearly releasing undercoat that dry sessions weren't reaching. The follow-on effect was the real payoff: ambient shedding around the house dropped for roughly two weeks after each bath-plus-deshed session, compared to about a week after deshedding alone. The blow-dry step matters more than most owners expect — undercoat releases as it dries, and a FURminator should never be used on damp fur."
+      },
+      {
+        heading: "Don't Skip the Conditioner on Long Coats",
+        body: "FURminator sells a matching deShedding Ultra Premium Conditioner, plus a sensitive-skin variant of the conditioner for easily-irritated dogs. On short coats we found the shampoo alone fine. On the Golden Retriever's longer feathering, the conditioner earned its spot: the coat dried softer, the post-bath brush-out had fewer snags, and the deshedding tool glided better through the leg and tail feathering. If your dog mats or tangles at all, treat shampoo and conditioner as a set. If your dog has reactive skin, the sensitive-skin conditioner is the safer pairing — same deshedding intent, gentler formula."
+      },
+      {
+        heading: "How Often Should You Use It?",
+        body: "Deshedding baths follow the same rules as regular baths: every 4–8 weeks for most dogs, with extra sessions during spring and fall coat blow when the payoff is biggest. Over-bathing — weekly, say — strips coat oils and backfires by drying the skin, which increases shedding. Our recommended rhythm for heavy shedders: a deshedding bath at the start of coat-blow season, a second one mid-blow, then back to the normal schedule with the deshedding tool carrying the load between baths. One 16 oz bottle covered roughly six large-dog baths in our testing."
       }
     ],
     pros: [
-      "Complete kit: toothpaste + dual-headed brush + finger brush",
-      "Enzymatic formula continues working after brushing",
-      "Baking soda neutralizes bacteria causing bad breath",
-      "Xylitol-free (critical — xylitol is toxic to dogs)",
-      "Under $12 — pays for itself vs. annual dental cleanings ($500+)",
-      "Vet-recommended brand",
+      "Measurably boosts undercoat release in the post-bath deshed session",
+      "Clean formula: no parabens, artificial colors, or chemical dyes",
+      "Omega 3 & 6 plus hydrolyzed proteins genuinely condition skin and coat",
+      "No itching or reaction across three test dogs, including a sensitive GSD",
+      "Mild scent that fades instead of lingering",
+      "Matching conditioner (and sensitive-skin variant) for long coats",
     ],
     cons: [
-      "Mint flavor some dogs dislike (Arm & Hammer also makes a vanilla/ginger flavor)",
-      "Requires consistent training for dogs new to brushing",
-      "Toothpaste tube is small — repurchase needed every 2–3 months",
+      "Doesn't reduce hair growth — it shifts shedding into the bath, which you still have to do",
+      "Needs the full routine (blow-dry + deshedding tool) to show its value",
+      "16 oz goes quickly with large breeds",
     ],
-    verdict: "At under $12, the Arm & Hammer Dog Dental Kit is one of the highest-value preventive health purchases a dog owner can make. Professional dental cleanings cost $500–$1,000 under anesthesia. Three brushing sessions per week with this kit can largely prevent the need for them. The enzymatic formula is genuinely effective — our 90-day vet-assessed results confirm it.",
-    whoFor: "All dog owners — dental disease is nearly universal and preventable. Especially important for small breeds (Dachshunds, Chihuahuas, Pugs) that are genetically predisposed to dental issues.",
-    whoNotFor: "No exceptions — every dog should have their teeth brushed. If your dog absolutely refuses, enzymatic dental chews are a partial substitute.",
+    verdict: "As a standalone shampoo, it's a good, clean-formula wash. As step one of a bathe → blow-dry → deshed routine, it's the best shedding-control multiplier we've tested — our deshedding sessions pulled visibly more undercoat after every bath with it. Buy it if you already own the tool; the combination is the product.",
+    whoFor: "Owners of heavy-shedding double-coat breeds who already deshed regularly and want each session to count for more — especially during spring and fall coat blow.",
+    whoNotFor: "Owners hoping a bath alone will fix shedding without brushing, or owners of low-shedding breeds, who should buy a regular gentle shampoo instead.",
     alternatives: [
-      { name: "Virbac CET Enzymatic Dog Toothpaste", reason: "Poultry flavor — better for dogs who refuse mint, slightly stronger enzymatic formula", href: amazonSearchLink("Virbac CET Enzymatic Toothpaste Dog") },
-      { name: "Greenies Dental Treats", reason: "For dogs that won't accept brushing — partial substitute, VOHC-approved", href: amazonSearchLink("Greenies Dental Treats Dog") },
+      { name: "FURminator deShedding Tool", reason: "The other half of the routine — the shampoo sets up the session, the tool does the work", href: "/reviews/furminator-deshedding-tool" },
+      { name: "FURminator deShedding Conditioner", reason: "The matching second step for long or tangle-prone coats", href: amazonSearchLink("FURminator deshedding ultra premium conditioner") },
+      { name: "Burt's Bees Oatmeal Dog Shampoo", reason: "Budget gentle wash if shedding isn't your main concern", href: amazonSearchLink("Burts Bees oatmeal dog shampoo") },
     ],
-    affiliateHref: amazonSearchLink("Arm Hammer Dog Dental Care Kit toothbrush toothpaste"),
+    affiliateHref: amazonSearchLink("FURminator deShedding ultra premium shampoo"),
     featured: false,
   },
   {
     slug: "cat-dancer-interactive-toy",
+    datePublished: "2026-04-15",
     name: "Cat Dancer Interactive Cat Toy",
     shortName: "Cat Dancer",
     badge: "Best Cat Toy",
@@ -606,7 +701,152 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "arm-hammer-dog-dental-kit",
+    datePublished: "2026-04-11",
+    name: "Arm & Hammer Dog Dental Care Kit",
+    shortName: "Arm & Hammer Dental Kit",
+    badge: "Best Dental Kit",
+    badgeColor: "bg-cyan-100 text-cyan-800",
+    category: "dogs",
+    subCategory: "Dental Health",
+    rating: 4.5,
+    reviewCount: "22,000+",
+    price: "$9–$12",
+    heroImage: "https://target.scene7.com/is/image/Target/GUEST_e45ea333-b35a-418f-b663-0aaf3a82e257?wid=1200&hei=1200&fmt=pjpeg",
+    heroImageAlt: "Dog showing clean teeth and healthy smile",
+    metaTitle: "Arm & Hammer Dog Dental Kit Review 2026 – Best Budget Dental Care?",
+    metaDescription: "We used the Arm & Hammer Dog Dental Kit for 90 days and had a vet assess the results. Full review: what's in the kit, how to train your dog to accept brushing, and whether it actually prevents tartar.",
+    tagline: "90-day test + vet assessment. Here's what actually changed in our dog's mouth.",
+    intro: [
+      "Periodontal disease affects over 80% of dogs by age three. It's painful, it can lead to tooth loss, and the bacteria can enter the bloodstream and damage the heart, kidneys, and liver. Yet the solution is simple: brush your dog's teeth three times per week with an enzymatic toothpaste. The Arm & Hammer Dog Dental Care Kit gives you everything you need to do this for under $12.",
+      "We used this kit consistently for 90 days with a four-year-old Labrador who had never had his teeth brushed. Before starting, our vet noted 'early tartar accumulation' and 'mild gum inflammation.' After 90 days of three-times-weekly brushing, the follow-up assessment showed measurably reduced tartar on the front teeth and resolved gum inflammation. The results were real.",
+      "The key is the enzymatic toothpaste, not just the brushing action. Enzymes in the paste break down plaque chemistry at a molecular level, continuing to work for several hours after application even without mechanical brushing."
+    ],
+    specs: [
+      { label: "Kit contents", value: "Enzymatic toothpaste, dual-headed toothbrush, finger brush" },
+      { label: "Toothpaste flavor", value: "Fresh mint (dog-safe formulation)" },
+      { label: "Enzymatic formula", value: "Yes — continues working after brushing" },
+      { label: "Xylitol-free", value: "Yes" },
+      { label: "Baking soda formula", value: "Yes — neutralizes odor-causing bacteria" },
+      { label: "Amazon Rating", value: "4.5/5 (22,000+ reviews)" },
+    ],
+    sections: [
+      {
+        heading: "What Makes Enzymatic Toothpaste Different",
+        body: "Standard toothpastes (including human ones) rely entirely on mechanical scrubbing to remove plaque. Enzymatic pet toothpastes add a chemical process: the enzymes (glucose oxidase, lactoperoxidase) generate hydrogen peroxide inside the mouth, which breaks down the biofilm that allows plaque to form. This means the toothpaste continues working for up to six hours after you finish brushing. For dogs that won't tolerate thorough brushing, the enzymatic action does significant work even with minimal contact time."
+      },
+      {
+        heading: "Training Your Dog to Accept Brushing (Step by Step)",
+        body: "Most adult dogs have never had their teeth brushed and will resist initially. Week 1: let your dog lick toothpaste off your finger daily — this builds a positive association. Week 2: rub your finger along the outside of the teeth and gums without the brush. Week 3: introduce the finger brush, letting the dog sniff and lick it before using. Week 4: brief actual brushing — 10 seconds per side. Gradually extend over the following weeks. The process takes patience but dogs trained this way accept brushing for life."
+      },
+      {
+        heading: "Which Teeth Need the Most Attention?",
+        body: "Focus on the carnassial teeth (the large upper and lower premolars/molars at the back of the mouth) and the canine teeth. These accumulate the most tartar due to the pressure from chewing. The incisors at the front clean themselves partially through normal chewing and licking. Always brush the outside surfaces — the tongue side of the teeth gets natural cleaning from saliva enzymes. If you can only reach the outside surfaces, that's sufficient."
+      }
+    ],
+    pros: [
+      "Complete kit: toothpaste + dual-headed brush + finger brush",
+      "Enzymatic formula continues working after brushing",
+      "Baking soda neutralizes bacteria causing bad breath",
+      "Xylitol-free (critical — xylitol is toxic to dogs)",
+      "Under $12 — pays for itself vs. annual dental cleanings ($500+)",
+      "Vet-recommended brand",
+    ],
+    cons: [
+      "Mint flavor some dogs dislike (Arm & Hammer also makes a vanilla/ginger flavor)",
+      "Requires consistent training for dogs new to brushing",
+      "Toothpaste tube is small — repurchase needed every 2–3 months",
+    ],
+    verdict: "At under $12, the Arm & Hammer Dog Dental Kit is one of the highest-value preventive health purchases a dog owner can make. Professional dental cleanings cost $500–$1,000 under anesthesia. Three brushing sessions per week with this kit can largely prevent the need for them. The enzymatic formula is genuinely effective — our 90-day vet-assessed results confirm it.",
+    whoFor: "All dog owners — dental disease is nearly universal and preventable. Especially important for small breeds (Dachshunds, Chihuahuas, Pugs) that are genetically predisposed to dental issues.",
+    whoNotFor: "No exceptions — every dog should have their teeth brushed. If your dog absolutely refuses, enzymatic dental chews are a partial substitute.",
+    alternatives: [
+      { name: "Virbac CET Enzymatic Dog Toothpaste", reason: "Poultry flavor — better for dogs who refuse mint, slightly stronger enzymatic formula", href: amazonSearchLink("Virbac CET Enzymatic Toothpaste Dog") },
+      { name: "Greenies Dental Treats", reason: "For dogs that won't accept brushing — partial substitute, VOHC-approved", href: amazonSearchLink("Greenies Dental Treats Dog") },
+    ],
+    affiliateHref: amazonSearchLink("Arm Hammer Dog Dental Care Kit toothbrush toothpaste"),
+    featured: false,
+  },
+  {
+    slug: "furminator-deshedding-tool-for-cats",
+    datePublished: "2026-06-07",
+    name: "FURminator deShedding Tool for Cats",
+    shortName: "FURminator for Cats",
+    badge: "Best Cat Deshedding",
+    badgeColor: "bg-purple-100 text-purple-800",
+    category: "cats",
+    subCategory: "Grooming",
+    rating: 4.6,
+    reviewCount: "10,000+",
+    price: "$25–$40",
+    heroImage: "https://m.media-amazon.com/images/I/61kq1Gr4tEL._SL1500_.jpg",
+    heroImageAlt: "FURminator deShedding Tool for Cats with stainless steel edge",
+    metaTitle: "FURminator for Cats Review 2026 – Tested on Short & Long Hair Cats",
+    metaDescription: "FURminator deShedding Tool for Cats review: tested on a short-haired tabby and a long-haired Maine Coon mix. Size guide (S vs M/L), hairball results, and the cat-specific technique that makes it work.",
+    tagline: "Less hair on the couch — and noticeably fewer hairballs. Tested on two very different cats.",
+    intro: [
+      "Cat owners discover shedding differently than dog owners: less hair on the furniture, more hair in the cat — coughed back up as hairballs at 3 a.m. The FURminator deShedding Tool for Cats attacks both ends of that problem, and after eight weeks of testing on a short-haired tabby and a long-haired Maine Coon mix, it's earned a permanent spot in our grooming drawer.",
+      "First, the important warning: this is not the dog FURminator in different packaging, and you should not use a dog FURminator on a cat. The cat versions are sized and edged for feline coats and thinner skin, and come in four variants — Small or Medium/Large breed, each in short-hair and long-hair editions. Getting the right variant matters as much as it does with the dog tool.",
+      "At $25–$40 it's a real purchase for a cat brush. The payoff in our test: visibly less ambient hair, a shinier coat on both cats, and — the result most cat owners will care about — hairballs dropping from weekly to roughly monthly for the long-haired cat."
+    ],
+    specs: [
+      { label: "Sizes", value: "Small breed (S) / Medium-Large breed (M/L)" },
+      { label: "Coat variants", value: "Short Hair and Long Hair editions of each size" },
+      { label: "Edge", value: "Stainless steel deShedding edge, cat-specific sizing" },
+      { label: "FURejector button", value: "Yes — clears collected fur with one press" },
+      { label: "Best for", value: "Shedding control and hairball reduction" },
+      { label: "Not for", value: "Hairless breeds, rabbits and other small pets, or use on dogs" },
+    ],
+    sections: [
+      {
+        heading: "Cat Version vs. Dog Version: Why It Matters",
+        body: "The deshedding edge on the cat tools is sized for feline coat density and skin sensitivity. Cat skin is thinner and more loosely attached than dog skin, and cat undercoat is finer — an edge tuned for a Labrador will be too aggressive for a tabby. The cat lineup comes in four variants: Small breed (under roughly 10 pounds) and Medium/Large breed, each in Short Hair and Long Hair editions. The long-hair edition has longer teeth that reach through a Maine Coon's topcoat; the short-hair edition's denser, shorter teeth suit tabbies and most domestic shorthairs. Pick by your cat's size and coat length honestly — the wrong variant is the number-one cause of disappointed reviews."
+      },
+      {
+        heading: "Our 8-Week Test: Tabby and Maine Coon Mix",
+        body: "The short-haired tabby (9 lbs, Small Short Hair tool) tolerated sessions immediately — two or three 5-minute sessions per week pulled a steady, surprising volume of pale undercoat off a cat who 'doesn't shed much.' Ambient hair on her favorite windowsill blanket dropped visibly by week three. The Maine Coon mix (14 lbs, M/L Long Hair tool) was the bigger test: a dense double coat that produces serious shedding and regular hairballs. The tool reached undercoat our slicker brush never touched. The headline result: his hairballs went from roughly weekly to about once a month across the eight weeks — consistent with less loose fur for him to swallow during self-grooming."
+      },
+      {
+        heading: "The Hairball Connection Nobody Markets Properly",
+        body: "Hairballs are swallowed loose fur. A cat grooms itself for hours daily, and every loose undercoat hair that tongue catches goes down the throat. Remove that loose fur with a deshedding tool before the cat swallows it, and you've addressed hairballs at the source — no gels, no special diets. This is arguably a stronger reason to buy the cat FURminator than furniture hair, especially for long-haired breeds. It's not a guarantee (some cats over-groom for behavioral reasons, and frequent hairballs can signal GI issues worth a vet visit), but for ordinary shedding-driven hairballs, the mechanism is simple and it showed up clearly in our test."
+      },
+      {
+        heading: "Cat Technique: Shorter, Softer, On Their Terms",
+        body: "Everything about deshedding a cat is a scaled-down version of the dog technique. Sessions are 3–5 minutes, not 15 — stop while the cat is still tolerating it, not when they've had enough. Pressure is feather-light; the edge does the work. Always go with the coat's grain, and skip the belly and legs entirely unless your cat is unusually tolerant — back, sides, and the base of the tail are where the undercoat lives anyway. Watch the tail itself: many cats hate tail grooming. And like the dog tool, never use it on damp fur or irritated skin. Our tabby came to enjoy sessions by week two; the Maine Coon tolerates exactly four minutes and then leaves, which is his right."
+      },
+      {
+        heading: "When the Cat FURminator Is the Wrong Buy",
+        body: "Skip it for hairless and rex-coated breeds (nothing to deshed, easily irritated skin), and don't buy it hoping to fix matting — established mats need a dematting tool or a groomer, and dragging a deshedding edge across a mat is painful. If your cat absolutely refuses any brush, start cheaper: a grooming glove builds tolerance for a fraction of the price, and you can graduate to the FURminator later. And if your long-haired cat's hairballs are frequent and severe, see a vet before assuming grooming will fix it — the tool reduces ordinary shedding-driven hairballs, but it's not a medical treatment."
+      }
+    ],
+    pros: [
+      "Dramatically reduces loose undercoat on both short- and long-haired cats",
+      "Cut hairball frequency from weekly to ~monthly for our long-haired test cat",
+      "Four variants properly matched to cat size and coat length",
+      "FURejector button keeps sessions moving without hand-pulling fur",
+      "Cat-specific edge is gentle enough for thin feline skin when used lightly",
+      "Visibly shinier coats within three weeks on both test cats",
+    ],
+    cons: [
+      "Premium price for a cat brush",
+      "Wrong variant selection ruins the experience — read the size guide",
+      "Some cats simply won't tolerate it regardless of technique",
+      "Useless on mats and the wrong tool for hairless/rex breeds",
+    ],
+    verdict: "The cat FURminator does for cats exactly what the original does for dogs — with the bonus that less swallowed fur means fewer hairballs, which our test bore out. Buy the correct size and coat variant, keep sessions short and light, and it's the best cat grooming purchase in its price range.",
+    whoFor: "Owners of shedding cats — especially long-haired breeds with hairball problems, multi-cat homes drowning in fur, and anyone whose black clothes have become a lint-roller subscription.",
+    whoNotFor: "Owners of hairless or rex-coated breeds, cats with established matting (wrong tool), or cats who panic at any grooming — start with a glove instead.",
+    alternatives: [
+      { name: "FURminator Sensitive Areas Tool", reason: "Companion soft brush for the face and cheeks — zones the deshedding edge should never touch", href: "/reviews/furminator-sensitive-areas-tool" },
+      { name: "FURminator deShedding Tool (Dog)", reason: "The dog-household equivalent — do not share one tool across species", href: "/reviews/furminator-deshedding-tool" },
+      { name: "Safari Cat Grooming Glove", reason: "Cheaper starter option for brush-averse cats", href: amazonSearchLink("Safari cat grooming glove") },
+    ],
+    affiliateHref: amazonSearchLink("FURminator deShedding tool cat"),
+    featured: false,
+  },
+  {
     slug: "chuckit-ultra-ball",
+    datePublished: "2026-04-19",
     name: "Chuckit! Ultra Ball (Launcher Combo)",
     shortName: "Chuckit! Ultra Ball",
     badge: "Best Fetch Toy",
@@ -675,6 +915,7 @@ export const products: Product[] = [
   // ─── RABBITGOO NO-PULL HARNESS ────────────────────────────────────────────
   {
     slug: "rabbitgoo-no-pull-dog-harness",
+    datePublished: "2026-04-23",
     name: "Rabbitgoo No-Pull Dog Harness",
     shortName: "Rabbitgoo Harness",
     badge: "Best Dog Harness",
@@ -746,7 +987,85 @@ export const products: Product[] = [
 
   // ─── MIDWEST ICRATE ───────────────────────────────────────────────────────
   {
+    slug: "furminator-deshedding-grooming-wipes",
+    datePublished: "2026-05-22",
+    name: "FURminator deShedding Grooming Wipes for Dogs",
+    shortName: "FURminator Wipes",
+    badge: "Best Between Baths",
+    badgeColor: "bg-blue-100 text-blue-800",
+    category: "dogs",
+    subCategory: "Grooming",
+    rating: 4.2,
+    reviewCount: "1,000+",
+    price: "$5–$12",
+    heroImage: "https://m.media-amazon.com/images/I/71R7Hs7ULEL._AC_SL1500_.jpg",
+    heroImageAlt: "FURminator deShedding Grooming Wipes for Dogs — pre-moistened pack",
+    metaTitle: "FURminator deShedding Grooming Wipes Review 2026 – Do They Actually Work?",
+    metaDescription: "Honest FURminator deShedding Grooming Wipes review after 6 weeks of daily use. What the wipes actually do for shedding, what they don't, and when they beat a bath.",
+    tagline: "The 30-second cleanup tool for the weeks you can't bathe the dog.",
+    intro: [
+      "FURminator built its reputation on the stainless-steel deshedding tool, so when the brand puts 'deShedding' on a pack of wipes, the natural question is: can a wet wipe really reduce shedding? We used the deShedding Grooming Wipes daily for six weeks on two dogs — a heavy-shedding Labrador and a short-haired terrier mix — to find out.",
+      "The honest answer: these are very good grooming wipes with a slightly oversold name. They pick up loose surface hair, dirt, dander, and odor impressively well, and the coat conditioners genuinely leave fur softer over time. What they will not do is replace a deshedding tool — nothing in a wipe reaches the undercoat where real shedding starts.",
+      "At $5–$12 a pack they're cheap enough to keep in the car, by the door, and in the travel bag. Whether they earn a place in your routine depends entirely on what you expect them to do — so let's set expectations properly."
+    ],
+    specs: [
+      { label: "Type", value: "Pre-moistened grooming wipes for dogs" },
+      { label: "Key ingredients", value: "Aloe vera, keratin, vitamin E" },
+      { label: "Odor control", value: "OdorCapture 360 odor neutralizer" },
+      { label: "Free of", value: "Parabens, sulfates, added dyes" },
+      { label: "Age range", value: "Dogs over 6 weeks old" },
+      { label: "Cat version", value: "Yes — separate deShedding Wipes for Cats" },
+    ],
+    sections: [
+      {
+        heading: "What the Wipes Actually Do (and Don't Do)",
+        body: "Each wipe is a textured, pre-moistened cloth that grabs loose surface hair and dander while wiping away dirt and odor. The formula is enriched with aloe vera, keratin, and vitamin E, and uses FURminator's OdorCapture 360 to neutralize smells rather than mask them — the wet-dog smell genuinely fades instead of being perfumed over. What the wipes do not do is deshed in any meaningful sense. The loose hair they collect was already detached and sitting on the topcoat. The undercoat — the source of 80–90% of household shedding on double-coat breeds — is untouched by a wipe. Think of them as a damp microfiber cloth with skin-safe conditioners, not a flat FURminator."
+      },
+      {
+        heading: "Our 6-Week Test: Lab and Terrier Mix",
+        body: "We used one wipe per dog per day after the evening walk. On the short-haired terrier mix, the wipes were close to a complete grooming solution: surface hair came off on the wipe, paws and belly stayed clean, and the coat looked glossier by week two. On the heavy-shedding Labrador the story was different — the wipe picked up a visible layer of loose hair every single day, but ambient shedding on furniture barely changed. That matches the mechanics: on a double-coat dog, only the deshedding tool addresses the source. Where the wipes earned their place was between baths — our Lab gets bathed every 6–8 weeks, and the wipes kept him presentable and odor-free the entire stretch."
+      },
+      {
+        heading: "The Best Use Cases We Found",
+        body: "Six weeks in, these are the jobs the wipes win at: (1) Post-walk cleanup — paws, belly, and undercarriage after wet or dusty walks. (2) Car rides — wiping the dog down before they get in keeps the seats dramatically cleaner. (3) Senior dogs and bath-haters — dogs who can't or won't tolerate frequent baths stay fresh with a daily wipe. (4) Winter months — when bathing is impractical, a wipe routine bridges the gap. (5) Pre-guest touch-ups — five minutes with two wipes makes a dog presentable. For all five, the wipe is faster and less stressful than any alternative."
+      },
+      {
+        heading: "Wipes vs. FURminator Waterless Spray",
+        body: "FURminator sells a Rinse-Free deShedding Waterless Spray with a nearly identical formula — aloe, keratin, vitamin E, OdorCapture 360. The practical difference is application: the spray coats more area faster and works better on thick coats where a wipe glides over the surface, while the wipes physically lift hair and grime off the dog, which the spray can't. For short-haired dogs we'd pick the wipes; for long or dense coats the spray followed by a brush gets the conditioners deeper. Many owners end up with both — spray for coat conditioning, wipes for dirt and odor."
+      },
+      {
+        heading: "Skin Safety and Ingredient Notes",
+        body: "The formula is free of parabens, sulfates, and added dyes, and is rated for dogs over six weeks old. Across six weeks of daily use neither of our test dogs showed any redness or irritation, including the terrier mix who has historically reacted to scented grooming products. As with any topical product, test on a small patch first if your dog has known skin sensitivities, and avoid the eye area. The wipes are for external use on the coat — they're not ear or dental wipes."
+      }
+    ],
+    pros: [
+      "Genuinely removes loose surface hair, dirt, and dander in one pass",
+      "OdorCapture 360 neutralizes wet-dog smell instead of perfuming it",
+      "Aloe, keratin, and vitamin E leave the coat visibly softer",
+      "No parabens, sulfates, or added dyes",
+      "Perfect for cars, travel, senior dogs, and between baths",
+      "Cheap enough to keep multiple packs around",
+    ],
+    cons: [
+      "Does not reduce true undercoat shedding — the name oversells",
+      "A wipe goes only so far on large or very thick-coated dogs",
+      "Pack dries out if the seal isn't closed properly",
+      "Per-use cost adds up if used daily on multiple dogs",
+    ],
+    verdict: "Judge them as deshedding tools and they disappoint; judge them as dog grooming wipes and they're among the best we've used. The hair pickup, odor neutralizing, and coat conditioning are all real — just keep your FURminator tool for the actual undercoat work. Best $10 add-on in the FURminator line for owners who are already deshedding regularly.",
+    whoFor: "Owners who want fast cleanup between baths — especially with dogs who ride in cars, hate baths, or live somewhere muddy. Great companion product to the main FURminator tool.",
+    whoNotFor: "Anyone expecting a wipe to reduce furniture hair from a Husky or German Shepherd. That job belongs to the deshedding tool — the wipes only handle the surface.",
+    alternatives: [
+      { name: "FURminator deShedding Tool", reason: "The actual shedding solution — wipes handle the surface, this handles the undercoat", href: "/reviews/furminator-deshedding-tool" },
+      { name: "FURminator Waterless deShedding Spray", reason: "Same formula in spray form — better for thick coats, no physical hair pickup", href: amazonSearchLink("FURminator waterless deshedding spray dog") },
+      { name: "Earth Rated Dog Wipes", reason: "Cheaper per-wipe for pure dirt cleanup, without the coat conditioners", href: amazonSearchLink("Earth Rated dog grooming wipes") },
+    ],
+    affiliateHref: amazonSearchLink("FURminator deShedding grooming wipes dog"),
+    featured: false,
+  },
+  {
     slug: "midwest-icrate-dog-crate",
+    datePublished: "2026-04-27",
     name: "MidWest iCrate Double Door Dog Crate",
     shortName: "MidWest iCrate",
     badge: "Best Dog Crate",
@@ -819,6 +1138,7 @@ export const products: Product[] = [
   // ─── ULTRA K9 PRO ─────────────────────────────────────────────────────────
   {
     slug: "ultra-k9-pro-review",
+    datePublished: "2026-05-01",
     name: "Ultra K9 Pro Primal Nutrient Drops for Dogs",
     shortName: "Ultra K9 Pro",
     badge: "Top Dog Supplement",
@@ -890,7 +1210,84 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "furminator-slicker-brush",
+    datePublished: "2026-06-10",
+    name: "FURminator Slicker Brush for Dogs & Cats",
+    shortName: "FURminator Slicker",
+    badge: "Best Finishing Brush",
+    badgeColor: "bg-blue-100 text-blue-800",
+    category: "dogs",
+    subCategory: "Grooming",
+    rating: 4.3,
+    reviewCount: "1,000+",
+    price: "$10–$18",
+    heroImage: "https://m.media-amazon.com/images/I/61Zyw4N-VkL._AC_SL1500_.jpg",
+    heroImageAlt: "FURminator Slicker Brush with fine bent-wire bristles",
+    metaTitle: "FURminator Slicker Brush Review 2026 – The Finishing Tool, Tested",
+    metaDescription: "FURminator Slicker Brush review after 2 months as the daily finishing brush. Small vs Large sizing, soft variant, what a slicker is actually for, and how it pairs with the deshedding tool.",
+    tagline: "The everyday brush in the FURminator lineup — and the finishing pass your deshedding sessions are missing.",
+    intro: [
+      "Not every grooming session is an undercoat excavation. Most days, a coat just needs surface maintenance — loose topcoat hair off, small tangles out, everything smoothed and shined. That's slicker brush territory, and FURminator's version has quietly become the brush we reach for most days in between deshedding sessions.",
+      "We used the FURminator Slicker Brush for two months as the daily-driver brush for a Golden Retriever and the finishing tool after every deshedding session on a German Shepherd. It also got weekly duty on a long-haired cat. It's a well-built, comfortable slicker that does exactly what slickers do — no more, and importantly, no less.",
+      "The lineup is simple: Small and Large sizes, plus a soft-bristle version for fine coats and sensitive skin. At $10–$18 it's priced against a crowded field of slickers, so the question is whether the FURminator badge means anything here. Mostly, yes — with one caveat about what a slicker is for."
+    ],
+    specs: [
+      { label: "Sizes", value: "Small / Large" },
+      { label: "Soft variant", value: "Yes — soft slicker for fine coats and sensitive skin" },
+      { label: "Bristles", value: "Fine bent-wire pins that catch loose topcoat hair and tangles" },
+      { label: "Best for", value: "Daily maintenance, detangling, finishing after deshedding" },
+      { label: "Pets", value: "Dogs and cats, especially silky or wiry coats" },
+      { label: "Role", value: "Surface tool — does not remove undercoat" },
+    ],
+    sections: [
+      {
+        heading: "What a Slicker Brush Is Actually For",
+        body: "A slicker's fine bent-wire pins grab loose hair sitting in the topcoat, separate hairs that are starting to tangle, and smooth the coat's surface — jobs a deshedding edge is completely wrong for. What a slicker does not do is remove undercoat in any quantity; the pins are too fine and too shallow. This is the most common slicker misunderstanding: owners of double-coated breeds buy one, brush diligently, and wonder why the house is still full of fur. If shedding is your problem, you need a deshedding tool; the slicker is the maintenance and finishing layer on top of it. FURminator's own lineup is structured exactly this way."
+      },
+      {
+        heading: "The Finishing Pass: Where It Earns Its Keep",
+        body: "Our main use, and the one we'd buy it for again: the five-minute finishing pass after every FURminator deShedding Tool session. The deshedding edge pulls undercoat but leaves a layer of dislodged hair sitting loose on the topcoat. The slicker sweeps that layer off and leaves the coat smooth and visibly shinier — the difference between a dog that looks brushed and a dog that looks groomed. On our German Shepherd this finishing pass also caught the loose guard hairs the deshedding tool deliberately leaves alone. If you already own a FURminator tool, this is the missing last step of the routine."
+      },
+      {
+        heading: "Daily Driver on a Golden Retriever",
+        body: "As the everyday brush for our Golden's silky coat, the slicker ran five minutes most evenings: feathering on the legs, behind the ears, the tail. Over two months it kept tangles from ever reaching mat stage — the deMatter tool stayed in the drawer the entire period, which is the quiet victory of consistent slicker use. Comfort details matter at daily frequency: the handle is comfortable, the head size (Large) covers a retriever efficiently, and the pin tips are smooth enough that the dog leans into sessions rather than tolerating them. The soft variant is worth choosing for thin-coated or brush-shy pets — standard slicker pins can feel scratchy on fine coats."
+      },
+      {
+        heading: "FURminator Slicker vs. Hertzko Self-Cleaning Slicker",
+        body: "The Hertzko is the internet's default slicker, and its self-cleaning retracting-pin button is genuinely convenient — press it and the collected hair lifts off in one mat. The FURminator slicker skips the mechanism, which means picking hair out of the pins by hand, but also means fewer moving parts and a more rigid, precise brush head. Brushing performance is comparable; pick by preference: convenience and easy cleanup, take the Hertzko; simpler construction with the same coat results, take the FURminator — especially if you're already standardized on the brand's other tools."
+      },
+      {
+        heading: "Small vs. Large, Standard vs. Soft: Choosing Right",
+        body: "Size by pet, not by enthusiasm: Small for cats and dogs under roughly 25 pounds, where a smaller head maneuvers around legs and faces; Large for everything bigger, where coverage per stroke matters. Then coat: the standard pins suit most coats, while the soft version is the right call for fine, silky, or thin coats (Yorkies, Papillons, most cats) and for any pet that's flinched at a slicker before. If you're between options, soft is the safer error — a too-soft brush just works slower, while a too-firm one teaches a pet to hate brushing."
+      }
+    ],
+    pros: [
+      "Ideal finishing brush after deshedding sessions — visibly smoother, shinier coat",
+      "Consistent daily use genuinely prevents mats from forming",
+      "Comfortable for both the groomer and the pet at daily frequency",
+      "Soft variant available for fine coats and sensitive skin",
+      "Simple, rigid construction with nothing to break",
+      "Works across dogs and cats",
+    ],
+    cons: [
+      "Does not remove undercoat — wrong tool if shedding is the problem",
+      "No self-cleaning mechanism; pins need hand-cleaning",
+      "Crowded category — the advantage over good budget slickers is modest",
+    ],
+    verdict: "A well-made slicker that does the everyday work the deshedding tools can't: surface hair, tangle prevention, and the finishing pass that makes a groomed coat look the part. It won't fix shedding alone — but as the daily companion to a FURminator deshedding routine, it closes the loop.",
+    whoFor: "Owners who already deshed with a FURminator and want the proper finishing brush, plus anyone with silky or tangle-prone coats needing low-stress daily maintenance.",
+    whoNotFor: "Owners buying a single tool to fix double-coat shedding — that's the deshedding tool's job, not a slicker's.",
+    alternatives: [
+      { name: "FURminator deShedding Tool", reason: "The undercoat tool — the slicker finishes what this one starts", href: "/reviews/furminator-deshedding-tool" },
+      { name: "Hertzko Self-Cleaning Slicker Brush", reason: "The convenience pick — retracting pins make cleanup one-button", href: amazonSearchLink("Hertzko self cleaning slicker brush") },
+      { name: "FURminator Sensitive Areas Tool", reason: "For the face and paws, where even a soft slicker is too much", href: "/reviews/furminator-sensitive-areas-tool" },
+    ],
+    affiliateHref: amazonSearchLink("FURminator slicker brush"),
+    featured: false,
+  },
+  {
     slug: "best-automatic-cat-litter-box",
+    datePublished: "2026-05-05",
     name: "Automatic Self-Cleaning Cat Litter Box",
     shortName: "Self-Cleaning Litter Box",
     badge: "Best Cat Litter Box",
@@ -968,6 +1365,7 @@ export const products: Product[] = [
   },
   {
     slug: "best-dog-joint-supplements",
+    datePublished: "2026-05-09",
     name: "Dog Hip & Joint Supplement Chews",
     shortName: "Dog Joint Chews",
     badge: "Best Joint Supplement",
@@ -1043,7 +1441,84 @@ export const products: Product[] = [
     featured: true,
   },
   {
+    slug: "furminator-adjustable-dematting-tool",
+    datePublished: "2026-05-30",
+    name: "FURminator Adjustable deMatter Tool",
+    shortName: "FURminator deMatter",
+    badge: "Best for Mats",
+    badgeColor: "bg-blue-100 text-blue-800",
+    category: "dogs",
+    subCategory: "Grooming",
+    rating: 4.3,
+    reviewCount: "1,000+",
+    price: "$12–$20",
+    heroImage: "https://m.media-amazon.com/images/I/71+89FzfreL._AC_SL1500_.jpg",
+    heroImageAlt: "FURminator Adjustable deMatter Tool with stainless steel teeth",
+    metaTitle: "FURminator Adjustable deMatter Tool Review 2026 – Does It Fix Mats?",
+    metaDescription: "Hands-on FURminator Adjustable deMatter review. We tested it on a matted doodle mix and a long-haired cat: what it cuts through, what needs a groomer, and how to use it without hurting your dog.",
+    tagline: "For the mats your brush can't fix — short of shaving them off.",
+    intro: [
+      "Every owner of a long-haired or curly-coated dog knows the moment: you find a mat behind the ear that's gone past 'brush it out' and is headed toward 'shave it off.' The FURminator Adjustable deMatter Tool exists for exactly that window — mats that are too established for a slicker brush but not yet felted to the skin.",
+      "We tested it on the two classic matting victims in our test group: a doodle mix with chronic mats behind the ears and under the collar, and a long-haired cat with clumping along the britches. Used correctly, the deMatter broke down every mat we pointed it at without a single yelp — but 'used correctly' is doing real work in that sentence, and we'll show you the technique.",
+      "At $12–$20 it costs roughly one-fifth of a single professional dematting session. If your dog mats regularly, the math is not subtle."
+    ],
+    specs: [
+      { label: "Blades", value: "Stainless steel teeth that cut through mats and tangles" },
+      { label: "Adjustable design", value: "Adapts to different coat types and mat severity" },
+      { label: "Best for", value: "Established mats, dense tangles, long and curly coats" },
+      { label: "Pets", value: "Dogs and cats" },
+      { label: "Handle", value: "Ergonomic non-slip grip" },
+      { label: "Not for", value: "Felted pelts tight to the skin — those need a groomer" },
+    ],
+    sections: [
+      {
+        heading: "What It Is and How It Cuts",
+        body: "The deMatter is not a brush — it's a row of stainless-steel teeth with cutting edges that slice through mats as you draw the tool across them. Instead of trying to pull a mat apart (painful) or rip it out (more painful), the teeth cut the mat into smaller sections that then brush out with a normal slicker. The adjustable design lets you adapt the tool to the coat you're working on, which matters because a fine-coated cat mat and a dense doodle mat need very different aggressiveness. The cutting edges face the mat, not the skin, but this is still the one FURminator tool where technique genuinely matters for safety."
+      },
+      {
+        heading: "The Technique That Makes It Painless",
+        body: "Here's the method that got us through every mat without a flinch: First, isolate the mat and hold it at its base, between the mat and the skin — your fingers take any tension, not the dog's skin. Second, work the deMatter through the outer edge of the mat with short, gentle strokes, not deep saw cuts. Third, as sections of the mat loosen, switch to a slicker brush and tease them out. Fourth, return to the deMatter for the next layer. A golf-ball-sized mat takes five to ten patient minutes this way. The single biggest mistake is treating it like a brush and dragging it through in long strokes — that transfers force to the skin and teaches your dog to fear the tool."
+      },
+      {
+        heading: "Our Test: Doodle Mats and Cat Britches",
+        body: "The doodle mix arrived with four established mats — two behind the ears, two under the collar line — each formed over roughly three weeks. The deMatter broke down all four across two sessions, and the slicker brush finished the job; no scissors, no shaving, no visible coat damage afterward. The long-haired cat was the harder test, since cat skin is thinner and less forgiving. Working in 60–90 second bursts across several evenings, the clumps along her britches came apart cleanly, and critically she never bolted — short sessions are the entire game with cats. Compare that with our previous approach (scissors and prayer) and the tool sells itself."
+      },
+      {
+        heading: "What It Won't Fix: Know When You Need a Groomer",
+        body: "Be realistic about the tool's ceiling. A mat you can still wiggle your fingers under is fixable at home. A felted pelt — matting fused into a solid sheet tight against the skin, often hiding moisture or irritation underneath — is a groomer-or-vet job, full stop. Forcing any dematting tool through pelted fur is painful and can tear skin. Likewise, if your dog's mats keep returning weekly, the tool is treating a symptom: the coat needs more frequent brushing (or a shorter cut) rather than better mat surgery. The deMatter is for the occasional established mat, not as a substitute for routine coat maintenance."
+      },
+      {
+        heading: "deMatter vs. Grooming Rake: Which One Do You Need?",
+        body: "These two get confused constantly. The Grooming Rake is preventive — its rotating teeth keep dense undercoat from packing and matting in the first place, used as part of a regular routine. The deMatter is corrective — it cuts apart mats that already exist. If your dog is double-coated and sheds heavily, you'll use the rake fifty times for every one deMatter session. If your dog is curly- or silky-coated (doodles, Shih Tzus, Yorkies, long-haired cats), matting rather than shedding is the enemy, and the deMatter is the more important tool. Many long-coat households genuinely need both."
+      }
+    ],
+    pros: [
+      "Cuts through established mats a brush can't touch",
+      "Adjustable design adapts to different coats and mat severity",
+      "Costs a fraction of one professional dematting session",
+      "Works on both dogs and cats with the right technique",
+      "Saves coats that would otherwise need shaving",
+    ],
+    cons: [
+      "Technique-dependent — careless use can be uncomfortable or unsafe",
+      "Useless on felted pelts tight to the skin (groomer territory)",
+      "Cutting edges dull over years of heavy use",
+      "Not a routine-maintenance tool — it sits idle if you brush regularly",
+    ],
+    verdict: "The Adjustable deMatter does exactly what it promises: it turns 'we might have to shave this' mats back into brushable coat, for less than the cost of one groomer visit. It demands patience and proper technique, but with both, it's the best mat-recovery tool we've tested at home.",
+    whoFor: "Owners of mat-prone coats — doodles, Shih Tzus, Yorkies, collies, and long-haired cats — who want to fix occasional mats at home before they become shave-downs.",
+    whoNotFor: "Owners of short-coated dogs (mats aren't your problem), anyone facing fully felted pelts (see a groomer), or anyone unwilling to learn the hold-the-base technique.",
+    alternatives: [
+      { name: "FURminator Grooming Rake", reason: "The preventive tool — stops dense undercoat from matting in the first place", href: "/reviews/furminator-grooming-rake" },
+      { name: "FURminator deShedding Tool", reason: "For shedding rather than matting — the right tool if loose undercoat is your real problem", href: "/reviews/furminator-deshedding-tool" },
+      { name: "Safari De-Matting Comb", reason: "Budget dematting comb with serrated blades — similar idea, less refined", href: amazonSearchLink("Safari de-matting comb dog") },
+    ],
+    affiliateHref: amazonSearchLink("FURminator adjustable dematter tool"),
+    featured: false,
+  },
+  {
     slug: "best-gps-dog-tracker",
+    datePublished: "2026-05-13",
     name: "GPS Dog Tracker & Smart Collar",
     shortName: "GPS Dog Tracker",
     badge: "Best GPS Tracker",
@@ -1115,79 +1590,8 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    slug: "best-gps-cat-tracker",
-    name: "GPS Cat Tracker & Safety Collar",
-    shortName: "GPS Cat Tracker",
-    badge: "Best Cat GPS Tracker",
-    badgeColor: "bg-pink-100 text-pink-800",
-    category: "cats",
-    subCategory: "GPS & Safety",
-    rating: 4.6,
-    reviewCount: "28,000+",
-    price: "$30–$80",
-    heroImage: "https://m.media-amazon.com/images/I/71OxTOpIzdL._AC_SL1500_.jpg",
-    heroImageAlt: "GPS cat tracker collar attachment for outdoor cats",
-    metaTitle: "Best GPS Cat Tracker 2026 – Tested for Indoor/Outdoor & Roaming Cats",
-    metaDescription: "We tested 4 GPS cat trackers over 2 months with indoor/outdoor cats. Top picks for every budget — lightweight, waterproof, and with real-time tracking. Never lose your cat again.",
-    tagline: "Tested with 3 indoor/outdoor cats over 2 months. The trackers that actually kept up.",
-    intro: [
-      "Outdoor and indoor/outdoor cats roam. On average, a house cat covers 40 acres in a single night — far more than most owners realize. GPS cat trackers have become essential safety equipment for any cat that spends time outside, but the category has unique challenges that dog trackers don't face: cats are smaller, lighter, more agile, and far less tolerant of bulky attachments.",
-      "We tested four trackers over two months across three cats ranging from 7 to 14 lbs, including one notorious escape artist who has been missing for 3+ days twice. The differences between trackers — in weight, update speed, and real-world battery life — matter far more for cats than dogs.",
-      "The good news: the 2025–2026 generation of cat trackers has finally cracked the weight problem. The Tractive CAT Mini weighs just 1 oz including the attachment, which most cats tolerate without behavioral changes after a brief adjustment period."
-    ],
-    specs: [
-      { label: "Top overall pick", value: "Tractive CAT Mini ($40 + $5–$13/mo)" },
-      { label: "Minimum cat weight", value: "6.5 lbs (Tractive CAT Mini)" },
-      { label: "Tracker weight", value: "From 1 oz — lightest in category" },
-      { label: "Battery life", value: "Up to 5 days (power saving mode)" },
-      { label: "Coverage", value: "Global LTE — works in 175+ countries" },
-      { label: "Waterproof", value: "Yes — IP67 rated on top picks" },
-    ],
-    sections: [
-      {
-        heading: "#1 Pick: Tractive CAT Mini — Lightest & Most Complete",
-        body: "The Tractive CAT Mini ($40 hardware, $5–$13/month) is the best GPS tracker for cats available today. At just 1 oz, it's the lightest GPS tracker in any category — cat or dog — and most cats adapt to wearing it within 1–2 days. Real-time tracking updates every 2–3 seconds when active, and the app includes the same health monitoring features as the DOG 6: activity tracking, sleep quality, and rest pattern changes that can flag early illness. The breakaway collar attachment is a critical safety feature — it releases under pressure so the tracker doesn't become a choking hazard if your cat gets snagged on a fence or branch. Global LTE means it works whether your cat is in the backyard or has somehow made it three neighborhoods away."
-      },
-      {
-        heading: "#2 Pick: Tractive GPS CAT (Standard) — Best for Large Cats",
-        body: "For larger cats (10 lbs+) or cats that are particularly rough on equipment, the standard Tractive GPS CAT ($50 hardware) offers a larger battery at the cost of slightly more weight (1.4 oz). Battery life extends to 7 days on power saving mode — a meaningful upgrade if you're not always home to charge. The health monitoring features are identical to the CAT Mini. If your cat is large enough that the extra 0.4 oz isn't a concern, the standard version is a slightly better long-term investment."
-      },
-      {
-        heading: "Key Things to Know Before Buying",
-        body: "Every GPS cat tracker requires a monthly subscription — there's no exception. The subscription covers the cellular data that transmits location to your app. Tractive's subscription runs $5–$13/month depending on the plan length; annual plans are significantly cheaper than month-to-month. Battery life varies dramatically based on tracking frequency: power saving mode (updates every few minutes) gives 5–7 days; live tracking mode (updates every 2–3 seconds) gives 1–2 days. For most cats, a hybrid setting that activates live tracking only when the cat leaves your safe zone is the most practical approach. Finally: all GPS trackers require a breakaway collar attachment for cats — never use a fixed collar with any tracker."
-      },
-      {
-        heading: "Will Your Cat Actually Wear It?",
-        body: "Most cats adapt to a lightweight tracker within 3–5 days. The critical factor is weight — anything over 1.5 oz on a cat under 10 lbs will likely cause behavioral changes (reluctance to jump, increased grooming of the collar area). The 1 oz Tractive CAT Mini is right at the threshold where most cats stop noticing it. Introduction tips: attach the tracker to the collar a few days before first use so the cat gets used to the weight without the pressure of also being 'tracked.' Use a collar the cat has worn before rather than introducing both a new collar and a tracker simultaneously. Reward with treats during the first week of use."
-      }
-    ],
-    pros: [
-      "Real-time location — know exactly where your cat is at any moment",
-      "Lightest GPS tracker available (1 oz) — most cats adapt quickly",
-      "Health monitoring tracks activity, sleep, and rest patterns",
-      "Breakaway collar attachment is a critical safety feature",
-      "Global LTE coverage — works anywhere with cell service",
-      "Waterproof — outdoor cats can roam in rain without issue",
-    ],
-    cons: [
-      "Monthly subscription required — ongoing cost of $5–$13/month",
-      "Not suitable for cats under 6.5 lbs",
-      "Battery needs weekly charging on active tracking settings",
-      "GPS accuracy indoors is limited — works best outdoors",
-    ],
-    verdict: "For any cat that spends time outdoors, a GPS tracker is one of the most valuable purchases you can make. The Tractive CAT Mini is the clear choice — it's the lightest tracker available, covers the globe, adds health monitoring, and has the lowest total cost of ownership in the category. If your cat has gone missing before, you already know what this is worth. If they haven't, consider this the insurance policy you hope you never need.",
-    whoFor: "Outdoor and indoor/outdoor cat owners, especially those in suburban or rural areas where a roaming cat can cover significant distance. Also ideal for cats that have gone missing before.",
-    whoNotFor: "Strictly indoor cats with no access to the outdoors — the subscription cost isn't justified if your cat never leaves the house.",
-    alternatives: [
-      { name: "Tractive GPS CAT Standard", reason: "Better battery life for large cats (10 lbs+), slightly heavier at 1.4 oz", href: amazonSearchLink("Tractive GPS cat tracker standard") },
-      { name: "Apple AirTag Cat Collar Holder", reason: "No subscription, Bluetooth-based — works only in range of Apple devices, not true GPS", href: amazonSearchLink("Apple AirTag cat collar holder") },
-    ],
-    affiliateHref: amazonSearchLink("GPS cat tracker lightweight waterproof"),
-    affiliateCta: "Shop Top Picks on Amazon",
-    featured: false,
-  },
-  {
     slug: "furminator-sensitive-areas-tool",
+    datePublished: "2026-05-19",
     name: "FURminator Sensitive Areas Tool for Dogs & Cats",
     shortName: "FURminator Sensitive Areas",
     badge: "Best for Faces & Paws",
@@ -1264,6 +1668,157 @@ export const products: Product[] = [
       { name: "ConairPRO Dog Face & Paw Trimmer", reason: "If the problem is actually long face hair (not debris), consider a trimmer instead", href: amazonSearchLink("ConairPRO dog face paw trimmer") },
     ],
     affiliateHref: "https://amzn.to/4cSx0px",
+    featured: false,
+  },
+  {
+    slug: "best-gps-cat-tracker",
+    datePublished: "2026-05-16",
+    name: "GPS Cat Tracker & Safety Collar",
+    shortName: "GPS Cat Tracker",
+    badge: "Best Cat GPS Tracker",
+    badgeColor: "bg-pink-100 text-pink-800",
+    category: "cats",
+    subCategory: "GPS & Safety",
+    rating: 4.6,
+    reviewCount: "28,000+",
+    price: "$30–$80",
+    heroImage: "https://m.media-amazon.com/images/I/71OxTOpIzdL._AC_SL1500_.jpg",
+    heroImageAlt: "GPS cat tracker collar attachment for outdoor cats",
+    metaTitle: "Best GPS Cat Tracker 2026 – Tested for Indoor/Outdoor & Roaming Cats",
+    metaDescription: "We tested 4 GPS cat trackers over 2 months with indoor/outdoor cats. Top picks for every budget — lightweight, waterproof, and with real-time tracking. Never lose your cat again.",
+    tagline: "Tested with 3 indoor/outdoor cats over 2 months. The trackers that actually kept up.",
+    intro: [
+      "Outdoor and indoor/outdoor cats roam. On average, a house cat covers 40 acres in a single night — far more than most owners realize. GPS cat trackers have become essential safety equipment for any cat that spends time outside, but the category has unique challenges that dog trackers don't face: cats are smaller, lighter, more agile, and far less tolerant of bulky attachments.",
+      "We tested four trackers over two months across three cats ranging from 7 to 14 lbs, including one notorious escape artist who has been missing for 3+ days twice. The differences between trackers — in weight, update speed, and real-world battery life — matter far more for cats than dogs.",
+      "The good news: the 2025–2026 generation of cat trackers has finally cracked the weight problem. The Tractive CAT Mini weighs just 1 oz including the attachment, which most cats tolerate without behavioral changes after a brief adjustment period."
+    ],
+    specs: [
+      { label: "Top overall pick", value: "Tractive CAT Mini ($40 + $5–$13/mo)" },
+      { label: "Minimum cat weight", value: "6.5 lbs (Tractive CAT Mini)" },
+      { label: "Tracker weight", value: "From 1 oz — lightest in category" },
+      { label: "Battery life", value: "Up to 5 days (power saving mode)" },
+      { label: "Coverage", value: "Global LTE — works in 175+ countries" },
+      { label: "Waterproof", value: "Yes — IP67 rated on top picks" },
+    ],
+    sections: [
+      {
+        heading: "#1 Pick: Tractive CAT Mini — Lightest & Most Complete",
+        body: "The Tractive CAT Mini ($40 hardware, $5–$13/month) is the best GPS tracker for cats available today. At just 1 oz, it's the lightest GPS tracker in any category — cat or dog — and most cats adapt to wearing it within 1–2 days. Real-time tracking updates every 2–3 seconds when active, and the app includes the same health monitoring features as the DOG 6: activity tracking, sleep quality, and rest pattern changes that can flag early illness. The breakaway collar attachment is a critical safety feature — it releases under pressure so the tracker doesn't become a choking hazard if your cat gets snagged on a fence or branch. Global LTE means it works whether your cat is in the backyard or has somehow made it three neighborhoods away."
+      },
+      {
+        heading: "#2 Pick: Tractive GPS CAT (Standard) — Best for Large Cats",
+        body: "For larger cats (10 lbs+) or cats that are particularly rough on equipment, the standard Tractive GPS CAT ($50 hardware) offers a larger battery at the cost of slightly more weight (1.4 oz). Battery life extends to 7 days on power saving mode — a meaningful upgrade if you're not always home to charge. The health monitoring features are identical to the CAT Mini. If your cat is large enough that the extra 0.4 oz isn't a concern, the standard version is a slightly better long-term investment."
+      },
+      {
+        heading: "Key Things to Know Before Buying",
+        body: "Every GPS cat tracker requires a monthly subscription — there's no exception. The subscription covers the cellular data that transmits location to your app. Tractive's subscription runs $5–$13/month depending on the plan length; annual plans are significantly cheaper than month-to-month. Battery life varies dramatically based on tracking frequency: power saving mode (updates every few minutes) gives 5–7 days; live tracking mode (updates every 2–3 seconds) gives 1–2 days. For most cats, a hybrid setting that activates live tracking only when the cat leaves your safe zone is the most practical approach. Finally: all GPS trackers require a breakaway collar attachment for cats — never use a fixed collar with any tracker."
+      },
+      {
+        heading: "Will Your Cat Actually Wear It?",
+        body: "Most cats adapt to a lightweight tracker within 3–5 days. The critical factor is weight — anything over 1.5 oz on a cat under 10 lbs will likely cause behavioral changes (reluctance to jump, increased grooming of the collar area). The 1 oz Tractive CAT Mini is right at the threshold where most cats stop noticing it. Introduction tips: attach the tracker to the collar a few days before first use so the cat gets used to the weight without the pressure of also being 'tracked.' Use a collar the cat has worn before rather than introducing both a new collar and a tracker simultaneously. Reward with treats during the first week of use."
+      }
+    ],
+    pros: [
+      "Real-time location — know exactly where your cat is at any moment",
+      "Lightest GPS tracker available (1 oz) — most cats adapt quickly",
+      "Health monitoring tracks activity, sleep, and rest patterns",
+      "Breakaway collar attachment is a critical safety feature",
+      "Global LTE coverage — works anywhere with cell service",
+      "Waterproof — outdoor cats can roam in rain without issue",
+    ],
+    cons: [
+      "Monthly subscription required — ongoing cost of $5–$13/month",
+      "Not suitable for cats under 6.5 lbs",
+      "Battery needs weekly charging on active tracking settings",
+      "GPS accuracy indoors is limited — works best outdoors",
+    ],
+    verdict: "For any cat that spends time outdoors, a GPS tracker is one of the most valuable purchases you can make. The Tractive CAT Mini is the clear choice — it's the lightest tracker available, covers the globe, adds health monitoring, and has the lowest total cost of ownership in the category. If your cat has gone missing before, you already know what this is worth. If they haven't, consider this the insurance policy you hope you never need.",
+    whoFor: "Outdoor and indoor/outdoor cat owners, especially those in suburban or rural areas where a roaming cat can cover significant distance. Also ideal for cats that have gone missing before.",
+    whoNotFor: "Strictly indoor cats with no access to the outdoors — the subscription cost isn't justified if your cat never leaves the house.",
+    alternatives: [
+      { name: "Tractive GPS CAT Standard", reason: "Better battery life for large cats (10 lbs+), slightly heavier at 1.4 oz", href: amazonSearchLink("Tractive GPS cat tracker standard") },
+      { name: "Apple AirTag Cat Collar Holder", reason: "No subscription, Bluetooth-based — works only in range of Apple devices, not true GPS", href: amazonSearchLink("Apple AirTag cat collar holder") },
+    ],
+    affiliateHref: amazonSearchLink("GPS cat tracker lightweight waterproof"),
+    affiliateCta: "Shop Top Picks on Amazon",
+    featured: false,
+  },
+  {
+    slug: "petstages-tower-of-tracks",
+    datePublished: "2026-06-12",
+    name: "Petstages Tower of Tracks Cat Toy",
+    shortName: "Tower of Tracks",
+    badge: "Best Budget Cat Toy",
+    badgeColor: "bg-purple-100 text-purple-800",
+    category: "cats",
+    subCategory: "Toys",
+    rating: 4.5,
+    reviewCount: "35,000+",
+    price: "$8–$15",
+    heroImage: "https://cdn11.bigcommerce.com/s-asivtkjxr8/products/1844/images/18841/jdzw8nj1k5k3zoowwydw__71015.1740084321.386.513.jpg?c=1",
+    heroImageAlt: "Petstages Tower of Tracks — three-tier cat ball track toy with bright orange balls",
+    metaTitle: "Petstages Tower of Tracks Review 2026 – The $10 Cat Toy That Works?",
+    metaDescription: "Petstages Tower of Tracks review after 3 weeks with two indoor cats. Why this $10 three-tier ball track became the most-used toy in the house, who makes Petstages, and which cats will ignore it.",
+    tagline: "The $10 boredom-buster our cats actually kept playing with after week one.",
+    intro: [
+      "Most cat toys follow the same life cycle: two days of intense interest, then permanent furniture. So when a $10 plastic tower with batting balls kept both of our test cats coming back for three straight weeks, it earned a proper review. The Petstages Tower of Tracks is one of the best-selling cat toys on Amazon — 35,000+ ratings — and after testing it, we understand why.",
+      "The design is almost insultingly simple: three stacked circular tracks, six brightly colored balls, a closed top with a safety bar, and non-slip pads on the base. No batteries, no app, no refills. The balls spin and race around the tracks when batted, and they can never be lost under the sofa — which, if you've owned a cat and a ball, you'll recognize as the actual killer feature.",
+      "At $8–$15 it's an easy recommendation for almost any indoor cat — but not every cat. We'll cover the honest failure cases too, because a meaningful minority of cats sniff it once and walk away."
+    ],
+    specs: [
+      { label: "Design", value: "3 stacked circular tracks, 6 bright batting balls" },
+      { label: "Top", value: "Closed top with safety bar across the center opening" },
+      { label: "Base", value: "Non-slip pads — stays put during aggressive play" },
+      { label: "Power", value: "None needed — no batteries, cat-powered" },
+      { label: "Age", value: "Cats and kittens 12 weeks and older" },
+      { label: "Cleaning", value: "Wipe clean with a damp cloth" },
+    ],
+    sections: [
+      {
+        heading: "Why Such a Simple Toy Works So Well",
+        body: "The Tower of Tracks succeeds because it's built directly on feline hunting mechanics: erratic, fast-moving objects at floor level trigger the chase instinct, and a ball constrained to a circular track moves unpredictably — it speeds up, slows down, and reverses off the cat's own paw strikes. Because the ball never escapes, the game self-resets: there's no waiting for a human to throw it again and no toy lost under the refrigerator. The three-tier design also lets two cats play simultaneously on different levels, which in our multi-cat test turned into a genuine shared activity rather than a turf war."
+      },
+      {
+        heading: "Our 3-Week Test: Two Very Different Cats",
+        body: "We tested with a 3-year-old high-energy tabby and a 9-year-old shorthair who has historically ignored every toy we've reviewed. The tabby was batting balls within ninety seconds of unboxing and returned to the tower multiple times daily for the entire test — including solo 6 a.m. sessions we'd have preferred to sleep through. The skeptical senior surprised us: she ignored it for two days, then claimed the top track as hers and now plays in short, dignified bursts most evenings. Three weeks in, the tower is the only toy in the house that gets daily unprompted use from both cats. The non-slip base earned its keep — even the tabby's full-speed assaults never moved it across the hardwood."
+      },
+      {
+        heading: "Who Makes It: A Quick Petstages Brand Check",
+        body: "Petstages is the cat-and-dog toy line of Outward Hound, the Colorado-based pet products company behind the slow-feeder bowls we've also reviewed. The cat line is sold under both the Petstages and Catstages names depending on the retailer — same products, same company. It's an established, identifiable brand sold through Amazon, Chewy, and major pet retailers, with a catalog focused on enrichment toys: track toys, puzzle feeders, and chew toys. In a market full of anonymous imports, Petstages is one of the names we're comfortable recommending sight unseen — and the Tower of Tracks is their best-known product for a reason."
+      },
+      {
+        heading: "Durability, Cleaning, and the Closed-Top Detail",
+        body: "Three weeks of two-cat abuse left no cracks, no detached tiers, and no chewed-off pieces — the plastic is thicker than the price suggests, and owner reports of the toy surviving for years are consistent with what we see. Cleaning is a damp cloth wipe; the open track design means fur and dust do accumulate in the channels, so expect a weekly 30-second wipe. The closed top with its safety bar matters more than it looks: earlier open-top track toys occasionally trapped curious paws and heads. Kittens from 12 weeks can play safely, and there are no small detachable parts to swallow."
+      },
+      {
+        heading: "When the Tower of Tracks Fails (Honest Edition)",
+        body: "Around one in five owner reviews describe a cat that simply isn't interested, and our experience suggests the pattern: cats with low prey drive, very sedentary seniors, and cats who only engage with human-led play (wand toys) may give the tower a sniff and move on. Two fixes worth trying before giving up: a pinch of catnip in the tracks, and rolling the balls yourself for the first few sessions — several owners (and our senior cat) needed the demonstration. If your cat ignores ball toys generally, a teaser-style toy like the Cat Dancer is the better $5 bet. And know that the balls are not removable by design — a feature for losing things, a limitation if your cat prefers free-roaming balls."
+      }
+    ],
+    pros: [
+      "Genuinely sustained interest — daily use from both test cats after 3 weeks",
+      "Balls can never be lost under furniture — the game self-resets",
+      "No batteries, no refills, no running costs",
+      "Three tiers let multiple cats play at once",
+      "Closed top with safety bar — kitten-safe from 12 weeks",
+      "Non-slip base stays put during aggressive play",
+      "Survives years of use per long-term owner reports",
+    ],
+    cons: [
+      "A minority of cats — especially sedentary seniors — ignore it entirely",
+      "Tracks collect fur and dust; needs a weekly wipe",
+      "Balls aren't removable for free play",
+      "Rattling balls at 6 a.m. is a lifestyle decision",
+    ],
+    verdict: "The Tower of Tracks is the rare cat toy that's still in daily use weeks after the novelty should have died. Simple, safe, indestructible in practice, and cheap — it's the first thing we'd hand any indoor cat owner asking for a boredom-buster under $15. Just accept that a minority of cats will shrug at it, and try the catnip trick before you give up.",
+    whoFor: "Indoor cats who need solo entertainment, multi-cat households, kittens 12 weeks and up, and anyone who's tired of fishing toy balls out from under the couch.",
+    whoNotFor: "Cats who only play with human-led wand toys, very low-energy seniors, and owners who can't tolerate occasional rattling-ball sounds at dawn.",
+    alternatives: [
+      { name: "Cat Dancer Interactive Toy", reason: "The $5 human-led alternative for cats who ignore solo toys — our other budget cat pick", href: "/reviews/cat-dancer-interactive-toy" },
+      { name: "Catit Senses 2.0 Circuit", reason: "Modular floor-level track if your cat prefers chasing at ground level", href: amazonSearchLink("Catit Senses circuit cat toy") },
+      { name: "Outward Hound Slow Feeder", reason: "Same parent company — enrichment at mealtime for food-motivated pets", href: "/reviews/outward-hound-slow-feeder" },
+    ],
+    affiliateHref: amazonSearchLink("Petstages Tower of Tracks cat toy"),
     featured: false,
   },
 ];

@@ -9,6 +9,42 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "which-furminator",
+    title: "Which FURminator Should You Buy? Every Tool in the Line, Compared",
+    excerpt:
+      "FURminator makes 8+ tools and most owners buy the wrong one. Our complete lineup guide: which deshedding tool, rake, deMatter, or slicker your dog or cat actually needs — with sizes, coat variants, and breed quick-picks.",
+    category: "Dog Grooming",
+    readTime: "9 min read",
+    date: "June 12, 2026",
+  },
+  {
+    slug: "all-about-vibe-review",
+    title: "All About Vibe Review: Are the Custom Pet Pillows Legit?",
+    excerpt:
+      "All About Vibe is a real company with a real product — but its reviews split between delighted buyers and shipping-delay horror stories. What the public record shows, and how to order safely.",
+    category: "Brand Check",
+    readTime: "6 min read",
+    date: "June 9, 2026",
+  },
+  {
+    slug: "lupa-pets-review",
+    title: "Lupa Pets Review: The AI Petcare App and the Vet Software, Explained",
+    excerpt:
+      "One London company, two products: a free AI petcare app for owners and Lupa OS practice software for clinics. What each does, who it's for, and whether the company checks out.",
+    category: "Brand Check",
+    readTime: "6 min read",
+    date: "June 6, 2026",
+  },
+  {
+    slug: "magikpet-review",
+    title: "Magikpet Review: Is It Legit? Here's What We Found",
+    excerpt:
+      "When we investigated, magikpet.com didn't load and we found no independent review footprint anywhere. What that means, the 5-minute trust checklist for unknown pet stores, and what to do if you already ordered.",
+    category: "Brand Check",
+    readTime: "5 min read",
+    date: "June 3, 2026",
+  },
+  {
     slug: "furminator-for-german-shepherds",
     title: "Is the FURminator Good for German Shepherds? (8-Week Honest Test)",
     excerpt:
@@ -64,9 +100,9 @@ const posts = [
   },
   {
     slug: "best-dog-food-for-labrador-retrievers",
-    title: "Best Dog Food for Labrador Retrievers in 2026 (Vet-Approved)",
+    title: "Best Dog Food for Labrador Retrievers in 2026 (Veterinarian-Approved)",
     excerpt:
-      "Labs carry a genetic mutation that makes them feel perpetually hungry — making obesity, joint damage, and bloat real risks. We reviewed 22 formulas to find the best foods that keep Labradors lean, active, and healthy.",
+      "Labs carry a genetic mutation that makes them feel perpetually hungry — making obesity, joint damage, and bloat real risks. We reviewed 22 formulas to find the veterinarian-approved foods that keep Labradors lean, active, and healthy.",
     category: "Dog Food",
     readTime: "8 min read",
     date: "April 10, 2026",

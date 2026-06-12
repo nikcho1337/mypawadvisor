@@ -57,14 +57,23 @@ export default async function ReviewPage({
   const product = getProductBySlug(slug);
   if (!product) notFound();
 
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const [py, pm, pd] = product.datePublished.split("-").map(Number);
+  const displayDate = `${MONTHS[pm - 1]} ${pd}, ${py}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: { "@type": "Product", name: product.name },
-    reviewRating: { "@type": "Rating", ratingValue: product.rating.toString(), bestRating: "5" },
-    author: { "@type": "Organization", name: "MyPawAdvisor" },
-    reviewBody: product.verdict,
-    datePublished: "2026-04-08",
+    "@type": "Product",
+    name: product.name,
+    image: product.heroImage,
+    description: product.metaDescription,
+    review: {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: product.rating.toString(), bestRating: "5" },
+      author: { "@type": "Organization", name: "MyPawAdvisor" },
+      reviewBody: product.verdict,
+      datePublished: product.datePublished,
+    },
   };
 
   return (
@@ -95,7 +104,7 @@ export default async function ReviewPage({
           </h1>
           <p className="text-xl text-gray-600 mb-4 leading-relaxed">{product.tagline}</p>
           <div className="flex flex-wrap items-center gap-5 text-sm text-gray-500 pb-5 border-b border-gray-100">
-            <span>📅 April 8, 2026</span>
+            <span>📅 {displayDate}</span>
             <span>✅ Tested & verified</span>
             <span>⏱️ 8 min read</span>
           </div>

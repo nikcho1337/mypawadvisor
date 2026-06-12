@@ -1,6 +1,6 @@
 import { products } from "@/lib/products";
 
-const SITE = "https://mypawadvisor.com";
+const SITE = "https://www.mypawadvisor.com";
 
 export async function GET() {
   const blogPosts = [
@@ -44,7 +44,7 @@ export async function GET() {
       <link>${SITE}/reviews/${p.slug}</link>
       <guid isPermaLink="true">${SITE}/reviews/${p.slug}</guid>
       <description><![CDATA[${p.tagline} Rating: ${p.rating}/5 from ${p.reviewCount} Amazon reviews. Price: ${p.price}.]]></description>
-      <pubDate>Tue, 08 Apr 2026 08:00:00 GMT</pubDate>
+      <pubDate>${new Date(p.datePublished + "T08:00:00Z").toUTCString()}</pubDate>
       <category>Pet Product Reviews</category>
       <image>
         <url>${p.heroImage}</url>

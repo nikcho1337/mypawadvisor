@@ -10,16 +10,16 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Review",
-  itemReviewed: {
-    "@type": "Product",
-    name: "Embrace Pet Insurance",
-    description: "Pet insurance provider offering accident & illness coverage plus optional wellness rewards.",
+  "@type": "Product",
+  name: "Embrace Pet Insurance",
+  description: "Pet insurance provider offering accident & illness coverage plus optional wellness rewards.",
+  review: {
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: "4.7", bestRating: "5" },
+    author: { "@type": "Organization", name: "MyPawAdvisor" },
+    datePublished: "2026-01-15",
+    reviewBody: "Embrace Pet Insurance offers flexible coverage with a unique diminishing deductible and optional wellness rewards program.",
   },
-  reviewRating: { "@type": "Rating", ratingValue: "4.7", bestRating: "5" },
-  author: { "@type": "Organization", name: "MyPawAdvisor" },
-  datePublished: "2026-01-15",
-  reviewBody: "Embrace Pet Insurance offers flexible coverage with a unique diminishing deductible and optional wellness rewards program.",
 };
 
 export default function EmbraceReviewPage() {

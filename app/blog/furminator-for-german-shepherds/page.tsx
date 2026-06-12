@@ -24,10 +24,59 @@ const jsonLd = {
   description:
     "Honest test of the FURminator on a German Shepherd over 8 weeks. Which size to buy, how often to use it, and the shedding reduction you can realistically expect.",
   author: { "@type": "Organization", name: "MyPawAdvisor" },
-  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://mypawadvisor.com" },
+  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://www.mypawadvisor.com" },
   datePublished: "2026-04-17",
-  dateModified: "2026-04-17",
-  mainEntityOfPage: "https://mypawadvisor.com/blog/furminator-for-german-shepherds",
+  dateModified: "2026-06-12",
+  mainEntityOfPage: "https://www.mypawadvisor.com/blog/furminator-for-german-shepherds",
+};
+
+const faqItems = [
+  {
+    q: "Is the FURminator good for German Shepherds?",
+    a: "Yes — it's one of the best grooming tools available for German Shepherds. In our 8-week test on a 4-year-old GSD, the FURminator (Large, Long Hair) reduced visible household shedding by approximately 85%. The results depend on buying the correct version and using it 2–3 times per week with light pressure on a dry coat.",
+  },
+  {
+    q: "Which FURminator should I buy for a German Shepherd?",
+    a: "The FURminator deShedding Tool in Large, Long Hair — the 4-inch edge for dogs 51–90 lbs with hair over 2 inches. Avoid the Medium (too small, doubles grooming time) and the Short Hair version (teeth can't reach GSD undercoat through the guard coat).",
+  },
+  {
+    q: "Will the FURminator damage a German Shepherd's coat?",
+    a: "Not if used correctly. Damage happens from pressing too hard or brushing against the grain. The FURminator edge is designed to catch loose undercoat without cutting guard hairs. Light pressure, direction of growth, and limited session times (15–20 minutes) keep the coat healthy.",
+  },
+  {
+    q: "How often should I brush my German Shepherd with the FURminator?",
+    a: "2–3 times per week year-round for maintenance, and daily during spring and fall coat blow (roughly 2–3 weeks each). Skipping weeks during normal periods allows undercoat to build up, making the next session take longer.",
+  },
+  {
+    q: "Can puppies use the FURminator?",
+    a: "Yes, but wait until your GSD puppy is 4–5 months old and has developed their adult undercoat. Before that, a soft slicker brush introduces them to grooming without the stronger sensation of the deshedding edge. Start with very short 5-minute sessions.",
+  },
+  {
+    q: "Is the FURminator better than a shedding blade for GSDs?",
+    a: "For undercoat removal, yes — by a wide margin. Shedding blades (the curved metal loop style) scrape the topcoat but barely reach the undercoat. They're better for short-coated breeds like Beagles than double-coated breeds like German Shepherds.",
+  },
+  {
+    q: "How long does a FURminator last?",
+    a: "The stainless steel edge typically lasts 5+ years of regular use. FURminator also sells replacement blade heads if the edge dulls or chips. The body itself has no moving parts that wear out beyond the FURejector button spring.",
+  },
+  {
+    q: "Does the FURminator work during the German Shepherd's summer coat?",
+    a: "Yes. GSD shedding never fully stops — they have a lighter summer undercoat that still sheds continuously. Twice-weekly FURminator sessions keep summer shedding manageable, and it prepares the coat for the fall coat blow.",
+  },
+  {
+    q: "Should I bathe my German Shepherd before using the FURminator?",
+    a: "Yes, if it's been a while. A clean coat deshedding is more effective — dirt and skin oils make undercoat stick. Bathe, blow-dry completely (a force dryer is a game-changer for GSDs), then deshed once fully dry.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const weeklyResults = [
@@ -105,6 +154,10 @@ export default function FurminatorGSDPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* BREADCRUMB */}
@@ -362,39 +415,10 @@ export default function FurminatorGSDPage() {
         {/* FAQ */}
         <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         <div className="space-y-4 mb-8">
-          {[
-            {
-              q: "Will the FURminator damage a German Shepherd&apos;s coat?",
-              a: "Not if used correctly. Damage happens from pressing too hard or brushing against the grain. The FURminator edge is designed to catch loose undercoat without cutting guard hairs. Light pressure, direction of growth, and limited session times (15–20 minutes) keep the coat healthy.",
-            },
-            {
-              q: "How often should I brush my German Shepherd with the FURminator?",
-              a: "2–3 times per week year-round for maintenance, and daily during spring and fall coat blow (roughly 2–3 weeks each). Skipping weeks during normal periods allows undercoat to build up, making the next session take longer.",
-            },
-            {
-              q: "Can puppies use the FURminator?",
-              a: "Yes, but wait until your GSD puppy is 4–5 months old and has developed their adult undercoat. Before that, a soft slicker brush introduces them to grooming without the stronger sensation of the deshedding edge. Start with very short 5-minute sessions.",
-            },
-            {
-              q: "Does the FURminator work during the German Shepherd&apos;s summer coat?",
-              a: "Yes. GSD shedding never fully stops — they have a lighter summer undercoat that still sheds continuously. Twice-weekly FURminator sessions keep summer shedding manageable, and it prepares the coat for the fall coat blow.",
-            },
-            {
-              q: "Is the FURminator better than a shedding blade for GSDs?",
-              a: "For undercoat removal, yes — by a wide margin. Shedding blades (the curved metal loop style) scrape the topcoat but barely reach the undercoat. They&apos;re better for short-coated breeds like Beagles than double-coated breeds like German Shepherds.",
-            },
-            {
-              q: "How long does a FURminator last?",
-              a: "The stainless steel edge typically lasts 5+ years of regular use. FURminator also sells replacement blade heads if the edge dulls or chips. The body itself has no moving parts that wear out beyond the FURejector button spring.",
-            },
-            {
-              q: "Should I bathe my German Shepherd before using the FURminator?",
-              a: "Yes, if it&apos;s been a while. A clean coat deshedding is more effective — dirt and skin oils make undercoat stick. Bathe, blow-dry completely (a force dryer is a game-changer for GSDs), then deshed once fully dry.",
-            },
-          ].map(({ q, a }) => (
+          {faqItems.map(({ q, a }) => (
             <div key={q} className="border border-gray-200 rounded-xl p-5">
-              <p className="font-semibold text-sm mb-2" dangerouslySetInnerHTML={{ __html: `Q: ${q}` }} />
-              <p className="text-sm text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: `A: ${a}` }} />
+              <p className="font-semibold text-sm mb-2">Q: {q}</p>
+              <p className="text-sm text-gray-600 leading-relaxed">A: {a}</p>
             </div>
           ))}
         </div>
@@ -424,6 +448,12 @@ export default function FurminatorGSDPage() {
               className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
             >
               FURminator Full Review
+            </Link>
+            <Link
+              href="/blog/which-furminator"
+              className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
+            >
+              Which FURminator Should You Buy?
             </Link>
             <Link
               href="/blog/best-dog-deshedding-tools"

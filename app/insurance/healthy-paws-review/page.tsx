@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Review",
-  itemReviewed: {
-    "@type": "Product",
-    name: "Healthy Paws Pet Insurance",
-    description: "Pet insurance provider offering unlimited annual benefits and fast claims processing.",
+  "@type": "Product",
+  name: "Healthy Paws Pet Insurance",
+  description: "Pet insurance provider offering unlimited annual benefits and fast claims processing.",
+  review: {
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: "4.9", bestRating: "5" },
+    author: { "@type": "Organization", name: "MyPawAdvisor" },
+    reviewBody: "Healthy Paws offers the best overall pet insurance with unlimited annual benefits and 90% reimbursement rate.",
   },
-  reviewRating: { "@type": "Rating", ratingValue: "4.9", bestRating: "5" },
-  author: { "@type": "Organization", name: "MyPawAdvisor" },
-  reviewBody: "Healthy Paws offers the best overall pet insurance with unlimited annual benefits and 90% reimbursement rate.",
 };
 
 export default function HealthyPawsReviewPage() {

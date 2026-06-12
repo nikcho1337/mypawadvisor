@@ -25,10 +25,47 @@ const jsonLd = {
   description:
     "We tested 9 deshedding tools on 6 breeds to find the ones that genuinely reduce shedding. Honest results after 8 weeks of real use.",
   author: { "@type": "Organization", name: "MyPawAdvisor" },
-  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://mypawadvisor.com" },
+  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://www.mypawadvisor.com" },
   datePublished: "2026-04-13",
-  dateModified: "2026-04-13",
-  mainEntityOfPage: "https://mypawadvisor.com/blog/best-dog-deshedding-tools",
+  dateModified: "2026-06-12",
+  mainEntityOfPage: "https://www.mypawadvisor.com/blog/best-dog-deshedding-tools",
+};
+
+const faqItems = [
+  {
+    q: "Are deshedding tools worth it?",
+    a: "Yes — for double-coated breeds. A quality deshedding tool removes loose undercoat (the source of 80–90% of household shedding) that regular brushes never reach. In our 8-week test, consistent use reduced visible shedding by 80–90% on German Shepherds and Golden Retrievers, and the tool costs less than a single groomer visit. They are not worth it for single-coated or curly breeds (Poodles, Maltese, Yorkies), which have no undercoat to remove.",
+  },
+  {
+    q: "Does the FURminator actually work?",
+    a: "Yes — for double-coated breeds. In our testing, the FURminator reduced visible shedding by 80–90% within 3 weeks of consistent use (2–3x per week) on German Shepherds and Labradors. It does not work on single-coated breeds like Poodles or Maltese, and using it on those breeds can damage their coat.",
+  },
+  {
+    q: "Is the FURminator good for German Shepherds?",
+    a: "The FURminator is one of the best tools for German Shepherds specifically. GSDs have a dense double coat that sheds heavily — particularly during shedding season (spring and fall). Use the large, long-hair version. Brush 2–3 times per week during normal periods and daily during shedding season. Your furniture will thank you.",
+  },
+  {
+    q: "How often should I use a deshedding tool?",
+    a: "For most double-coated breeds, 2–3 times per week is ideal for year-round maintenance. During heavy shedding seasons (spring 'coat blow' and fall), daily sessions for 2–3 weeks will clear the undercoat faster. After the undercoat clears, return to a maintenance schedule.",
+  },
+  {
+    q: "Can deshedding tools hurt my dog?",
+    a: "Used correctly with light pressure and in the direction of hair growth, deshedding tools are safe and most dogs enjoy the sensation. Problems arise from pressing too hard (causes skin irritation), brushing against the grain (pulls topcoat), or over-brushing one area (brush burn). Limit sessions to 20 minutes and stop if your dog shows discomfort.",
+  },
+  {
+    q: "What's the difference between a deshedding tool and a regular brush?",
+    a: "A regular slicker or pin brush removes loose fur from the topcoat only. A deshedding tool (like the FURminator) has a fine-edged stainless steel comb that passes through the topcoat to reach and remove loose fur from the undercoat. That undercoat is the source of most household shedding — which is why a regular brush alone doesn't solve the shedding problem.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const picks = [
@@ -156,6 +193,10 @@ export default function DesheddingToolsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* BREADCRUMB */}
@@ -381,28 +422,7 @@ export default function DesheddingToolsPage() {
         {/* FAQ */}
         <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         <div className="space-y-4 mb-8">
-          {[
-            {
-              q: "Does the FURminator actually work?",
-              a: "Yes — for double-coated breeds. In our testing, the FURminator reduced visible shedding by 80–90% within 3 weeks of consistent use (2–3x per week) on German Shepherds and Labradors. It does not work on single-coated breeds like Poodles or Maltese, and using it on those breeds can damage their coat.",
-            },
-            {
-              q: "Is the FURminator good for German Shepherds?",
-              a: "The FURminator is one of the best tools for German Shepherds specifically. GSDs have a dense double coat that sheds heavily — particularly during shedding season (spring and fall). Use the large, long-hair version. Brush 2–3 times per week during normal periods and daily during shedding season. Your furniture will thank you.",
-            },
-            {
-              q: "How often should I use a deshedding tool?",
-              a: "For most double-coated breeds, 2–3 times per week is ideal for year-round maintenance. During heavy shedding seasons (spring 'coat blow' and fall), daily sessions for 2–3 weeks will clear the undercoat faster. After the undercoat clears, return to a maintenance schedule.",
-            },
-            {
-              q: "Can deshedding tools hurt my dog?",
-              a: "Used correctly with light pressure and in the direction of hair growth, deshedding tools are safe and most dogs enjoy the sensation. Problems arise from pressing too hard (causes skin irritation), brushing against the grain (pulls topcoat), or over-brushing one area (brush burn). Limit sessions to 20 minutes and stop if your dog shows discomfort.",
-            },
-            {
-              q: "What's the difference between a deshedding tool and a regular brush?",
-              a: "A regular slicker or pin brush removes loose fur from the topcoat only. A deshedding tool (like the FURminator) has a fine-edged stainless steel comb that passes through the topcoat to reach and remove loose fur from the undercoat. That undercoat is the source of most household shedding — which is why a regular brush alone doesn't solve the shedding problem.",
-            },
-          ].map(({ q, a }) => (
+          {faqItems.map(({ q, a }) => (
             <div key={q} className="border border-gray-200 rounded-xl p-5">
               <p className="font-semibold text-sm mb-2">Q: {q}</p>
               <p className="text-sm text-gray-600 leading-relaxed">A: {a}</p>
@@ -435,6 +455,18 @@ export default function DesheddingToolsPage() {
               className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
             >
               FURminator Full Review
+            </Link>
+            <Link
+              href="/blog/which-furminator"
+              className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
+            >
+              Which FURminator Should You Buy?
+            </Link>
+            <Link
+              href="/blog/furminator-for-german-shepherds"
+              className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
+            >
+              FURminator for German Shepherds
             </Link>
             <Link
               href="/blog/best-dog-food-for-german-shepherds"

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for Labrador Retrievers 2026 – Vet-Approved Picks",
+  title: "Best Dog Food for Labrador Retrievers 2026 – Veterinarian-Approved",
   description:
-    "Discover the best dog food for Labrador Retrievers in 2026. Our vet-approved picks address Labs' unique health needs: obesity, joint problems, and bloat risk. Tested and rated.",
+    "Where can you find veterinarian-approved nutrition for Labradors? These 4 foods meet the criteria vets actually use — AAFCO feeding trials, veterinary nutritionists on staff — and address Labs' obesity, joint, and bloat risks.",
   keywords: [
     "best dog food for Labrador Retrievers",
+    "veterinarian approved dog food for labradors",
+    "veterinarian approved nutrition for labradors",
     "Labrador Retriever food",
     "best dog food for Labs",
     "Lab dog food 2026",
@@ -19,14 +21,51 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Best Dog Food for Labrador Retrievers 2026 – Vet-Approved Picks",
+  headline: "Best Dog Food for Labrador Retrievers 2026 – Veterinarian-Approved",
   description:
-    "Vet-approved dog food picks for Labrador Retrievers covering weight management, joint health, and digestive support.",
+    "Veterinarian-approved dog food picks for Labrador Retrievers covering weight management, joint health, and digestive support.",
   author: { "@type": "Organization", name: "MyPawAdvisor" },
-  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://mypawadvisor.com" },
+  publisher: { "@type": "Organization", name: "MyPawAdvisor", url: "https://www.mypawadvisor.com" },
   datePublished: "2026-04-10",
-  dateModified: "2026-04-10",
-  mainEntityOfPage: "https://mypawadvisor.com/blog/best-dog-food-for-labrador-retrievers",
+  dateModified: "2026-06-12",
+  mainEntityOfPage: "https://www.mypawadvisor.com/blog/best-dog-food-for-labrador-retrievers",
+};
+
+const faqItems = [
+  {
+    q: "Where can I find veterinarian-approved nutrition for Labradors?",
+    a: "Start with the brands veterinarians actually recommend in practice: Royal Canin, Hill's Science Diet, and Purina Pro Plan. All three employ board-certified veterinary nutritionists, run AAFCO feeding trials, and meet the WSAVA guideline criteria vets use to evaluate foods. All are available on Amazon, at Chewy, and through most vet clinics. For a Lab specifically, Royal Canin Labrador Retriever Adult and Hill's Science Diet Large Breed are the two most commonly recommended — both are reviewed in detail above.",
+  },
+  {
+    q: "What makes a dog food 'veterinarian approved'?",
+    a: "There is no official 'veterinarian approved' certification — so look for the signals vets themselves use: an AAFCO nutritional adequacy statement on the label, a brand that employs board-certified veterinary nutritionists (DACVN), published feeding trials rather than formulation-only testing, and compliance with WSAVA's manufacturer guidelines. The picks in this guide were selected against exactly those criteria. For a Lab with a specific condition (obesity, kidney disease, allergies), ask your own vet — they may recommend a prescription diet instead.",
+  },
+  {
+    q: "Should I feed my Lab a grain-free diet?",
+    a: "Not necessarily. The FDA has investigated a potential link between grain-free diets and dilated cardiomyopathy (DCM) in dogs. Unless your Lab has a confirmed grain allergy or sensitivity, a high-quality grain-inclusive diet like Hill's Science Diet or Purina Pro Plan is generally the safer choice. Always consult your vet.",
+  },
+  {
+    q: "How do I prevent my Lab from eating too fast?",
+    a: "Use a slow-feeder bowl or a puzzle feeder. Alternatively, Royal Canin's Lab-specific formula uses a donut-shaped kibble designed to slow eating. Fast eating is a primary bloat risk factor — it's worth addressing directly.",
+  },
+  {
+    q: "My Lab keeps gaining weight even on normal portions. What should I do?",
+    a: "Switch to a food with lower calorie density (under 350 kcal/cup) and ensure all family members are following the same measured portions. Remember that treats count — they should be less than 10% of daily calories. A vet check is also worthwhile to rule out hypothyroidism, which is common in Labs.",
+  },
+  {
+    q: "When should I switch from puppy food to adult food?",
+    a: "Switch around 12–15 months when your Lab has reached skeletal maturity. Large breed puppy food has different calcium/phosphorus ratios that support bone development — staying on it too long can cause joint issues.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const picks = [
@@ -125,6 +164,10 @@ export default function LabradorFoodPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* BREADCRUMB */}
       <div className="max-w-4xl mx-auto px-4 pt-6 text-sm text-gray-500">
@@ -139,7 +182,7 @@ export default function LabradorFoodPage() {
         <header className="mb-8">
           <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Dog Food</span>
           <h1 className="text-3xl md:text-4xl font-bold mt-3 mb-3 leading-tight">
-            Best Dog Food for Labrador Retrievers in 2026 (Vet-Approved)
+            Best Dog Food for Labrador Retrievers in 2026 (Veterinarian-Approved)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
             Labrador Retrievers are America's most popular dog breed — and one of the most food-obsessed. Their genetic drive to eat makes obesity, joint stress, and bloat real risks. We reviewed 22 formulas to find the foods that keep Labs lean, active, and healthy for the long haul.
@@ -264,6 +307,24 @@ export default function LabradorFoodPage() {
           ))}
         </div>
 
+        {/* VETERINARIAN-APPROVED */}
+        <h2 className="text-2xl font-bold mb-4">Where Can You Find Veterinarian-Approved Nutrition for Labradors?</h2>
+        <p className="text-gray-700 mb-4 leading-relaxed">
+          Here&apos;s the honest answer: there is no official &quot;veterinarian approved&quot; stamp — no regulator certifies dog food that way. What the phrase really means is food that meets the criteria veterinarians use when they recommend a diet, and those criteria are specific: an <strong>AAFCO nutritional adequacy statement</strong> on the bag, a manufacturer that employs <strong>board-certified veterinary nutritionists</strong>, real <strong>feeding trials</strong> (not just formulation on paper), and compliance with <strong>WSAVA manufacturer guidelines</strong>.
+        </p>
+        <p className="text-gray-700 mb-4 leading-relaxed">
+          Only a handful of brands clear all four bars — which is why vets keep recommending the same names: <strong>Royal Canin, Hill&apos;s Science Diet, and Purina Pro Plan</strong>. All three anchor our picks above, and all three are easy to find: Amazon and Chewy carry the full lines (usually at the best prices), and most veterinary clinics stock or can order them. You don&apos;t need a prescription for any of the foods in this guide — prescription diets are a separate category for diagnosed conditions like kidney disease or severe allergies.
+        </p>
+        <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-8">
+          <p className="font-bold text-sm text-emerald-800 mb-2">✅ The 30-second veterinarian-approval check for any Lab food</p>
+          <ul className="text-sm text-gray-700 space-y-1">
+            <li>• AAFCO statement for &quot;adult maintenance&quot; or &quot;all life stages&quot; on the label</li>
+            <li>• Brand employs board-certified veterinary nutritionists (DACVN)</li>
+            <li>• Food validated in feeding trials, not formulation-only</li>
+            <li>• Large-breed formula with controlled calories — non-negotiable for a breed where 59% are overweight</li>
+          </ul>
+        </div>
+
         {/* WHAT TO LOOK FOR */}
         <h2 className="text-2xl font-bold mb-4">What to Look for in Lab Food</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
@@ -341,24 +402,7 @@ export default function LabradorFoodPage() {
         {/* FAQ */}
         <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         <div className="space-y-4 mb-8">
-          {[
-            {
-              q: "Should I feed my Lab a grain-free diet?",
-              a: "Not necessarily. The FDA has investigated a potential link between grain-free diets and dilated cardiomyopathy (DCM) in dogs. Unless your Lab has a confirmed grain allergy or sensitivity, a high-quality grain-inclusive diet like Hill's Science Diet or Purina Pro Plan is generally the safer choice. Always consult your vet.",
-            },
-            {
-              q: "How do I prevent my Lab from eating too fast?",
-              a: "Use a slow-feeder bowl or a puzzle feeder. Alternatively, Royal Canin's Lab-specific formula uses a donut-shaped kibble designed to slow eating. Fast eating is a primary bloat risk factor — it's worth addressing directly.",
-            },
-            {
-              q: "My Lab keeps gaining weight even on normal portions. What should I do?",
-              a: "Switch to a food with lower calorie density (under 350 kcal/cup) and ensure all family members are following the same measured portions. Remember that treats count — they should be less than 10% of daily calories. A vet check is also worthwhile to rule out hypothyroidism, which is common in Labs.",
-            },
-            {
-              q: "When should I switch from puppy food to adult food?",
-              a: "Switch around 12–15 months when your Lab has reached skeletal maturity. Large breed puppy food has different calcium/phosphorus ratios that support bone development — staying on it too long can cause joint issues.",
-            },
-          ].map(({ q, a }) => (
+          {faqItems.map(({ q, a }) => (
             <div key={q} className="border border-gray-200 rounded-xl p-5">
               <p className="font-semibold text-sm mb-2">Q: {q}</p>
               <p className="text-sm text-gray-600 leading-relaxed">A: {a}</p>

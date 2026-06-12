@@ -60,13 +60,14 @@ export default function BooksPage() {
       item: {
         "@type": "Book",
         name: b.title,
-        author: { "@type": "Organization", name: b.author },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: b.rating,
-          bestRating: 5,
-        },
+        author: { "@type": "Person", name: b.author },
         url: `https://www.mypawadvisor.com/books#${b.slug}`,
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: b.rating, bestRating: 5 },
+          author: { "@type": "Organization", name: "MyPawAdvisor" },
+          reviewBody: b.blurb,
+        },
       },
     })),
   };
