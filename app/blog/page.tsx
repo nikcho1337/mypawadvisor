@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Pet Care Blog – Tips, Reviews & Buying Guides | MyPawAdvisor",
   description:
     "Expert pet care advice, product reviews, and buying guides for dog and cat owners. New articles weekly.",
+  alternates: { canonical: "/blog" },
 };
 
 const posts = [

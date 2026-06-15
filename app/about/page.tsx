@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "About PawsGuide – Our Mission & Review Process",
   description:
     "Learn about PawsGuide's mission, review methodology, and affiliate disclosure. We're committed to honest, research-backed pet product reviews.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

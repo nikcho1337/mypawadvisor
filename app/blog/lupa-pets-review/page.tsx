@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "lupa os review",
     "is lupa pets legit",
   ],
+  alternates: { canonical: "/blog/lupa-pets-review" },
 };
 
 const faqItems = [

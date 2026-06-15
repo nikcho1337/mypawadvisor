@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "magikpet scam",
     "buy magikpet reviews",
   ],
+  alternates: { canonical: "/blog/magikpet-review" },
 };
 
 const faqItems = [

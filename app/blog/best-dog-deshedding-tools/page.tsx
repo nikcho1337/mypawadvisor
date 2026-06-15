@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "deshedding tool for German Shepherds",
     "deshedding tool for Labradors",
   ],
+  alternates: { canonical: "/blog/best-dog-deshedding-tools" },
 };
 
 const jsonLd = {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best dog food for Golden Retrievers in 2026. We cover joint health, heart health, and weight management formulas. Vet-approved picks for puppies, adults, and seniors.",
   keywords: ["best dog food for Golden Retrievers", "Golden Retriever food", "Golden Retriever diet", "dog food for large breeds", "Golden Retriever puppy food"],
+  alternates: { canonical: "/blog/best-dog-food-for-golden-retrievers" },
 };
 
 const jsonLd = {

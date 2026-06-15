@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Our editors picked the best-rated pet products on Amazon in 2026. Top toys, grooming tools, beds, slow feeders, and odor eliminators for dogs and cats — all with thousands of reviews.",
   keywords: ["best pet products amazon", "amazon dog products", "amazon cat products", "best dog toys amazon", "best pet accessories 2026"],
+  alternates: { canonical: "/blog/best-pet-products-amazon" },
 };
 
 const TAG = "pawadvisor-20";

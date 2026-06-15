@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Pet Product Reviews 2026 — Best Dog, Cat & Home Products Tested",
   description:
     "Honest pet product reviews based on real testing. Best dog toys, grooming tools, cat products, and home cleaning gear ranked from hands-on use. No sponsored posts, no guessing.",
+  alternates: { canonical: "/reviews" },
 };
 
 function StarRating({ rating }: { rating: number }) {

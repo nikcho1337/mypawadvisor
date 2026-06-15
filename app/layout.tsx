@@ -13,20 +13,21 @@ export const metadata: Metadata = {
   description:
     "Honest, hands-on reviews of the best pet products on Amazon. Dog toys, grooming tools, beds, feeders, and more — tested so you can buy with confidence.",
   keywords: ["best pet products", "amazon dog toys", "pet product reviews", "best dog bed", "cat toy reviews"],
-  metadataBase: new URL("https://mypawadvisor.com"),
+  metadataBase: new URL("https://www.mypawadvisor.com"),
   openGraph: { siteName: "MyPawAdvisor", type: "website", locale: "en_US" },
   robots: { index: true, follow: true },
   alternates: {
+    canonical: "/",
     types: {
-      "application/rss+xml": "https://mypawadvisor.com/feed.xml",
+      "application/rss+xml": "https://www.mypawadvisor.com/feed.xml",
     },
   },
 };
 
 const navLinks = [
   { href: "/reviews", label: "Reviews" },
-  { href: "/reviews?cat=dogs", label: "Dogs" },
-  { href: "/reviews?cat=cats", label: "Cats" },
+  { href: "/dogs", label: "Dogs" },
+  { href: "/cats", label: "Cats" },
   { href: "/blog", label: "Blog" },
   { href: "/books", label: "Books" },
   { href: "/insurance", label: "Insurance" },

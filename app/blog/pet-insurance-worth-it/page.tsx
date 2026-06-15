@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Is pet insurance worth the cost? We analyzed 5 years of vet cost data vs. insurance premiums to give you an honest, data-driven answer. Find out when it makes sense — and when it doesn't.",
   keywords: ["is pet insurance worth it", "pet insurance cost vs benefit", "should I get pet insurance", "pet insurance 2026", "pet insurance pros and cons"],
+  alternates: { canonical: "/blog/pet-insurance-worth-it" },
 };
 
 const jsonLd = {

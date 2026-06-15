@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best cat food of 2026. We reviewed 25+ wet and dry cat food brands for nutrition, ingredients, and value. Top picks for kittens, adults, seniors, and indoor cats.",
   keywords: ["best cat food 2026", "best wet cat food", "best dry cat food", "cat food reviews", "healthiest cat food"],
+  alternates: { canonical: "/blog/best-cat-food" },
 };
 
 const jsonLd = {

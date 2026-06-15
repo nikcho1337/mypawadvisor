@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Compare the best pet insurance plans of 2026. We reviewed 12 providers so you don't have to. Find affordable coverage for dogs and cats with the highest reimbursement rates.",
   keywords: ["best pet insurance", "pet insurance comparison", "dog insurance", "cat insurance", "cheap pet insurance 2026"],
+  alternates: { canonical: "/insurance" },
 };
 
 const plans = [

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "german shepherd undercoat brush",
     "furminator large long hair",
   ],
+  alternates: { canonical: "/blog/furminator-for-german-shepherds" },
 };
 
 const jsonLd = {

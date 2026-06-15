@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best dog food for your breed. We reviewed 30+ brands and ranked them by ingredients, nutrition, and real owner feedback. Updated April 2026.",
   keywords: ["best dog food", "dog food reviews 2026", "best dog food by breed", "healthy dog food", "grain free dog food"],
+  alternates: { canonical: "/dogs" },
 };
 
 const products = [

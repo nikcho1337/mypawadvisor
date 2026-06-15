@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "dog food for large active breeds",
     "weight control dog food Labs",
   ],
+  alternates: { canonical: "/blog/best-dog-food-for-labrador-retrievers" },
 };
 
 const jsonLd = {

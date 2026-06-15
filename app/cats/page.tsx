@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Best Cat Products 2026 — Litter Boxes, Toys, GPS Trackers & Food",
   description:
     "Honest cat product reviews based on real testing. Best automatic litter boxes, interactive toys, GPS trackers for outdoor cats, and food guides — ranked from hands-on use.",
+  alternates: { canonical: "/cats" },
 };
 
 function StarRating({ rating }: { rating: number }) {

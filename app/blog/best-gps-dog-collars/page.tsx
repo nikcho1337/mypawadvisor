@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "GPS tracker for dogs",
     "dog location tracker",
   ],
+  alternates: { canonical: "/blog/best-gps-dog-collars" },
 };
 
 const jsonLd = {

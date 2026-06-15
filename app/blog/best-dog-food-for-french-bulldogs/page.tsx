@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best dog food for French Bulldogs in 2026. We cover the top picks for sensitive stomachs, weight management, and puppies. Vet-approved, breed-specific recommendations.",
   keywords: ["best dog food for French Bulldogs", "French Bulldog food", "French Bulldog sensitive stomach food", "best food for Frenchie", "French Bulldog diet"],
+  alternates: { canonical: "/blog/best-dog-food-for-french-bulldogs" },
 };
 
 const jsonLd = {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Detailed Healthy Paws pet insurance review for 2026. We cover pricing, coverage, real claims experience, pros and cons. Is Healthy Paws the best pet insurance for your dog or cat?",
   keywords: ["Healthy Paws review", "Healthy Paws pet insurance", "best pet insurance", "healthy paws cost", "healthy paws claims"],
+  alternates: { canonical: "/insurance/healthy-paws-review" },
 };
 
 const jsonLd = {

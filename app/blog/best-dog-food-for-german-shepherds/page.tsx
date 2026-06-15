@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best dog food for German Shepherds in 2026. We cover digestive health, joint support, and high-protein formulas. Top picks for GSDs of all ages.",
   keywords: ["best dog food for German Shepherds", "German Shepherd food", "GSD diet", "German Shepherd sensitive stomach", "German Shepherd puppy food"],
+  alternates: { canonical: "/blog/best-dog-food-for-german-shepherds" },
 };
 
 const jsonLd = {

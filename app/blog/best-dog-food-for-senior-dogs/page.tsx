@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "high protein senior dog food",
     "dog food for aging dogs joints",
   ],
+  alternates: { canonical: "/blog/best-dog-food-for-senior-dogs" },
 };
 
 const jsonLd = {

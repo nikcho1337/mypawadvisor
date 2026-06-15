@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "probiotic for dog diarrhea",
     "dog digestive health",
   ],
+  alternates: { canonical: "/blog/best-dog-probiotics" },
 };
 
 const jsonLd = {

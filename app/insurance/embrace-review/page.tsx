@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Detailed Embrace Pet Insurance review for 2026. We cover pricing, coverage, wellness rewards, real claims experience, and how it compares to Healthy Paws. Find out if Embrace is right for your pet.",
   keywords: ["Embrace pet insurance review", "Embrace pet insurance", "best pet insurance 2026", "embrace cost", "embrace vs healthy paws"],
+  alternates: { canonical: "/insurance/embrace-review" },
 };
 
 const jsonLd = {

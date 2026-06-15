@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "is all about vibe legit",
     "vibe for pets reviews",
   ],
+  alternates: { canonical: "/blog/all-about-vibe-review" },
 };
 
 const faqItems = [

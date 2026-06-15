@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "dog bad breath chews",
     "natural dental chews for dogs",
   ],
+  alternates: { canonical: "/blog/best-dog-dental-chews" },
 };
 
 const jsonLd = {

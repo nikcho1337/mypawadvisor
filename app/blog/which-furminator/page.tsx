@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "furminator for golden retriever",
     "furminator reviews",
   ],
+  alternates: { canonical: "/blog/which-furminator" },
 };
 
 const faqItems = [

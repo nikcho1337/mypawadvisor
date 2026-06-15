@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy – MyPawAdvisor",
   description:
     "How MyPawAdvisor collects, uses, and protects your information, including our use of analytics cookies and Amazon affiliate links.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
