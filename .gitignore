@@ -43,3 +43,7 @@ scripts/pinterest/tokens.json
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated marketing/listing assets (re-create with the scripts in each folder)
+scripts/natal/out/
+scripts/pinterest/out/

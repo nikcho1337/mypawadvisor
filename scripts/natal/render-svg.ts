@@ -88,6 +88,9 @@ export interface RenderOpts {
   theme?: ThemeName;
   edits?: CertEdits;
   layout?: LayoutName;   // classic (default) · poster · almanac
+  photoZoom?: number;    // 1 = fill the medallion; >1 zooms in on the subject
+  photoFocusX?: number;  // 0..1 — source x mapped to the medallion centre (default 0.5)
+  photoFocusY?: number;  // 0..1 — source y mapped to the medallion centre (default 0.5)
 }
 
 export function renderCertificateSVG(pet: BirthInput, chart: NatalChart, reading: Reading, opts: RenderOpts = {}): string {
@@ -206,8 +209,14 @@ export function renderCertificateSVG(pet: BirthInput, chart: NatalChart, reading
   let center = "";
   center += `<circle cx="${CX}" cy="${CY}" r="${R_PHOTO+46}" fill="url(#halo)"/>`;
   if (hasPhoto) {
+    // Place a (possibly zoomed) square image and let the circular clip crop it. Focus lets a
+    // subject that sits off-centre in the source be pulled to the medallion centre.
+    const pz = opts.photoZoom ?? 1;
+    const imgS = R_PHOTO * 2 * pz;
+    const ix = CX - (opts.photoFocusX ?? 0.5) * imgS;
+    const iy = CY - (opts.photoFocusY ?? 0.5) * imgS;
     center +=
-      `<image href="${opts.photoDataUri}" x="${CX-R_PHOTO}" y="${CY-R_PHOTO}" width="${R_PHOTO*2}" height="${R_PHOTO*2}" clip-path="url(#petclip)" preserveAspectRatio="xMidYMid slice"/>` +
+      `<image href="${opts.photoDataUri}" x="${ix}" y="${iy}" width="${imgS}" height="${imgS}" clip-path="url(#petclip)" preserveAspectRatio="xMidYMid slice"/>` +
       `<circle cx="${CX}" cy="${CY}" r="${R_PHOTO}" fill="none" stroke="${T.gold}" stroke-width="3"/>` +
       `<circle cx="${CX}" cy="${CY}" r="${R_PHOTO+6}" fill="none" stroke="${T.gold}" stroke-width="0.8" opacity="0.6"/>`;
   } else {

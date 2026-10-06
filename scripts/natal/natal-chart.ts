@@ -3,6 +3,7 @@
 // lat/long, so we pass local clock time + coordinates only.
 import * as natal from "circular-natal-horoscope-js";
 import type { SignName } from "./data";
+/* eslint-disable @typescript-eslint/no-explicit-any -- circular-natal-horoscope-js ships no types; its objects are deeply dynamic */
 // CJS interop differs across runtimes (tsx vs Next/webpack vs native ESM) — resolve robustly.
 const _n: any = natal;
 const Origin: any = _n.Origin ?? _n.default?.Origin;

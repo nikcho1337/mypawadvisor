@@ -18,8 +18,8 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const ENV_PATH = join(HERE, ".env");
 const TOKENS_PATH = join(HERE, "tokens.json");
 
-// boards:read to look up board IDs, pins:write to create Pins.
-const SCOPES = ["boards:read", "pins:read", "pins:write"];
+// boards:read/write to look up + pin to boards, pins:read/write to create Pins.
+const SCOPES = ["boards:read", "boards:write", "pins:read", "pins:write"];
 const AUTH_URL = "https://www.pinterest.com/oauth/";
 const TOKEN_URL = "https://api.pinterest.com/v5/oauth/token";
 
