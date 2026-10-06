@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for Golden Retrievers 2026 – Vet-Approved Picks",
+  title: "Best Dog Food for Golden Retrievers 2026 (Vet-Approved)",
   description:
-    "Find the best dog food for Golden Retrievers in 2026. We cover joint health, heart health, and weight management formulas. Vet-approved picks for puppies, adults, and seniors.",
+    "Best dog food for Golden Retrievers in 2026: vet-approved picks for joint health, heart health and weight management, for puppies, adults and seniors.",
   keywords: ["best dog food for Golden Retrievers", "Golden Retriever food", "Golden Retriever diet", "dog food for large breeds", "Golden Retriever puppy food"],
   alternates: { canonical: "/blog/best-dog-food-for-golden-retrievers" },
 };

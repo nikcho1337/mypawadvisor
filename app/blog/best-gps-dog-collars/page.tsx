@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best GPS Dog Collars 2026 – Top Trackers Tested & Reviewed",
+  title: "Best GPS Dog Collars 2026: Tested & Reviewed",
   description:
-    "Find the best GPS dog collar in 2026. We tested Fi Series 3, Tractive, Garmin, and SpotOn to find the top trackers for everyday safety, hiking, and hunting dogs.",
+    "Best GPS dog collars of 2026: we tested Fi Series 3, Tractive, Garmin Alpha and SpotOn for everyday safety, hiking and hunting dogs.",
   keywords: [
     "best GPS dog collar",
     "GPS dog collar 2026",
@@ -292,7 +292,7 @@ export default function BestGPSDogCollarsPage() {
             </thead>
             <tbody className="text-gray-600">
               {[
-                ["Fi Series 3", "Up to 3 months", "US only", "~$99/yr", "Everyday use"],
+                ["Fi Series 3+", "Up to 3 months", "US only", "$189/yr ($339 per 2 yr)", "Everyday use"],
                 ["Tractive GPS DOG 4", "3–7 days", "175+ countries", "~$60–$120/yr", "Budget & travel"],
                 ["Garmin Alpha T 20", "20–40 hrs active", "Off-grid radio", "None", "Hunters & hikers"],
                 ["SpotOn GPS Fence", "Up to 12 hrs", "US (Verizon LTE)", "~$180–$360/yr", "Virtual fence"],

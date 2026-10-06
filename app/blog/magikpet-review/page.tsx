@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Magikpet Review 2026 – Is Magikpet Legit? What We Found",
   description:
-    "Searching for Magikpet reviews? Here's what we could verify about magikpet.com — an unreachable website and no established review footprint — plus how to vet unknown pet stores and what to do if you already ordered.",
+    "Magikpet reviews: what we could verify about magikpet.com (an unreachable site, no review footprint), how to vet unknown pet stores, and what to do if you ordered.",
   keywords: [
     "magikpet reviews",
     "magikpet review",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Probiotics 2026 – Vet-Recommended for Gut Health",
+  title: "Best Dog Probiotics 2026: Vet-Recommended Picks",
   description:
-    "Discover the best dog probiotics in 2026. Our vet-recommended guide covers Purina FortiFlora, Zesty Paws, Honest Paws, and more — ranked by strain count, efficacy, and value.",
+    "Best dog probiotics in 2026: Purina FortiFlora, Zesty Paws, Honest Paws and more, ranked by strain count, evidence and value. Vet-recommended guide.",
   keywords: [
     "best dog probiotics",
     "dog probiotics 2026",

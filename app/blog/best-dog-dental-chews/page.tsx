@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Dental Chews 2026 – Vet-Approved Picks for Clean Teeth",
+  title: "Best Dog Dental Chews 2026: Vet-Approved Picks",
   description:
-    "Looking for the best dog dental chews in 2026? Our vet-approved guide covers the top VOHC-accepted picks that actually reduce plaque, tartar, and bad breath. Rated and reviewed.",
+    "Vet-approved guide to the best dog dental chews of 2026: VOHC-accepted picks that actually reduce plaque, tartar and bad breath, rated and reviewed.",
   keywords: [
     "best dog dental chews",
     "dog dental chews 2026",

@@ -312,6 +312,12 @@ export default function HoroscopePage() {
             <img src="/pdf-icon.png" alt="PDF"
               style={{ display: "inline-block", width: "1.1em", height: "1.1em", verticalAlign: "-0.2em", marginLeft: "0.3em" }} />.
           </p>
+          <ul className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-amber-100/80" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
+            <li>✦ See the chart free</li>
+            <li>✦ Keepsake PDF {formatUsd(priceCents(false))}</li>
+            <li>✦ Instant download</li>
+            <li>✦ Dogs &amp; cats</li>
+          </ul>
         </section>
 
         <section className="relative z-10 max-w-2xl mx-auto px-4 pb-16">
@@ -365,6 +371,47 @@ export default function HoroscopePage() {
               {busy ? "Consulting the stars…" : "✦ Reveal the Chart ✦"}
             </button>
           </form>
+
+          {/* What you receive — the three themes double as a theme picker */}
+          <div className="mt-10">
+            <p className="text-center tracking-[0.35em] text-amber-200/70 text-[11px] mb-5" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
+              WHAT YOU RECEIVE
+            </p>
+            <div className="grid grid-cols-3 gap-3 md:gap-5">
+              {THEMES.map((t) => {
+                const selected = t.value === theme;
+                return (
+                  <button
+                    key={t.value}
+                    type="button"
+                    onClick={() => setTheme(t.value)}
+                    aria-pressed={selected}
+                    className={`group rounded-xl overflow-hidden border transition ${selected ? "border-amber-300/80 shadow-[0_0_30px_rgba(252,211,77,0.25)]" : "border-amber-200/15 hover:border-amber-200/40"}`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`/natal/sample-${t.value}.jpg`}
+                      alt={`Sample pet natal chart certificate in the ${t.label} theme`}
+                      width={560}
+                      height={888}
+                      loading="lazy"
+                      className="w-full h-auto group-hover:scale-[1.02] transition-transform"
+                    />
+                    <span className={`block py-2 text-xs ${selected ? "text-amber-200" : "text-indigo-200/70"}`} style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
+                      {selected ? "✦ " : ""}{t.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-indigo-100/85 max-w-xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <li>✦ A real birth chart: Sun, Moon and Rising signs, planets, houses and aspects computed from the birth data</li>
+              <li>✦ A written reading of your pet&apos;s character, play style and Cosmic Signature</li>
+              <li>✦ Your pet&apos;s photo in the centre medallion (optional, recommended)</li>
+              <li>✦ A printable PDF certificate in your chosen theme — {formatUsd(priceCents(false))}, or {formatUsd(priceCents(true))} with your own dedication wording</li>
+            </ul>
+            <p className="mt-4 text-center text-xs text-indigo-300/60">Birth time unknown? Tick the box above — you still get the Sun, Moon and planets; only the Rising sign and houses need the time.</p>
+          </div>
         </section>
       </div>
 

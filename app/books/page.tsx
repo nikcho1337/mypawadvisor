@@ -3,9 +3,9 @@ import Link from "next/link";
 import { books, AUDIBLE_FREE_TRIAL } from "@/lib/books";
 
 export const metadata: Metadata = {
-  title: "Best Books for Dog & Cat Owners (2026) — Plus Listen Free on Audible",
+  title: "Best Books for Dog & Cat Owners 2026 (Free on Audible)",
   description:
-    "Our favorite books for pet owners — Decoding Your Dog, Decoding Your Cat, and All Dogs Go to Kevin. Honest reviews, plus how to listen to any of them free with an Audible trial.",
+    "Our favorite books for pet owners: Decoding Your Dog, Decoding Your Cat and All Dogs Go to Kevin. Honest reviews, plus how to listen free with an Audible trial.",
   keywords: [
     "best dog behavior book",
     "best cat behavior book",

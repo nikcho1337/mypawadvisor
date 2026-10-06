@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Healthy Paws Pet Insurance Review 2026 – Is It Worth It?",
+  title: "Healthy Paws Pet Insurance Review 2026: Is It Worth It?",
   description:
-    "Detailed Healthy Paws pet insurance review for 2026. We cover pricing, coverage, real claims experience, pros and cons. Is Healthy Paws the best pet insurance for your dog or cat?",
+    "Healthy Paws pet insurance review for 2026: pricing, coverage, real claims experience, pros and cons. Is it the best pet insurance for your dog or cat?",
   keywords: ["Healthy Paws review", "Healthy Paws pet insurance", "best pet insurance", "healthy paws cost", "healthy paws claims"],
   alternates: { canonical: "/insurance/healthy-paws-review" },
 };
@@ -55,7 +55,7 @@ export default function HealthyPawsReviewPage() {
 
         {/* VERDICT BOX */}
         <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 mb-8">
-          <h2 className="font-bold text-lg mb-3">🏆 PawsGuide Verdict</h2>
+          <h2 className="font-bold text-lg mb-3">🏆 MyPawAdvisor Verdict</h2>
           <p className="text-gray-700 mb-4 text-sm leading-relaxed">
             <strong>Healthy Paws is the best pet insurance for most dog and cat owners.</strong> The unlimited annual benefit means you&apos;ll never hit a cap when your pet needs expensive surgery. The 90% reimbursement rate and simple mobile app make claims painless.
           </p>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Pet Insurance 2026 – Compare Top Plans",
+  title: "Compare Pet Insurance 2026: Best Plans for Dogs & Cats",
   description:
-    "Compare the best pet insurance plans of 2026. We reviewed 12 providers so you don't have to. Find affordable coverage for dogs and cats with the highest reimbursement rates.",
+    "Compare pet insurance plans for 2026. We reviewed 12 providers to find affordable dog and cat coverage with the highest reimbursement rates.",
   keywords: ["best pet insurance", "pet insurance comparison", "dog insurance", "cat insurance", "cheap pet insurance 2026"],
   alternates: { canonical: "/insurance" },
 };
@@ -74,7 +74,7 @@ const jsonLd = {
   "@type": "Article",
   headline: "Best Pet Insurance 2026 – Compare Top Plans",
   description: "Compare the best pet insurance plans of 2026 for dogs and cats.",
-  author: { "@type": "Organization", name: "PawsGuide" },
+  author: { "@type": "Organization", name: "MyPawAdvisor" },
 };
 
 export default function InsurancePage() {

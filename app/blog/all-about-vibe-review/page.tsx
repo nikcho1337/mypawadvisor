@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "All About Vibe Review 2026 – Are the Custom Pet Pillows Legit?",
+  title: "All About Vibe Review 2026: Are the Pet Pillows Legit?",
   description:
-    "All About Vibe review: what the custom pet pillow company actually delivers, what its mixed customer reviews say about shipping and refunds, and the alternatives to consider before ordering.",
+    "All About Vibe review: what the custom pet pillow company delivers, what its mixed reviews say about shipping and refunds, and alternatives to consider first.",
   keywords: [
     "all about vibe reviews",
     "all about vibe review",

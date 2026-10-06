@@ -3,9 +3,9 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Best Cat Products 2026 — Litter Boxes, Toys, GPS Trackers & Food",
+  title: "Best Cat Products 2026: Litter Boxes, Toys, GPS Trackers",
   description:
-    "Honest cat product reviews based on real testing. Best automatic litter boxes, interactive toys, GPS trackers for outdoor cats, and food guides — ranked from hands-on use.",
+    "Honest cat product reviews from real testing: the best automatic litter boxes, interactive toys, GPS trackers for outdoor cats, and cat food guides.",
   alternates: { canonical: "/cats" },
 };
 

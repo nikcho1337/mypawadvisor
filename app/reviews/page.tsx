@@ -3,9 +3,9 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Pet Product Reviews 2026 — Best Dog, Cat & Home Products Tested",
+  title: "Pet Product Reviews 2026: Dog, Cat & Home Products Tested",
   description:
-    "Honest pet product reviews based on real testing. Best dog toys, grooming tools, cat products, and home cleaning gear ranked from hands-on use. No sponsored posts, no guessing.",
+    "Honest pet product reviews from real testing: the best dog toys, grooming tools, cat products and home cleaning gear, ranked from hands-on use. No sponsored posts.",
   alternates: { canonical: "/reviews" },
 };
 

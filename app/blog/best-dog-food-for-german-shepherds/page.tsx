@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for German Shepherds 2026 – Expert Picks",
+  title: "Best Dog Food for German Shepherds 2026: Expert Picks",
   description:
     "Find the best dog food for German Shepherds in 2026. We cover digestive health, joint support, and high-protein formulas. Top picks for GSDs of all ages.",
   keywords: ["best dog food for German Shepherds", "German Shepherd food", "GSD diet", "German Shepherd sensitive stomach", "German Shepherd puppy food"],

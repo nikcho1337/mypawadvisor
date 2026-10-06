@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Pet Products on Amazon 2026 – Top Picks for Dogs & Cats",
+  title: "Best Pet Products on Amazon 2026: Top Picks for Dogs & Cats",
   description:
-    "Our editors picked the best-rated pet products on Amazon in 2026. Top toys, grooming tools, beds, slow feeders, and odor eliminators for dogs and cats — all with thousands of reviews.",
+    "Editor-picked, best-rated pet products on Amazon in 2026: toys, grooming tools, beds, slow feeders and odor eliminators for dogs and cats with thousands of reviews.",
   keywords: ["best pet products amazon", "amazon dog products", "amazon cat products", "best dog toys amazon", "best pet accessories 2026"],
   alternates: { canonical: "/blog/best-pet-products-amazon" },
 };

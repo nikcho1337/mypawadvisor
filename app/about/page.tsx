@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About PawsGuide – Our Mission & Review Process",
+  title: "About MyPawAdvisor – Our Mission & Review Process",
   description:
-    "Learn about PawsGuide's mission, review methodology, and affiliate disclosure. We're committed to honest, research-backed pet product reviews.",
+    "Learn about MyPawAdvisor's mission, review methodology and affiliate disclosure. Honest, research-backed pet product reviews written by pet owners.",
   alternates: { canonical: "/about" },
 };
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <h2 className="text-xl font-bold mb-3">Affiliate Disclosure</h2>
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5 text-sm text-gray-700 leading-relaxed">
             <p className="mb-2">
-              <strong>PawsGuide is reader-supported.</strong> Some links on this site are affiliate links. If you click through and make a purchase, we may earn a commission at no additional cost to you.
+              <strong>MyPawAdvisor is reader-supported.</strong> Some links on this site are affiliate links. If you click through and make a purchase, we may earn a commission at no additional cost to you.
             </p>
             <p>
               Our editorial content is never influenced by affiliate relationships. We recommend products based on merit. If a product doesn&apos;t earn a high rating in our review process, we won&apos;t promote it regardless of commission rates.

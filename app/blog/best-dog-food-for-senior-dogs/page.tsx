@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for Senior Dogs 2026 – Vet-Approved Picks",
+  title: "Best Dog Food for Senior Dogs 2026 (Vet-Approved)",
   description:
-    "The best dog food for senior dogs in 2026. Our vet-approved picks address the real challenges of aging dogs: muscle loss, joint pain, cognitive decline, and weight gain. Tested and rated.",
+    "Best dog food for senior dogs in 2026: vet-approved picks for muscle loss, joint pain, cognitive decline and weight gain in aging dogs. Tested and rated.",
   keywords: [
     "best dog food for senior dogs",
     "best senior dog food 2026",

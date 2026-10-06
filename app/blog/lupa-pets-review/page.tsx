@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lupa Pets Review 2026 – The AI Petcare App & Vet Software, Explained",
+  title: "Lupa Pets Review 2026: The AI Petcare App & Vet Software",
   description:
-    "Lupa Pets review: one London company, two products — a free AI petcare app for owners (AI vet chat, records, bookings) and Lupa OS practice software for veterinary clinics. What each does and who it's for.",
+    "Lupa Pets review: one London company, two products. A free AI petcare app for owners and Lupa OS practice software for clinics. What each does and who it is for.",
   keywords: [
     "lupa pets review",
     "lupa pets reviews",

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Which FURminator Should You Buy? Every Tool Compared (2026)",
   description:
-    "FURminator makes 8+ tools and most owners buy the wrong one. Complete lineup guide: which FURminator for a German Shepherd, Lab, Golden, or cat — plus short vs long hair, sizes, and what each tool actually does.",
+    "FURminator makes 8+ tools and most owners buy the wrong one. Which FURminator for a German Shepherd, Lab, Golden or cat: short vs long hair, sizes, what each does.",
   keywords: [
     "which furminator should i buy",
     "which furminator for a german shepherd",

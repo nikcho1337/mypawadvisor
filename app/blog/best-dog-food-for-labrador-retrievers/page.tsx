@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for Labrador Retrievers 2026 – Veterinarian-Approved",
+  title: "Best Dog Food for Labrador Retrievers 2026 (Vet-Approved)",
   description:
-    "Where can you find veterinarian-approved nutrition for Labradors? These 4 foods meet the criteria vets actually use — AAFCO feeding trials, veterinary nutritionists on staff — and address Labs' obesity, joint, and bloat risks.",
+    "Vet-approved dog food for Labradors: 4 foods that pass AAFCO feeding trials, employ veterinary nutritionists, and target Labs' weight, joint and bloat risks.",
   keywords: [
     "best dog food for Labrador Retrievers",
     "veterinarian approved dog food for labradors",

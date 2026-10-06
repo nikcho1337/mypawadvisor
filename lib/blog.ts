@@ -139,6 +139,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-cat-food",
+    updated: "2026-10-07",
     title: "Best Cat Food in 2026: Top Picks for Every Cat",
     excerpt: "Cats are obligate carnivores that need high-protein, meat-based diets. We reviewed 25+ wet and dry brands to find foods that actually meet your cat's nutritional needs.",
     category: "Cat Food",

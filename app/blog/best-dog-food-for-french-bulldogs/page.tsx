@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food for French Bulldogs 2026 – Vet-Approved Picks",
+  title: "Best Dog Food for French Bulldogs 2026 (Vet-Approved)",
   description:
-    "Find the best dog food for French Bulldogs in 2026. We cover the top picks for sensitive stomachs, weight management, and puppies. Vet-approved, breed-specific recommendations.",
+    "Best dog food for French Bulldogs in 2026: vet-approved, breed-specific picks for sensitive stomachs, weight management and puppies, incl. Royal Canin and Hill's.",
   keywords: ["best dog food for French Bulldogs", "French Bulldog food", "French Bulldog sensitive stomach food", "best food for Frenchie", "French Bulldog diet"],
   alternates: { canonical: "/blog/best-dog-food-for-french-bulldogs" },
 };

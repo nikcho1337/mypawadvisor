@@ -19,6 +19,16 @@ export async function generateMetadata({
     title: product.metaTitle,
     description: product.metaDescription,
     alternates: { canonical: `/reviews/${slug}` },
+    openGraph: {
+      title: product.metaTitle,
+      description: product.metaDescription,
+      url: `/reviews/${slug}`,
+      type: "article",
+      siteName: "MyPawAdvisor",
+      locale: "en_US",
+      images: [{ url: product.heroImage, alt: product.heroImageAlt }],
+    },
+    twitter: { card: "summary_large_image", title: product.metaTitle, description: product.metaDescription, images: [product.heroImage] },
   };
 }
 
@@ -59,8 +69,33 @@ export default async function ReviewPage({
   if (!product) notFound();
 
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const [py, pm, pd] = product.datePublished.split("-").map(Number);
-  const displayDate = `${MONTHS[pm - 1]} ${pd}, ${py}`;
+  const fmtDate = (iso: string) => {
+    const [y, m, d] = iso.split("-").map(Number);
+    return `${MONTHS[m - 1]} ${d}, ${y}`;
+  };
+  const displayDate = fmtDate(product.datePublished);
+  const updatedDate = product.dateModified ? fmtDate(product.dateModified) : null;
+
+  // Related reviews: same sub-category first, then same category — gives every review 4 internal paths.
+  const related = products
+    .filter((p) => p.slug !== product.slug)
+    .sort((a, b) => {
+      const score = (p: typeof product) => (p.subCategory === product.subCategory ? 2 : 0) + (p.category === product.category ? 1 : 0);
+      return score(b) - score(a) || a.name.localeCompare(b.name);
+    })
+    .slice(0, 4);
+
+  const faqLd = product.faq && product.faq.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: product.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,12 +109,14 @@ export default async function ReviewPage({
       author: { "@type": "Organization", name: "MyPawAdvisor" },
       reviewBody: product.verdict,
       datePublished: product.datePublished,
+      dateModified: product.dateModified ?? product.datePublished,
     },
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       {/* BREADCRUMB */}
       <div className="max-w-4xl mx-auto px-4 pt-5 text-sm text-gray-500 flex items-center gap-1.5 flex-wrap">
@@ -106,6 +143,7 @@ export default async function ReviewPage({
           <p className="text-xl text-gray-600 mb-4 leading-relaxed">{product.tagline}</p>
           <div className="flex flex-wrap items-center gap-5 text-sm text-gray-500 pb-5 border-b border-gray-100">
             <span>📅 {displayDate}</span>
+            {updatedDate && <span>🔄 Updated {updatedDate}</span>}
             <span>✅ Tested & verified</span>
             <span>⏱️ 8 min read</span>
           </div>
@@ -170,6 +208,46 @@ export default async function ReviewPage({
             ))}
           </div>
         </section>
+
+        {/* COMPARISON TABLE (roundup reviews) */}
+        {product.comparison && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">{product.comparison.title ?? "Side-by-Side Comparison"}</h2>
+            <div className="border border-gray-200 rounded-xl overflow-x-auto">
+              <table className="w-full text-sm text-left min-w-[640px]">
+                <thead className="bg-gray-50 text-gray-700">
+                  <tr>
+                    {product.comparison.columns.map((c) => (
+                      <th key={c} scope="col" className="px-4 py-3 font-semibold whitespace-nowrap">{c}</th>
+                    ))}
+                    <th scope="col" className="px-4 py-3"><span className="sr-only">Link</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {product.comparison.rows.map((row, i) => (
+                    <tr key={row.name} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}>
+                      <th scope="row" className="px-4 py-3 font-semibold text-gray-900 align-top">
+                        {row.name}
+                        {row.badge && <span className="block text-[11px] font-bold text-emerald-700 mt-0.5">{row.badge}</span>}
+                      </th>
+                      {row.values.map((v, k) => (
+                        <td key={k} className="px-4 py-3 text-gray-600 align-top">{v}</td>
+                      ))}
+                      <td className="px-4 py-3 align-top">
+                        {row.href && (
+                          <a href={row.href} target="_blank" rel="noopener noreferrer sponsored" className="text-xs font-semibold text-amber-600 hover:text-amber-700 whitespace-nowrap border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-50 transition-colors">
+                            View on Amazon →
+                          </a>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {product.comparison.note && <p className="text-xs text-gray-400 mt-2">{product.comparison.note}</p>}
+          </section>
+        )}
 
         {/* INTRO */}
         <section className="mb-10">
@@ -258,6 +336,24 @@ export default async function ReviewPage({
           </div>
         </section>
 
+        {/* FAQ */}
+        {product.faq && product.faq.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-5 text-gray-900">Frequently Asked Questions</h2>
+            <div className="divide-y divide-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+              {product.faq.map((f) => (
+                <details key={f.q} className="group bg-white open:bg-gray-50">
+                  <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-gray-900 flex items-center justify-between gap-4">
+                    <span>{f.q}</span>
+                    <span aria-hidden="true" className="text-emerald-600 text-xl leading-none transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-5 text-sm text-gray-700 leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* FINAL BUY CTA */}
         <div className="bg-gray-900 text-white rounded-2xl p-8 text-center mb-10">
           <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">{product.badge}</p>
@@ -287,7 +383,22 @@ export default async function ReviewPage({
 
         {/* RELATED REVIEWS */}
         <div className="border-t border-gray-100 pt-8">
-          <h3 className="font-bold text-lg mb-4">More Reviews</h3>
+          <h3 className="font-bold text-lg mb-4">Related Reviews</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {related.map((p) => (
+              <Link key={p.slug} href={`/reviews/${p.slug}`} className="group border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow bg-white">
+                <div className="h-28 bg-gray-50 flex items-center justify-center overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.heroImage} alt={p.heroImageAlt} loading="lazy" className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform" />
+                </div>
+                <div className="p-3">
+                  <p className="text-xs text-gray-500 mb-0.5">{p.subCategory}</p>
+                  <p className="text-sm font-semibold text-gray-900 leading-snug group-hover:text-emerald-700">{p.shortName}</p>
+                  <p className="text-xs text-amber-500 mt-1">★ {p.rating.toFixed(1)} · <span className="text-gray-500">{p.price}</span></p>
+                </div>
+              </Link>
+            ))}
+          </div>
           <div className="flex flex-wrap gap-3">
             <Link href="/reviews" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">All Reviews</Link>
             <Link href="/insurance" className="border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-gray-50 transition-colors">Pet Insurance Comparison</Link>

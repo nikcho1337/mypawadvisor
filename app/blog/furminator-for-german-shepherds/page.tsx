@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Is the FURminator Good for German Shepherds? (8-Week Test, 2026)",
+  title: "Is the FURminator Good for German Shepherds? 8-Week Test",
   description:
-    "We tested the FURminator on a German Shepherd for 8 weeks. It reduced visible shedding by 85% — but only when used correctly. Here's the honest review, including which size to buy and how often to brush.",
+    "We tested the FURminator on a German Shepherd for 8 weeks: 85% less visible shedding when used correctly. Which size to buy, how often to brush, mistakes to avoid.",
   keywords: [
     "is the furminator good for german shepherds",
     "furminator for german shepherds",

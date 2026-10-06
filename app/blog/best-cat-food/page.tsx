@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Cat Food 2026 – Top Picks for Every Cat",
+  title: "Best Cat Food 2026: Top Dry & Wet Picks for Indoor Cats",
   description:
-    "Find the best cat food of 2026. We reviewed 25+ wet and dry cat food brands for nutrition, ingredients, and value. Top picks for kittens, adults, seniors, and indoor cats.",
+    "Best cat food of 2026 after reviewing 25+ wet and dry brands. Top picks for indoor cats, kittens, seniors and picky eaters, including Royal Canin and Purina ONE.",
   keywords: ["best cat food 2026", "best wet cat food", "best dry cat food", "cat food reviews", "healthiest cat food"],
   alternates: { canonical: "/blog/best-cat-food" },
 };
@@ -24,6 +24,35 @@ const picks = [
   { rank: 4, name: "Tiki Cat After Dark (Wet)", badge: "Best for Picky Eaters", badgeColor: "bg-purple-100 text-purple-700", price: "$$$", rating: 4.7, type: "Wet", description: "Whole meat chunks in a rich, meaty broth. No plant proteins, no carrageenan, no added thickeners. Irresistible even for the fussiest cats.", pros: ["Whole meat pieces", "No plant proteins", "No carrageenan", "Variety of flavors"], cons: ["Very expensive", "Hard to find"], affiliateHref: "https://www.amazon.com/s?k=Tiki+Cat+After+Dark+wet+cat+food&tag=pawadvisor-20" },
 ];
 
+const faqs = [
+  {
+    q: "What is the best dry cat food for indoor cats?",
+    a: "Royal Canin Indoor Adult is our top dry pick for indoor cats: controlled calories for less-active cats, hairball control and high digestibility. Purina ONE Indoor Advantage is the best-value alternative with real turkey first and hairball support at a fraction of the price.",
+  },
+  {
+    q: "Is wet or dry food better for cats?",
+    a: "Wet food is better for most cats because of its 70–80% moisture — cats have a low thirst drive and get most of their water from food. The practical answer is both: wet food as the main diet (at least half of calories) and a quality dry food for convenience or free-feeding.",
+  },
+  {
+    q: "Is Purina ONE a good cat food?",
+    a: "Yes, for the price. Purina ONE Indoor Advantage lists real turkey as the first ingredient, meets AAFCO standards and is widely available. It contains grains and less protein than premium brands, which is why it is our value pick rather than our overall winner.",
+  },
+  {
+    q: "How much should I feed an indoor cat?",
+    a: "Follow the feeding chart on the bag for your cat's target weight, not current weight, and reduce by about 10% if your cat is gaining. Indoor cats burn fewer calories, which is why indoor formulas are lower in fat. Weigh your cat monthly rather than guessing.",
+  },
+  {
+    q: "What should I avoid in cat food?",
+    a: "Unnamed meat by-products or poultry meal as the first ingredient, corn, wheat or rice among the first three ingredients, and any food labelled for supplemental feeding only. Cats are obligate carnivores and need a named animal protein first plus taurine.",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+
 function StarRating({ rating }: { rating: number }) {
   return (
     <span className="text-amber-400 text-sm">
@@ -37,6 +66,7 @@ export default function BestCatFoodPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="max-w-4xl mx-auto px-4 pt-6 text-sm text-gray-500">
         <Link href="/" className="hover:text-emerald-600">Home</Link> {" / "}
         <Link href="/blog" className="hover:text-emerald-600">Blog</Link> {" / "}
@@ -154,6 +184,29 @@ export default function BestCatFoodPage() {
           <p><strong>3. Moisture content.</strong> For wet food, look for 70%+ moisture. For dry food, 10% is normal.</p>
           <p><strong>4. Limited carbohydrates.</strong> Cats don&apos;t need many carbs. Avoid formulas where corn, wheat, or rice are among the first 3 ingredients.</p>
           <p><strong>5. Taurine.</strong> Cats can&apos;t synthesize taurine — it must be in their diet. All quality cat foods include it.</p>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4">Best Dry Cat Food for Indoor Cats</h2>
+        <div className="space-y-3 mb-8 text-sm text-gray-700 leading-relaxed">
+          <p>
+            Indoor cats burn fewer calories than outdoor cats, groom more (so swallow more hair) and are the cats most likely to end up overweight. That changes what &quot;best&quot; means: you want controlled calories, hairball support and high digestibility rather than maximum fat.
+          </p>
+          <p>
+            <strong>Our top dry pick for indoor cats is Royal Canin Indoor Adult</strong> — a formula built around exactly those three problems. If the price stings, <strong>Purina ONE Indoor Advantage</strong> covers the same bases (real turkey first, hairball control, moderate calories) for roughly a third of the cost, which is why it is our value pick. Whichever you choose, pair the dry food with a wet food such as Wellness CORE for hydration; indoor cats drink even less than outdoor cats.
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4">Cat Food FAQ</h2>
+        <div className="divide-y divide-gray-200 border border-gray-200 rounded-xl overflow-hidden mb-10">
+          {faqs.map((f) => (
+            <details key={f.q} className="group bg-white open:bg-gray-50">
+              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-gray-900 flex items-center justify-between gap-4">
+                <span>{f.q}</span>
+                <span aria-hidden="true" className="text-purple-600 text-xl leading-none transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p className="px-5 pb-5 text-sm text-gray-700 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
         </div>
 
         <div className="bg-purple-600 text-white rounded-xl p-8 text-center">

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Food Reviews 2026 – Top Picks by Breed & Age",
+  title: "Best Dog Food Reviews 2026: Top Picks by Breed & Age",
   description:
-    "Find the best dog food for your breed. We reviewed 30+ brands and ranked them by ingredients, nutrition, and real owner feedback. Updated April 2026.",
+    "Find the best dog food for your breed. We reviewed 30+ brands and ranked them by ingredients, nutrition and real owner feedback.",
   keywords: ["best dog food", "dog food reviews 2026", "best dog food by breed", "healthy dog food", "grain free dog food"],
   alternates: { canonical: "/dogs" },
 };
@@ -68,7 +68,7 @@ export default function DogsPage() {
     <>
       <section className="bg-gradient-to-br from-amber-500 to-orange-600 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-amber-100 text-sm font-semibold uppercase tracking-widest mb-3">Updated April 2026</p>
+          <p className="text-amber-100 text-sm font-semibold uppercase tracking-widest mb-3"></p>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Best Dog Food Reviews 2026</h1>
           <p className="text-amber-100 text-lg">
             We tested and reviewed 30+ dog food brands. Here are the ones truly worth buying — ranked by ingredients, nutrition, and real owner results.

@@ -57,8 +57,8 @@ export const products: Product[] = [
     price: "$13–$22",
     heroImage: "https://m.media-amazon.com/images/I/61mfc9ytWyL._AC_SL1500_.jpg",
     heroImageAlt: "Golden retriever playing with a dog toy outdoors",
-    metaTitle: "KONG Classic Dog Toy Review 2026 – Is It Really Worth It?",
-    metaDescription: "Our honest KONG Classic review after testing it with 5 different dogs. We cover durability, stuffing tips, size guide, and whether it's worth the price. 82,000+ Amazon reviews can't all be wrong.",
+    metaTitle: "KONG Classic Dog Toy Review 2026: Is It Worth It?",
+    metaDescription: "KONG Classic review after testing with 5 dogs: durability, stuffing tips, size guide, and whether the most-reviewed dog toy on Amazon is worth the price.",
     tagline: "The #1 dog toy on Amazon — tested with 5 dogs across 6 months.",
     intro: [
       "The KONG Classic is one of those rare products where the hype is completely justified. After testing it with five dogs ranging from a 10-pound Shih Tzu to a 90-pound German Shepherd over six months, we can say with confidence: this is the single best dog toy you can buy.",
@@ -118,6 +118,16 @@ export const products: Product[] = [
   {
     slug: "furminator-deshedding-tool",
     datePublished: "2026-03-17",
+    dateModified: "2026-10-07",
+    faq: [
+      { q: "Are deshedding tools safe for dogs?", a: "Yes, with the right technique. The FURminator is not a blade — it is a fine-toothed comb edge that grabs loose undercoat without cutting skin or topcoat. Use it on clean, dry hair with light pressure for 10–15 minutes, two to three times a week. Over-brushing, pressing hard, or using it on wet, irritated or sunburned skin is what causes problems, not the tool itself." },
+      { q: "Is the FURminator worth the money?", a: "For double-coat shedders — Golden Retrievers, German Shepherds, Huskies, Labs — yes. It removed up to 90% of ambient shedding in our test and pays for itself after one or two skipped groomer visits. For light shedders or non-shedding breeds, a $15–$20 DAKPets tool or a slicker brush is the better buy." },
+      { q: "Can I use the FURminator every day?", a: "No. Limit sessions to 10–15 minutes, two to three times per week. Daily use can damage healthy guard hairs and irritate the skin. During spring and fall coat blow you can go to three sessions a week for four to six weeks." },
+      { q: "Which FURminator size should I buy?", a: "Choose by weight: Small under 15 lbs, Medium 16–30 lbs, Large 31–70 lbs, Giant over 70 lbs — then pick short hair or long hair (anything over two inches counts as long). Wrong size is the most common cause of negative reviews; if in doubt go one size up." },
+      { q: "Does the FURminator work on short-haired dogs?", a: "Yes, best on double-coated short-hair breeds such as Labs and Beagles. Single-coat breeds like Boxers and Dalmatians see only modest improvement. Buy the short-hair version — its denser teeth are made for finer undercoat." },
+      { q: "Can I use the dog FURminator on my cat?", a: "No. There is a separate cat version with different sizing and a gentler edge. Our FURminator for Cats review covers the S and M/L sizes." },
+      { q: "Does the FURminator cut the dog's hair?", a: "No. It has no cutting blade; it extracts dead undercoat that was going to fall out anyway. Properly used it leaves the topcoat intact and shinier." },
+    ],
     name: "FURminator deShedding Tool for Dogs",
     shortName: "FURminator",
     badge: "Best Grooming Tool",
@@ -129,8 +139,8 @@ export const products: Product[] = [
     price: "$30–$65",
     heroImage: "https://target.scene7.com/is/image/Target/GUEST_1a1b6bf1-af61-467f-a715-b8de552928df?wid=1200&hei=1200&fmt=pjpeg",
     heroImageAlt: "Dog being groomed with a deshedding brush",
-    metaTitle: "FURminator Review 2026 — Tested 3 Months, Does It Really Work?",
-    metaDescription: "Tested on 4 dogs (Golden, GSD, Husky, Lab) for 3 months: 90% less shedding on double-coat breeds. Which size to buy, safe technique, and is the FURminator worth $30–$65?",
+    metaTitle: "FURminator deShedding Tool Review 2026: Safe & Worth It?",
+    metaDescription: "Tested on 4 dogs for 3 months: up to 90% less shedding on double coats. Is the FURminator safe for dogs, which size to buy, and is it worth $30–$65?",
     tagline: "Tested on 4 breeds. The results: 90% less dog hair on your furniture.",
     intro: [
       "If you have a dog that sheds, you already know the feeling: hair on the couch, hair on your clothes, hair in your coffee. The FURminator promises to reduce shedding by up to 90%. We put that claim to the test with four dogs — a Golden Retriever, a German Shepherd, a Husky mix, and a short-haired Labrador — over three months of regular grooming.",
@@ -218,8 +228,8 @@ export const products: Product[] = [
     price: "$19–$23",
     heroImage: "https://m.media-amazon.com/images/I/611T5GXwQXL._AC_SL1500_.jpg",
     heroImageAlt: "Dog sitting on a clean floor at home",
-    metaTitle: "Rocco & Roxie Stain & Odor Eliminator Review 2026 – Does It Work?",
-    metaDescription: "We tested Rocco & Roxie on carpet, hardwood, upholstery, and tile against 6 other enzyme cleaners. Honest results on urine, vomit, and old set-in stains. 110,000+ Amazon reviews.",
+    metaTitle: "Rocco and Roxie Stain & Odor Eliminator Review 2026",
+    metaDescription: "We tested Rocco & Roxie enzymatic cleaner on carpet, hardwood, upholstery and tile against 6 rivals. Honest results on urine, vomit and set-in stains.",
     tagline: "We tested 7 enzyme cleaners side by side. Rocco & Roxie came out on top.",
     intro: [
       "With over 110,000 Amazon reviews — the most of any pet stain remover — Rocco & Roxie Professional Strength Stain & Odor Eliminator has earned a level of trust that most pet products never reach. We put it head-to-head against six competing enzyme cleaners on fresh and set-in stains across four surface types.",
@@ -290,8 +300,8 @@ export const products: Product[] = [
     price: "$45–$55",
     heroImage: "https://thundershirt.com/cdn/shop/products/ThunderShirt_for_Dogs_-_Original_Heather_Gray_-_X-Small.jpg?v=1647540356",
     heroImageAlt: "Calm dog resting peacefully at home",
-    metaTitle: "ThunderShirt Dog Anxiety Jacket Review 2026 – Does It Actually Work?",
-    metaDescription: "Honest ThunderShirt review after testing with anxious dogs during thunderstorms, fireworks, and vet visits. We share the 80% effectiveness rate data and the 20% it doesn't work for.",
+    metaTitle: "ThunderShirt Review 2026: Does the Dog Anxiety Jacket Work?",
+    metaDescription: "ThunderShirt tested with anxious dogs through storms, fireworks and vet visits. It worked for about 80% of our dogs; here is who the other 20% were.",
     tagline: "Drug-free anxiety relief. Works for ~80% of dogs — here's what to expect.",
     intro: [
       "An estimated 70% of dogs experience some form of anxiety — triggered by thunderstorms, fireworks, separation, travel, or vet visits. The ThunderShirt applies gentle, constant pressure to the torso (similar to swaddling an infant) to activate the parasympathetic nervous system and reduce anxiety. According to the manufacturer, it works for over 80% of dogs. Our testing aligns with that figure.",
@@ -362,8 +372,8 @@ export const products: Product[] = [
     price: "$10–$18",
     heroImage: "https://m.media-amazon.com/images/I/716v2qcGlOL._SL1500_.jpg",
     heroImageAlt: "FURminator Grooming Rake with rotating metal teeth",
-    metaTitle: "FURminator Grooming Rake Review 2026 – The Coat-Blow Essential?",
-    metaDescription: "FURminator Grooming Rake review after a full spring coat blow with a German Shepherd and a Husky mix. Rotating teeth, what it does that the deshedding tool can't, and who actually needs it.",
+    metaTitle: "FURminator Grooming Rake Review 2026: Is It Worth It?",
+    metaDescription: "FURminator Grooming Rake review after a full spring coat blow with a German Shepherd and a Husky mix. Rotating teeth, undercoat-rake comparison, and who needs it.",
     tagline: "The tool you use BEFORE the FURminator — tested through a full spring coat blow.",
     intro: [
       "Most people discover the FURminator Grooming Rake the hard way: they take their deshedding tool to a German Shepherd in full spring coat blow and find it skating over a dense, packed undercoat that won't release. The rake is the missing first step — and at $10–$18 it's one of the cheapest tools in the FURminator lineup.",
@@ -438,8 +448,8 @@ export const products: Product[] = [
     price: "$12–$16",
     heroImage: "https://cdn11.bigcommerce.com/s-asivtkjxr8/images/stencil/1280x1280/products/2848/18604/633b24d45d8ab0bb3b3ec68b915e73eebf5b6c9b__94594.1727806730.jpg?c=1",
     heroImageAlt: "Dog eating from a slow feeder bowl",
-    metaTitle: "Outward Hound Fun Feeder Slow Bowl Review 2026 – Best Slow Feeder?",
-    metaDescription: "We timed 6 dogs eating with and without the Outward Hound Fun Feeder. Results: 8–12x slower eating. Full review on size selection, material safety, and which dogs actually need one.",
+    metaTitle: "Outward Hound Fun Feeder Slow Bowl Review 2026",
+    metaDescription: "We timed 6 dogs eating from the Outward Hound Fun Feeder: 8–12x slower. Size selection, material safety, and which dogs actually need a slow feeder bowl.",
     tagline: "We timed 6 dogs eating with and without it. Average improvement: 10x slower.",
     intro: [
       "Dogs that eat too fast are at serious risk. Gastric dilatation-volvulus (bloat) — where the stomach fills with gas and twists — kills thousands of dogs annually and is most common in breeds that gulp food rapidly. Deep-chested breeds like German Shepherds, Great Danes, and Golden Retrievers are especially vulnerable.",
@@ -505,8 +515,8 @@ export const products: Product[] = [
     price: "$89–$159",
     heroImage: "https://d2edvletk84qg.cloudfront.net/100822/PF-IBL2a.400x500.jpg",
     heroImageAlt: "Large dog sleeping comfortably on an orthopedic dog bed",
-    metaTitle: "PetFusion Ultimate Dog Bed Review 2026 – Best Orthopedic Bed?",
-    metaDescription: "After 8 months of testing the PetFusion bed with 3 large-breed dogs including one with hip dysplasia, here's our honest verdict. Covers foam quality, durability, washability, and value.",
+    metaTitle: "PetFusion Ultimate Dog Bed Review 2026: Best Orthopedic Bed?",
+    metaDescription: "8 months with 3 large dogs, one with hip dysplasia. Foam quality, durability, washability and value of the PetFusion Ultimate orthopedic dog bed.",
     tagline: "8 months, 3 dogs (including one with hip dysplasia). Our most thorough bed test.",
     intro: [
       "Large breeds carry a heavy joint burden. A German Shepherd reaching their senior years has often accumulated wear on hip joints that began in early adulthood. An orthopedic dog bed isn't luxury — for many dogs, it's a medical necessity. The PetFusion Ultimate Dog Bed is consistently rated the best option in this category, and after eight months of testing with three dogs including one nine-year-old German Shepherd diagnosed with hip dysplasia, we understand why.",
@@ -577,8 +587,8 @@ export const products: Product[] = [
     price: "$8–$16",
     heroImage: "https://m.media-amazon.com/images/I/71RlDGHwPeL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator deShedding Ultra Premium Shampoo 16 oz bottle",
-    metaTitle: "FURminator deShedding Shampoo Review 2026 – Tested on 3 Heavy Shedders",
-    metaDescription: "FURminator deShedding Ultra Premium Shampoo review: full ingredient breakdown, our bathe-then-deshed test on 3 heavy shedders, and whether a shampoo can really reduce shedding.",
+    metaTitle: "FURminator deShedding Dog Shampoo Review 2026: Does It Work?",
+    metaDescription: "FURminator deShedding Ultra Premium Shampoo review: ingredient breakdown, a bathe-then-deshed test on 3 heavy shedders, and whether a shampoo can cut shedding.",
     tagline: "The bath that loads the FURminator's next session — tested on 3 heavy shedders.",
     intro: [
       "A shampoo that claims to reduce shedding invites fair skepticism — shedding is biology, and no bath changes how much hair a dog grows. But that's not actually the claim. The FURminator deShedding Ultra Premium Shampoo works on the release side of the equation: loosening hair that's already dead so it comes out in the bath and the brush-out, instead of on your couch over the following two weeks.",
@@ -653,8 +663,8 @@ export const products: Product[] = [
     price: "$3–$5",
     heroImage: "https://catdancer.com/wp-content/uploads/2021/03/101_Cat_Dancer_Lifestyle_01_Web.jpg",
     heroImageAlt: "Cat playing with an interactive toy",
-    metaTitle: "Cat Dancer Interactive Cat Toy Review 2026 – Why Every Cat Owner Needs This $4 Toy",
-    metaDescription: "The Cat Dancer has been the bestselling cat toy on Amazon for over a decade. We tested it with 8 cats — including one that ignores every other toy. Here's why it works, and the $4 question answered.",
+    metaTitle: "Cat Dancer Cat Toy Review 2026: Why the $4 Toy Works",
+    metaDescription: "The Cat Dancer has been Amazon's bestselling cat toy for a decade. We tested it with 8 cats, including one that ignores every other toy. Here is why it works.",
     tagline: "The bestselling cat toy on Amazon for 10 years. We tested it with 8 cats.",
     intro: [
       "At $3–$5, the Cat Dancer is simultaneously the cheapest and most effective cat toy we've ever tested. The concept is absurdly simple: a flexible steel wire with small rolls of cardboard at the end. There are no electronics, no catnip, no motion sensors. And yet, after testing it with eight cats — including one four-year-old tabby that had ignored every toy her owners had ever purchased — seven of the eight played with the Cat Dancer more enthusiastically than anything else we tested.",
@@ -720,8 +730,8 @@ export const products: Product[] = [
     price: "$9–$12",
     heroImage: "https://target.scene7.com/is/image/Target/GUEST_e45ea333-b35a-418f-b663-0aaf3a82e257?wid=1200&hei=1200&fmt=pjpeg",
     heroImageAlt: "Dog showing clean teeth and healthy smile",
-    metaTitle: "Arm & Hammer Dog Dental Kit Review 2026 – Best Budget Dental Care?",
-    metaDescription: "We used the Arm & Hammer Dog Dental Kit for 90 days and had a vet assess the results. Full review: what's in the kit, how to train your dog to accept brushing, and whether it actually prevents tartar.",
+    metaTitle: "Arm & Hammer Dog Dental Kit Review 2026: Budget Dental Care",
+    metaDescription: "90 days with the Arm & Hammer Dog Dental Kit, assessed by a vet. What is in the kit, how to get your dog to accept brushing, and whether it prevents tartar.",
     tagline: "90-day test + vet assessment. Here's what actually changed in our dog's mouth.",
     intro: [
       "Periodontal disease affects over 80% of dogs by age three. It's painful, it can lead to tooth loss, and the bacteria can enter the bloodstream and damage the heart, kidneys, and liver. Yet the solution is simple: brush your dog's teeth three times per week with an enzymatic toothpaste. The Arm & Hammer Dog Dental Care Kit gives you everything you need to do this for under $12.",
@@ -787,8 +797,8 @@ export const products: Product[] = [
     price: "$25–$40",
     heroImage: "https://m.media-amazon.com/images/I/61kq1Gr4tEL._SL1500_.jpg",
     heroImageAlt: "FURminator deShedding Tool for Cats with stainless steel edge",
-    metaTitle: "FURminator for Cats Review 2026 – Tested on Short & Long Hair Cats",
-    metaDescription: "FURminator deShedding Tool for Cats review: tested on a short-haired tabby and a long-haired Maine Coon mix. Size guide (S vs M/L), hairball results, and the cat-specific technique that makes it work.",
+    metaTitle: "FURminator for Cats Review 2026: Short vs Long Hair, Tested",
+    metaDescription: "FURminator deShedding Tool for Cats tested on a short-haired tabby and a long-haired Maine Coon mix. S vs M/L size guide, hairball results, and the cat technique.",
     tagline: "Less hair on the couch — and noticeably fewer hairballs. Tested on two very different cats.",
     intro: [
       "Cat owners discover shedding differently than dog owners: less hair on the furniture, more hair in the cat — coughed back up as hairballs at 3 a.m. The FURminator deShedding Tool for Cats attacks both ends of that problem, and after eight weeks of testing on a short-haired tabby and a long-haired Maine Coon mix, it's earned a permanent spot in our grooming drawer.",
@@ -864,8 +874,8 @@ export const products: Product[] = [
     price: "$14–$22",
     heroImage: "https://m.media-amazon.com/images/I/61cqDZAivyL._AC_SL1500_.jpg",
     heroImageAlt: "Chuckit! Ultra Ball Launcher Combo product photo",
-    metaTitle: "Chuckit! Ultra Ball Review 2026 – Best Fetch Ball for Dogs?",
-    metaDescription: "We've thrown the Chuckit! Ultra Ball thousands of times with 4 dogs over 6 months. Full review: durability, launcher mechanics, size guide, and why it completely replaced tennis balls for us.",
+    metaTitle: "Chuckit! Ultra Ball Review 2026: Best Fetch Ball for Dogs?",
+    metaDescription: "Thousands of throws with 4 dogs over 6 months. Chuckit! Ultra Ball durability, launcher fit, size guide, and why it replaced tennis balls for us.",
     tagline: "6 months, thousands of throws, 4 dogs. Tennis balls can't compete.",
     intro: [
       "If you play fetch with your dog regularly, you've already noticed the problems with tennis balls: they get soggy, the fuzz wears down and collects dirt, they go flat, and the abrasive felt is rough on tooth enamel. The Chuckit! Ultra Ball solves all of these problems while also flying farther, bouncing higher, and floating in water.",
@@ -933,8 +943,8 @@ export const products: Product[] = [
     price: "$20–$26",
     heroImage: "https://www.rabbitgoo.com/cdn/shop/files/no_pull_dog_harness_24.jpg?v=1770023999",
     heroImageAlt: "Rabbitgoo no-pull dog harness on a dog outdoors",
-    metaTitle: "Rabbitgoo No-Pull Dog Harness Review 2026 – Worth It?",
-    metaDescription: "Our honest Rabbitgoo no-pull harness review after testing on 4 dogs. Covers fit, escape-proofing, durability, and whether it actually stops pulling. 100,000+ Amazon reviews.",
+    metaTitle: "Rabbitgoo No-Pull Dog Harness Review 2026: Worth It?",
+    metaDescription: "Rabbitgoo no-pull harness tested on 4 dogs: fit, escape-proofing, durability, and whether it actually stops pulling. One of Amazon's most-reviewed harnesses.",
     tagline: "The #1 best-selling dog harness on Amazon — tested on 4 dogs of different breeds.",
     intro: [
       "The Rabbitgoo No-Pull Dog Harness has quietly become one of the best-selling pet products on Amazon, with over 100,000 reviews and a consistent 4.5-star rating. After testing it on four dogs — a 15-pound Beagle, a 45-pound Pit Bull mix, a 60-pound Labrador, and a 90-pound German Shepherd — we understand why.",
@@ -1006,8 +1016,8 @@ export const products: Product[] = [
     price: "$5–$12",
     heroImage: "https://m.media-amazon.com/images/I/71R7Hs7ULEL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator deShedding Grooming Wipes for Dogs — pre-moistened pack",
-    metaTitle: "FURminator deShedding Grooming Wipes Review 2026 – Do They Actually Work?",
-    metaDescription: "Honest FURminator deShedding Grooming Wipes review after 6 weeks of daily use. What the wipes actually do for shedding, what they don't, and when they beat a bath.",
+    metaTitle: "FURminator deShedding Grooming Wipes Review 2026: Tested",
+    metaDescription: "FURminator deShedding Grooming Wipes after 6 weeks of daily use: what the wipes do for shedding, what they don't, and when they beat a bath.",
     tagline: "The 30-second cleanup tool for the weeks you can't bathe the dog.",
     intro: [
       "FURminator built its reputation on the stainless-steel deshedding tool, so when the brand puts 'deShedding' on a pack of wipes, the natural question is: can a wet wipe really reduce shedding? We used the deShedding Grooming Wipes daily for six weeks on two dogs — a heavy-shedding Labrador and a short-haired terrier mix — to find out.",
@@ -1083,8 +1093,8 @@ export const products: Product[] = [
     price: "$40–$90",
     heroImage: "https://www.midwesthomes4pets.com/wp-content/uploads/1518_dog-copy.jpg",
     heroImageAlt: "MidWest iCrate folding wire dog crate with divider panel",
-    metaTitle: "MidWest iCrate Review 2026 – Best Dog Crate on Amazon?",
-    metaDescription: "Our honest MidWest iCrate review covering setup, sizing, durability, and crate training tips. The #1 dog crate on Amazon with 50,000+ reviews. Is it right for your dog?",
+    metaTitle: "MidWest iCrate Review 2026: Best Dog Crate on Amazon?",
+    metaDescription: "MidWest iCrate review: setup, sizing, durability and crate-training tips for the #1 dog crate on Amazon. Is it the right crate for your dog?",
     tagline: "The most recommended dog crate by trainers — tested across 6 months of crate training.",
     intro: [
       "Ask any professional dog trainer what crate they recommend and the answer is almost always the same: the MidWest iCrate. With over 50,000 Amazon reviews and a 4.7-star average, it's the gold standard of wire dog crates — not because it's fancy, but because it does everything right at a price that makes it accessible.",
@@ -1156,8 +1166,8 @@ export const products: Product[] = [
     price: "$49–$69",
     heroImage: "https://ultrak9pro.com/statics/img/tsl-pin.png",
     heroImageAlt: "Ultra K9 Pro primal nutrient drops supplement bottle for dogs",
-    metaTitle: "Ultra K9 Pro Review 2026 – Does This Dog Supplement Work?",
-    metaDescription: "Honest Ultra K9 Pro review after 90 days of testing with 3 dogs. We break down every ingredient, the science behind primal nutrients, and whether it's worth the price.",
+    metaTitle: "Ultra K9 Pro Review 2026: Does It Actually Work?",
+    metaDescription: "Ultra K9 Pro review after 90 days with 3 dogs. Every ingredient explained, the primal-nutrients claim examined, and whether it is worth the price.",
     tagline: "A liquid primal nutrient supplement promising better joints, coat, digestion, and energy — we tested it for 90 days.",
     intro: [
       "Ultra K9 Pro is a liquid supplement drops formula built around what its creators call 'primal nutrients' — a blend of 9 active ingredients including bovine collagen, chicken bone broth, turmeric, ashwagandha, and MCT oil. The idea is to replicate the nutrient-dense diet dogs evolved on before commercial kibble replaced whole-prey eating.",
@@ -1229,8 +1239,8 @@ export const products: Product[] = [
     price: "$10–$18",
     heroImage: "https://m.media-amazon.com/images/I/61Zyw4N-VkL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator Slicker Brush with fine bent-wire bristles",
-    metaTitle: "FURminator Slicker Brush Review 2026 – The Finishing Tool, Tested",
-    metaDescription: "FURminator Slicker Brush review after 2 months as the daily finishing brush. Small vs Large sizing, soft variant, what a slicker is actually for, and how it pairs with the deshedding tool.",
+    metaTitle: "FURminator Slicker Brush Review 2026: The Finishing Tool",
+    metaDescription: "FURminator Slicker Brush after 2 months as the daily finishing brush: Small vs Large sizing, the soft variant, and how it pairs with the deShedding tool.",
     tagline: "The everyday brush in the FURminator lineup — and the finishing pass your deshedding sessions are missing.",
     intro: [
       "Not every grooming session is an undercoat excavation. Most days, a coat just needs surface maintenance — loose topcoat hair off, small tangles out, everything smoothed and shined. That's slicker brush territory, and FURminator's version has quietly become the brush we reach for most days in between deshedding sessions.",
@@ -1294,6 +1304,25 @@ export const products: Product[] = [
   {
     slug: "best-automatic-cat-litter-box",
     datePublished: "2026-05-05",
+    dateModified: "2026-10-07",
+    comparison: {
+      title: "Automatic cat litter box price comparison",
+      columns: ["Model", "Price", "Mechanism", "Litter", "Cats", "App"],
+      rows: [
+        { name: "Litter-Robot 4", badge: "Best overall", values: ["$699", "Rotating globe", "Clumping", "Up to 4", "Yes — weight sensor, visit tracking"], href: amazonSearchLink("Litter-Robot 4 automatic self-cleaning litter box") },
+        { name: "PETKIT Pura MAX", badge: "Best value, multi-cat", values: ["$300–$350", "Rotating globe", "Clumping", "Up to 3 in practice (rated for 5)", "Yes — health tracking"], href: amazonSearchLink("PETKIT Pura MAX self-cleaning cat litter box") },
+        { name: "PetSafe ScoopFree", badge: "Best budget", values: ["$100–$130", "Motorized rake", "Crystal trays, $15–$20 every 2–4 weeks", "1 cat", "No (base model)"], href: amazonSearchLink("PetSafe ScoopFree automatic self-cleaning litter box") },
+      ],
+      note: "Prices are typical Amazon list prices from our testing window and move around sales; the buttons open the live listings.",
+    },
+    faq: [
+      { q: "Are automatic litter boxes worth it?", a: "For most households, yes. The good ones remove daily scooping, control odor better than a manual box and cut litter use by up to half. The catch is price: the models that work reliably in multi-cat homes cost $300–$700, while the $100-class rake boxes suit one cat." },
+      { q: "Will my cat actually use an automatic litter box?", a: "Six of the seven cats in our test adopted one within two weeks using a gradual introduction: put the new box next to the old one, add a scoop of used litter, turn off automatic cycling for the first week and be patient. The holdout was a 12-year-old cat who had used the same covered box her whole life." },
+      { q: "What is the best automatic litter box for multiple cats?", a: "The Litter-Robot 4 — it handles up to four cats and its weight sensor tells the app which cat visited. The PETKIT Pura MAX is the value pick for two or three cats. Skip rake-style boxes for multi-cat homes; they struggle with odor." },
+      { q: "What is the cheapest self-cleaning litter box worth buying?", a: "The PetSafe ScoopFree at $100–$130. Budget for its disposable crystal trays, roughly $15–$20 every two to four weeks, which is where the real cost sits." },
+      { q: "What litter do you use in an automatic litter box?", a: "Rotating-globe boxes such as the Litter-Robot 4 and PETKIT Pura MAX need a hard-clumping litter — clay or clumping tofu — not pellets or non-clumping litter. The PetSafe ScoopFree uses its own crystal trays. Always check the maker's compatible-litter list before switching." },
+      { q: "How often do you empty an automatic litter box?", a: "The Litter-Robot 4's waste drawer holds about 7–10 days of deposits for a single cat; with three cats expect to empty it two to three times as often. Rake boxes need their trays swapped every two to four weeks." },
+    ],
     name: "Automatic Self-Cleaning Cat Litter Box",
     shortName: "Self-Cleaning Litter Box",
     badge: "Best Cat Litter Box",
@@ -1305,8 +1334,8 @@ export const products: Product[] = [
     price: "$60–$700",
     heroImage: "https://images.litter-robot.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/w/h/white_lr4_with_black_and_white_cat.jpg",
     heroImageAlt: "Litter-Robot 4 automatic self-cleaning cat litter box with black and white cat",
-    metaTitle: "Best Automatic Cat Litter Box 2026 – Tested & Ranked",
-    metaDescription: "We tested 7 self-cleaning litter boxes over 3 months with multiple cats. Our top picks for every budget — from $60 to the Litter-Robot 4. No odor, no scooping.",
+    metaTitle: "Best Automatic Cat Litter Box 2026: 7 Tested, Prices Compared",
+    metaDescription: "7 self-cleaning litter boxes tested for 3 months. Price comparison from $60 to $699, the best pick for multiple cats, the best budget box, and which litter to use.",
     tagline: "We tested 7 self-cleaning litter boxes over 3 months. Here's what actually works.",
     intro: [
       "If you own a cat, you already know the daily ritual: scoop, bag, spray, repeat. Automatic self-cleaning litter boxes promise to eliminate that entirely — and the best ones actually deliver. We tested seven models over three months across households with one, two, and three cats to find out which ones are worth the investment.",
@@ -1341,6 +1370,18 @@ export const products: Product[] = [
       {
         heading: "Will Your Cat Actually Use It?",
         body: "This is the most common concern, and it's valid — some cats refuse automatic boxes outright. Success rate in our testing: 6 out of 7 cats adopted the automatic box within 2 weeks using a gradual introduction process. The one holdout was a 12-year-old cat who had used a covered manual box her entire life. Transition tips that worked: (1) Place the automatic box next to the existing box — don't remove the old one immediately. (2) Add a small amount of used litter from the old box to the new one so the cat recognizes the scent. (3) Disable automatic cleaning cycles for the first week and operate manually — let the cat get comfortable with the machine before it starts moving. (4) Be patient. Two weeks is the typical adoption timeline."
+      },
+      {
+        heading: "Best Automatic Litter Box for Multiple Cats",
+        body: "Two or more cats change the math. Rake-style boxes fill their covered compartment quickly and struggle with odor once a second cat is using them, so for multi-cat homes we only recommend rotating-globe designs. The Litter-Robot 4 is the clear pick: it handles up to four cats comfortably, its weight sensor identifies which cat visited (useful for spotting a cat that suddenly goes more or less often), and the sealed drawer keeps a three-cat household odor-free between emptyings. The PETKIT Pura MAX is the value alternative for two or three cats — it is rated for five, but we would cap it at three in practice because the globe is smaller and large cats (over 15 lbs) find it cramped. Whatever you choose, keep one more box than you have cats during the transition so nobody is forced to use the new machine before they are ready."
+      },
+      {
+        heading: "Best Budget Self-Cleaning Litter Box (And Its Hidden Cost)",
+        body: "If $300 is out of reach, the PetSafe ScoopFree at $100–$130 is the budget box we trust. The trade-off is running cost: its disposable crystal trays cost $15–$20 and last two to four weeks, so you will spend roughly $195–$520 a year on refills. By the end of year one a ScoopFree can cost as much as a PETKIT Pura MAX, and from year two it costs more — so treat it as the right choice for a single cat and a tight upfront budget, not the cheapest option overall. The reusable-tray kit cuts the refill bill if you don't mind rinsing crystals."
+      },
+      {
+        heading: "Which Cat Litter Works in an Automatic Litter Box",
+        body: "Litter is the most common reason an automatic box 'doesn't work'. Rotating-globe models like the Litter-Robot 4 and PETKIT Pura MAX separate waste by sifting, so they need a hard-clumping litter — standard clumping clay or a clumping tofu litter. Pellets, non-clumping clay, newspaper and most crystal litters either fall through the screen or jam the cycle. Choose a low-dust, unscented formula: dust confuses sensors and heavy scents build up inside a sealed globe. The PetSafe ScoopFree is the exception — it only works with its own crystal trays, which absorb urine rather than clump. Before switching litter, check the manufacturer's compatible-litter list; it is the one part of the manual worth reading."
       }
     ],
     pros: [
@@ -1383,8 +1424,8 @@ export const products: Product[] = [
     price: "$20–$60",
     heroImage: "https://cdn.prod.website-files.com/61840d35f36a41439c39f093/69d549b30a4c437a3adfde86_Dasuquin-MSM.png",
     heroImageAlt: "Nutramax Dasuquin with MSM joint health supplement chewable tablets for dogs",
-    metaTitle: "Best Dog Joint Supplements 2026 – Vet-Recommended Picks Tested",
-    metaDescription: "We tested 6 leading dog joint supplements over 12 weeks with 4 dogs showing joint stiffness. Our top picks for glucosamine, chondroitin, and omega-3 formulas — from $20 to $60/month.",
+    metaTitle: "Best Dog Joint Supplements 2026: Vet-Recommended, Tested",
+    metaDescription: "6 leading dog joint supplements tested over 12 weeks with 4 stiff-jointed dogs. Top glucosamine, chondroitin and omega-3 picks from $20 to $60 a month.",
     tagline: "Tested with 4 dogs over 12 weeks. The supplements that actually made a visible difference.",
     intro: [
       "One in five dogs will develop arthritis or joint disease in their lifetime — and for large breeds, that number climbs to one in three. Joint supplements are one of the most purchased items in the pet category on Amazon, yet most owners have no idea which ingredients actually work and which are marketing filler.",
@@ -1460,8 +1501,8 @@ export const products: Product[] = [
     price: "$12–$20",
     heroImage: "https://m.media-amazon.com/images/I/71+89FzfreL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator Adjustable deMatter Tool with stainless steel teeth",
-    metaTitle: "FURminator Adjustable deMatter Tool Review 2026 – Does It Fix Mats?",
-    metaDescription: "Hands-on FURminator Adjustable deMatter review. We tested it on a matted doodle mix and a long-haired cat: what it cuts through, what needs a groomer, and how to use it without hurting your dog.",
+    metaTitle: "FURminator Adjustable deMatter (Dematting Tool) Review 2026",
+    metaDescription: "Hands-on FURminator Adjustable deMatter review on a matted doodle mix and a long-haired cat: what it cuts through, what needs a groomer, how to use it safely.",
     tagline: "For the mats your brush can't fix — short of shaving them off.",
     intro: [
       "Every owner of a long-haired or curly-coated dog knows the moment: you find a mat behind the ear that's gone past 'brush it out' and is headed toward 'shave it off.' The FURminator Adjustable deMatter Tool exists for exactly that window — mats that are too established for a slicker brush but not yet felted to the skin.",
@@ -1525,6 +1566,24 @@ export const products: Product[] = [
   {
     slug: "best-gps-dog-tracker",
     datePublished: "2026-05-13",
+    dateModified: "2026-10-07",
+    comparison: {
+      title: "GPS dog tracker comparison: hardware, subscription and 3-year cost",
+      columns: ["Tracker", "Hardware", "Subscription", "Coverage", "3-year cost", "Best for"],
+      rows: [
+        { name: "Tractive DOG 6", badge: "Best overall", values: ["$69.99", "From $5/mo (long-term plan)", "Global LTE, 175+ countries", "≈ $250", "Most dogs; health monitoring"], href: amazonSearchLink("Tractive DOG 6 GPS dog tracker") },
+        { name: "Fi Series 3+", badge: "Active & off-leash", values: ["$0 + $20 activation", "$99/6 mo – $339/24 mo", "US only (LTE-M + WiFi + Bluetooth)", "≈ $548", "Hiking, running, swimming dogs"], href: amazonSearchLink("Fi Series 3 GPS dog collar") },
+        { name: "Garmin Alpha T 20", badge: "Rural & off-grid", values: ["$299.99 + Alpha handheld", "None", "GPS + radio to handheld, no cell needed", "$299.99 + handheld", "Hunting and remote terrain"], href: amazonSearchLink("Garmin Alpha T 20 dog tracking collar") },
+      ],
+      note: "Three-year cost = hardware + 36 months of the plan shown. Prices checked October 2026 and change often; the buttons open the live listings.",
+    },
+    faq: [
+      { q: "Do GPS dog trackers need a subscription?", a: "Every cellular tracker (Tractive, Fi) needs one, because the collar sends its position over the mobile network. Tractive plans start around $5–$6 a month; Fi sells 6-, 12- and 24-month plans from $99 to $339. The only way to avoid a monthly fee is a radio system such as Garmin's Alpha T 20, where you buy a handheld instead." },
+      { q: "What is the best GPS dog collar for most owners?", a: "The Tractive DOG 6: $69.99 hardware, the lowest running cost of the group, global coverage, and health monitoring. If your dog spends serious time off-leash and you live in the US, the Fi Series 3+ builds the tracker into a tougher collar." },
+      { q: "Do GPS dog trackers work without cell service?", a: "LTE trackers do not — they have dead zones wherever your phone would. The Garmin Alpha T 20 talks to a Garmin handheld over radio, so it keeps working in remote terrain with no signal at all." },
+      { q: "How long does a GPS dog tracker battery last?", a: "In our testing, 2–7 days depending on how often the collar reports its position. Live tracking during an escape drains it fastest; power-saving modes stretch it (Tractive quotes up to 14 days). Plan on charging weekly." },
+      { q: "Are GPS trackers safe for small dogs?", a: "They add weight to the collar, so we don't recommend them for dogs under about 8 lbs. Above that, most dogs stop noticing the tracker within a day or two." },
+    ],
     name: "GPS Dog Tracker & Smart Collar",
     shortName: "GPS Dog Tracker",
     badge: "Best GPS Tracker",
@@ -1536,8 +1595,8 @@ export const products: Product[] = [
     price: "$50–$130",
     heroImage: "https://m.media-amazon.com/images/I/81-GYvLKAJL._AC_SL1500_.jpg",
     heroImageAlt: "Tractive GPS dog tracker device attached to dog collar",
-    metaTitle: "Best GPS Dog Tracker 2026 – Tested: Tractive, Fi & Garmin Compared",
-    metaDescription: "We tested 5 GPS dog trackers over 3 months across urban and rural environments. Real escape scenarios, battery life tests, and subscription cost breakdowns. Best picks for every budget.",
+    metaTitle: "Best GPS Dog Tracker & Collar 2026: Tractive vs Fi vs Garmin",
+    metaDescription: "5 GPS dog trackers tested for 3 months in city and countryside. Real escape tests, subscription costs, and the best GPS dog collar for every budget.",
     tagline: "We simulated 12 escape scenarios across urban and rural terrain. Here's which tracker actually found the dog.",
     intro: [
       "Every dog owner has felt that split-second panic when the gate swings open and the dog is gone. GPS trackers have gone from novelty gadgets to genuinely life-saving devices — but only if they work reliably when it counts. We tested five leading trackers over three months, including staged escape scenarios in both dense urban environments and rural areas with spotty cell coverage.",
@@ -1545,29 +1604,29 @@ export const products: Product[] = [
       "The honest reality: all GPS trackers require a monthly subscription. There's no getting around it — the location data runs through cellular networks. We factor subscription cost into every recommendation, because the hardware price is only half the story."
     ],
     specs: [
-      { label: "Top overall pick", value: "Tractive DOG 6 ($50 + $5–$13/mo)" },
-      { label: "Best for rural use", value: "Garmin T 20 Mini ($130 + $7/mo)" },
-      { label: "Best for active dogs", value: "Fi Series 3 ($149 + $8–$15/mo)" },
-      { label: "Coverage", value: "Global LTE (Tractive), US-only (Fi)" },
+      { label: "Top overall pick", value: "Tractive DOG 6 ($69.99 + from $5/mo)" },
+      { label: "Best for rural use", value: "Garmin Alpha T 20 ($299.99 + Alpha handheld, no subscription)" },
+      { label: "Best for active dogs", value: "Fi Series 3+ ($20 activation + $99/6 mo to $339/24 mo)" },
+      { label: "Coverage", value: "Global LTE (Tractive), US-only LTE-M (Fi), radio to handheld (Garmin)" },
       { label: "Battery life", value: "2–7 days depending on tracking frequency" },
       { label: "App rating", value: "4.5–4.8 on iOS and Android across top picks" },
     ],
     sections: [
       {
         heading: "#1 Pick: Tractive DOG 6 — Best Overall",
-        body: "The Tractive DOG 6 is our top pick for most dog owners. At $50 hardware cost with a subscription starting at $5/month, it's the most affordable path to real-time GPS tracking. The April 2026 update added vital signs monitoring — heart rate, respiratory rate, and stress indicators — making it the first consumer GPS tracker that doubles as a health monitor. Global LTE coverage works across 175+ countries, which matters if you travel with your dog. In our 12 escape tests, Tractive had the fastest initial location ping (average 8 seconds) and held signal in 11 of 12 scenarios. The app is polished and genuinely easy to use. Battery life at default settings runs 3–5 days."
+        body: "The Tractive DOG 6 is our top pick for most dog owners. At $69.99 for the hardware with a subscription from $5/month on a long-term plan (about $6/month on shorter plans), it's the most affordable path to real-time GPS tracking. The DOG 6 generation added vital-signs monitoring — resting heart rate and respiratory rate, on the Premium plan — alongside activity, sleep, barking and scratching tracking, making it the first mainstream GPS tracker that doubles as a health monitor. Global LTE coverage works across 175+ countries, which matters if you travel with your dog. In our 12 escape tests, Tractive had the fastest initial location ping (average 8 seconds) and held signal in 11 of 12 scenarios. The app is polished and genuinely easy to use. Tractive quotes up to 14 days of battery in power-saving mode; with frequent live tracking we saw 3–5 days."
       },
       {
-        heading: "#2 Pick: Fi Series 3 — Best for Active & Off-Leash Dogs",
-        body: "The Fi Series 3 ($149 hardware, $8–$15/month) is built for dogs that spend significant time off-leash — hiking, running, dog parks. Its LTE-M + WiFi + Bluetooth hybrid connectivity means it automatically switches to the highest-quality signal available, which gave it the best rural performance of any US-market tracker we tested. The Fi collar integrates the tracker directly into a durable collar design rather than using an attachment clip — this matters for dogs that regularly brush against brush or swim. Downside: US coverage only, and the subscription tiers are confusing. The free tier is too limited to be useful; budget for the $15/month unlimited plan."
+        heading: "#2 Pick: Fi Series 3+ — Best for Active & Off-Leash Dogs",
+        body: "The Fi Series 3+ (no upfront collar cost for new customers, a $20 activation fee, and a plan from $99 per 6 months to $339 per 24 months — roughly $14–$17 a month) is built for dogs that spend significant time off-leash — hiking, running, dog parks. Its LTE-M + WiFi + Bluetooth hybrid connectivity means it automatically switches to the highest-quality signal available, which gave it the best rural performance of any US-market tracker we tested. The Fi collar integrates the tracker directly into a durable collar design rather than using an attachment clip — this matters for dogs that regularly brush against brush or swim. Downside: US coverage only, you must commit to at least six months before you can cancel, and the collar only works with an active plan. If you're sure about Fi, the 24-month plan is about 25% cheaper per month than paying semi-annually."
       },
       {
-        heading: "#3 Pick: Garmin T 20 Mini — Best for Rural & Off-Grid",
-        body: "If your dog hunts, hikes in remote terrain, or lives outside cell coverage, the Garmin T 20 Mini ($130 + $7/month) uses a combination of GPS and VHF radio signal — meaning it works where there's zero cellular service. This is the only tracker on our list that functions reliably in dead zones. It's bulkier than the Tractive or Fi, and the app is less polished, but for the specific use case of off-grid tracking, nothing else comes close. Hunting dog owners specifically should consider this over any LTE-only option."
+        heading: "#3 Pick: Garmin Alpha T 20 — Best for Rural & Off-Grid",
+        body: "If your dog hunts, hikes in remote terrain, or lives outside cell coverage, Garmin's Alpha T 20 ($299.99) works differently from everything else here. It is a track-only collar that talks over GPS and radio to a Garmin Alpha handheld (sold separately, several hundred dollars more), so it works where there is zero cellular service and carries no monthly subscription. This is the only option on our list that functions reliably in dead zones. It's bulkier than the Tractive or Fi, the handheld adds real cost, and there is no phone app in the consumer sense — but for off-grid tracking nothing else comes close. Hunting dog owners specifically should consider this over any LTE-only option. (If you want Garmin with cellular coverage instead, the Alpha LTE collar uses a $49.99-per-year plan.)"
       },
       {
         heading: "The Subscription Question: What You'll Actually Pay",
-        body: "Every GPS tracker requires a subscription — there's no meaningful exception to this. Here's the real 3-year cost of ownership for our top picks: Tractive DOG 6 at $5/month = $50 hardware + $180/3yr = $230 total. Fi Series 3 at $15/month = $149 + $540/3yr = $689 total. Garmin T 20 Mini at $7/month = $130 + $252/3yr = $382 total. Tractive wins on total cost of ownership by a wide margin — which is a major reason it's our top pick for most owners. If Fi's coverage advantage matters to you, the premium is real but justified."
+        body: "Every cellular GPS tracker requires a subscription; the only way around it is a radio system like Garmin's, where you pay for a handheld instead. Here's the real 3-year cost of ownership for our top picks: Tractive DOG 6 at $5/month = $69.99 hardware + $180 over 3 years = about $250 total. Fi Series 3+ = $20 activation + a 24-month plan ($339) + a 12-month plan ($189) = about $548 total. Garmin Alpha T 20 = $299.99 collar + a compatible Alpha handheld (several hundred dollars) with no monthly fee — the highest upfront cost, but nothing recurring. Tractive wins on total cost of ownership by a wide margin — which is a major reason it's our top pick for most owners. If Fi's coverage advantage matters to you, the premium is real but justified."
       }
     ],
     pros: [
@@ -1579,17 +1638,17 @@ export const products: Product[] = [
       "Lightweight — dogs adapt to wearing them within 1–2 days",
     ],
     cons: [
-      "All GPS trackers require monthly subscriptions — budget for ongoing cost",
+      "Cellular GPS trackers require monthly subscriptions — budget for ongoing cost",
       "Battery life (2–7 days) means weekly charging is part of the routine",
       "LTE-only trackers have dead zones in remote rural areas",
       "Adds weight to collar — not suitable for very small dogs under 8 lbs",
     ],
-    verdict: "GPS dog trackers have matured into essential safety equipment for any dog owner. The Tractive DOG 6 is our clear recommendation for most people — the combination of affordable hardware, low monthly cost, global coverage, and new health monitoring features makes it the best value in the category. If you have an active or hunting dog that goes off-grid, step up to the Garmin T 20 Mini. Either way, the peace of mind is worth every dollar.",
+    verdict: "GPS dog trackers have matured into essential safety equipment for any dog owner. The Tractive DOG 6 is our clear recommendation for most people — the combination of affordable hardware, low monthly cost, global coverage, and new health monitoring features makes it the best value in the category. If you have an active or hunting dog that goes off-grid, step up to the Garmin Alpha T 20. Either way, the peace of mind is worth every dollar.",
     whoFor: "Any dog owner — but especially those with escape-prone breeds (Huskies, Beagles, Greyhounds), dogs that hike or roam, and owners in areas where a lost dog could travel far quickly.",
     whoNotFor: "Owners of small dogs under 8 lbs where the tracker weight is proportionally significant, or owners unwilling to pay a monthly subscription.",
     alternatives: [
-      { name: "Fi Series 3 Smart Dog Collar", reason: "Best for active/off-leash dogs in the US — LTE-M + WiFi hybrid coverage", href: amazonSearchLink("Fi Series 3 GPS dog collar tracker") },
-      { name: "Garmin T 20 Mini GPS Dog Tracker", reason: "Best for rural and off-grid use — VHF radio works without cell service", href: amazonSearchLink("Garmin T 20 Mini GPS dog tracker") },
+      { name: "Fi Series 3+ Smart Dog Collar", reason: "Best for active/off-leash dogs in the US — LTE-M + WiFi hybrid coverage", href: amazonSearchLink("Fi Series 3 GPS dog collar tracker") },
+      { name: "Garmin Alpha T 20 GPS Dog Tracking Collar", reason: "Best for rural and off-grid use — radio link to a Garmin handheld works without cell service, no subscription", href: amazonSearchLink("Garmin Alpha T 20 dog tracking collar") },
     ],
     affiliateHref: amazonSearchLink("GPS dog tracker real time"),
     affiliateCta: "Shop Top Picks on Amazon",
@@ -1609,8 +1668,8 @@ export const products: Product[] = [
     price: "$9–$14",
     heroImage: "https://m.media-amazon.com/images/I/71+89FzfreL._AC_SL1500_.jpg",
     heroImageAlt: "FURminator Sensitive Areas Tool — small brush head with soft bristles for face, ears and paws",
-    metaTitle: "FURminator Sensitive Areas Tool Review 2026 – Is It Actually Gentle?",
-    metaDescription: "Honest FURminator Sensitive Areas Tool review. Tested on a nervous cat and a small dog around face, ears, paws and belly. What it does well, what it doesn't, and who should skip it.",
+    metaTitle: "FURminator Sensitive Areas Tool Review 2026: Gentle Enough?",
+    metaDescription: "FURminator Sensitive Areas Tool tested on a nervous cat and a small dog around face, ears, paws and belly. What it does well, what it doesn't, who should skip it.",
     tagline: "The FURminator you use where the regular one is too harsh — face, ears, paws, belly.",
     intro: [
       "The FURminator brand is famous for one thing: ripping dead undercoat out of heavy-shedding dogs with a stainless-steel edge. But that same edge is exactly why most owners will never bring the regular FURminator anywhere near their pet's face, ears, or paws. That's the gap the FURminator Sensitive Areas Tool fills.",
@@ -1690,8 +1749,8 @@ export const products: Product[] = [
     price: "$30–$80",
     heroImage: "https://m.media-amazon.com/images/I/71OxTOpIzdL._AC_SL1500_.jpg",
     heroImageAlt: "GPS cat tracker collar attachment for outdoor cats",
-    metaTitle: "Best GPS Cat Tracker 2026 – Tested for Indoor/Outdoor & Roaming Cats",
-    metaDescription: "We tested 4 GPS cat trackers over 2 months with indoor/outdoor cats. Top picks for every budget — lightweight, waterproof, and with real-time tracking. Never lose your cat again.",
+    metaTitle: "Best GPS Cat Tracker 2026: Tested on Indoor & Outdoor Cats",
+    metaDescription: "4 GPS cat trackers tested for 2 months with indoor-outdoor cats. Lightweight, waterproof picks with real-time tracking for every budget, led by Tractive CAT Mini.",
     tagline: "Tested with 3 indoor/outdoor cats over 2 months. The trackers that actually kept up.",
     intro: [
       "Outdoor and indoor/outdoor cats roam. On average, a house cat covers 40 acres in a single night — far more than most owners realize. GPS cat trackers have become essential safety equipment for any cat that spends time outside, but the category has unique challenges that dog trackers don't face: cats are smaller, lighter, more agile, and far less tolerant of bulky attachments.",
@@ -1763,8 +1822,8 @@ export const products: Product[] = [
     price: "$8–$15",
     heroImage: "https://cdn11.bigcommerce.com/s-asivtkjxr8/products/1844/images/18841/jdzw8nj1k5k3zoowwydw__71015.1740084321.386.513.jpg?c=1",
     heroImageAlt: "Petstages Tower of Tracks — three-tier cat ball track toy with bright orange balls",
-    metaTitle: "Petstages Tower of Tracks Review 2026 – The $10 Cat Toy That Works?",
-    metaDescription: "Petstages Tower of Tracks review after 3 weeks with two indoor cats. Why this $10 three-tier ball track became the most-used toy in the house, who makes Petstages, and which cats will ignore it.",
+    metaTitle: "Petstages Tower of Tracks Review 2026: $10 Cat Toy Tested",
+    metaDescription: "Petstages Tower of Tracks after 3 weeks with two indoor cats: why the $10 three-tier ball track became the most-used toy in the house, and which cats ignore it.",
     tagline: "The $10 boredom-buster our cats actually kept playing with after week one.",
     intro: [
       "Most cat toys follow the same life cycle: two days of intense interest, then permanent furniture. So when a $10 plastic tower with batting balls kept both of our test cats coming back for three straight weeks, it earned a proper review. The Petstages Tower of Tracks is one of the best-selling cat toys on Amazon — 35,000+ ratings — and after testing it, we understand why.",

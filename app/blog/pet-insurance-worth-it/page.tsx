@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Is Pet Insurance Worth It in 2026? Honest Analysis",
   description:
-    "Is pet insurance worth the cost? We analyzed 5 years of vet cost data vs. insurance premiums to give you an honest, data-driven answer. Find out when it makes sense — and when it doesn't.",
+    "Is pet insurance worth the cost? We compared 5 years of vet cost data with premiums for an honest, data-driven answer on when it makes sense and when it doesn't.",
   keywords: ["is pet insurance worth it", "pet insurance cost vs benefit", "should I get pet insurance", "pet insurance 2026", "pet insurance pros and cons"],
   alternates: { canonical: "/blog/pet-insurance-worth-it" },
 };

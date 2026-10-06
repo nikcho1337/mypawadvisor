@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dog Deshedding Tools in 2026 – Tested & Ranked",
+  title: "Best Dog Deshedding Tools 2026: Tested & Ranked",
   description:
-    "Are deshedding tools worth it? We tested 9 brushes and tools on 6 breeds over 8 weeks. Our top picks reduce shedding by up to 90% — and the best one costs under $50.",
+    "Are deshedding tools worth it? We tested 9 brushes and tools on 6 breeds over 8 weeks. The top picks cut shedding by up to 90%, and the best costs under $50.",
   keywords: [
     "best dog deshedding tool",
     "are deshedding tools worth it",

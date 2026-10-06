@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Embrace Pet Insurance Review 2026 – Is It Worth It?",
+  title: "Embrace Pet Insurance Review 2026: Is It Worth It?",
   description:
-    "Detailed Embrace Pet Insurance review for 2026. We cover pricing, coverage, wellness rewards, real claims experience, and how it compares to Healthy Paws. Find out if Embrace is right for your pet.",
+    "Embrace Pet Insurance review for 2026: pricing, coverage, Wellness Rewards, claims experience, and how it compares with Healthy Paws.",
   keywords: ["Embrace pet insurance review", "Embrace pet insurance", "best pet insurance 2026", "embrace cost", "embrace vs healthy paws"],
   alternates: { canonical: "/insurance/embrace-review" },
 };
