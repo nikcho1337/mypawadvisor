@@ -1,40 +1,10 @@
 import { products } from "@/lib/products";
+import { blogPosts as allBlogPosts, blogPostDate } from "@/lib/blog";
 
 const SITE = "https://www.mypawadvisor.com";
 
 export async function GET() {
-  const blogPosts = [
-    {
-      slug: "best-dog-food-for-golden-retrievers",
-      title: "Best Dog Food for Golden Retrievers 2026 – Vet-Approved Picks",
-      excerpt: "Vet-approved picks covering heart health, joint support, and weight management for Golden Retrievers.",
-      date: "2026-04-01",
-    },
-    {
-      slug: "best-dog-food-for-german-shepherds",
-      title: "Best Dog Food for German Shepherds 2026",
-      excerpt: "High-protein, large-breed formulas tested with real German Shepherds. Complete ingredient analysis.",
-      date: "2026-04-02",
-    },
-    {
-      slug: "best-cat-food",
-      title: "Best Cat Food in 2026: Top Picks for Every Cat",
-      excerpt: "We reviewed 25+ wet and dry cat food brands so you don't have to.",
-      date: "2026-04-03",
-    },
-    {
-      slug: "pet-insurance-worth-it",
-      title: "Is Pet Insurance Actually Worth It? Honest Answer",
-      excerpt: "We crunched the numbers on vet costs vs. premiums. Here's the honest answer.",
-      date: "2026-04-04",
-    },
-    {
-      slug: "best-pet-products-amazon",
-      title: "Best Pet Products on Amazon 2026 – Tested & Rated",
-      excerpt: "Our top picks from 82,000+ Amazon reviews across dog toys, beds, grooming tools, and more.",
-      date: "2026-04-05",
-    },
-  ];
+  const blogPosts = [...allBlogPosts].sort((a, b) => blogPostDate(b).getTime() - blogPostDate(a).getTime());
 
   const reviewItems = products
     .map(
@@ -63,7 +33,7 @@ export async function GET() {
       <link>${SITE}/blog/${post.slug}</link>
       <guid isPermaLink="true">${SITE}/blog/${post.slug}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <pubDate>${blogPostDate(post).toUTCString()}</pubDate>
       <category>Pet Care</category>
     </item>`
     )
@@ -84,7 +54,7 @@ export async function GET() {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${SITE}/favicon.ico</url>
+      <url>${SITE}/og-default.png</url>
       <title>MyPawAdvisor</title>
       <link>${SITE}</link>
     </image>

@@ -17,7 +17,7 @@ export async function GET(request: Request) {
       paid: session.payment_status === "paid" || session.payment_status === "no_payment_required",
       personalized: session.metadata?.personalized === "1",
     });
-  } catch (err: any) {
-    return Response.json({ paid: false, error: err?.message ?? "Stripe error" }, { status: 500 });
+  } catch (err) {
+    return Response.json({ paid: false, error: err instanceof Error ? err.message : "Stripe error" }, { status: 500 });
   }
 }

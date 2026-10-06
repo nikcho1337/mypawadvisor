@@ -38,6 +38,19 @@ const COUNTRY_ALIAS: Record<string, string> = {
 // Resolve a free-text city to coordinates via Open-Meteo's geocoding API (free, no key).
 // The API's `name` param wants a bare city, so we split off any "City, Country" qualifier
 // and use it to pick the right match. The natal library derives timezone/DST from lat/long.
+type GeoResult = {
+  latitude: number;
+  longitude: number;
+  name: string;
+  country?: string;
+  country_code?: string;
+  admin1?: string;
+};
+
+function errorMessage(e: unknown): string {
+  return e instanceof Error ? e.message : String(e);
+}
+
 async function geocodeCity(q: string): Promise<{ lat: number; long: number; label: string }> {
   const parts = q.split(",").map((s) => s.trim()).filter(Boolean);
   const cityName = parts[0];
@@ -47,7 +60,7 @@ async function geocodeCity(q: string): Promise<{ lat: number; long: number; labe
   const res = await fetch(url);
   if (!res.ok) throw new Error("City lookup failed — please try again.");
   const data = await res.json();
-  const results: any[] = data?.results ?? [];
+  const results: GeoResult[] = data?.results ?? [];
   if (!results.length) throw new Error(`Couldn't find a city named "${cityName}". Check the spelling, or try a nearby larger city.`);
 
   let r = results[0];
@@ -149,8 +162,8 @@ export default function HoroscopePage() {
     try {
       const slug = (name || "pet").toLowerCase().replace(/\s+/g, "-");
       await downloadCertificatePdf(svg, `${slug}-natal-chart.pdf`);
-    } catch (e: any) {
-      setError("PDF export failed: " + (e?.message ?? e));
+    } catch (e) {
+      setError("PDF export failed: " + errorMessage(e));
     } finally {
       setPdfBusy(false);
     }
@@ -181,8 +194,8 @@ export default function HoroscopePage() {
       setPaidUnlocked(false);
       setNotice(null);
       setTimeout(() => document.getElementById("result")?.scrollIntoView({ behavior: "smooth" }), 50);
-    } catch (err: any) {
-      setError(err?.message ?? "Something went wrong.");
+    } catch (err) {
+      setError(errorMessage(err) || "Something went wrong.");
     } finally {
       setBusy(false);
     }
@@ -217,8 +230,8 @@ export default function HoroscopePage() {
       const data = await res.json();
       if (data.url) window.location.href = data.url;
       else { setError(data.error ?? "Could not start checkout."); setCheckoutBusy(false); }
-    } catch (e: any) {
-      setError("Checkout error: " + (e?.message ?? e));
+    } catch (e) {
+      setError("Checkout error: " + errorMessage(e));
       setCheckoutBusy(false);
     }
   }
@@ -268,7 +281,7 @@ export default function HoroscopePage() {
     <main className="min-h-screen bg-[#0a0a1f] text-indigo-50">
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital@0;1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap"
         rel="stylesheet"
       />
       {notice && (
@@ -285,10 +298,10 @@ export default function HoroscopePage() {
       >
         <PawBackground />
         <section className="relative z-10 max-w-3xl mx-auto px-4 pt-16 pb-10 text-center">
-          <p className="tracking-[0.4em] text-amber-200/80 text-xs mb-4" style={{ fontFamily: "Cinzel, serif" }}>
+          <p className="tracking-[0.4em] text-amber-200/80 text-xs mb-4" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
             ✦ MYPAWADVISOR ASTROLOGY ✦
           </p>
-          <h1 className="text-4xl md:text-6xl mb-4" style={{ fontFamily: "Cinzel, serif" }}>
+          <h1 className="text-4xl md:text-6xl mb-4" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
             Your Pet&apos;s Natal Chart
           </h1>
           <p className="text-indigo-200/80 text-lg max-w-xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -347,7 +360,7 @@ export default function HoroscopePage() {
 
             <button type="submit" disabled={busy}
               className="w-full rounded-full bg-gradient-to-r from-amber-300 to-amber-200 text-[#120a2e] font-bold py-3 text-lg tracking-wide hover:from-amber-200 hover:to-amber-100 transition disabled:opacity-60"
-              style={{ fontFamily: "Cinzel, serif" }}>
+              style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
               {busy ? "Consulting the stars…" : "✦ Reveal the Chart ✦"}
             </button>
           </form>
@@ -367,7 +380,7 @@ export default function HoroscopePage() {
                     <p className="text-emerald-300 text-sm mb-3 font-semibold">Paid ✓ — thank you! Your PDF is unlocked.</p>
                     <button onClick={handleDownload} disabled={pdfBusy}
                       className="rounded-full bg-gradient-to-r from-amber-300 to-amber-200 text-[#120a2e] font-bold px-6 py-2.5 text-sm hover:from-amber-200 hover:to-amber-100 transition disabled:opacity-60"
-                      style={{ fontFamily: "Cinzel, serif" }}>
+                      style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
                       {pdfBusy ? "Preparing…" : "⬇ Download PDF"}
                     </button>
                   </>
@@ -378,7 +391,7 @@ export default function HoroscopePage() {
                     </p>
                     <button onClick={startCheckout} disabled={checkoutBusy}
                       className="rounded-full bg-gradient-to-r from-amber-300 to-amber-200 text-[#120a2e] font-bold px-6 py-2.5 text-sm hover:from-amber-200 hover:to-amber-100 transition disabled:opacity-60"
-                      style={{ fontFamily: "Cinzel, serif" }}>
+                      style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
                       {checkoutBusy ? "Redirecting to secure checkout…" : `Unlock PDF — ${formatUsd(priceCents(personalized))}`}
                     </button>
                     <p className="mt-3 flex items-center justify-center gap-1.5 text-indigo-300/55 text-xs">
@@ -395,7 +408,7 @@ export default function HoroscopePage() {
               <div className="mt-4 rounded-xl border border-amber-300/30 bg-amber-300/[0.06] p-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-amber-100 font-semibold" style={{ fontFamily: "Cinzel, serif" }}>Personalize the wording</p>
+                    <p className="text-amber-100 font-semibold" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>Personalize the wording</p>
                     <p className="text-indigo-200/70 text-sm">Rewrite the captions &amp; closing line, or add a dedication.</p>
                   </div>
                   <span className="shrink-0 rounded-full bg-amber-300 text-[#120a2e] text-[11px] font-bold px-2.5 py-1 tracking-wide">CUSTOM&nbsp;+$3</span>
@@ -436,7 +449,7 @@ export default function HoroscopePage() {
           <Link
             href="/natal-chart/guide"
             className="shrink-0 rounded-full border border-amber-300/50 px-3 py-1.5 text-amber-100 text-xs hover:bg-amber-300/10 transition"
-            style={{ fontFamily: "Cinzel, serif" }}
+            style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
           >
             ✦ Read the Guide
           </Link>
@@ -452,7 +465,7 @@ export default function HoroscopePage() {
               window.location.href = `mailto:${user}@${domain}?subject=${encodeURIComponent("MyPawAdvisor Natal Chart — Support")}`;
             }}
             className="shrink-0 rounded-full border border-amber-300/50 px-3 py-1.5 text-amber-100 text-xs hover:bg-amber-300/10 transition cursor-pointer"
-            style={{ fontFamily: "Cinzel, serif" }}
+            style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
           >
             Contact Support
           </button>
@@ -522,7 +535,7 @@ function EditField({ label, value, onChange, placeholder }: { label: string; val
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="block text-xs uppercase tracking-widest text-amber-200/70 mb-1.5" style={{ fontFamily: "Cinzel, serif" }}>{label}</span>
+      <span className="block text-xs uppercase tracking-widest text-amber-200/70 mb-1.5" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>{label}</span>
       {children}
     </label>
   );
@@ -554,7 +567,7 @@ function Interpretation({ reading }: { reading: Reading }) {
   ];
   return (
     <div style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-      <h2 className="text-3xl text-amber-100 mb-1" style={{ fontFamily: "Cinzel, serif" }}>{reading.title}</h2>
+      <h2 className="text-3xl text-amber-100 mb-1" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>{reading.title}</h2>
       <p className="text-amber-300 text-xl mb-3">{stars}</p>
       <div className="flex flex-wrap gap-2 mb-6">
         {badges.map((b) => (
@@ -566,7 +579,7 @@ function Interpretation({ reading }: { reading: Reading }) {
           const [h, body] = blk as [string, string];
           return (
             <div key={h}>
-              <h3 className="text-amber-200/90 text-sm uppercase tracking-widest mb-1" style={{ fontFamily: "Cinzel, serif" }}>{h}</h3>
+              <h3 className="text-amber-200/90 text-sm uppercase tracking-widest mb-1" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>{h}</h3>
               <p className="text-indigo-100/90 text-lg leading-relaxed">{body}</p>
             </div>
           );
@@ -574,7 +587,7 @@ function Interpretation({ reading }: { reading: Reading }) {
         <p className="text-indigo-200/70 italic">{reading.luckyToy}</p>
         {/* the memorable closing line — the keepsake's signature */}
         <div className="mt-2 rounded-xl border border-amber-300/30 bg-gradient-to-br from-amber-300/[0.10] to-transparent p-5">
-          <p className="text-amber-200/70 text-xs uppercase tracking-[0.3em] mb-2" style={{ fontFamily: "Cinzel, serif" }}>✦ Cosmic Signature ✦</p>
+          <p className="text-amber-200/70 text-xs uppercase tracking-[0.3em] mb-2" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>✦ Cosmic Signature ✦</p>
           <p className="text-amber-50 text-xl leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{reading.cosmicSignature}</p>
         </div>
         <p className="text-indigo-300/50 text-sm pt-2 border-t border-white/10">For entertainment only — not veterinary advice.</p>

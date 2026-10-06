@@ -38,7 +38,7 @@ export default function PetInsuranceWorthItPage() {
             Is Pet Insurance Actually Worth It? Honest Analysis for 2026
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            We crunched the numbers on average vet costs versus insurance premiums across 5 years of data. Here's our honest, data-driven take — including the situations where pet insurance doesn't make financial sense.
+            We crunched the numbers on average vet costs versus insurance premiums across 5 years of data. Here&apos;s our honest, data-driven take — including the situations where pet insurance doesn&apos;t make financial sense.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <span>📅 January 5, 2026</span>
@@ -60,7 +60,7 @@ export default function PetInsuranceWorthItPage() {
         <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">📋 Short Answer</h2>
           <p className="text-gray-700 text-sm leading-relaxed">
-            <strong>For most pet owners, yes — pet insurance is worth it.</strong> Not because you'll always "come out ahead" financially, but because it removes the devastating choice between your pet's life and your bank account. One emergency can cost $3,000–$10,000. Insurance turns that into $300–$1,000.
+            <strong>For most pet owners, yes — pet insurance is worth it.</strong> Not because you&apos;ll always &quot;come out ahead&quot; financially, but because it removes the devastating choice between your pet&apos;s life and your bank account. One emergency can cost $3,000–$10,000. Insurance turns that into $300–$1,000.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function PetInsuranceWorthItPage() {
 
         <h2 className="text-2xl font-bold mb-4">The Math: Insurance vs. Self-Paying</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Let's run a realistic scenario for a medium-sized dog from age 2 to 10 (8 years):
+          Let&apos;s run a realistic scenario for a medium-sized dog from age 2 to 10 (8 years):
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
@@ -130,12 +130,12 @@ export default function PetInsuranceWorthItPage() {
           </div>
         </div>
         <p className="text-gray-700 mb-6 text-sm leading-relaxed bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-          <strong>Result:</strong> In this scenario, insurance saves ~$4,700 over 8 years — even factoring in all premiums. And that's with only ONE major incident. Most dogs have multiple health issues over their lifetime.
+          <strong>Result:</strong> In this scenario, insurance saves ~$4,700 over 8 years — even factoring in all premiums. And that&apos;s with only ONE major incident. Most dogs have multiple health issues over their lifetime.
         </p>
 
         <h2 className="text-2xl font-bold mb-4">When Pet Insurance Is NOT Worth It</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Fairness demands we acknowledge the scenarios where insurance doesn't make financial sense:
+          Fairness demands we acknowledge the scenarios where insurance doesn&apos;t make financial sense:
         </p>
         <ul className="space-y-3 mb-6">
           {[
@@ -159,7 +159,7 @@ export default function PetInsuranceWorthItPage() {
           Get pet insurance when your pet is young and healthy — ideally before age 3 for dogs, age 2 for cats. Waiting until your pet is sick means pre-existing conditions exclusions will make the policy far less valuable.
         </p>
         <p className="text-gray-700 mb-6 leading-relaxed">
-          For most pet owners, the right question isn't "will I get my money back?" — it's "can I afford a $6,000 vet bill without insurance?" If the answer is no or even "maybe not comfortably," insurance is worth it.
+          For most pet owners, the right question isn&apos;t &quot;will I get my money back?&quot; — it&apos;s &quot;can I afford a $6,000 vet bill without insurance?&quot; If the answer is no or even &quot;maybe not comfortably,&quot; insurance is worth it.
         </p>
 
         <div className="bg-emerald-600 text-white rounded-xl p-8 text-center">

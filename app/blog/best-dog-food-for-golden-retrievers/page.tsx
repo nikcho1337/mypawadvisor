@@ -30,7 +30,7 @@ const picks = [
     description: "Breed-specific formula with EPA, DHA, and taurine to support Golden Retriever heart health. Exclusive kibble shape encourages slower eating.",
     pros: ["Tailored for Goldens specifically", "Heart health support (taurine)", "Promotes healthy coat", "Optimal stool quality"],
     cons: ["Premium price", "Contains some by-products"],
-    affiliateHref: "#",
+    affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Golden+Retriever+Adult+dry+dog+food&tag=pawadvisor-20",
   },
   {
     rank: 2,
@@ -42,7 +42,7 @@ const picks = [
     description: "Clinically proven antioxidants, glucosamine and chondroitin for joint support. Specially sized kibble for large breeds.",
     pros: ["Glucosamine & chondroitin", "Vet #1 recommended brand", "Controlled calorie content", "Natural ingredients"],
     cons: ["Not grain-free", "Some dogs find it too bland"],
-    affiliateHref: "#",
+    affiliateHref: "https://www.amazon.com/s?k=Hill%27s+Science+Diet+Large+Breed+Adult+dog+food&tag=pawadvisor-20",
   },
   {
     rank: 3,
@@ -54,7 +54,7 @@ const picks = [
     description: "Real chicken as first ingredient with live probiotics for digestive health. Omega-6 fatty acids nourish Golden's iconic golden coat.",
     pros: ["Real chicken first", "Live probiotics", "Great for coat", "Widely available"],
     cons: ["Contains corn and wheat", "Higher in calories"],
-    affiliateHref: "#",
+    affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Large+Breed+Adult+chicken+rice+dog+food&tag=pawadvisor-20",
   },
   {
     rank: 4,
@@ -66,7 +66,7 @@ const picks = [
     description: "85% quality animal ingredients from free-run poultry, nest-laid eggs, and wild-caught fish. Biologically appropriate diet.",
     pros: ["85% animal ingredients", "No grain, no filler", "Excellent protein quality", "Mimics natural diet"],
     cons: ["Very expensive", "Rich — transition slowly"],
-    affiliateHref: "#",
+    affiliateHref: "https://www.amazon.com/s?k=Orijen+Large+Breed+Adult+dog+food&tag=pawadvisor-20",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function GoldenRetrieverFoodPage() {
             Best Dog Food for Golden Retrievers in 2026 (Vet-Approved)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            Golden Retrievers are one of America's most beloved breeds — but they come with specific health concerns including heart disease, hip dysplasia, and a love of overeating. The right food makes a real difference. We reviewed 18 formulas to find the best options.
+            Golden Retrievers are one of America&apos;s most beloved breeds — but they come with specific health concerns including heart disease, hip dysplasia, and a love of overeating. The right food makes a real difference. We reviewed 18 formulas to find the best options.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <span>📅 January 20, 2026</span>
@@ -129,7 +129,7 @@ export default function GoldenRetrieverFoodPage() {
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Food for Golden Retrievers 2026</h2>
           <ul className="text-sm space-y-1 text-gray-700">
             <li><strong>Best Overall:</strong> Royal Canin Golden Retriever Adult — breed-specific, heart health support</li>
-            <li><strong>Best Vet-Recommended:</strong> Hill's Science Diet Large Breed — glucosamine, joint support</li>
+            <li><strong>Best Vet-Recommended:</strong> Hill&apos;s Science Diet Large Breed — glucosamine, joint support</li>
             <li><strong>Best Value:</strong> Purina Pro Plan Large Breed — real chicken, probiotics, great coat support</li>
             <li><strong>Best Grain-Free:</strong> Orijen Large Breed — 85% animal ingredients, biologically appropriate</li>
           </ul>
@@ -217,7 +217,7 @@ export default function GoldenRetrieverFoodPage() {
               ))}
             </tbody>
           </table>
-          <p className="text-xs text-gray-500 mt-3">*Amounts are general guidelines. Adjust based on your dog's activity level and body condition. Consult your vet for personalized recommendations.</p>
+          <p className="text-xs text-gray-500 mt-3">*Amounts are general guidelines. Adjust based on your dog&apos;s activity level and body condition. Consult your vet for personalized recommendations.</p>
         </div>
 
         {/* CTA */}

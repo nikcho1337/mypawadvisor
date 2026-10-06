@@ -18,10 +18,10 @@ const jsonLd = {
 };
 
 const picks = [
-  { rank: 1, name: "Royal Canin Indoor Adult (Dry)", badge: "Best Overall Dry", badgeColor: "bg-amber-100 text-amber-700", price: "$$$", rating: 4.8, type: "Dry", description: "Specifically designed for indoor cats with controlled calorie content to prevent obesity, hairball reduction formula, and high digestibility.", pros: ["Indoor cat formula", "Hairball control", "Weight management", "High digestibility"], cons: ["Expensive", "Contains by-products"], affiliateHref: "#" },
-  { rank: 2, name: "Wellness CORE Grain-Free Wet (Turkey & Chicken)", badge: "Best Wet Food", badgeColor: "bg-blue-100 text-blue-700", price: "$$", rating: 4.8, type: "Wet", description: "High-protein, grain-free wet food with real turkey and chicken. No fillers, by-products, or artificial additives. Cats love the texture.", pros: ["High protein (>12% wet)", "Grain-free", "No artificial additives", "Excellent palatability"], cons: ["Pricier per serving", "Needs refrigeration after opening"], affiliateHref: "#" },
-  { rank: 3, name: "Purina ONE Indoor Advantage (Dry)", badge: "Best Value", badgeColor: "bg-green-100 text-green-700", price: "$", rating: 4.6, type: "Dry", description: "Real turkey as the first ingredient with omega-6 fatty acids, antioxidants, and natural fiber for hairball control. Affordable and widely available.", pros: ["Real turkey first", "Affordable", "Hairball control", "Widely available"], cons: ["Contains grains", "Lower protein than premium brands"], affiliateHref: "#" },
-  { rank: 4, name: "Tiki Cat After Dark (Wet)", badge: "Best for Picky Eaters", badgeColor: "bg-purple-100 text-purple-700", price: "$$$", rating: 4.7, type: "Wet", description: "Whole meat chunks in a rich, meaty broth. No plant proteins, no carrageenan, no added thickeners. Irresistible even for the fussiest cats.", pros: ["Whole meat pieces", "No plant proteins", "No carrageenan", "Variety of flavors"], cons: ["Very expensive", "Hard to find"], affiliateHref: "#" },
+  { rank: 1, name: "Royal Canin Indoor Adult (Dry)", badge: "Best Overall Dry", badgeColor: "bg-amber-100 text-amber-700", price: "$$$", rating: 4.8, type: "Dry", description: "Specifically designed for indoor cats with controlled calorie content to prevent obesity, hairball reduction formula, and high digestibility.", pros: ["Indoor cat formula", "Hairball control", "Weight management", "High digestibility"], cons: ["Expensive", "Contains by-products"], affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+Indoor+Adult+dry+cat+food&tag=pawadvisor-20" },
+  { rank: 2, name: "Wellness CORE Grain-Free Wet (Turkey & Chicken)", badge: "Best Wet Food", badgeColor: "bg-blue-100 text-blue-700", price: "$$", rating: 4.8, type: "Wet", description: "High-protein, grain-free wet food with real turkey and chicken. No fillers, by-products, or artificial additives. Cats love the texture.", pros: ["High protein (>12% wet)", "Grain-free", "No artificial additives", "Excellent palatability"], cons: ["Pricier per serving", "Needs refrigeration after opening"], affiliateHref: "https://www.amazon.com/s?k=Wellness+CORE+grain+free+wet+cat+food+turkey+chicken&tag=pawadvisor-20" },
+  { rank: 3, name: "Purina ONE Indoor Advantage (Dry)", badge: "Best Value", badgeColor: "bg-green-100 text-green-700", price: "$", rating: 4.6, type: "Dry", description: "Real turkey as the first ingredient with omega-6 fatty acids, antioxidants, and natural fiber for hairball control. Affordable and widely available.", pros: ["Real turkey first", "Affordable", "Hairball control", "Widely available"], cons: ["Contains grains", "Lower protein than premium brands"], affiliateHref: "https://www.amazon.com/s?k=Purina+ONE+Indoor+Advantage+dry+cat+food&tag=pawadvisor-20" },
+  { rank: 4, name: "Tiki Cat After Dark (Wet)", badge: "Best for Picky Eaters", badgeColor: "bg-purple-100 text-purple-700", price: "$$$", rating: 4.7, type: "Wet", description: "Whole meat chunks in a rich, meaty broth. No plant proteins, no carrageenan, no added thickeners. Irresistible even for the fussiest cats.", pros: ["Whole meat pieces", "No plant proteins", "No carrageenan", "Variety of flavors"], cons: ["Very expensive", "Hard to find"], affiliateHref: "https://www.amazon.com/s?k=Tiki+Cat+After+Dark+wet+cat+food&tag=pawadvisor-20" },
 ];
 
 function StarRating({ rating }: { rating: number }) {
@@ -50,7 +50,7 @@ export default function BestCatFoodPage() {
             Best Cat Food in 2026: Top Picks for Every Cat
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            Cats are obligate carnivores — they need high-protein, meat-based diets to thrive. Yet most grocery store brands are loaded with fillers and carbohydrates. We reviewed 25+ brands to find cat foods that actually meet your cat's nutritional needs.
+            Cats are obligate carnivores — they need high-protein, meat-based diets to thrive. Yet most grocery store brands are loaded with fillers and carbohydrates. We reviewed 25+ brands to find cat foods that actually meet your cat&apos;s nutritional needs.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
             <span>📅 January 15, 2026</span>
@@ -88,7 +88,7 @@ export default function BestCatFoodPage() {
 
         <h2 className="text-2xl font-bold mb-4">Wet vs. Dry Cat Food: Which Is Better?</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          The short answer: wet food is generally better for cats. Cats evolved from desert animals and have a low thirst drive — they get most of their hydration from prey. Wet food mimics this by providing 70–80% moisture content vs. dry food's 10%.
+          The short answer: wet food is generally better for cats. Cats evolved from desert animals and have a low thirst drive — they get most of their hydration from prey. Wet food mimics this by providing 70–80% moisture content vs. dry food&apos;s 10%.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -149,15 +149,15 @@ export default function BestCatFoodPage() {
 
         <h2 className="text-2xl font-bold mb-4">What to Look for on a Cat Food Label</h2>
         <div className="space-y-3 mb-8 text-sm text-gray-700 leading-relaxed">
-          <p><strong>1. Named protein first.</strong> "Chicken," "salmon," or "turkey" should be the first ingredient — not "poultry meal" or "meat by-products."</p>
-          <p><strong>2. AAFCO statement.</strong> Look for "complete and balanced" for your cat's life stage. If it says "for supplemental feeding only," it's not a complete diet.</p>
+          <p><strong>1. Named protein first.</strong> &quot;Chicken,&quot; &quot;salmon,&quot; or &quot;turkey&quot; should be the first ingredient — not &quot;poultry meal&quot; or &quot;meat by-products.&quot;</p>
+          <p><strong>2. AAFCO statement.</strong> Look for &quot;complete and balanced&quot; for your cat&apos;s life stage. If it says &quot;for supplemental feeding only,&quot; it&apos;s not a complete diet.</p>
           <p><strong>3. Moisture content.</strong> For wet food, look for 70%+ moisture. For dry food, 10% is normal.</p>
-          <p><strong>4. Limited carbohydrates.</strong> Cats don't need many carbs. Avoid formulas where corn, wheat, or rice are among the first 3 ingredients.</p>
-          <p><strong>5. Taurine.</strong> Cats can't synthesize taurine — it must be in their diet. All quality cat foods include it.</p>
+          <p><strong>4. Limited carbohydrates.</strong> Cats don&apos;t need many carbs. Avoid formulas where corn, wheat, or rice are among the first 3 ingredients.</p>
+          <p><strong>5. Taurine.</strong> Cats can&apos;t synthesize taurine — it must be in their diet. All quality cat foods include it.</p>
         </div>
 
         <div className="bg-purple-600 text-white rounded-xl p-8 text-center">
-          <h2 className="text-xl font-bold mb-2">Don't Forget Pet Insurance for Your Cat</h2>
+          <h2 className="text-xl font-bold mb-2">Don&apos;t Forget Pet Insurance for Your Cat</h2>
           <p className="text-purple-100 mb-4 text-sm">Cat insurance starts at just $15/month. Protect against unexpected vet bills.</p>
           <Link href="/insurance" className="bg-white text-purple-700 font-bold px-6 py-3 rounded-full hover:bg-purple-50 transition-colors inline-block text-sm">
             Compare Cat Insurance Plans →

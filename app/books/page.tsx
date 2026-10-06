@@ -199,7 +199,7 @@ export default function BooksPage() {
                 {/* What you'll learn */}
                 <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-xl p-5">
                   <h3 className="font-bold text-emerald-900 mb-3 text-sm uppercase tracking-wide">
-                    What you'll learn
+                    What you&apos;ll learn
                   </h3>
                   <ul className="space-y-2">
                     {book.learn.map((item) => (
@@ -270,7 +270,7 @@ export default function BooksPage() {
           <p className="text-[#ff9900] font-bold text-xs uppercase tracking-widest mb-2">🎧 Audible</p>
           <h2 className="text-3xl font-extrabold mb-4">How to Listen to Any of These Free</h2>
           <p className="text-gray-300 mb-10 max-w-xl mx-auto">
-            Audible's free trial gives you a credit good for any audiobook on this page. Cancel anytime —
+            Audible&apos;s free trial gives you a credit good for any audiobook on this page. Cancel anytime —
             the book is yours to keep forever.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-10 text-left">

@@ -19,9 +19,9 @@ const jsonLd = {
 };
 
 const picks = [
-  { rank: 1, name: "Royal Canin French Bulldog Adult", badge: "Best Overall", badgeColor: "bg-amber-100 text-amber-700", price: "$$$", description: "Specifically formulated for French Bulldogs with a unique D-shape kibble for their flat face and digestive support with exclusive fiber blend.", affiliateHref: "#" },
-  { rank: 2, name: "Purina Pro Plan Sensitive Skin & Stomach", badge: "Best for Sensitive Stomachs", badgeColor: "bg-blue-100 text-blue-700", price: "$$", description: "Salmon as the first ingredient with prebiotic fiber for digestive support. Ideal for Frenchies prone to food sensitivities.", affiliateHref: "#" },
-  { rank: 3, name: "Hill's Science Diet Small Paws", badge: "Best Vet-Recommended", badgeColor: "bg-green-100 text-green-700", price: "$$", description: "Clinically proven antioxidants for a healthy immune system. High digestibility for a clean and healthy stool.", affiliateHref: "#" },
+  { rank: 1, name: "Royal Canin French Bulldog Adult", badge: "Best Overall", badgeColor: "bg-amber-100 text-amber-700", price: "$$$", description: "Specifically formulated for French Bulldogs with a unique D-shape kibble for their flat face and digestive support with exclusive fiber blend.", affiliateHref: "https://www.amazon.com/s?k=Royal+Canin+French+Bulldog+Adult+dry+dog+food&tag=pawadvisor-20" },
+  { rank: 2, name: "Purina Pro Plan Sensitive Skin & Stomach", badge: "Best for Sensitive Stomachs", badgeColor: "bg-blue-100 text-blue-700", price: "$$", description: "Salmon as the first ingredient with prebiotic fiber for digestive support. Ideal for Frenchies prone to food sensitivities.", affiliateHref: "https://www.amazon.com/s?k=Purina+Pro+Plan+Sensitive+Skin+and+Stomach+dog+food&tag=pawadvisor-20" },
+  { rank: 3, name: "Hill's Science Diet Small Paws", badge: "Best Vet-Recommended", badgeColor: "bg-green-100 text-green-700", price: "$$", description: "Clinically proven antioxidants for a healthy immune system. High digestibility for a clean and healthy stool.", affiliateHref: "https://www.amazon.com/s?k=Hill%27s+Science+Diet+Small+Paws+adult+dog+food&tag=pawadvisor-20" },
 ];
 
 export default function FrenchBulldogFoodPage() {
@@ -68,14 +68,14 @@ export default function FrenchBulldogFoodPage() {
           <ul className="text-sm space-y-1 text-gray-700">
             <li><strong>Best Overall:</strong> Royal Canin French Bulldog Adult — the only formula designed specifically for this breed</li>
             <li><strong>Best for Sensitive Stomachs:</strong> Purina Pro Plan Sensitive Skin & Stomach — salmon-based, prebiotic fiber</li>
-            <li><strong>Best Vet-Recommended:</strong> Hill's Science Diet Small Paws — clinically proven antioxidants, high digestibility</li>
+            <li><strong>Best Vet-Recommended:</strong> Hill&apos;s Science Diet Small Paws — clinically proven antioxidants, high digestibility</li>
           </ul>
         </div>
 
         {/* WHY FRENCHIES ARE DIFFERENT */}
         <h2 className="text-2xl font-bold mb-4">Why French Bulldogs Need Special Food</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          French Bulldogs aren't just small dogs — they have specific anatomical and physiological traits that affect what they can and should eat:
+          French Bulldogs aren&apos;t just small dogs — they have specific anatomical and physiological traits that affect what they can and should eat:
         </p>
         <ul className="space-y-3 mb-6">
           {[

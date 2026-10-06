@@ -6,17 +6,13 @@
  * Run: node scripts/submit-traffic.js
  */
 
-const SITE = "https://mypawadvisor.com";
+const SITE = "https://www.mypawadvisor.com";
 const RSS = `${SITE}/feed.xml`;
 const SITEMAP = `${SITE}/sitemap.xml`;
 
 // ─── RSS FEED AGGREGATORS ──────────────────────────────────────────────────
 // These services index RSS feeds and distribute content to their readers.
-const RSS_PING_SERVICES = [
-  // Standard RSS ping endpoints
-  `https://rpc.pingomatic.com/`,  // (POST XML-RPC — handled separately)
-  `https://ping.blogs.yandex.ru/RPC2`,
-];
+// (RSS ping endpoints are handled by the XML-RPC section below.)
 
 // Feedly, Flipboard, NewsBlur etc. auto-discover via feed.xml link in <head>
 // We just need to add the <link> tag to layout (done below).

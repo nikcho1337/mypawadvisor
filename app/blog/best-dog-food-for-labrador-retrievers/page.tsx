@@ -186,7 +186,7 @@ export default function LabradorFoodPage() {
             Best Dog Food for Labrador Retrievers in 2026 (Veterinarian-Approved)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            Labrador Retrievers are America's most popular dog breed — and one of the most food-obsessed. Their genetic drive to eat makes obesity, joint stress, and bloat real risks. We reviewed 22 formulas to find the foods that keep Labs lean, active, and healthy for the long haul.
+            Labrador Retrievers are America&apos;s most popular dog breed — and one of the most food-obsessed. Their genetic drive to eat makes obesity, joint stress, and bloat real risks. We reviewed 22 formulas to find the foods that keep Labs lean, active, and healthy for the long haul.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <span>📅 April 10, 2026</span>
@@ -219,7 +219,7 @@ export default function LabradorFoodPage() {
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Food for Labs 2026</h2>
           <ul className="text-sm space-y-1 text-gray-700">
             <li><strong>Best Overall:</strong> Royal Canin Labrador Retriever Adult — breed-specific kibble, bloat-reducing shape, L-carnitine</li>
-            <li><strong>Best Vet-Recommended:</strong> Hill's Science Diet Large Breed — glucosamine, joint support, controlled calories</li>
+            <li><strong>Best Vet-Recommended:</strong> Hill&apos;s Science Diet Large Breed — glucosamine, joint support, controlled calories</li>
             <li><strong>Best Value:</strong> Purina Pro Plan Large Breed — real chicken, probiotics, research-backed</li>
             <li><strong>Best Grain-Free:</strong> Wellness Core Large Breed — high protein, kidney-friendly, no grains</li>
           </ul>
@@ -228,7 +228,7 @@ export default function LabradorFoodPage() {
         {/* WHY LABS NEED SPECIAL FOOD */}
         <h2 className="text-2xl font-bold mb-4">Why Labrador Retrievers Have Unique Nutritional Needs</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Labs aren't just big dogs who love food — there's science behind their insatiable appetite. A 2016 Cambridge University study found that many Labs carry a variant in the <em>POMC</em> gene, which impairs their ability to feel full. This single genetic quirk explains why Labs will eat until they're sick — and why their diet needs active management.
+          Labs aren&apos;t just big dogs who love food — there&apos;s science behind their insatiable appetite. A 2016 Cambridge University study found that many Labs carry a variant in the <em>POMC</em> gene, which impairs their ability to feel full. This single genetic quirk explains why Labs will eat until they&apos;re sick — and why their diet needs active management.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {[
@@ -329,7 +329,7 @@ export default function LabradorFoodPage() {
         {/* WHAT TO LOOK FOR */}
         <h2 className="text-2xl font-bold mb-4">What to Look for in Lab Food</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Not every "large breed" food is right for a Labrador. Here are the specific things to check on the label:
+          Not every &quot;large breed&quot; food is right for a Labrador. Here are the specific things to check on the label:
         </p>
         <div className="space-y-3 mb-8">
           {[
@@ -367,7 +367,7 @@ export default function LabradorFoodPage() {
         {/* FEEDING GUIDE */}
         <h2 className="text-2xl font-bold mb-4">How Much to Feed a Labrador Retriever</h2>
         <p className="text-gray-700 mb-4 text-sm">
-          Always measure portions — Labs will self-regulate toward "more." These are starting guidelines based on typical calorie densities (~360 kcal/cup). Adjust based on body condition score and activity level.
+          Always measure portions — Labs will self-regulate toward &quot;more.&quot; These are starting guidelines based on typical calorie densities (~360 kcal/cup). Adjust based on body condition score and activity level.
         </p>
         <div className="bg-gray-50 rounded-xl p-5 mb-8 overflow-x-auto">
           <table className="w-full text-sm">
@@ -396,7 +396,7 @@ export default function LabradorFoodPage() {
             </tbody>
           </table>
           <p className="text-xs text-gray-500 mt-3">
-            *Adjust based on your Lab's body condition score. You should feel ribs easily but not see them. Consult your vet for personalized guidance.
+            *Adjust based on your Lab&apos;s body condition score. You should feel ribs easily but not see them. Consult your vet for personalized guidance.
           </p>
         </div>
 

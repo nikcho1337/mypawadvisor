@@ -132,8 +132,8 @@ export default function DogsPage() {
           <h2 className="text-2xl font-bold mb-6">How to Choose the Best Dog Food</h2>
           <div className="space-y-5 text-sm text-gray-700 leading-relaxed">
             <p><strong>1. Look at the first ingredient.</strong> It should be a named protein source — chicken, beef, salmon, or turkey — not a by-product or grain.</p>
-            <p><strong>2. Match food to your dog's life stage.</strong> Puppies, adults, and seniors have different nutritional needs. Always choose age-appropriate formulas.</p>
-            <p><strong>3. Consider your dog's breed size.</strong> Large breeds benefit from controlled calcium and phosphorus levels. Small breeds need smaller kibble and higher caloric density.</p>
+            <p><strong>2. Match food to your dog&apos;s life stage.</strong> Puppies, adults, and seniors have different nutritional needs. Always choose age-appropriate formulas.</p>
+            <p><strong>3. Consider your dog&apos;s breed size.</strong> Large breeds benefit from controlled calcium and phosphorus levels. Small breeds need smaller kibble and higher caloric density.</p>
             <p><strong>4. Avoid unnecessary fillers.</strong> Corn, wheat, and soy as primary ingredients add calories with minimal nutrition. Look for whole grains or grain-free options instead.</p>
           </div>
           <div className="mt-6">

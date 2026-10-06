@@ -193,7 +193,7 @@ export default function SeniorDogFoodPage() {
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-2">🏆 Quick Answer: Best Senior Dog Food 2026</h2>
           <ul className="text-sm space-y-1 text-gray-700">
-            <li><strong>Best Overall:</strong> Hill's Science Diet Adult 7+ — #1 vet-recommended, antioxidants, DHA, omega-3s</li>
+            <li><strong>Best Overall:</strong> Hill&apos;s Science Diet Adult 7+ — #1 vet-recommended, antioxidants, DHA, omega-3s</li>
             <li><strong>Best for Brain Health:</strong> Purina Pro Plan Bright Mind 7+ — MCTs clinically shown to improve alertness</li>
             <li><strong>Best for Small Breeds:</strong> Royal Canin Aging 12+ — adapted for tiny, long-lived dogs</li>
             <li><strong>Best Natural:</strong> Blue Buffalo Healthy Aging — real chicken, LifeSource antioxidant blend</li>
@@ -204,7 +204,7 @@ export default function SeniorDogFoodPage() {
         {/* WHEN IS A DOG SENIOR */}
         <h2 className="text-2xl font-bold mb-4">When Is a Dog Considered Senior?</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          There's no single age cutoff — it depends heavily on breed size. Large breeds age faster because their bodies work harder to maintain a bigger frame. Here's a general guide:
+          There&apos;s no single age cutoff — it depends heavily on breed size. Large breeds age faster because their bodies work harder to maintain a bigger frame. Here&apos;s a general guide:
         </p>
         <div className="bg-gray-50 rounded-xl p-5 mb-8 overflow-x-auto">
           <table className="w-full text-sm">
@@ -235,9 +235,9 @@ export default function SeniorDogFoodPage() {
         </div>
 
         {/* WHAT CHANGES */}
-        <h2 className="text-2xl font-bold mb-4">How Aging Changes Your Dog's Nutritional Needs</h2>
+        <h2 className="text-2xl font-bold mb-4">How Aging Changes Your Dog&apos;s Nutritional Needs</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Senior dogs aren't just older adults — their physiology changes in ways that require a fundamentally different approach to nutrition:
+          Senior dogs aren&apos;t just older adults — their physiology changes in ways that require a fundamentally different approach to nutrition:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {[
@@ -365,7 +365,7 @@ export default function SeniorDogFoodPage() {
         {/* TRANSITION GUIDE */}
         <h2 className="text-2xl font-bold mb-4">How to Transition Your Dog to Senior Food</h2>
         <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-          Senior dogs often have more sensitive digestive systems. Switch too fast and you'll get loose stools and a dog who refuses to eat. Follow this 10-day transition schedule:
+          Senior dogs often have more sensitive digestive systems. Switch too fast and you&apos;ll get loose stools and a dog who refuses to eat. Follow this 10-day transition schedule:
         </p>
         <div className="bg-gray-50 rounded-xl p-5 mb-8 overflow-x-auto">
           <table className="w-full text-sm">
@@ -430,7 +430,7 @@ export default function SeniorDogFoodPage() {
 
         {/* SIGNS */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
-          <h2 className="font-bold text-lg mb-3">⚠️ Signs Your Senior Dog's Diet Needs to Change</h2>
+          <h2 className="font-bold text-lg mb-3">⚠️ Signs Your Senior Dog&apos;s Diet Needs to Change</h2>
           <ul className="text-sm space-y-2 text-gray-700">
             {[
               "Visible muscle loss or a prominent spine and hip bones",

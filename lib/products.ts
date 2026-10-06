@@ -34,6 +34,12 @@ export interface Product {
   featured: boolean;
   /** ISO yyyy-mm-dd — drives JSON-LD datePublished, the visible date, and RSS pubDate */
   datePublished: string;
+  /** ISO yyyy-mm-dd of the last substantive update — JSON-LD dateModified, visible "Updated" label, sitemap lastmod */
+  dateModified?: string;
+  /** Optional side-by-side table for roundup-style reviews (rendered above the review body) */
+  comparison?: { title?: string; columns: string[]; rows: { name: string; values: string[]; href?: string; badge?: string }[]; note?: string };
+  /** Optional FAQ — rendered as an accordion and emitted as FAQPage JSON-LD */
+  faq?: { q: string; a: string }[];
 }
 
 export const products: Product[] = [
@@ -1667,7 +1673,7 @@ export const products: Product[] = [
       { name: "Safari Cat Grooming Glove", reason: "Alternative for cats who won't tolerate any brush — bristle glove gets face/body in one pass", href: amazonSearchLink("Safari cat grooming glove") },
       { name: "ConairPRO Dog Face & Paw Trimmer", reason: "If the problem is actually long face hair (not debris), consider a trimmer instead", href: amazonSearchLink("ConairPRO dog face paw trimmer") },
     ],
-    affiliateHref: "https://amzn.to/4cSx0px",
+    affiliateHref: amazonSearchLink("FURminator Sensitive Areas Tool for dogs and cats"),
     featured: false,
   },
   {

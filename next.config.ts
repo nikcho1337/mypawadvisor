@@ -33,6 +33,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Canonical host is www. Vercel's domain redirect answers 307 (temporary); this answers 308 when the
+      // request reaches Next, so search engines consolidate signals on the www URLs.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "mypawadvisor.com" }],
+        destination: "https://www.mypawadvisor.com/:path*",
+        permanent: true,
+      },
       {
         source: "/blog/best-dog-food-for-labrador-retriever",
         destination: "/blog/best-dog-food-for-labrador-retrievers",

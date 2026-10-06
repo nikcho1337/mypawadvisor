@@ -152,7 +152,7 @@ export default function BestDogProbioticsPage() {
             Best Dog Probiotics in 2026 (Vet-Recommended for Gut Health)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            Gut health is the fastest-growing category in pet wellness — and for good reason. A dog's gut microbiome influences digestion, immune function, skin health, mood, and even longevity. We ranked the best dog probiotics of 2026 by strain diversity, clinical evidence, palatability, and value.
+            Gut health is the fastest-growing category in pet wellness — and for good reason. A dog&apos;s gut microbiome influences digestion, immune function, skin health, mood, and even longevity. We ranked the best dog probiotics of 2026 by strain diversity, clinical evidence, palatability, and value.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <span>📅 April 11, 2026</span>
@@ -192,9 +192,9 @@ export default function BestDogProbioticsPage() {
         </div>
 
         {/* WHY GUT HEALTH MATTERS */}
-        <h2 className="text-2xl font-bold mb-4">Why Your Dog's Gut Health Is Everything</h2>
+        <h2 className="text-2xl font-bold mb-4">Why Your Dog&apos;s Gut Health Is Everything</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          The gut isn't just where food is digested — it's where 70% of the immune system lives. Research over the past decade has established the gut-brain axis in dogs, linking microbiome health to anxiety, mood, and behavior. A disrupted gut microbiome (dysbiosis) has been linked to chronic diarrhea, skin allergies, ear infections, obesity, and inflammatory bowel disease in dogs.
+          The gut isn&apos;t just where food is digested — it&apos;s where 70% of the immune system lives. Research over the past decade has established the gut-brain axis in dogs, linking microbiome health to anxiety, mood, and behavior. A disrupted gut microbiome (dysbiosis) has been linked to chronic diarrhea, skin allergies, ear infections, obesity, and inflammatory bowel disease in dogs.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {[

@@ -362,12 +362,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex-1 text-center md:text-left">
-            <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-2">Editor's Top Pick — Dog Health & Longevity</p>
+            <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-2">Editor&apos;s Top Pick — Dog Health & Longevity</p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-tight">
               Turn Your Dog Back Into the Fierce, Healthy Animal They Were Born to Be
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-lg">
-              <strong>UltraK9 Pro</strong> contains a spectrum of primal nutrients that clear your dog's body of toxins, strengthen their liver, kidneys, and thyroid, and fight the GMOs, preservatives, and allergens hidden in commercial food. Better digestion, less inflammation, healthier joints — and years added back to their life.
+              <strong>UltraK9 Pro</strong> contains a spectrum of primal nutrients that clear your dog&apos;s body of toxins, strengthen their liver, kidneys, and thyroid, and fight the GMOs, preservatives, and allergens hidden in commercial food. Better digestion, less inflammation, healthier joints — and years added back to their life.
             </p>
             <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-5">
               {[
@@ -459,7 +459,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 py-14">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-1">Editor's Picks</p>
+            <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-1">Editor&apos;s Picks</p>
             <h2 className="text-3xl font-extrabold text-gray-900">Top Picks This Month</h2>
           </div>
           <Link href="/reviews" className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 hidden md:block">
@@ -517,7 +517,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-8">
             <div>
               <p className="text-gray-500 font-semibold text-sm uppercase tracking-wider mb-1">All Tested Products</p>
-              <h2 className="text-3xl font-extrabold text-gray-900">Every Review We've Written</h2>
+              <h2 className="text-3xl font-extrabold text-gray-900">Every Review We&apos;ve Written</h2>
             </div>
           </div>
 
@@ -556,7 +556,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Why Pet Owners Trust Us</h2>
-          <p className="text-gray-500 max-w-xl mx-auto">We're pet owners first. Every product is tested with real animals, not just read about online.</p>
+          <p className="text-gray-500 max-w-xl mx-auto">We&apos;re pet owners first. Every product is tested with real animals, not just read about online.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
@@ -669,7 +669,7 @@ export default function HomePage() {
                   <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 group-hover:text-emerald-600 transition-colors">
                     Is Pet Insurance Actually Worth It?
                   </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">We crunched 5 years of vet cost data vs. premiums. The honest answer — including when it doesn't make sense.</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">We crunched 5 years of vet cost data vs. premiums. The honest answer — including when it doesn&apos;t make sense.</p>
                 </div>
               </Link>
             </div>
@@ -751,7 +751,7 @@ export default function HomePage() {
       {/* INSURANCE CTA */}
       <section className="bg-emerald-600 text-white py-14 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-3">Don't Forget to Protect Your Pet</h2>
+          <h2 className="text-3xl font-extrabold mb-3">Don&apos;t Forget to Protect Your Pet</h2>
           <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">
             The right product keeps your pet happy. Pet insurance keeps them healthy when the unexpected happens. Compare top plans — free, in 60 seconds.
           </p>

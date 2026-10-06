@@ -39,12 +39,12 @@ export default function HealthyPawsReviewPage() {
       <article className="max-w-4xl mx-auto px-4 py-8">
         {/* HEADER */}
         <header className="mb-8">
-          <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Editor's Choice 2026</span>
+          <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Editor&apos;s Choice 2026</span>
           <h1 className="text-3xl md:text-4xl font-bold mt-3 mb-3 leading-tight">
             Healthy Paws Pet Insurance Review 2026: Best Overall?
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            After reviewing 12 pet insurance providers, Healthy Paws consistently tops our list for comprehensive coverage, fast claims, and unlimited annual benefits. Here's everything you need to know.
+            After reviewing 12 pet insurance providers, Healthy Paws consistently tops our list for comprehensive coverage, fast claims, and unlimited annual benefits. Here&apos;s everything you need to know.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
             <span>📅 Updated January 2026</span>
@@ -57,7 +57,7 @@ export default function HealthyPawsReviewPage() {
         <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-3">🏆 PawsGuide Verdict</h2>
           <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-            <strong>Healthy Paws is the best pet insurance for most dog and cat owners.</strong> The unlimited annual benefit means you'll never hit a cap when your pet needs expensive surgery. The 90% reimbursement rate and simple mobile app make claims painless.
+            <strong>Healthy Paws is the best pet insurance for most dog and cat owners.</strong> The unlimited annual benefit means you&apos;ll never hit a cap when your pet needs expensive surgery. The 90% reimbursement rate and simple mobile app make claims painless.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             {[
@@ -72,26 +72,26 @@ export default function HealthyPawsReviewPage() {
               </div>
             ))}
           </div>
-          <a href="#" className="block text-center bg-emerald-600 text-white font-bold py-3 rounded-full hover:bg-emerald-700 transition-colors">
+          <a href="https://www.healthypawspetinsurance.com/" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-emerald-600 text-white font-bold py-3 rounded-full hover:bg-emerald-700 transition-colors">
             Get Your Free Healthy Paws Quote →
           </a>
-          <p className="text-xs text-gray-400 text-center mt-2">Affiliate link – we may earn a commission at no extra cost to you</p>
+          <p className="text-xs text-gray-400 text-center mt-2">Opens Healthy Paws&apos; official site in a new tab. We are not currently paid by Healthy Paws.</p>
         </div>
 
         {/* MAIN CONTENT */}
         <div className="prose max-w-none">
           <h2 className="text-2xl font-bold mb-4">What Is Healthy Paws Pet Insurance?</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Healthy Paws is one of the most popular pet insurance companies in the United States, founded in 2009. It's consistently rated #1 by consumer review sites and has processed over a million claims. The company focuses exclusively on accident and illness coverage — no wellness plans — which keeps premiums competitive and the product simple to understand.
+            Healthy Paws is one of the most popular pet insurance companies in the United States, founded in 2009. It&apos;s consistently rated #1 by consumer review sites and has processed over a million claims. The company focuses exclusively on accident and illness coverage — no wellness plans — which keeps premiums competitive and the product simple to understand.
           </p>
 
-          <h2 className="text-2xl font-bold mb-4 mt-8">Healthy Paws Coverage: What's Included?</h2>
+          <h2 className="text-2xl font-bold mb-4 mt-8">Healthy Paws Coverage: What&apos;s Included?</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Healthy Paws covers a wide range of accidents and illnesses. Unlike many competitors, there are no per-incident limits, no annual caps, and no lifetime limits — just your deductible and chosen reimbursement percentage.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h3 className="font-bold text-green-800 mb-2">✅ What's Covered</h3>
+              <h3 className="font-bold text-green-800 mb-2">✅ What&apos;s Covered</h3>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Accidents (injuries, poisoning)</li>
                 <li>• Illnesses (cancer, diabetes, infections)</li>
@@ -104,7 +104,7 @@ export default function HealthyPawsReviewPage() {
               </ul>
             </div>
             <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <h3 className="font-bold text-red-700 mb-2">❌ What's NOT Covered</h3>
+              <h3 className="font-bold text-red-700 mb-2">❌ What&apos;s NOT Covered</h3>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Pre-existing conditions</li>
                 <li>• Routine wellness care (vaccines, checkups)</li>
@@ -118,7 +118,7 @@ export default function HealthyPawsReviewPage() {
 
           <h2 className="text-2xl font-bold mb-4 mt-8">How Much Does Healthy Paws Cost?</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Healthy Paws pricing depends on your pet's species, breed, age, and location. You choose your deductible ($100, $250, or $500) and reimbursement percentage (70%, 80%, or 90%). Lower deductibles and higher reimbursement mean higher premiums.
+            Healthy Paws pricing depends on your pet&apos;s species, breed, age, and location. You choose your deductible ($100, $250, or $500) and reimbursement percentage (70%, 80%, or 90%). Lower deductibles and higher reimbursement mean higher premiums.
           </p>
           <div className="bg-gray-50 rounded-xl p-5 mb-6">
             <h3 className="font-bold mb-3">Typical Monthly Premiums (US Average)</h3>
@@ -141,10 +141,10 @@ export default function HealthyPawsReviewPage() {
 
           <h2 className="text-2xl font-bold mb-4 mt-8">Is Healthy Paws Worth It?</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            For most pet owners, <strong>yes — Healthy Paws is worth it.</strong> The unlimited annual benefit is the key differentiator. With many competitors capping at $5,000–$10,000 per year, a single cancer treatment or orthopedic surgery can easily exceed that. With Healthy Paws, there's no ceiling.
+            For most pet owners, <strong>yes — Healthy Paws is worth it.</strong> The unlimited annual benefit is the key differentiator. With many competitors capping at $5,000–$10,000 per year, a single cancer treatment or orthopedic surgery can easily exceed that. With Healthy Paws, there&apos;s no ceiling.
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            The 90% reimbursement option means after your deductible, Healthy Paws covers 90 cents of every dollar you spend at the vet. For a $5,000 surgery with a $250 deductible, you'd pay just $725 out of pocket.
+            The 90% reimbursement option means after your deductible, Healthy Paws covers 90 cents of every dollar you spend at the vet. For a $5,000 surgery with a $250 deductible, you&apos;d pay just $725 out of pocket.
           </p>
         </div>
 
@@ -152,10 +152,10 @@ export default function HealthyPawsReviewPage() {
         <div className="bg-emerald-600 text-white rounded-xl p-8 mt-10 text-center">
           <h2 className="text-2xl font-bold mb-2">Ready to Protect Your Pet?</h2>
           <p className="text-emerald-100 mb-4">Get a free, instant quote from Healthy Paws in under 2 minutes.</p>
-          <a href="#" className="bg-white text-emerald-700 font-bold px-8 py-3 rounded-full hover:bg-emerald-50 transition-colors inline-block">
+          <a href="https://www.healthypawspetinsurance.com/" target="_blank" rel="nofollow noopener noreferrer" className="bg-white text-emerald-700 font-bold px-8 py-3 rounded-full hover:bg-emerald-50 transition-colors inline-block">
             Get My Free Quote →
           </a>
-          <p className="text-emerald-200 text-xs mt-3">Affiliate link — see our disclosure policy</p>
+          <p className="text-emerald-200 text-xs mt-3">Opens the insurer&apos;s official site. Not a paid link.</p>
         </div>
 
         {/* RELATED */}

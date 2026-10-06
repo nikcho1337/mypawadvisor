@@ -17,7 +17,7 @@ export default function AboutPage() {
         <section>
           <h2 className="text-xl font-bold mb-3">Our Mission</h2>
           <p className="text-gray-700 leading-relaxed">
-            MyPawAdvisor exists to cut through the noise in the pet product market. There are thousands of dog foods, pet insurance plans, and supplements out there — most of them marketed with the same vague claims. We do the research so you don't have to.
+            MyPawAdvisor exists to cut through the noise in the pet product market. There are thousands of dog foods, pet insurance plans, and supplements out there — most of them marketed with the same vague claims. We do the research so you don&apos;t have to.
           </p>
         </section>
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
               <strong>PawsGuide is reader-supported.</strong> Some links on this site are affiliate links. If you click through and make a purchase, we may earn a commission at no additional cost to you.
             </p>
             <p>
-              Our editorial content is never influenced by affiliate relationships. We recommend products based on merit. If a product doesn't earn a high rating in our review process, we won't promote it regardless of commission rates.
+              Our editorial content is never influenced by affiliate relationships. We recommend products based on merit. If a product doesn&apos;t earn a high rating in our review process, we won&apos;t promote it regardless of commission rates.
             </p>
           </div>
         </section>

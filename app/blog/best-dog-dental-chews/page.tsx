@@ -147,7 +147,7 @@ export default function BestDogDentalChewsPage() {
             Best Dog Dental Chews in 2026 (Vet-Approved for Clean Teeth)
           </h1>
           <p className="text-gray-600 text-lg mb-4">
-            80% of dogs show signs of dental disease by age 3 — yet most owners skip brushing entirely. The good news: the right dental chew, given daily, can reduce plaque by up to 60% and add years to your dog's life. We tested and ranked the best options on the market so you don't have to guess.
+            80% of dogs show signs of dental disease by age 3 — yet most owners skip brushing entirely. The good news: the right dental chew, given daily, can reduce plaque by up to 60% and add years to your dog&apos;s life. We tested and ranked the best options on the market so you don&apos;t have to guess.
           </p>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <span>📅 April 11, 2026</span>
@@ -189,7 +189,7 @@ export default function BestDogDentalChewsPage() {
         {/* WHY DENTAL HEALTH MATTERS */}
         <h2 className="text-2xl font-bold mb-4">Why Dog Dental Health Is More Serious Than You Think</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Dental disease isn't just bad breath — it's a systemic health crisis. Bacteria from periodontal disease enter the bloodstream and have been directly linked to kidney disease, heart valve damage, and liver problems in dogs. The American Veterinary Medical Association estimates that untreated dental disease shortens a dog's life by 1–3 years on average.
+          Dental disease isn&apos;t just bad breath — it&apos;s a systemic health crisis. Bacteria from periodontal disease enter the bloodstream and have been directly linked to kidney disease, heart valve damage, and liver problems in dogs. The American Veterinary Medical Association estimates that untreated dental disease shortens a dog&apos;s life by 1–3 years on average.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {[
@@ -272,7 +272,7 @@ export default function BestDogDentalChewsPage() {
         {/* WHAT TO LOOK FOR */}
         <h2 className="text-2xl font-bold mb-4">What to Look for in a Dog Dental Chew</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Not all dental chews are equal. Many are just flavored treats with no real dental benefit. Here's how to tell the good ones apart:
+          Not all dental chews are equal. Many are just flavored treats with no real dental benefit. Here&apos;s how to tell the good ones apart:
         </p>
         <div className="space-y-3 mb-8">
           {[
@@ -310,7 +310,7 @@ export default function BestDogDentalChewsPage() {
         {/* SIZE GUIDE */}
         <h2 className="text-2xl font-bold mb-4">Dog Dental Chew Size Guide</h2>
         <p className="text-gray-700 mb-4 text-sm">
-          Always use the correct size for your dog's weight. Most brands follow similar sizing conventions:
+          Always use the correct size for your dog&apos;s weight. Most brands follow similar sizing conventions:
         </p>
         <div className="bg-gray-50 rounded-xl p-5 mb-8 overflow-x-auto">
           <table className="w-full text-sm">

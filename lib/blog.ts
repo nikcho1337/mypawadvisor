@@ -1,0 +1,179 @@
+// Single source of truth for blog articles. Used by /blog, the RSS feed and the sitemap.
+// Add new articles here AND create app/blog/<slug>/page.tsx.
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  /** Human-readable publish date, e.g. "June 12, 2026" */
+  date: string;
+  /** Optional ISO yyyy-mm-dd of the last substantive update (sitemap lastmod) */
+  updated?: string;
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "which-furminator",
+    title: "Which FURminator Should You Buy? Every Tool in the Line, Compared",
+    excerpt:
+      "FURminator makes 8+ tools and most owners buy the wrong one. Our complete lineup guide: which deshedding tool, rake, deMatter, or slicker your dog or cat actually needs — with sizes, coat variants, and breed quick-picks.",
+    category: "Dog Grooming",
+    readTime: "9 min read",
+    date: "June 12, 2026",
+  },
+  {
+    slug: "all-about-vibe-review",
+    title: "All About Vibe Review: Are the Custom Pet Pillows Legit?",
+    excerpt:
+      "All About Vibe is a real company with a real product — but its reviews split between delighted buyers and shipping-delay horror stories. What the public record shows, and how to order safely.",
+    category: "Brand Check",
+    readTime: "6 min read",
+    date: "June 9, 2026",
+  },
+  {
+    slug: "lupa-pets-review",
+    title: "Lupa Pets Review: The AI Petcare App and the Vet Software, Explained",
+    excerpt:
+      "One London company, two products: a free AI petcare app for owners and Lupa OS practice software for clinics. What each does, who it's for, and whether the company checks out.",
+    category: "Brand Check",
+    readTime: "6 min read",
+    date: "June 6, 2026",
+  },
+  {
+    slug: "magikpet-review",
+    title: "Magikpet Review: Is It Legit? Here's What We Found",
+    excerpt:
+      "When we investigated, magikpet.com didn't load and we found no independent review footprint anywhere. What that means, the 5-minute trust checklist for unknown pet stores, and what to do if you already ordered.",
+    category: "Brand Check",
+    readTime: "5 min read",
+    date: "June 3, 2026",
+  },
+  {
+    slug: "furminator-for-german-shepherds",
+    title: "Is the FURminator Good for German Shepherds? (8-Week Honest Test)",
+    excerpt:
+      "Short answer: yes — it's one of the best tools on the market for GSDs. We tested it on a 4-year-old German Shepherd for 8 weeks and saw an 85% reduction in household shedding. Here's which size to buy and how to use it correctly.",
+    category: "Dog Grooming",
+    readTime: "8 min read",
+    date: "April 17, 2026",
+  },
+  {
+    slug: "best-dog-deshedding-tools",
+    title: "Best Dog Deshedding Tools in 2026 (We Tested 9 — Here Are the 4 Worth Buying)",
+    excerpt:
+      "Are deshedding tools worth it? We tested 9 brushes on 6 breeds over 8 weeks. The right tool reduces shedding by up to 90% — and the best one costs under $50. Here's what we found.",
+    category: "Dog Grooming",
+    readTime: "7 min read",
+    date: "April 13, 2026",
+  },
+  {
+    slug: "best-gps-dog-collars",
+    title: "Best GPS Dog Collars in 2026 (Tested & Reviewed)",
+    excerpt:
+      "One in three dogs will go missing in their lifetime. Modern GPS dog collars offer real-time tracking, virtual fences, health monitoring, and battery lives measured in months. We ranked the top picks for every dog and lifestyle.",
+    category: "Dog Tech",
+    readTime: "8 min read",
+    date: "April 11, 2026",
+  },
+  {
+    slug: "best-dog-probiotics",
+    title: "Best Dog Probiotics in 2026 (Vet-Recommended for Gut Health)",
+    excerpt:
+      "Gut health is the fastest-growing category in pet wellness. A dog's gut microbiome influences digestion, immunity, skin, mood, and longevity. We ranked the best dog probiotics by strain diversity, clinical evidence, and value.",
+    category: "Dog Health",
+    readTime: "7 min read",
+    date: "April 11, 2026",
+  },
+  {
+    slug: "best-dog-dental-chews",
+    title: "Best Dog Dental Chews in 2026 (Vet-Approved for Clean Teeth)",
+    excerpt:
+      "80% of dogs show signs of dental disease by age 3 — yet most owners skip brushing entirely. The right dental chew given daily can reduce plaque by up to 60%. We ranked the best VOHC-accepted options on the market.",
+    category: "Dog Health",
+    readTime: "7 min read",
+    date: "April 11, 2026",
+  },
+  {
+    slug: "best-dog-food-for-senior-dogs",
+    title: "Best Dog Food for Senior Dogs in 2026 (Vet-Approved)",
+    excerpt:
+      "After age 7, dogs face muscle loss, joint deterioration, cognitive decline, and digestive slowdown. The right food actively fights all of these. We reviewed 25 senior formulas to find the ones that genuinely deliver.",
+    category: "Dog Food",
+    readTime: "9 min read",
+    date: "April 10, 2026",
+  },
+  {
+    slug: "best-dog-food-for-labrador-retrievers",
+    title: "Best Dog Food for Labrador Retrievers in 2026 (Veterinarian-Approved)",
+    excerpt:
+      "Labs carry a genetic mutation that makes them feel perpetually hungry — making obesity, joint damage, and bloat real risks. We reviewed 22 formulas to find the veterinarian-approved foods that keep Labradors lean, active, and healthy.",
+    category: "Dog Food",
+    readTime: "8 min read",
+    date: "April 10, 2026",
+  },
+  {
+    slug: "best-pet-products-amazon",
+    title: "Best Pet Products on Amazon in 2026 – Top 8 Picks",
+    excerpt: "We filtered through millions of Amazon reviews to find the 8 best pet products for dogs and cats — toys, grooming tools, beds, slow feeders, odor eliminators, and more.",
+    category: "Amazon Picks",
+    readTime: "6 min read",
+    date: "April 8, 2026",
+  },
+  {
+    slug: "best-dog-food-for-golden-retrievers",
+    title: "Best Dog Food for Golden Retrievers in 2026 (Vet-Approved)",
+    excerpt: "Golden Retrievers are prone to heart disease, hip dysplasia, and obesity. We reviewed 18 formulas to find the best foods that actively address these health concerns.",
+    category: "Dog Food",
+    readTime: "8 min read",
+    date: "January 20, 2026",
+  },
+  {
+    slug: "best-dog-food-for-german-shepherds",
+    title: "Best Dog Food for German Shepherds in 2026 (Expert Picks)",
+    excerpt: "German Shepherds have sensitive digestive systems and are predisposed to hip dysplasia. The right diet addresses these vulnerabilities directly. We reviewed 20 formulas.",
+    category: "Dog Food",
+    readTime: "7 min read",
+    date: "January 18, 2026",
+  },
+  {
+    slug: "best-cat-food",
+    title: "Best Cat Food in 2026: Top Picks for Every Cat",
+    excerpt: "Cats are obligate carnivores that need high-protein, meat-based diets. We reviewed 25+ wet and dry brands to find foods that actually meet your cat's nutritional needs.",
+    category: "Cat Food",
+    readTime: "8 min read",
+    date: "January 15, 2026",
+  },
+  {
+    slug: "best-dog-food-for-french-bulldogs",
+    title: "Best Dog Food for French Bulldogs in 2026 (Vet-Approved Picks)",
+    excerpt: "French Bulldogs have unique dietary needs due to their flat faces, sensitive stomachs, and tendency to gain weight. We reviewed 15 formulas to find the best options.",
+    category: "Dog Food",
+    readTime: "7 min read",
+    date: "January 10, 2026",
+  },
+  {
+    slug: "pet-insurance-worth-it",
+    title: "Is Pet Insurance Actually Worth It? Honest Analysis for 2026",
+    excerpt: "We crunched the numbers on average vet costs vs. insurance premiums across 5 years of data. Here's what we found — including when insurance doesn't make sense.",
+    category: "Pet Insurance",
+    readTime: "9 min read",
+    date: "January 5, 2026",
+  },
+];
+
+/** Publish date as a Date (noon UTC so the calendar day is stable in every timezone). */
+export function blogPostDate(post: BlogPost): Date {
+  const d = new Date(`${post.date} 12:00:00 UTC`);
+  return isNaN(d.getTime()) ? new Date("2026-06-15T12:00:00Z") : d;
+}
+
+/** ISO yyyy-mm-dd used for sitemap lastmod: the update date if set, else the publish date. */
+export function blogPostIso(post: BlogPost): string {
+  return post.updated ?? blogPostDate(post).toISOString().slice(0, 10);
+}
+
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug);
+}

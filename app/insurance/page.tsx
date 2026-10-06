@@ -24,7 +24,7 @@ const plans = [
     pros: ["Unlimited annual benefit", "90% reimbursement", "24/7 claims app", "No per-incident limits"],
     cons: ["No wellness add-on", "Older pets pay more"],
     href: "/insurance/healthy-paws-review",
-    affiliateHref: "#",
+    affiliateHref: "https://www.healthypawspetinsurance.com/",
   },
   {
     name: "Embrace Pet Insurance",
@@ -40,7 +40,7 @@ const plans = [
     pros: ["Optional wellness rewards", "Diminishing deductible", "Dental illness covered", "Flexible plans"],
     cons: ["Higher base premium", "Annual limit caps"],
     href: "/insurance/embrace-review",
-    affiliateHref: "#",
+    affiliateHref: "https://www.embracepetinsurance.com/",
   },
   {
     name: "Figo Pet Insurance",
@@ -56,7 +56,7 @@ const plans = [
     pros: ["100% reimbursement option", "Cloud-based pet records", "Pet cloud app", "24/7 vet chat"],
     cons: ["Newer company", "Limited reviews"],
     href: "/insurance",
-    affiliateHref: "#",
+    affiliateHref: "https://figopetinsurance.com/",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function InsurancePage() {
                 </div>
               </div>
               <div className="px-6 pb-6 flex flex-wrap gap-3">
-                <a href={plan.affiliateHref} className="bg-emerald-600 text-white font-semibold px-5 py-2 rounded-full text-sm hover:bg-emerald-700 transition-colors">
+                <a href={plan.affiliateHref} target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 text-white font-semibold px-5 py-2 rounded-full text-sm hover:bg-emerald-700 transition-colors">
                   Get Free Quote →
                 </a>
                 <Link href={plan.href} className="border border-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-full text-sm hover:bg-gray-50 transition-colors">

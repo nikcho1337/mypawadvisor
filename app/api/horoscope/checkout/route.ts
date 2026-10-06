@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     });
 
     return Response.json({ url: session.url });
-  } catch (err: any) {
-    return Response.json({ error: err?.message ?? "Stripe error" }, { status: 500 });
+  } catch (err) {
+    return Response.json({ error: err instanceof Error ? err.message : "Stripe error" }, { status: 500 });
   }
 }

@@ -62,7 +62,7 @@ export default function GuidePage() {
     <main className="min-h-screen bg-[#0a0a1f] text-indigo-50">
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital@0;1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap"
         rel="stylesheet"
       />
 
@@ -77,10 +77,10 @@ export default function GuidePage() {
           ))}
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 pt-20 pb-16 text-center">
-          <p className="tracking-[0.4em] text-amber-200/80 text-xs mb-5" style={{ fontFamily: "Cinzel, serif" }}>
+          <p className="tracking-[0.4em] text-amber-200/80 text-xs mb-5" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
             ✦ THE STORY BEHIND THE CHARTS ✦
           </p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-5" style={{ fontFamily: "Cinzel, serif" }}>
+          <h1 className="text-4xl md:text-6xl leading-tight mb-5" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
             Every pet is written<br />in the stars
           </h1>
           <p
@@ -96,7 +96,7 @@ export default function GuidePage() {
 
       {/* ---------- live example chart ---------- */}
       <section className="relative max-w-md mx-auto px-5 pt-14 -mb-2">
-        <p className="text-center text-amber-200/70 text-xs tracking-[0.3em] mb-4" style={{ fontFamily: "Cinzel, serif" }}>
+        <p className="text-center text-amber-200/70 text-xs tracking-[0.3em] mb-4" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
           ✦ A REAL EXAMPLE ✦
         </p>
         <div
@@ -290,14 +290,14 @@ export default function GuidePage() {
 
         {/* ---------- CTA ---------- */}
         <div className="mt-14 rounded-2xl border border-amber-200/20 bg-white/5 p-8 text-center">
-          <p className="text-amber-100 text-2xl mb-2" style={{ fontFamily: "Cinzel, serif" }}>
+          <p className="text-amber-100 text-2xl mb-2" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
             Ready to meet your pet&rsquo;s stars?
           </p>
           <p className="text-indigo-200/75 mb-6">It&rsquo;s free to see the full chart and reading.</p>
           <Link
             href="/natal-chart"
             className="inline-block rounded-full bg-gradient-to-r from-amber-300 to-amber-200 text-[#120a2e] font-bold px-8 py-3 text-lg tracking-wide hover:from-amber-200 hover:to-amber-100 transition"
-            style={{ fontFamily: "Cinzel, serif" }}
+            style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
           >
             ✦ Create the Chart ✦
           </Link>
@@ -314,7 +314,7 @@ export default function GuidePage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl text-amber-100 mb-4" style={{ fontFamily: "Cinzel, serif" }}>
+      <h2 className="text-2xl md:text-3xl text-amber-100 mb-4" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
         {title}
       </h2>
       <div className="space-y-4 text-indigo-100/85 text-lg leading-relaxed">{children}</div>
@@ -327,12 +327,12 @@ function Step({ n, h, children }: { n: number; h: string; children: React.ReactN
     <li className="flex gap-4">
       <span
         className="shrink-0 grid place-items-center w-9 h-9 rounded-full border border-amber-300/50 text-amber-200 text-sm"
-        style={{ fontFamily: "Cinzel, serif" }}
+        style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
       >
         {n}
       </span>
       <div>
-        <h3 className="text-amber-100 text-lg mb-0.5" style={{ fontFamily: "Cinzel, serif" }}>{h}</h3>
+        <h3 className="text-amber-100 text-lg mb-0.5" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>{h}</h3>
         <p className="text-indigo-100/80">{children}</p>
       </div>
     </li>

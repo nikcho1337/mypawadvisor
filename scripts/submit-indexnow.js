@@ -10,7 +10,7 @@
  * Run: node scripts/submit-indexnow.js
  */
 
-const SITE = "https://mypawadvisor.com";
+const SITE = "https://www.mypawadvisor.com";
 const INDEXNOW_KEY = "a8f3d2e1c9b7a4f6e5d8c3b2a1f9e7d6";
 
 const urls = [

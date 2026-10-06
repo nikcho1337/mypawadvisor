@@ -282,14 +282,14 @@ export default function BestPetProductsAmazonPage() {
           <div className="space-y-3 text-sm text-gray-700">
             <p><strong>20,000+ reviews minimum.</strong> We only considered products with enough reviews to filter out outliers and fake ratings.</p>
             <p><strong>4.4 stars or higher.</strong> With thousands of reviews, a 4.4+ rating reflects genuine long-term satisfaction.</p>
-            <p><strong>Repeat purchases matter.</strong> Products with high "subscribe & save" rates or "bought again" signals show pets actually use and love them.</p>
+            <p><strong>Repeat purchases matter.</strong> Products with high &quot;subscribe & save&quot; rates or &quot;bought again&quot; signals show pets actually use and love them.</p>
             <p><strong>Vet or expert endorsements preferred.</strong> Where available, we prioritized products that veterinarians actively recommend.</p>
           </div>
         </div>
 
         {/* CTA */}
         <div className="bg-emerald-600 text-white rounded-xl p-8 text-center">
-          <h2 className="text-xl font-bold mb-2">Don't Forget to Protect Your Pet</h2>
+          <h2 className="text-xl font-bold mb-2">Don&apos;t Forget to Protect Your Pet</h2>
           <p className="text-emerald-100 mb-4 text-sm">Great gear is just the start. Pet insurance covers the unexpected — vet bills, surgeries, emergencies.</p>
           <Link href="/insurance" className="bg-white text-emerald-700 font-bold px-6 py-3 rounded-full hover:bg-emerald-50 transition-colors inline-block text-sm">
             Compare Pet Insurance Plans →

@@ -63,7 +63,7 @@ export default function EmbraceReviewPage() {
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-lg mb-3">🏆 MyPawAdvisor Verdict</h2>
           <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-            <strong>Embrace is an excellent choice for pet owners who want flexibility.</strong> Its diminishing deductible rewards loyalty — every year you don't make a claim, your deductible drops by $50. The optional Wellness Rewards program adds preventive care reimbursements that most competitors don't offer.
+            <strong>Embrace is an excellent choice for pet owners who want flexibility.</strong> Its diminishing deductible rewards loyalty — every year you don&apos;t make a claim, your deductible drops by $50. The optional Wellness Rewards program adds preventive care reimbursements that most competitors don&apos;t offer.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             {[
@@ -78,21 +78,21 @@ export default function EmbraceReviewPage() {
               </div>
             ))}
           </div>
-          <a href="#" className="block text-center bg-blue-600 text-white font-bold py-3 rounded-full hover:bg-blue-700 transition-colors">
+          <a href="https://www.embracepetinsurance.com/" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-blue-600 text-white font-bold py-3 rounded-full hover:bg-blue-700 transition-colors">
             Get Your Free Embrace Quote →
           </a>
-          <p className="text-xs text-gray-400 text-center mt-2">Affiliate link – we may earn a commission at no extra cost to you</p>
+          <p className="text-xs text-gray-400 text-center mt-2">Opens Embrace&apos;s official site in a new tab. We are not currently paid by Embrace.</p>
         </div>
 
         <h2 className="text-2xl font-bold mb-4">What Is Embrace Pet Insurance?</h2>
         <p className="text-gray-700 mb-6 leading-relaxed">
-          Embrace Pet Insurance was founded in 2003 and is one of the older, more established pet insurers in the US. Based in Cleveland, Ohio, it's known for its customer service, flexible policy options, and unique features like the Healthy Pet Deductible — a diminishing deductible that rewards claim-free years.
+          Embrace Pet Insurance was founded in 2003 and is one of the older, more established pet insurers in the US. Based in Cleveland, Ohio, it&apos;s known for its customer service, flexible policy options, and unique features like the Healthy Pet Deductible — a diminishing deductible that rewards claim-free years.
         </p>
 
         <h2 className="text-2xl font-bold mb-4">What Does Embrace Cover?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-            <h3 className="font-bold text-green-800 mb-2">✅ What's Covered</h3>
+            <h3 className="font-bold text-green-800 mb-2">✅ What&apos;s Covered</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Accidents and injuries</li>
               <li>• Illnesses (cancer, diabetes, infections)</li>
@@ -108,7 +108,7 @@ export default function EmbraceReviewPage() {
             </ul>
           </div>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-            <h3 className="font-bold text-red-700 mb-2">❌ What's NOT Covered</h3>
+            <h3 className="font-bold text-red-700 mb-2">❌ What&apos;s NOT Covered</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Pre-existing conditions</li>
               <li>• Routine wellness (without add-on)</li>
@@ -123,9 +123,9 @@ export default function EmbraceReviewPage() {
 
         {/* STANDOUT FEATURE */}
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-8">
-          <h3 className="font-bold text-lg mb-2">⭐ Embrace's Standout Feature: Diminishing Deductible</h3>
+          <h3 className="font-bold text-lg mb-2">⭐ Embrace&apos;s Standout Feature: Diminishing Deductible</h3>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Embrace's "Healthy Pet Deductible" reduces your annual deductible by <strong>$50 every claim-free year</strong> until it hits $0. If you start with a $500 deductible and your dog stays healthy, after 10 years your deductible is $0. No other major pet insurer does this.
+            Embrace&apos;s &quot;Healthy Pet Deductible&quot; reduces your annual deductible by <strong>$50 every claim-free year</strong> until it hits $0. If you start with a $500 deductible and your dog stays healthy, after 10 years your deductible is $0. No other major pet insurer does this.
           </p>
         </div>
 
@@ -217,10 +217,10 @@ export default function EmbraceReviewPage() {
         <div className="bg-blue-600 text-white rounded-xl p-8 text-center">
           <h2 className="text-2xl font-bold mb-2">Get a Free Embrace Quote</h2>
           <p className="text-blue-100 mb-4">Takes less than 2 minutes. No credit card required.</p>
-          <a href="#" className="bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors inline-block">
+          <a href="https://www.embracepetinsurance.com/" target="_blank" rel="nofollow noopener noreferrer" className="bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors inline-block">
             Get My Free Quote →
           </a>
-          <p className="text-blue-200 text-xs mt-3">Affiliate link — see our disclosure policy</p>
+          <p className="text-blue-200 text-xs mt-3">Opens the insurer&apos;s official site. Not a paid link.</p>
         </div>
 
         <div className="mt-10 border-t border-gray-200 pt-8">

@@ -258,10 +258,10 @@ export default function DesheddingToolsPage() {
         {/* ARE THEY WORTH IT */}
         <h2 className="text-2xl font-bold mb-4">Are Deshedding Tools Actually Worth It?</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Short answer: yes — for double-coated breeds. A quality deshedding tool reaches the undercoat (the soft, dense layer beneath the visible outer coat) and removes loose fur before it falls. Regular brushing with a slicker brush only addresses the topcoat. That's why dogs still shed heavily even when their owners brush them weekly with a standard brush.
+          Short answer: yes — for double-coated breeds. A quality deshedding tool reaches the undercoat (the soft, dense layer beneath the visible outer coat) and removes loose fur before it falls. Regular brushing with a slicker brush only addresses the topcoat. That&apos;s why dogs still shed heavily even when their owners brush them weekly with a standard brush.
         </p>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          In our testing, consistent use of the FURminator 2–3 times per week reduced visible shedding around the house by approximately 80–90% for our German Shepherd and Golden Retriever test dogs within three weeks. That's not marketing — we counted the vacuuming sessions.
+          In our testing, consistent use of the FURminator 2–3 times per week reduced visible shedding around the house by approximately 80–90% for our German Shepherd and Golden Retriever test dogs within three weeks. That&apos;s not marketing — we counted the vacuuming sessions.
         </p>
         <p className="text-gray-700 mb-6 leading-relaxed">
           The caveat: deshedding tools are not for every dog. Single-coated breeds (Poodles, Maltese, Shih Tzus, Yorkshire Terriers) do not have an undercoat. Using a FURminator on these breeds can damage the coat. Stick to a slicker brush for single-coated dogs.
@@ -357,7 +357,7 @@ export default function DesheddingToolsPage() {
         {/* BREED GUIDE */}
         <h2 className="text-2xl font-bold mb-4">Which Deshedding Tool Is Right for Your Breed?</h2>
         <p className="text-gray-700 mb-4 text-sm">
-          Coat type determines tool choice. Using the wrong size or blade type reduces results and can cause discomfort. Here's what we recommend for common breeds:
+          Coat type determines tool choice. Using the wrong size or blade type reduces results and can cause discomfort. Here&apos;s what we recommend for common breeds:
         </p>
         <div className="bg-gray-50 rounded-xl p-5 mb-8 overflow-x-auto">
           <table className="w-full text-sm">
@@ -385,7 +385,7 @@ export default function DesheddingToolsPage() {
         {/* HOW TO USE */}
         <h2 className="text-2xl font-bold mb-4">How to Use a Deshedding Tool Correctly</h2>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Most people who say deshedding tools "don't work" are using them incorrectly. Here's the technique that gets the 80–90% shedding reduction results:
+          Most people who say deshedding tools &quot;don&apos;t work&quot; are using them incorrectly. Here&apos;s the technique that gets the 80–90% shedding reduction results:
         </p>
         <div className="space-y-3 mb-8">
           {[
@@ -435,7 +435,7 @@ export default function DesheddingToolsPage() {
         <div className="bg-gray-900 text-white rounded-xl p-8 mb-8">
           <h2 className="text-xl font-bold mb-3">Bottom Line</h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            If you have a double-coated dog and you're still fighting shedding with a regular brush, you're working harder than you need to. The FURminator is worth the price for any owner of a Lab, GSD, Golden, Husky, or Corgi. If you want to spend less, the Dakpets FURblaster delivers 70–75% of the results at half the cost. Use a slicker brush daily between sessions to maintain the results.
+            If you have a double-coated dog and you&apos;re still fighting shedding with a regular brush, you&apos;re working harder than you need to. The FURminator is worth the price for any owner of a Lab, GSD, Golden, Husky, or Corgi. If you want to spend less, the Dakpets FURblaster delivers 70–75% of the results at half the cost. Use a slicker brush daily between sessions to maintain the results.
           </p>
           <a
             href="https://www.amazon.com/s?k=FURminator+deShedding+Tool&tag=pawadvisor-20"
