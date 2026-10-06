@@ -239,14 +239,15 @@ export default function HoroscopePage() {
   // Handle return from Stripe: verify payment, restore the chart, auto-download.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get("canceled")) {
-      setNotice("Checkout canceled — your chart is still here whenever you're ready.");
-      window.history.replaceState({}, "", "/natal-chart");
-      return;
-    }
+    const canceled = params.get("canceled");
     const paid = params.get("paid");
-    if (!paid) return;
+    if (!canceled && !paid) return;
     (async () => {
+      if (canceled || !paid) {
+        setNotice("Checkout canceled — your chart is still here whenever you're ready.");
+        window.history.replaceState({}, "", "/natal-chart");
+        return;
+      }
       try {
         const v = await fetch(`/api/horoscope/verify?session_id=${encodeURIComponent(paid)}`).then((r) => r.json());
         const raw = sessionStorage.getItem(STORAGE_KEY);
